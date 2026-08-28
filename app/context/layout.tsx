@@ -1,6 +1,6 @@
 import { Boundary } from '#/ui/boundary';
 import { Mdx } from '#/ui/codehike';
-import { CounterProvider } from 'app/context/counter-context';
+import { CounterProvider } from './counter-context';
 import React from 'react';
 import ContextClickCounter from './context-click-counter';
 import Readme from './readme.mdx';

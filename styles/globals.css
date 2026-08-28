@@ -192,3 +192,78 @@
     filter: blur(3px);
   }
 }
+
+/* Vault-specific MDX typography */
+.prose-vault {
+  @apply prose prose-neutral text-gray-100 leading-relaxed;
+}
+
+/* Headings */
+.prose-vault h1 {
+  @apply text-4xl font-medium text-white;
+}
+
+.prose-vault h2 {
+  @apply text-3xl font-medium text-gray-100 mt-12 mb-4;
+}
+
+.prose-vault h3 {
+  @apply text-2xl font-medium text-gray-100 mt-10 mb-3;
+}
+
+/* Paragraphs */
+.prose-vault p {
+  @apply text-gray-100 leading-relaxed;
+}
+
+/* Lists */
+.prose-vault ul,
+.prose-vault ol {
+  @apply mt-6 mb-6 text-gray-100;
+}
+
+.prose-vault li {
+  @apply mt-2 text-gray-100;
+}
+
+/* List item markers */
+.prose-vault ul > li::marker,
+.prose-vault ol > li::marker {
+  @apply text-gray-200;
+}
+
+/* Links — green */
+.prose-vault a {
+  @apply text-green-400 underline hover:text-green-300;
+}
+
+/* Emphasis via size */
+.prose-vault strong,
+.prose-vault b {
+  @apply text-[1.10em] font-semibold text-gray-100;
+}
+
+.prose-vault em,
+.prose-vault i {
+  @apply text-[1.05em] italic text-gray-100;
+}
+
+/* MDX auto-generated spans inside paragraphs */
+.prose-vault p span {
+  @apply text-gray-100;
+}
+
+/* Code blocks */
+.prose-vault pre {
+  @apply bg-neutral-900 text-gray-100 p-4 rounded-lg;
+}
+
+/* Inline code */
+.prose-vault code {
+  @apply text-green-300 font-medium;
+}
+
+/* Blockquotes */
+.prose-vault blockquote {
+  @apply border-l-4 border-neutral-700 pl-4 text-gray-100 italic;
+}
