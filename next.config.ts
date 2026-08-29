@@ -10,9 +10,6 @@ const nextConfig = {
     inlineCss: true,
     cachedNavigations: true,
     viewTransition: true,
-
-    // ⭐ Fully disable Turbopack (this is the correct flag)
-    turbo: false,
   },
 };
 
