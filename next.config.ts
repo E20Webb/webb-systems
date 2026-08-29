@@ -5,10 +5,14 @@ const nextConfig = {
   cacheComponents: true,
   partialPrefetching: true,
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+
   experimental: {
     inlineCss: true,
     cachedNavigations: true,
     viewTransition: true,
+
+    // ⭐ Fully disable Turbopack (this is the correct flag)
+    turbo: false,
   },
 };
 
