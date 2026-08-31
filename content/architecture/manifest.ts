@@ -1,5 +1,4 @@
 import IdentityArchitecture from "./identity-architecture.mdx";
-import AestheticIdentity from "./aesthetic-identity.mdx";
 import GenreTaxonomyArchitecture from "./genre-taxonomy-architecture.mdx";
 import CatalogArchitecture from "./catalog-architecture.mdx";
 import TasteGraphProblemArchitecture from "./taste-graph-problem-architecture.mdx";
@@ -9,7 +8,6 @@ import ReleaseCadenceArchitecture from "./release-cadence-architecture.mdx";
 
 export const architecture = {
   "identity-architecture": IdentityArchitecture,
-  "aesthetic-identity": AestheticIdentity,
   "genre-taxonomy-architecture": GenreTaxonomyArchitecture,
   "catalog-architecture": CatalogArchitecture,
   "taste-graph-problem-architecture": TasteGraphProblemArchitecture,
