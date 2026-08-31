@@ -1,14 +1,8 @@
-export const instant = false;
-
 import { notFound } from "next/navigation";
 import { ncDocuments } from "@/content/projects/vault/nc-foundation/meta";
 
-export default async function NCFoundationViewer({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const slug = (await params).slug;
+export default async function Page(props: any) {
+  const slug = props.params.slug;
 
   const doc = ncDocuments.find((d) => d.slug === slug);
   if (!doc) return notFound();
