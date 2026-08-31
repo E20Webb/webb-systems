@@ -1,14 +1,8 @@
-export const instant = false;
-
 import { notFound } from "next/navigation";
 import { xboxDocuments } from "@/content/projects/vault/xbox-forever/meta";
 
-export default async function XboxForeverViewer({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const slug = (await params).slug;
+export default async function Page(props: any) {
+  const slug = props.params.slug;
 
   const doc = xboxDocuments.find((d) => d.slug === slug);
   if (!doc) return notFound();
