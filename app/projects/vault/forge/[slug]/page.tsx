@@ -1,8 +1,12 @@
 import { notFound } from "next/navigation";
 import { forgeDocuments } from "@/content/projects/vault/forge/meta";
 
-export default async function ForgeViewer({ params }: { params: { slug: string } }) {
-  const slug = params.slug; // ← FIXED
+export default async function ForgeViewer({
+  params,
+}: {
+  params: Record<string, string>;
+}) {
+  const slug = params.slug;
   const doc = forgeDocuments.find((d) => d.slug === slug);
   if (!doc) return notFound();
 
