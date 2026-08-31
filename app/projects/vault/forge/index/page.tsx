@@ -14,8 +14,8 @@ export default function ForgeIndex() {
         <p className="text-lg text-gray-300 leading-relaxed">
           Forge is a design‑time engine built to correct the structural problems that make
           modern game development slow, expensive, and unpredictable. It provides deterministic
-          behavior modeling, designer‑first iteration, and engine‑agnostic world coherence —
-          enabling teams to build complex systems without losing clarity, time, money, or control.
+          behavior modeling, designer‑first iteration, and engine‑agnostic world coherence.
+          Enabling teams to build complex systems without losing clarity, time, money, or control.
         </p>
 
         <p className="text-gray-400 leading-relaxed">
