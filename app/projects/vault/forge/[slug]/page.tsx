@@ -1,5 +1,3 @@
-export const instant = false;
-
 import { notFound } from "next/navigation";
 import { forgeDocuments } from "@/content/projects/vault/forge/meta";
 
