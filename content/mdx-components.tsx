@@ -3,7 +3,6 @@ import type { ComponentPropsWithoutRef } from "react";
 
 type AnyProps = ComponentPropsWithoutRef<any>;
 
-// ⭐ Added: Proper code renderer so MDX stops injecting <MyCode>
 const Code = (props: AnyProps) => {
   return (
     <pre className="bg-black/40 p-4 rounded-lg overflow-x-auto my-6">
@@ -62,6 +61,7 @@ export const mdxComponents = {
     />
   ),
 
+  // ⭐ MDX <img> → Next.js <Image>
   img: (props: AnyProps) => {
     if (!props.src) return null;
     return (
@@ -75,11 +75,13 @@ export const mdxComponents = {
     );
   },
 
+  // ⭐ MDX <Image> → Next.js <Image>
+  Image,
+
   hr: () => <hr className="my-16 border-gray-700" />,
 
   div: (props: AnyProps) => <div {...props} />,
 
-  // ⭐ Added: MDX code block support
   code: Code,
   pre: Code,
 };

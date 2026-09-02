@@ -1,7 +1,7 @@
 import type { MDXComponents } from "mdx/types";
 import Link from "next/link";
+import Image from "next/image"; // ⭐ REQUIRED for MDX <Image>
 
-// ⭐ These names MUST match next.config.ts
 export const MyCode = (props: any) => (
   <pre className="bg-black/40 p-4 rounded-lg overflow-x-auto my-6">
     <code {...props} />
@@ -21,7 +21,10 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       return <Link {...props} />;
     },
 
-    // ⭐ CodeHike will inject <MyCode> and <MyInlineCode>
+    // ⭐ MDX now knows how to render <Image>
+    Image,
+
+    // ⭐ CodeHike injects these
     MyCode,
     MyInlineCode,
   };
