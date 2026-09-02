@@ -26,6 +26,14 @@ export const architectureMeta: ArchitectureMeta[] = [
   thumbnailMotion: "/thumbnails/aesthetic-identity-motion.mp4"
 },
 {
+  "slug": "publisher-identity-architecture",
+  "title": "Publisher Identity Architecture",
+  "abstract": "How fantasy‑mechanic labels create identity lanes that unify catalogs, culture, cadence, and discovery.",
+  "category": "Architecture",
+  "thumbnail": "/thumbnails/ways-to-skin-a-cat.jpg",
+  "thumbnailMotion": "/thumbnails/ways-to-skin-a-cat.mp4"
+},
+{
   slug: "genre-taxonomy-architecture",
   title: "Genre Taxonomy Architecture",
   abstract:

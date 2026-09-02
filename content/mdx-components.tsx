@@ -3,6 +3,15 @@ import type { ComponentPropsWithoutRef } from "react";
 
 type AnyProps = ComponentPropsWithoutRef<any>;
 
+// ⭐ Added: Proper code renderer so MDX stops injecting <MyCode>
+const Code = (props: AnyProps) => {
+  return (
+    <pre className="bg-black/40 p-4 rounded-lg overflow-x-auto my-6">
+      <code {...props} />
+    </pre>
+  );
+};
+
 export const mdxComponents = {
   h1: (props: AnyProps) => (
     <h1
@@ -53,21 +62,24 @@ export const mdxComponents = {
     />
   ),
 
- img: (props: AnyProps) => {
-  if (!props.src) return null; // MDX sometimes passes undefined src
-  return (
-    <Image
-      src={props.src}
-      alt={props.alt || ""}
-      width={Number(props.width) || 1600}
-      height={Number(props.height) || 900}
-      className="rounded-lg w-full shadow-lg my-12"
-    />
-  );
-},
-
+  img: (props: AnyProps) => {
+    if (!props.src) return null;
+    return (
+      <Image
+        src={props.src}
+        alt={props.alt || ""}
+        width={Number(props.width) || 1600}
+        height={Number(props.height) || 900}
+        className="rounded-lg w-full shadow-lg my-12"
+      />
+    );
+  },
 
   hr: () => <hr className="my-16 border-gray-700" />,
 
   div: (props: AnyProps) => <div {...props} />,
+
+  // ⭐ Added: MDX code block support
+  code: Code,
+  pre: Code,
 };

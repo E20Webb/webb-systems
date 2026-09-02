@@ -1,16 +1,29 @@
 import { notFound } from "next/navigation";
 import { architecture, ArchitectureSlug } from "@/content/architecture/manifest";
+import { Suspense } from "react";
 
 export function generateStaticParams() {
   return Object.keys(architecture).map((slug) => ({ slug }));
 }
 
-export default async function ArchitecturePage({
+export default function ArchitecturePage({
   params,
 }: {
-  params: { slug: ArchitectureSlug };
+  params: Promise<{ slug: ArchitectureSlug }>;
 }) {
-  const { slug } = params;
+  return (
+    <Suspense fallback={<div className="mx-auto max-w-3xl px-6 py-24">Loading…</div>}>
+      <ArchitectureContent params={params} />
+    </Suspense>
+  );
+}
+
+async function ArchitectureContent({
+  params,
+}: {
+  params: Promise<{ slug: ArchitectureSlug }>;
+}) {
+  const { slug } = await params; // ⭐ REQUIRED in Next.js 16.3
 
   const loader = architecture[slug];
   if (!loader) return notFound();
