@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { essayMeta } from "@/content/essays/meta";
-import Thumbnail from "@/components/Thumbnail";
+import Thumbnail from "../components/Thumbnail";
 
 export default function EssaysIndex() {
   return (

@@ -12,14 +12,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         
         {/* GLOBAL HEADER */}
         <header className="mb-4 border-b border-gray-800 pb-0">
-          <nav className="flex items-center gap-8 text-sm text-gray-300">
-            <Link href="/" className="flex items-center">
-              <img
-                src="/webb-systems-logo.png"
-                alt="Webb Systems"
-                className="h-12 w-auto opacity-80 hover:opacity-100 transition-opacity"
-              />
+          <nav className="flex items-center gap-4 md:gap-8 text-sm text-gray-300">
+
+            {/* Logo — FIXED */}
+            <Link href="/" className="flex items-center flex-shrink-0">
+              <div className="h-12 w-auto flex-shrink-0">
+                <img
+                  src="/webb-systems-logo.png"
+                  alt="Webb Systems"
+                  className="h-full w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+                />
+              </div>
             </Link>
+
             <Link href="/essays" className="hover:text-white">Essays</Link>
             <Link href="/architecture" className="hover:text-white">Architecture</Link>
             <Link href="/projects/vault" className="hover:text-white">Projects</Link>
