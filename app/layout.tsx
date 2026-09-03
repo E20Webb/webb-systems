@@ -12,11 +12,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         
         {/* GLOBAL HEADER */}
         <header className="mb-4 border-b border-gray-800 pb-0">
-          <nav className="flex flex-wrap items-center gap-3 md:gap-8 text-sm text-gray-300">
+          <nav className="flex items-center gap-3 md:gap-8 text-sm text-gray-300">
 
-            {/* Logo — mobile shrink, desktop full size */}
+            {/* Logo — mobile h-6, desktop h-12 */}
             <Link href="/" className="flex items-center flex-shrink-0">
-              <div className="h-8 md:h-12 w-auto flex-shrink-0">
+              <div className="h-6 md:h-12 w-auto flex-shrink-0">
                 <img
                   src="/webb-systems-logo.png"
                   alt="Webb Systems"
