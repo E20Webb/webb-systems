@@ -81,7 +81,7 @@ export default function NavBar() {
       <div
         className="
           pointer-events-none absolute left-0 top-0 bottom-0 w-6
-          bg-gradient-to-r from-gray-900 to-transparent
+          bg-gradient-to-r from-gray-800 to-transparent
           md:hidden
         "
       />
@@ -90,7 +90,7 @@ export default function NavBar() {
       <div
         className="
           pointer-events-none absolute right-0 top-0 bottom-0 w-6
-          bg-gradient-to-l from-gray-900 to-transparent
+          bg-gradient-to-l from-gray-800 to-transparent
           md:hidden
         "
       />
