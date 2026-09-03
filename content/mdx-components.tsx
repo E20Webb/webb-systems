@@ -3,11 +3,43 @@ import type { ComponentPropsWithoutRef } from "react";
 
 type AnyProps = ComponentPropsWithoutRef<any>;
 
-const Code = (props: AnyProps) => {
+const Pre = (props: AnyProps) => {
+  const { className = "", ...rest } = props;
+
   return (
-    <pre className="bg-black/40 p-4 rounded-lg overflow-x-auto my-6">
-      <code {...props} />
-    </pre>
+    <pre
+      {...rest}
+      className={[
+        "bg-black/40",
+        "text-gray-200",
+        "p-4",
+        "rounded-lg",
+        "overflow-x-auto",
+        "my-6",
+        "font-mono",
+        "whitespace-pre",
+        className,
+      ]
+        .filter(Boolean)
+        .join(" ")}
+    />
+  );
+};
+
+const Code = (props: AnyProps) => {
+  const { className = "", ...rest } = props;
+
+  return (
+    <code
+      {...rest}
+      className={[
+        "font-mono",
+        "text-gray-200",
+        className,
+      ]
+        .filter(Boolean)
+        .join(" ")}
+    />
   );
 };
 
@@ -54,6 +86,13 @@ export const mdxComponents = {
     />
   ),
 
+  li: (props: AnyProps) => (
+    <li
+      {...props}
+      className="text-gray-200"
+    />
+  ),
+
   blockquote: (props: AnyProps) => (
     <blockquote
       {...props}
@@ -61,9 +100,9 @@ export const mdxComponents = {
     />
   ),
 
-  // ⭐ MDX <img> → Next.js <Image>
   img: (props: AnyProps) => {
     if (!props.src) return null;
+
     return (
       <Image
         src={props.src}
@@ -75,13 +114,10 @@ export const mdxComponents = {
     );
   },
 
-  // ⭐ MDX <Image> → Next.js <Image>
-  Image,
-
   hr: () => <hr className="my-16 border-gray-700" />,
 
   div: (props: AnyProps) => <div {...props} />,
 
+  pre: Pre,
   code: Code,
-  pre: Code,
 };
