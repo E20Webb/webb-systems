@@ -36,7 +36,7 @@ export default function VaultIndex() {
       <section className="pt-4">
         <div className="flex items-center gap-4">
           <img
-            src="/icons/web-systems-seal.png"
+            src="/site-icons/web-systems-seal.png"
             alt="Web Systems Seal"
             className="w-40 md:w-56 h-auto opacity-90"
           />
