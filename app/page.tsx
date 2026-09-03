@@ -39,7 +39,7 @@ export default function EssaysIndex() {
             <div className="flex flex-col md:flex-row gap-6 md:gap-10">
 
               {/* Thumbnail */}
-              <div className="shrink-0 w-full h-auto md:w-56 md:h-36">
+              <div className="shrink-0 w-full h-48 md:w-56 md:h-36">
                 <Thumbnail
                   image={essay.thumbnail}
                   video={essay.thumbnailMotion}
