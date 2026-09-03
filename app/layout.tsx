@@ -1,11 +1,14 @@
 import '../styles/globals.css';
 import { Geist, Geist_Mono } from 'next/font/google';
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+
   return (
     <html lang="en" className="[color-scheme:dark]">
       <body className={`overflow-y-scroll bg-gray-950 font-sans ${geistSans.variable} ${geistMono.variable} antialiased`}>
@@ -21,10 +24,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 gap-3 md:gap-8
                 whitespace-nowrap
                 px-1
+                scroll-snap-type-x mandatory
               "
             >
               {/* Logo */}
-              <Link href="/" className="flex items-center flex-shrink-0">
+              <Link
+                href="/"
+                className={`
+                  flex items-center flex-shrink-0 scroll-snap-align-start
+                  ${pathname === "/" ? "text-green-400" : ""}
+                `}
+              >
                 <div className="h-6 md:h-12 w-auto flex-shrink-0">
                   <img
                     src="/webb-systems-logo.png"
@@ -34,17 +44,52 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </div>
               </Link>
 
-              <Link href="/essays" className="hover:text-white flex-shrink-0">Essays</Link>
-              <Link href="/architecture" className="hover:text-white flex-shrink-0">Architecture</Link>
-              <Link href="/projects/vault" className="hover:text-white flex-shrink-0">Projects</Link>
-              <Link href="/about" className="hover:text-white flex-shrink-0">About</Link>
+              <Link
+                href="/essays"
+                className={`
+                  hover:text-white flex-shrink-0 scroll-snap-align-start
+                  ${pathname === "/essays" ? "text-green-400" : ""}
+                `}
+              >
+                Essays
+              </Link>
+
+              <Link
+                href="/architecture"
+                className={`
+                  hover:text-white flex-shrink-0 scroll-snap-align-start
+                  ${pathname === "/architecture" ? "text-green-400" : ""}
+                `}
+              >
+                Architecture
+              </Link>
+
+              <Link
+                href="/projects/vault"
+                className={`
+                  hover:text-white flex-shrink-0 scroll-snap-align-start
+                  ${pathname === "/projects/vault" ? "text-green-400" : ""}
+                `}
+              >
+                Projects
+              </Link>
+
+              <Link
+                href="/about"
+                className={`
+                  hover:text-white flex-shrink-0 scroll-snap-align-start
+                  ${pathname === "/about" ? "text-green-400" : ""}
+                `}
+              >
+                About
+              </Link>
             </div>
 
             {/* Left Fade */}
             <div
               className="
                 pointer-events-none absolute left-0 top-0 bottom-0 w-6
-                bg-gradient-to-r from-gray-950 to-transparent
+                bg-gradient-to-r from-gray-900 to-transparent
                 md:hidden
               "
             />
@@ -53,7 +98,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div
               className="
                 pointer-events-none absolute right-0 top-0 bottom-0 w-6
-                bg-gradient-to-l from-gray-950 to-transparent
+                bg-gradient-to-l from-gray-900 to-transparent
                 md:hidden
               "
             />

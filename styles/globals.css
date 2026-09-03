@@ -251,3 +251,19 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+/* Snap scrolling */
+.scroll-snap-type-x {
+  scroll-snap-type: x mandatory;
+}
+.scroll-snap-align-start {
+  scroll-snap-align: start;
+}
+
+/* Hide scrollbar for horizontal nav */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
