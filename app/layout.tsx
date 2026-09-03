@@ -12,7 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         
         {/* GLOBAL HEADER */}
         <header className="mb-4 border-b border-gray-800 pb-0">
-          <nav className="relative flex items-center text-sm text-gray-300">
+          <nav className="relative block text-sm text-gray-300">
 
             {/* Scroll Container */}
             <div
