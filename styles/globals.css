@@ -82,7 +82,6 @@
 .spinner {
   background: conic-gradient(transparent 10deg, white, transparent 320deg);
 
-  /* Mask to create a hollow center 🍩 */
   --border-size: 3px;
   mask-image: radial-gradient(
     closest-side,
@@ -90,10 +89,6 @@
     white calc(100% - var(--border-size))
   );
 
-  /* Animation:
-     - opacity: render invisible and use animations to reveal spinner
-     - fade: fade in after delay to prevent flashes of UI on fast navigations 
-     - rotate: rotate indefinitely while rendered */
   opacity: 0;
   animation:
     fade 500ms 150ms forwards,
@@ -173,20 +168,10 @@
   animation-duration: var(--duration-move);
 }
 
-/* 
- * Using view-transition-image-pair and not view-transition-group to preserve
- * the default animation which includes automatic position and scale morphing
- */
 ::view-transition-image-pair(.animate-morph) {
   animation-name: via-blur;
 }
 
-/* 
- * Blur animation for view transitions with shared elements. 
- * Fast-moving elements can be visually jarring as the eye tries
- * to track them. This creates a poor man's motion blur we can
- * use to make these transitions smoother.
- */
 @keyframes via-blur {
   30% {
     filter: blur(3px);
@@ -198,7 +183,6 @@
   @apply prose prose-neutral text-gray-100 leading-relaxed;
 }
 
-/* Headings */
 .prose-vault h1 {
   @apply text-4xl font-medium text-white;
 }
@@ -211,12 +195,10 @@
   @apply text-2xl font-medium text-gray-100 mt-10 mb-3;
 }
 
-/* Paragraphs */
 .prose-vault p {
   @apply text-gray-100 leading-relaxed;
 }
 
-/* Lists */
 .prose-vault ul,
 .prose-vault ol {
   @apply mt-6 mb-6 text-gray-100;
@@ -226,18 +208,15 @@
   @apply mt-2 text-gray-100;
 }
 
-/* List item markers */
 .prose-vault ul > li::marker,
 .prose-vault ol > li::marker {
   @apply text-gray-200;
 }
 
-/* Links — green */
 .prose-vault a {
   @apply text-green-400 underline hover:text-green-300;
 }
 
-/* Emphasis via size */
 .prose-vault strong,
 .prose-vault b {
   @apply text-[1.10em] font-semibold text-gray-100;
@@ -248,22 +227,27 @@
   @apply text-[1.05em] italic text-gray-100;
 }
 
-/* MDX auto-generated spans inside paragraphs */
 .prose-vault p span {
   @apply text-gray-100;
 }
 
-/* Code blocks */
 .prose-vault pre {
   @apply bg-neutral-900 text-gray-100 p-4 rounded-lg;
 }
 
-/* Inline code */
 .prose-vault code {
   @apply text-green-300 font-medium;
 }
 
-/* Blockquotes */
 .prose-vault blockquote {
   @apply border-l-4 border-neutral-700 pl-4 text-gray-100 italic;
+}
+
+/* ⭐ ADD THIS — hides scrollbar for horizontal nav */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

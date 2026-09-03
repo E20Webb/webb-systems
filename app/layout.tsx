@@ -12,23 +12,52 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         
         {/* GLOBAL HEADER */}
         <header className="mb-4 border-b border-gray-800 pb-0">
-          <nav className="flex items-center gap-3 md:gap-8 text-sm text-gray-300">
+          <nav className="relative flex items-center text-sm text-gray-300">
 
-            {/* Logo — mobile h-6, desktop h-12 */}
-            <Link href="/" className="flex items-center flex-shrink-0">
-              <div className="h-6 md:h-12 w-auto flex-shrink-0">
-                <img
-                  src="/webb-systems-logo.png"
-                  alt="Webb Systems"
-                  className="h-full w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
-                />
-              </div>
-            </Link>
+            {/* Scroll Container */}
+            <div
+              className="
+                flex overflow-x-auto overflow-y-hidden no-scrollbar
+                gap-3 md:gap-8
+                whitespace-nowrap
+                px-1
+              "
+            >
+              {/* Logo */}
+              <Link href="/" className="flex items-center flex-shrink-0">
+                <div className="h-6 md:h-12 w-auto flex-shrink-0">
+                  <img
+                    src="/webb-systems-logo.png"
+                    alt="Webb Systems"
+                    className="h-full w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+                  />
+                </div>
+              </Link>
 
-            <Link href="/essays" className="hover:text-white">Essays</Link>
-            <Link href="/architecture" className="hover:text-white">Architecture</Link>
-            <Link href="/projects/vault" className="hover:text-white">Projects</Link>
-            <Link href="/about" className="hover:text-white">About</Link>
+              <Link href="/essays" className="hover:text-white flex-shrink-0">Essays</Link>
+              <Link href="/architecture" className="hover:text-white flex-shrink-0">Architecture</Link>
+              <Link href="/projects/vault" className="hover:text-white flex-shrink-0">Projects</Link>
+              <Link href="/about" className="hover:text-white flex-shrink-0">About</Link>
+            </div>
+
+            {/* Left Fade */}
+            <div
+              className="
+                pointer-events-none absolute left-0 top-0 bottom-0 w-6
+                bg-gradient-to-r from-gray-950 to-transparent
+                md:hidden
+              "
+            />
+
+            {/* Right Fade */}
+            <div
+              className="
+                pointer-events-none absolute right-0 top-0 bottom-0 w-6
+                bg-gradient-to-l from-gray-950 to-transparent
+                md:hidden
+              "
+            />
+
           </nav>
         </header>
 
