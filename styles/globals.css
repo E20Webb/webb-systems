@@ -38,12 +38,15 @@
     0% {
       opacity: 0;
     }
+
     30% {
       opacity: 1;
     }
+
     70% {
       opacity: 1;
     }
+
     100% {
       transform: translateX(150%);
       opacity: 0;
@@ -70,19 +73,26 @@
   0% {
     opacity: 0.2;
   }
+
   20% {
     opacity: 1;
     transform: translateX(1px);
   }
+
   100% {
     opacity: 0.2;
   }
 }
 
 .spinner {
-  background: conic-gradient(transparent 10deg, white, transparent 320deg);
+  background: conic-gradient(
+    transparent 10deg,
+    white,
+    transparent 320deg
+  );
 
   --border-size: 3px;
+
   mask-image: radial-gradient(
     closest-side,
     transparent calc(100% - var(--border-size)),
@@ -90,6 +100,7 @@
   );
 
   opacity: 0;
+
   animation:
     fade 500ms 150ms forwards,
     rotate 1s linear infinite;
@@ -104,6 +115,7 @@
 .transition-enter {
   opacity: 1;
   transform: scale(1);
+
   transition:
     opacity 0.5s,
     transform 0.5s;
@@ -122,6 +134,7 @@
     filter: blur(3px);
     opacity: 0;
   }
+
   to {
     filter: blur(0);
     opacity: 1;
@@ -132,6 +145,7 @@
   from {
     translate: var(--slide-offset);
   }
+
   to {
     translate: 0;
   }
@@ -139,12 +153,15 @@
 
 ::view-transition-new(.animate-slide-from-left) {
   --slide-offset: -60px;
+
   animation:
     var(--duration-enter) ease-out var(--duration-exit) both fade,
     var(--duration-move) ease-in-out both slide;
 }
+
 ::view-transition-old(.animate-slide-to-right) {
   --slide-offset: 60px;
+
   animation:
     var(--duration-exit) ease-in both fade reverse,
     var(--duration-move) ease-in-out both slide reverse;
@@ -152,6 +169,7 @@
 
 ::view-transition-new(.animate-slide-from-right) {
   --slide-offset: 60px;
+
   animation:
     var(--duration-enter) ease-out var(--duration-exit) both fade,
     var(--duration-move) ease-in-out both slide;
@@ -159,6 +177,7 @@
 
 ::view-transition-old(.animate-slide-to-left) {
   --slide-offset: -60px;
+
   animation:
     var(--duration-exit) ease-in both fade reverse,
     var(--duration-move) ease-in-out both slide reverse;
@@ -178,7 +197,10 @@
   }
 }
 
-/* Vault-specific MDX typography */
+/* =========================================================
+   Vault-specific MDX typography
+   ========================================================= */
+
 .prose-vault {
   @apply prose prose-neutral text-gray-100 leading-relaxed;
 }
@@ -231,39 +253,79 @@
   @apply text-gray-100;
 }
 
+/* =========================================================
+   MDX code and architecture blocks
+   ========================================================= */
+
 .prose-vault pre {
-  @apply bg-neutral-900 text-gray-100 p-4 rounded-lg;
+  @apply bg-neutral-900 text-gray-100 p-4 rounded-lg my-6;
+
+  overflow-x: auto;
+  max-width: 100%;
+  white-space: pre;
+  -webkit-overflow-scrolling: touch;
 }
 
-.prose-vault code {
-  @apply text-green-300 font-medium;
+.prose-vault pre code {
+  display: block;
+  color: #d1d5db;
+  background: transparent;
+
+  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular,
+    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    monospace;
+
+  font-weight: 400;
+  line-height: 1.6;
+  white-space: pre;
+
+  padding: 0;
+  margin: 0;
+  border: 0;
+
+  min-width: max-content;
 }
+
+.prose-vault :not(pre) > code {
+  @apply text-green-300 font-medium;
+  background: transparent;
+}
+
+.prose-vault :not(pre) > code::before,
+.prose-vault :not(pre) > code::after {
+  content: none;
+}
+
+.prose-vault pre code::before,
+.prose-vault pre code::after {
+  content: none;
+}
+
+/* =========================================================
+Blockquotes
+========================================================= */
 
 .prose-vault blockquote {
   @apply border-l-4 border-neutral-700 pl-4 text-gray-100 italic;
 }
 
-/* ⭐ ADD THIS — hides scrollbar for horizontal nav */
+/* =========================================================
+Horizontal navigation helpers
+========================================================= */
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-/* Snap scrolling */
+
 .scroll-snap-type-x {
   scroll-snap-type: x mandatory;
 }
+
 .scroll-snap-align-start {
   scroll-snap-align: start;
-}
-
-/* Hide scrollbar for horizontal nav */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
