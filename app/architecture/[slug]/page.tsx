@@ -45,7 +45,8 @@ async function ArchitectureContent({
         </p>
       )}
 
-      <article className="prose prose-invert max-w-none text-neutral-300">
+      {/* ⭐ FIXED: Use prose-vault so ASCII diagrams render correctly */}
+      <article className="prose-vault max-w-none">
         <Content />
       </article>
     </main>
