@@ -1,5 +1,9 @@
 import { notFound } from "next/navigation";
-import { architecture, ArchitectureSlug } from "@/content/architecture/manifest";
+import {
+  architecture,
+  ArchitectureSlug,
+} from "@/content/architecture/manifest";
+import { mdxComponents } from "@/content/mdx-components";
 import { Suspense } from "react";
 
 export function generateStaticParams() {
@@ -12,7 +16,13 @@ export default function ArchitecturePage({
   params: Promise<{ slug: ArchitectureSlug }>;
 }) {
   return (
-    <Suspense fallback={<div className="mx-auto max-w-3xl px-6 py-24">Loading…</div>}>
+    <Suspense
+      fallback={
+        <div className="mx-auto max-w-3xl px-6 py-24">
+          Loading…
+        </div>
+      }
+    >
       <ArchitectureContent params={params} />
     </Suspense>
   );
@@ -23,10 +33,13 @@ async function ArchitectureContent({
 }: {
   params: Promise<{ slug: ArchitectureSlug }>;
 }) {
-  const { slug } = await params; // ⭐ REQUIRED in Next.js 16.3
+  const { slug } = await params;
 
   const loader = architecture[slug];
-  if (!loader) return notFound();
+
+  if (!loader) {
+    return notFound();
+  }
 
   const mod = await loader();
   const Content = mod.default;
@@ -45,9 +58,8 @@ async function ArchitectureContent({
         </p>
       )}
 
-      {/* ⭐ FIXED: Use prose-vault so ASCII diagrams render correctly */}
       <article className="prose-vault max-w-none">
-        <Content />
+        <Content components={mdxComponents} />
       </article>
     </main>
   );
