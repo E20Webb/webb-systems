@@ -98,9 +98,11 @@ export default function Thumbnail({ image, video, alt, caption }: ThumbnailProps
         <video
           ref={videoRef}
           src={video}
+          autoPlay
           muted
           playsInline
           loop
+          preload="auto"
           style={{
             transform: `translate(${parallax.x}px, ${parallax.y}px) scale(1.12)`
           }}
