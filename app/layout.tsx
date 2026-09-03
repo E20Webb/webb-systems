@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import { Geist, Geist_Mono } from 'next/font/google';
 import NavBar from "./NavBar";
+import { Suspense } from "react";
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
@@ -12,7 +13,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* GLOBAL HEADER */}
         <header className="mb-4 border-b border-gray-800 pb-0">
-          <NavBar />
+          <Suspense fallback={null}>
+            <NavBar />
+          </Suspense>
         </header>
 
         {/* PAGE CONTENT */}
