@@ -12,7 +12,9 @@ export default function NavBar() {
       {/* Scroll Container */}
       <div
         className="
-          flex overflow-x-auto overflow-y-hidden no-scrollbar
+          flex items-center
+          min-h-6 md:min-h-12
+          overflow-x-auto overflow-y-hidden no-scrollbar
           gap-3 md:gap-8
           whitespace-nowrap
           px-1
@@ -39,6 +41,7 @@ export default function NavBar() {
         <Link
           href="/essays"
           className={`
+            flex items-center
             hover:text-white flex-shrink-0 scroll-snap-align-start
             ${pathname === "/essays" ? "text-green-400" : ""}
           `}
@@ -49,6 +52,7 @@ export default function NavBar() {
         <Link
           href="/architecture"
           className={`
+            flex items-center
             hover:text-white flex-shrink-0 scroll-snap-align-start
             ${pathname === "/architecture" ? "text-green-400" : ""}
           `}
@@ -59,6 +63,7 @@ export default function NavBar() {
         <Link
           href="/projects/vault"
           className={`
+            flex items-center
             hover:text-white flex-shrink-0 scroll-snap-align-start
             ${pathname === "/projects/vault" ? "text-green-400" : ""}
           `}
@@ -69,6 +74,7 @@ export default function NavBar() {
         <Link
           href="/about"
           className={`
+            flex items-center
             hover:text-white flex-shrink-0 scroll-snap-align-start
             ${pathname === "/about" ? "text-green-400" : ""}
           `}
