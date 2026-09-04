@@ -50,11 +50,24 @@ export default function AboutPage() {
         <div className="space-y-2 text-neutral-300">
           <p>
             <span className="text-neutral-500">Email:</span>{" "}
-            <span className="text-neutral-400">elliott@webb.systems</span>
+            <a
+              href="mailto:elliott@webb.systems"
+              className="text-blue-400 hover:underline"
+            >
+              elliott@webb.systems
+            </a>
           </p>
+
           <p>
             <span className="text-neutral-500">LinkedIn:</span>{" "}
-            <span className="text-neutral-400">linkedin.com/in/elliottwebb</span>
+            <a
+              href="https://www.linkedin.com/in/elliott-webb-56b906226/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:underline"
+            >
+              linkedin.com/in/elliott-webb-56b906226
+            </a>
           </p>
         </div>
       </section>
