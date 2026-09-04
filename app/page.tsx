@@ -7,15 +7,17 @@ export default function EssaysIndex() {
     <main className="mx-auto max-w-4xl px-6 pt-2 pb-16 md:pb-24">
 
       {/* Slim Motion Arrow Banner */}
-      <div className="w-full aspect-[5/1] mb-8 md:mb-16 rounded-lg overflow-hidden bg-black">
-        <video
-          src="/banners/home-arrow-banner.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-contain"
-        />
+      <div className="mb-8 md:mb-16 flex justify-center">
+        <div className="w-36 md:w-44 rounded-lg overflow-hidden">
+          <video
+            src="/banners/home-arrow-banner.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-auto block"
+          />
+        </div>
       </div>
 
       {/* Homepage Identity Block */}
@@ -23,8 +25,10 @@ export default function EssaysIndex() {
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-white">
           Culture, Systems, and the Architecture of Future Worlds
         </h1>
+
         <div className="text-lg md:text-xl text-neutral-400 mt-2 tracking-tight">
-          A unified body of work exploring the foundations, pipelines, and worldmaking principles shaping the future of interactive worlds.
+          A unified body of work exploring the foundations, pipelines, and
+          worldmaking principles shaping the future of interactive worlds.
         </div>
       </div>
 
@@ -74,12 +78,13 @@ export default function EssaysIndex() {
           {/* Essays Tile */}
           <Link
             href="/essays"
-            className="group block border border-neutral-800 rounded-lg p-6 md:p-10 
+            className="group block border border-neutral-800 rounded-lg p-6 md:p-10
                        hover:bg-neutral-900 transition"
           >
             <h3 className="text-xl md:text-2xl font-medium text-white group-hover:underline underline-offset-4">
               Essays
             </h3>
+
             <p className="text-neutral-500 mt-3">
               Cultural analysis, systems thinking, and the future of games.
             </p>
@@ -94,6 +99,7 @@ export default function EssaysIndex() {
             <h3 className="text-xl md:text-2xl font-medium text-white group-hover:underline underline-offset-4">
               Architecture
             </h3>
+
             <p className="text-neutral-500 mt-3">
               Conceptual frameworks, diagrams, and industry-level models.
             </p>
@@ -102,12 +108,13 @@ export default function EssaysIndex() {
           {/* Projects Vault Tile */}
           <Link
             href="/projects/vault"
-            className="group block border border-neutral-800 rounded-lg p-6 md:p-10 
+            className="group block border border-neutral-800 rounded-lg p-6 md:p-10
                        hover:bg-neutral-900 transition"
           >
             <h3 className="text-xl md:text-2xl font-medium text-white group-hover:underline underline-offset-4">
               Projects Vault
             </h3>
+
             <p className="text-neutral-500 mt-3">
               Password-protected one-pagers and executive summaries.
             </p>
@@ -116,12 +123,13 @@ export default function EssaysIndex() {
           {/* About Me Tile */}
           <Link
             href="/about"
-            className="group block border border-neutral-800 rounded-lg p-6 md:p-10 
+            className="group block border border-neutral-800 rounded-lg p-6 md:p-10
                        hover:bg-neutral-900 transition"
           >
             <h3 className="text-xl md:text-2xl font-medium text-white group-hover:underline underline-offset-4">
               About Me
             </h3>
+
             <p className="text-neutral-500 mt-3">
               Who I am, what I build, and how to reach me.
             </p>
@@ -133,4 +141,5 @@ export default function EssaysIndex() {
     </main>
   );
 }
+
 // Trigger new deployment with npm
