@@ -141,7 +141,7 @@ export default function VaultIndex() {
                 image="/thumbnails/nc-foundation.jpg"
                 video="/thumbnails/nc-foundation-motion.mp4"
                 alt="NC Foundation"
-                caption="NC—“A conceptual direction for future intelligent systems"
+                caption="NC — A direction for future systems"
               />
             </div>
           </Link>
