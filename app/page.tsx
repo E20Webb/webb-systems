@@ -8,16 +8,14 @@ export default function EssaysIndex() {
 
       {/* Slim Motion Arrow Banner */}
       <div className="mb-8 md:mb-16 flex justify-center">
-        <div className="w-16 h-12 md:w-20 md:h-14 overflow-hidden rounded-lg flex items-center justify-center">
-          <video
-            src="/banners/home-arrow-banner.mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="h-full w-auto max-w-none scale-[3] block"
-          />
-        </div>
+        <video
+          src="/banners/home-arrow-banner.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-20 md:w-24 h-auto block"
+        />
       </div>
 
       {/* Homepage Identity Block */}
