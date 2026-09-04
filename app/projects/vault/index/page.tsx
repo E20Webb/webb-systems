@@ -154,9 +154,7 @@ export default function VaultIndex() {
               NC Foundation
             </Link>
 
-            <p className="text-neutral-500 text-sm uppercase tracking-wide mt-1">
-              Cognitive Architecture
-            </p>
+            {/* ⭐ Subtitle removed */}
           </div>
         </li>
 
