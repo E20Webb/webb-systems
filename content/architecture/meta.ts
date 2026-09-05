@@ -11,10 +11,10 @@ export type ArchitectureMeta = {
 export const architectureMeta: ArchitectureMeta[] = [
 
 {
-  slug: "identity-architecture",
-  title: "The Identity Architecture Games Never Built",
+  slug: "ip-expansion-architecture",
+  title: "The IP Expansion Architecture",
   abstract:
-    "How fantasy-mechanic labels unify identity, cadence, culture, and discovery.",
+    "How aesthetic identity turns franchises into worlds.",
   thumbnailCaption:
     "One world. Infinite doors.",
   category: "Architecture",

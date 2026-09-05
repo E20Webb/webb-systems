@@ -1,6 +1,6 @@
 export const architecture = {
-  "identity-architecture": () =>
-    import("./identity-architecture.mdx"),
+  "ip-expansion-architecture": () =>
+    import("./ip-expansion-architecture.mdx"),
 
   "aesthetic-identity": () =>
     import("./aesthetic-identity.mdx"),

@@ -146,7 +146,7 @@ export default function Thumbnail({ image, video, alt, caption }: ThumbnailProps
           className="
             absolute bottom-0 left-0 right-0
             px-4 py-3
-            text-sm text-neutral-300
+            text-sm text-[#7CFF6B]
             opacity-0
             transition-opacity duration-300 delay-200
             md:group-hover:opacity-100
