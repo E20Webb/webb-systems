@@ -61,7 +61,7 @@ export default function EssaysIndex() {
                   image={essay.thumbnail}
                   video={essay.thumbnailMotion}
                   alt={essay.title}
-                  caption={essay.abstract}
+                  caption={essay.thumbnailCaption}
                 />
               </div>
             </Link>
