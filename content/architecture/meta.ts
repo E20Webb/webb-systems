@@ -8,14 +8,16 @@ export type ArchitectureMeta = {
 };
 
 export const architectureMeta: ArchitectureMeta[] = [
+
 {
   "slug": "identity-architecture",
   "title": "The Identity Architecture Games Never Built",
-  "abstract": "How fantasy‑mechanic labels unify identity, cadence, culture, and discovery.",
+  "abstract": "How fantasy-mechanic labels unify identity, cadence, culture, and discovery.",
   "category": "Architecture",
-  "thumbnail": "/thumbnails/publisher-architecture.jpg",
-  "thumbnailMotion": "/thumbnails/publisher-architecture-motion.mp4"
+  "thumbnail": "/thumbnails/ways-to-skin-a-cat.jpg",
+  "thumbnailMotion": "/thumbnails/ways-to-skin-a-cat.mp4"
 },
+
 {
   slug: "aesthetic-identity",
   title: "The Aesthetic Identity",
@@ -25,14 +27,16 @@ export const architectureMeta: ArchitectureMeta[] = [
   thumbnail: "/thumbnails/aesthetic-identity.jpg",
   thumbnailMotion: "/thumbnails/aesthetic-identity-motion.mp4"
 },
+
 {
   "slug": "publisher-identity-architecture",
   "title": "Publisher Identity Architecture",
-  "abstract": "How fantasy‑mechanic labels create identity lanes that unify catalogs, culture, cadence, and discovery.",
+  "abstract": "How fantasy-mechanic labels create identity lanes that unify catalogs, culture, cadence, and discovery.",
   "category": "Architecture",
-  "thumbnail": "/thumbnails/ways-to-skin-a-cat.jpg",
-  "thumbnailMotion": "/thumbnails/ways-to-skin-a-cat.mp4"
+  "thumbnail": "/thumbnails/publisher-architecture.jpg",
+  "thumbnailMotion": "/thumbnails/publisher-architecture-motion.mp4"
 },
+
 {
   slug: "genre-taxonomy-architecture",
   title: "Genre Taxonomy Architecture",
@@ -42,6 +46,7 @@ export const architectureMeta: ArchitectureMeta[] = [
   thumbnail: "/thumbnails/genre-taxonomy-architecture.jpg",
   thumbnailMotion: "/thumbnails/genre-taxonomy-architecture-motion.mp4"
 },
+
 {
   slug: "catalog-architecture",
   title: "Catalog Architecture: The Platform’s World Model",
@@ -51,6 +56,7 @@ export const architectureMeta: ArchitectureMeta[] = [
   thumbnail: "/thumbnails/catalog-architecture.jpg",
   thumbnailMotion: "/thumbnails/catalog-architecture-motion.mp4"
 },
+
 {
   slug: "taste-graph-problem-architecture",
   title: "Taste Graph Problem Architecture",
@@ -60,6 +66,7 @@ export const architectureMeta: ArchitectureMeta[] = [
   thumbnail: "/thumbnails/taste-graph-problem-architecture.jpg",
   thumbnailMotion: "/thumbnails/taste-graph-problem-architecture-motion.mp4"
 },
+
 {
   slug: "studio-identity-architecture",
   title: "Studio Identity Architecture",
@@ -69,6 +76,7 @@ export const architectureMeta: ArchitectureMeta[] = [
   thumbnail: "/thumbnails/studio-identity-architecture.jpg",
   thumbnailMotion: "/thumbnails/studio-identity-architecture-motion.mp4"
 },
+
 {
   slug: "cultural-infrastructure-architecture",
   title: "Cultural Infrastructure Architecture",
@@ -78,6 +86,7 @@ export const architectureMeta: ArchitectureMeta[] = [
   thumbnail: "/thumbnails/cultural-infrastructure-architecture.jpg",
   thumbnailMotion: "/thumbnails/cultural-infrastructure-architecture-motion.mp4"
 },
+
 {
   slug: "release-cadence-architecture",
   title: "Release Cadence Architecture",
@@ -87,4 +96,5 @@ export const architectureMeta: ArchitectureMeta[] = [
   thumbnail: "/thumbnails/release-cadence-architecture.jpg",
   thumbnailMotion: "/thumbnails/release-cadence-architecture-motion.mp4"
 }
+
 ];
