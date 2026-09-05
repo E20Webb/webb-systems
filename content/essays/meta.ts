@@ -62,7 +62,7 @@ export const essayMeta: EssayMeta[] = [
     slug: "game-ip-mythos-vs-continuity",
     title: "Game IP: Cultural Mythos vs Continuity",
     abstract:
-      "Can games escape the cage of continuity.",
+      "Can games escape the cage of continuity?",
     thumbnailCaption:
       "Mythos needs room to reinterpret.",
     category: "Culture",
