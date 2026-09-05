@@ -72,7 +72,7 @@ export const architectureMeta: ArchitectureMeta[] = [
 
 {
   slug: "taste-graph-problem-architecture",
-  title: "Taste Graph Problem Architecture",
+  title: "The Taste Graph Problem",
   abstract:
     "Why personalization breaks — and how a graph model fixes it.",
   thumbnailCaption:

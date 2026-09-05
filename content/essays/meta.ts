@@ -84,7 +84,7 @@ export const essayMeta: EssayMeta[] = [
 
   {
     slug: "death-of-play",
-    title: "The Death of Play: How the gaming industry lost touch with gamers",
+    title: "The Death of Play",
     abstract:
       "How modern games drifted away from play.",
     thumbnailCaption:
