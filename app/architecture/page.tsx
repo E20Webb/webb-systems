@@ -42,7 +42,7 @@ export default function ArchitectureIndex() {
 
         <p>
           Some of these documents include diagrams, JSON structures, component maps, and
-          multi‑layered frameworks. They’re meant to be read slowly — not as declarations, but as
+          multi-layered frameworks. They’re meant to be read slowly — not as declarations, but as
           working blueprints.
         </p>
 
@@ -63,7 +63,7 @@ export default function ArchitectureIndex() {
                   image={item.thumbnail}
                   video={item.thumbnailMotion}
                   alt={item.title}
-                  caption={item.abstract}
+                  caption={item.thumbnailCaption}
                 />
               </div>
             </Link>
