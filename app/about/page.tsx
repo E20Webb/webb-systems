@@ -17,6 +17,8 @@ export default function AboutPage() {
 
         <p className="text-neutral-400 max-w-prose leading-relaxed text-base md:text-lg">
           Systems architect. Cultural thinker. Platform-level designer.
+          <br />
+          I productize emerging capability through systems architecture.
         </p>
       </section>
 
@@ -25,8 +27,8 @@ export default function AboutPage() {
         <p>
           I design systems that sit above products — frameworks, taxonomies, and architectures that
           reshape how people build, create, and interact. My work spans cultural essays, platform
-          strategy, and large-scale conceptual projects like the Neural Computer and Forge: systems
-          that explore identity, cognition, creativity, and the future of human-computer interaction.
+          strategy, and large-scale systems architectures like Forge: systems that explore identity,
+          creativity, interaction, and the future of digital platforms.
         </p>
 
         <p>

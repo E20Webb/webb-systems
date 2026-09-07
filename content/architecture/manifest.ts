@@ -1,4 +1,8 @@
 export const architecture = {
+
+  "post-launch-architecture": () =>
+    import("./post-launch-architecture.mdx"),
+
   "ip-expansion-architecture": () =>
     import("./ip-expansion-architecture.mdx"),
 
@@ -25,6 +29,7 @@ export const architecture = {
 
   "release-cadence-architecture": () =>
     import("./release-cadence-architecture.mdx"),
+
 };
 
 export type ArchitectureSlug = keyof typeof architecture;
