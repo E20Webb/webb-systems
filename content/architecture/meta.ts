@@ -55,6 +55,24 @@ export const architectureMeta: ArchitectureMeta[] = [
 },
 
 {
+  slug: "advertising-mode-problem-architecture",
+
+  title: "Advertising Is a Mode Problem",
+
+  abstract:
+    "How new play surfaces can create revenue without breaking games.",
+
+  thumbnailCaption:
+    "Monetize curiosity, not frustration.",
+
+  category: "Architecture",
+
+  thumbnail: "/thumbnails/advertising-mode-problem-architecture.jpg",
+
+  thumbnailMotion: "/thumbnails/advertising-mode-problem-architecture-motion.mp4"
+},
+
+{
   slug: "ip-expansion-architecture",
 
   title: "The IP Expansion Architecture",

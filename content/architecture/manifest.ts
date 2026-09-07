@@ -6,6 +6,9 @@ export const architecture = {
   "discord-server-era": () =>
     import("./discord-server-era.mdx"),
 
+  "advertising-mode-problem-architecture": () =>
+    import("./advertising-mode-problem-architecture.mdx"),
+
   "ip-expansion-architecture": () =>
     import("./ip-expansion-architecture.mdx"),
 
