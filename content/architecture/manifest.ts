@@ -3,6 +3,9 @@ export const architecture = {
   "post-launch-architecture": () =>
     import("./post-launch-architecture.mdx"),
 
+  "discord-server-era": () =>
+    import("./discord-server-era.mdx"),
+
   "ip-expansion-architecture": () =>
     import("./ip-expansion-architecture.mdx"),
 
