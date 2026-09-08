@@ -13,22 +13,39 @@ export default function VaultIndex() {
         <h2 className="text-lg md:text-xl font-medium">Orientation</h2>
 
         <p>
-          This vault contains foundational documents from Xbox Forever, Forge, and the NC Framework.
-          These are not marketing materials — they are structural artifacts. Each one describes a
-          component of a larger architecture, built to be read, inspected, and understood at a
-          systems level.
+          This vault contains private architecture from Xbox Forever, Forge, and the NC
+          Framework — systems developed at different scales but through the same method:
+          identify the structural constraint, separate responsibilities, and design the
+          architecture that makes a different outcome possible.
         </p>
 
         <p>
-          Many of these documents map directly to a working repository. The full architecture already
-          exists in code — complete enough to open in VS Code, explore, and begin engineering against.
-          The vault is the narrative layer that explains how those systems fit together.
+          <strong className="text-white">Xbox Forever</strong> explores the platform layer
+          around games — continuity, identity, discovery, community, competition, creation,
+          and long-term ecosystem structure.
         </p>
 
         <p>
-          These documents are provided for private review only. They are living foundations, meant to
-          clarify structure, preserve intent, and support the work of anyone building on top of the
-          architecture.
+          <strong className="text-white">Forge</strong> addresses the production layer —
+          making complex interactive systems more coherent, traceable, predictable, and
+          transferable from design through runtime.
+        </p>
+
+        <p>
+          <strong className="text-white">NC</strong> explores a longer-horizon computing
+          problem: the governed environment persistent intelligence would require to operate
+          across time, contexts, agents, and devices.
+        </p>
+
+        <p>
+          These are not marketing materials. They are narrative views into larger systems
+          architectures. Many of the documents map directly to working repositories containing
+          the underlying models, contracts, structures, and implementation strategy.
+        </p>
+
+        <p>
+          The material here is intentionally limited. Full repositories and deeper
+          architectural documentation are available through direct conversation under NDA.
         </p>
       </section>
 
@@ -49,8 +66,9 @@ export default function VaultIndex() {
       {/* Document Classes */}
       <section className="space-y-4">
         <h2 className="text-lg md:text-xl font-medium">Document Classes</h2>
+
         <ul className="list-disc list-inside text-neutral-300 space-y-1">
-          <li>One‑Pagers</li>
+          <li>One-Pagers</li>
           <li>Executive Briefs</li>
           <li>Architecture Notes</li>
           <li>Strategic Addenda</li>
@@ -62,14 +80,17 @@ export default function VaultIndex() {
         <p className="text-neutral-500 text-sm">Last Updated: July 2026</p>
       </section>
 
-      {/* Request Full Access */}
+      {/* Full Architecture */}
       <section className="space-y-2">
-        <h2 className="text-lg md:text-xl font-medium">Request Full Access</h2>
+        <h2 className="text-lg md:text-xl font-medium">Full Architecture</h2>
+
         <p className="text-neutral-300">
-          Access to the full repository and architectural corpus requires an NDA.
+          The complete repositories and deeper architectural corpus are available for serious
+          review under NDA.
         </p>
+
         <Link
-          href="mailto:Elliott@Webb.Systems?subject=Request%20for%20Full%20Access%20(NDA%20Required)"
+          href="mailto:Elliott@Webb.Systems?subject=Request%20for%20Full%20Architecture%20Access%20(NDA%20Required)"
           className="text-blue-400 hover:underline"
         >
           Contact Elliott@Webb.Systems
@@ -153,8 +174,6 @@ export default function VaultIndex() {
             >
               NC Foundation
             </Link>
-
-            {/* ⭐ Subtitle removed */}
           </div>
         </li>
 

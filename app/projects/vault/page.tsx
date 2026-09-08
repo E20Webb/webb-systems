@@ -8,7 +8,7 @@ export default function VaultLogin() {
   const [show, setShow] = useState(false);
   const router = useRouter();
 
-  // Auto‑redirect if already unlocked
+  // Auto-redirect if already unlocked
   useEffect(() => {
     if (typeof window !== "undefined") {
       if (localStorage.getItem("vault") === "open") {
@@ -23,7 +23,7 @@ export default function VaultLogin() {
     const allowed = process.env.NEXT_PUBLIC_VAULT_PASSWORD?.split(",");
 
     if (allowed?.includes(password)) {
-      localStorage.setItem("vault", "open"); // persist session
+      localStorage.setItem("vault", "open");
       router.push("/projects/vault/index");
     } else {
       alert("Incorrect password.");
@@ -32,9 +32,21 @@ export default function VaultLogin() {
 
   return (
     <main className="mx-auto max-w-md px-6 py-16 md:py-24 space-y-12">
-      <h1 className="text-2xl md:text-3xl font-medium mb-6 md:mb-8">
-        Projects Vault
-      </h1>
+      <section className="space-y-4">
+        <h1 className="text-2xl md:text-3xl font-medium">
+          Projects Vault
+        </h1>
+
+        <p className="text-neutral-300 leading-relaxed">
+          Private architecture, executive briefs, and system-level documentation
+          for Xbox Forever, Forge, and selected long-horizon research.
+        </p>
+
+        <p className="text-neutral-500 text-sm leading-relaxed">
+          Provided for controlled review. Deeper repositories and architectural
+          material are available through direct conversation under NDA.
+        </p>
+      </section>
 
       <form onSubmit={submit} className="space-y-6">
 
