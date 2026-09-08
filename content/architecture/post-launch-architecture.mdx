@@ -232,17 +232,149 @@ A healthy architecture creates an intentional transition:
 
 ```text
 CREATION
-    ↓
+↓
 LAUNCH
-    ↓
+↓
 STABILIZATION
-    ↓
+↓
 STEWARDSHIP
 ```
 
 That transition gives studios something increasingly rare:
 
 **room to make the next thing.**
+
+---
+
+# HANDOFF REQUIRES A DIFFERENT PIPELINE
+
+The organizational model only works if the production architecture supports it.
+
+Most games are not built for institutional transfer.
+
+They are built to ship.
+
+Over years of development, production pipelines accumulate:
+
+- bespoke tools
+- undocumented dependencies
+- runtime-specific knowledge
+- fragile integrations
+- implicit assumptions
+- specialized workflows
+- systems understood primarily by the people who built them
+
+That creates another form of lock-in.
+
+Even if leadership wants to move the original team forward, the game may still depend on them operationally.
+
+```text
+LEGACY PIPELINE
+↓
+BESPOKE KNOWLEDGE
+↓
+ORIGINAL TEAM DEPENDENCY
+↓
+DIFFICULT HANDOFF
+↓
+PERMANENT LIVE-OPS BURDEN
+```
+
+This is why post-launch architecture cannot be solved through staffing alone.
+
+**Stewardship requires transferability.**
+
+A new team needs to be able to understand:
+
+- what a system is supposed to do
+- what depends on it
+- what a change will affect
+- whether the change is valid
+- how content can be authored safely
+- how behavior can be tested before deployment
+- where failures originate
+- how the system should evolve without destabilizing everything around it
+
+That requires a different production pipeline.
+
+```text
+STRUCTURED AUTHORING
+↓
+LEGIBLE CONTRACTS
+↓
+TRACEABLE DEPENDENCIES
+↓
+PREDICTABLE VALIDATION
+↓
+TRANSFERABLE STEWARDSHIP
+```
+
+This is the production problem **Forge** is designed to address.
+
+Forge is a design-time architecture built around a simple separation:
+
+**Designers author intent.  
+Forge validates behavior.  
+Engines execute outcomes.**
+
+Instead of allowing critical knowledge to remain trapped inside implementation details, individual tools, and the memories of the original team, Forge makes more of the production system explicit.
+
+That includes:
+
+- structured authoring
+- deterministic behavior
+- legible system contracts
+- traceable dependencies
+- unified serialization
+- predictable validation
+- modular runtime bindings
+- engine-agnostic representations
+- safer iteration
+- reusable production systems
+
+The objective is not merely faster production.
+
+**It is making complex game systems more transferable.**
+
+```text
+DESIGN INTENT
+↓
+STRUCTURED AUTHORING
+↓
+VALIDATION
+↓
+RUNTIME
+```
+
+That changes the post-launch equation.
+
+A stewardship team should not have to reverse-engineer years of institutional knowledge before it can safely contribute.
+
+It should be able to inherit a production system that explains more of itself.
+
+The architecture should make dependencies visible.
+
+It should make behavior understandable.
+
+It should make changes testable.
+
+It should make authoring safer.
+
+It should reduce how much continued operation depends on knowing which person originally built which piece of the game.
+
+**The pipeline becomes part of the handoff.**
+
+This does not eliminate engineering.
+
+It does not eliminate expertise.
+
+And it does not make every team interchangeable.
+
+It gives specialized teams a more coherent system to inherit.
+
+The original developers can remain vision stewards without remaining the only people capable of operating the machinery.
+
+That is the difference between handing off responsibility and actually handing off capability.
 
 ---
 
@@ -290,7 +422,26 @@ This is where post-launch stops being a studio problem and becomes a platform ar
 
 Systems like **Xbox Forever** can provide continuity across games — identity, presence, discovery, progression, community, and cultural memory that do not disappear every time the player changes software.
 
-Systems like **Forge** can attack the production side — modular authoring, safer iteration, scalable content creation, and more coherent pipelines.
+Systems like **Forge** can provide the production architecture required to make continued creation more coherent — structured authoring, traceable dependencies, predictable validation, reusable systems, and pipelines that can be inherited rather than continually rediscovered.
+
+One addresses continuity above the game.
+
+The other addresses transferability inside the production system.
+
+```text
+FORGE
+Production continuity
+Transferable authoring
+Safer iteration
+        ↓
+GAME + POST-LAUNCH STUDIO
+        ↓
+XBOX FOREVER
+Player continuity
+Discovery
+Community
+Platform context
+```
 
 Neither replaces the game.  
 Neither replaces the studio.
@@ -302,6 +453,8 @@ That distinction matters.
 The future of post-launch should not require every successful game to independently rebuild its own continuity system, creation pipeline, discovery model, social layer, retention machinery, and operational infrastructure.
 
 Platforms should carry more of that burden.
+
+Production systems should carry more of the knowledge.
 
 Studios should carry more of the creativity.
 
@@ -371,6 +524,8 @@ POST-LAUNCH FAILURE
 │
 └── PRODUCTION FAILURE
         Live-ops dependency
+        Knowledge remains trapped
+        Handoffs remain fragile
         Creative exhaustion
         Sequel delays
         Portfolio instability
@@ -394,13 +549,14 @@ How do we reduce live-ops burnout?
 How do we improve retention?  
 How do we sustain communities?  
 How do we stabilize release calendars?  
+How do we make successful games easier to inherit?  
 How do we give successful studios room to create again?
 
 These questions converge on the same missing layer.
 
 Post-launch should not begin after development ends.
 
-It should be architected alongside the game, the studio, and the platform from the beginning.
+It should be architected alongside the game, the production pipeline, the studio, and the platform from the beginning.
 
 Because a modern game does not simply launch and remain.
 
@@ -409,6 +565,7 @@ It accumulates.
 Players accumulate history.  
 Communities accumulate culture.  
 Worlds accumulate meaning.  
+Production systems accumulate dependencies.  
 Studios accumulate obligations.  
 Platforms accumulate responsibility.
 
