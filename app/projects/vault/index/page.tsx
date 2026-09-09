@@ -6,46 +6,60 @@ import Thumbnail from "@/components/Thumbnail";
 export default function VaultIndex() {
   return (
     <main className="mx-auto max-w-3xl px-6 pt-6 pb-16 md:pb-24 space-y-12 md:space-y-16">
-      <h1 className="text-3xl md:text-4xl font-medium mb-8 md:mb-10">Vault</h1>
+      <h1 className="text-3xl md:text-4xl font-medium mb-8 md:mb-10">
+        Vault
+      </h1>
 
       {/* Orientation */}
       <section className="space-y-6 text-neutral-300 leading-relaxed">
         <h2 className="text-lg md:text-xl font-medium">Orientation</h2>
 
         <p>
-          This vault contains private architecture from Xbox Forever, Forge, and the NC
-          Framework — systems developed at different scales but through the same method:
-          identify the structural constraint, separate responsibilities, and design the
+          This vault contains private architecture from Xbox Forever, the
+          Dashboard Launcher Kit, Forge, and the NC Framework — systems
+          developed at different scales but through the same method: identify
+          the structural constraint, separate responsibilities, and design the
           architecture that makes a different outcome possible.
         </p>
 
         <p>
-          <strong className="text-white">Xbox Forever</strong> explores the platform layer
-          around games — continuity, identity, discovery, community, competition, creation,
-          and long-term ecosystem structure.
+          <strong className="text-white">Xbox Forever</strong> explores the
+          platform layer around games — continuity, identity, discovery,
+          community, competition, creation, and long-term ecosystem structure.
         </p>
 
         <p>
-          <strong className="text-white">Forge</strong> addresses the production layer —
-          making complex interactive systems more coherent, traceable, predictable, and
-          transferable from design through runtime.
+          <strong className="text-white">
+            Dashboard Launcher Kit
+          </strong>{" "}
+          explores the delivery layer — a practical way to evolve Xbox Home
+          while creating a path toward the broader Xbox Forever platform
+          vision.
         </p>
 
         <p>
-          <strong className="text-white">NC</strong> explores a longer-horizon computing
-          problem: the governed environment persistent intelligence would require to operate
-          across time, contexts, agents, and devices.
+          <strong className="text-white">Forge</strong> addresses the production
+          layer — making complex interactive systems more coherent, traceable,
+          predictable, and transferable from design through runtime.
         </p>
 
         <p>
-          These are not marketing materials. They are narrative views into larger systems
-          architectures. Many of the documents map directly to working repositories containing
-          the underlying models, contracts, structures, and implementation strategy.
+          <strong className="text-white">NC</strong> explores a longer-horizon
+          computing problem: the governed environment persistent intelligence
+          would require to operate across time, contexts, agents, and devices.
         </p>
 
         <p>
-          The material here is intentionally limited. Full repositories and deeper
-          architectural documentation are available through direct conversation under NDA.
+          These are not marketing materials. They are narrative views into
+          larger systems architectures. Many of the documents map directly to
+          working repositories containing the underlying models, contracts,
+          structures, and implementation strategy.
+        </p>
+
+        <p>
+          The material here is intentionally limited. Full repositories and
+          deeper architectural documentation are available through direct
+          conversation under NDA.
         </p>
       </section>
 
@@ -77,7 +91,9 @@ export default function VaultIndex() {
 
       {/* Last Updated */}
       <section>
-        <p className="text-neutral-500 text-sm">Last Updated: July 2026</p>
+        <p className="text-neutral-500 text-sm">
+          Last Updated: September 2026
+        </p>
       </section>
 
       {/* Full Architecture */}
@@ -85,8 +101,8 @@ export default function VaultIndex() {
         <h2 className="text-lg md:text-xl font-medium">Full Architecture</h2>
 
         <p className="text-neutral-300">
-          The complete repositories and deeper architectural corpus are available for serious
-          review under NDA.
+          The complete repositories and deeper architectural corpus are
+          available for serious review under NDA.
         </p>
 
         <Link
@@ -102,7 +118,10 @@ export default function VaultIndex() {
 
         {/* Xbox Forever */}
         <li>
-          <Link href="/projects/vault/xbox-forever" className="block group">
+          <Link
+            href="/projects/vault/xbox-forever"
+            className="block group"
+          >
             <div className="aspect-[16/9] w-full pointer-events-none">
               <Thumbnail
                 image="/thumbnails/xbox-forever.jpg"
@@ -123,6 +142,36 @@ export default function VaultIndex() {
 
             <p className="text-neutral-500 text-sm uppercase tracking-wide mt-1">
               Platform Strategy
+            </p>
+          </div>
+        </li>
+
+        {/* Dashboard Launcher Kit */}
+        <li>
+          <Link
+            href="/projects/vault/xbox-dashboard-launcher-kit"
+            className="block group"
+          >
+            <div className="aspect-[16/9] w-full pointer-events-none">
+              <Thumbnail
+                image="/thumbnails/dashboard-launcher-kit.jpg"
+                video="/thumbnails/dashboard-launcher-kit-motion.mp4"
+                alt="Dashboard Launcher Kit"
+                caption="A practical first step toward Xbox Forever."
+              />
+            </div>
+          </Link>
+
+          <div className="mt-4">
+            <Link
+              href="/projects/vault/xbox-dashboard-launcher-kit"
+              className="text-xl md:text-2xl font-medium hover:underline underline-offset-4"
+            >
+              Dashboard Launcher Kit
+            </Link>
+
+            <p className="text-neutral-500 text-sm uppercase tracking-wide mt-1">
+              Platform Infrastructure
             </p>
           </div>
         </li>

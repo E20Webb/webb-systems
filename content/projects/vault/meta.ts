@@ -31,5 +31,13 @@ export const vaultMeta: VaultMeta[] = [
     category: "Architecture",
     thumbnail: "/thumbnails/xbox-forever.jpg",
     thumbnailMotion: "/thumbnails/xbox-forever-motion.mp4"
+  },
+  {
+    slug: "xbox-dashboard-launcher-kit",
+    title: "Dashboard Launcher Kit",
+    abstract: "A practical first step toward Xbox Forever.",
+    category: "Platform Infrastructure",
+    thumbnail: "/thumbnails/dashboard-launcher-kit.jpg",
+    thumbnailMotion: "/thumbnails/dashboard-launcher-kit-motion.mp4"
   }
 ];
