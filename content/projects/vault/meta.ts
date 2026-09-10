@@ -16,6 +16,7 @@ export const vaultMeta: VaultMeta[] = [
     thumbnail: "/thumbnails/nc-foundation.jpg",
     thumbnailMotion: "/thumbnails/nc-foundation-motion.mp4"
   },
+
   {
     slug: "forge",
     title: "Forge",
@@ -24,6 +25,7 @@ export const vaultMeta: VaultMeta[] = [
     thumbnail: "/thumbnails/forge.jpg",
     thumbnailMotion: "/thumbnails/forge-motion.mp4"
   },
+
   {
     slug: "xbox-forever",
     title: "Xbox Forever",
@@ -32,6 +34,17 @@ export const vaultMeta: VaultMeta[] = [
     thumbnail: "/thumbnails/xbox-forever.jpg",
     thumbnailMotion: "/thumbnails/xbox-forever-motion.mp4"
   },
+
+  {
+    slug: "xbox-forever-ads",
+    title: "Xbox Forever Ads",
+    abstract:
+      "A platform-native advertising and discovery model built around participation rather than interruption.",
+    category: "Advertising Architecture",
+    thumbnail: "/thumbnails/xbox-forever-ads.jpg",
+    thumbnailMotion: "/thumbnails/xbox-forever-ads-motion.mp4"
+  },
+
   {
     slug: "xbox-dashboard-launcher-kit",
     title: "Dashboard Launcher Kit",

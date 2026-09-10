@@ -15,17 +15,24 @@ export default function VaultIndex() {
         <h2 className="text-lg md:text-xl font-medium">Orientation</h2>
 
         <p>
-          This vault contains private architecture from Xbox Forever, the
-          Dashboard Launcher Kit, Forge, and the NC Framework — systems
-          developed at different scales but through the same method: identify
-          the structural constraint, separate responsibilities, and design the
-          architecture that makes a different outcome possible.
+          This vault contains private architecture from Xbox Forever, Xbox
+          Forever Ads, the Dashboard Launcher Kit, Forge, and the NC Framework
+          — systems developed at different scales but through the same method:
+          identify the structural constraint, separate responsibilities, and
+          design the architecture that makes a different outcome possible.
         </p>
 
         <p>
           <strong className="text-white">Xbox Forever</strong> explores the
           platform layer around games — continuity, identity, discovery,
           community, competition, creation, and long-term ecosystem structure.
+        </p>
+
+        <p>
+          <strong className="text-white">Xbox Forever Ads</strong> explores the
+          economic layer around games — creating platform-native advertising,
+          discovery, and cultural surfaces built around participation rather
+          than interruption.
         </p>
 
         <p>
@@ -142,6 +149,36 @@ export default function VaultIndex() {
 
             <p className="text-neutral-500 text-sm uppercase tracking-wide mt-1">
               Platform Strategy
+            </p>
+          </div>
+        </li>
+
+        {/* Xbox Forever Ads */}
+        <li>
+          <Link
+            href="/projects/vault/xbox-forever-ads"
+            className="block group"
+          >
+            <div className="aspect-[16/9] w-full pointer-events-none">
+              <Thumbnail
+                image="/thumbnails/xbox-forever-ads.jpg"
+                video="/thumbnails/xbox-forever-ads-motion.mp4"
+                alt="Xbox Forever Ads"
+                caption="Monetize curiosity, not frustration."
+              />
+            </div>
+          </Link>
+
+          <div className="mt-4">
+            <Link
+              href="/projects/vault/xbox-forever-ads"
+              className="text-xl md:text-2xl font-medium hover:underline underline-offset-4"
+            >
+              Xbox Forever Ads
+            </Link>
+
+            <p className="text-neutral-500 text-sm uppercase tracking-wide mt-1">
+              Advertising Architecture
             </p>
           </div>
         </li>
