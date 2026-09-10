@@ -35,7 +35,8 @@ export default function AboutPage() {
 
           <p className="mt-5 text-neutral-400 text-base md:text-lg leading-relaxed max-w-3xl">
             My work is about turning that gap into coherent systems,
-            products, platforms, and new possibilities for interaction.
+            products, platforms, and possibilities that weren&apos;t obvious
+            from the individual pieces.
           </p>
         </div>
       </section>
