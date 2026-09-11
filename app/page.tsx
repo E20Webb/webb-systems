@@ -1,8 +1,60 @@
 import Link from "next/link";
 import { essayMeta } from "@/content/essays/meta";
+import { architectureMeta } from "@/content/architecture/meta";
 import Thumbnail from "../components/Thumbnail";
 
-export default function EssaysIndex() {
+const featuredSelections = [
+  {
+    type: "essay",
+    slug: "future-isnt-lost-its-underbuilt",
+  },
+  {
+    type: "essay",
+    slug: "gaming-culture",
+  },
+  {
+    type: "architecture",
+    slug: "discord-server-era",
+  },
+  {
+    type: "essay",
+    slug: "gaming-profits",
+  },
+  {
+    type: "architecture",
+    slug: "advertising-mode-problem-architecture",
+  },
+  {
+    type: "architecture",
+    slug: "post-launch-architecture",
+  },
+] as const;
+
+const featuredWork = featuredSelections.map((selection) => {
+  const source =
+    selection.type === "essay" ? essayMeta : architectureMeta;
+
+  const item = source.find(
+    (entry) => entry.slug === selection.slug
+  );
+
+  if (!item) {
+    throw new Error(
+      `Featured ${selection.type} not found: ${selection.slug}`
+    );
+  }
+
+  return {
+    ...item,
+    type: selection.type === "essay" ? "Essay" : "Architecture",
+    href:
+      selection.type === "essay"
+        ? `/essays/${selection.slug}`
+        : `/architecture/${selection.slug}`,
+  };
+});
+
+export default function HomePage() {
   return (
     <main className="mx-auto max-w-4xl px-6 pt-2 pb-16 md:pb-24">
 
@@ -30,44 +82,50 @@ export default function EssaysIndex() {
         </div>
       </div>
 
-      {/* Essays List */}
-      <div className="space-y-12 md:space-y-20">
-        {essayMeta.map((essay) => (
-          <Link
-            key={essay.slug}
-            href={`/essays/${essay.slug}`}
-            className="group block"
-          >
-            <div className="flex flex-col md:flex-row gap-6 md:gap-10">
+      {/* Selected Work */}
+      <section>
+        <p className="text-xs uppercase tracking-widest text-neutral-500 mb-8 md:mb-10">
+          Selected Work
+        </p>
 
-              {/* Thumbnail */}
-              <div className="shrink-0 w-full h-48 md:w-56 md:h-36">
-                <Thumbnail
-                  image={essay.thumbnail}
-                  video={essay.thumbnailMotion}
-                  alt={essay.title}
-                />
+        <div className="space-y-12 md:space-y-20">
+          {featuredWork.map((item) => (
+            <Link
+              key={`${item.type}-${item.slug}`}
+              href={item.href}
+              className="group block"
+            >
+              <div className="flex flex-col md:flex-row gap-6 md:gap-10">
+
+                {/* Thumbnail */}
+                <div className="shrink-0 w-full h-48 md:w-56 md:h-36">
+                  <Thumbnail
+                    image={item.thumbnail}
+                    video={item.thumbnailMotion}
+                    alt={item.title}
+                  />
+                </div>
+
+                {/* Text Content */}
+                <div className="flex flex-col justify-center">
+                  <p className="text-xs uppercase tracking-widest text-neutral-500 mb-2">
+                    {item.type}
+                  </p>
+
+                  <h2 className="text-3xl font-medium text-white group-hover:underline underline-offset-4">
+                    {item.title}
+                  </h2>
+
+                  <p className="text-neutral-400 mt-3 leading-relaxed max-w-prose">
+                    {item.abstract}
+                  </p>
+                </div>
+
               </div>
-
-              {/* Text Content */}
-              <div className="flex flex-col justify-center">
-                <p className="text-xs uppercase tracking-widest text-neutral-500 mb-2">
-                  {essay.category}
-                </p>
-
-                <h2 className="text-3xl font-medium text-white group-hover:underline underline-offset-4">
-                  {essay.title}
-                </h2>
-
-                <p className="text-neutral-400 mt-3 leading-relaxed max-w-prose">
-                  {essay.abstract}
-                </p>
-              </div>
-
-            </div>
-          </Link>
-        ))}
-      </div>
+            </Link>
+          ))}
+        </div>
+      </section>
 
       {/* Homepage Tiles */}
       <section className="mt-20 md:mt-32 border-t border-neutral-800 pt-12 md:pt-20">
@@ -139,5 +197,3 @@ export default function EssaysIndex() {
     </main>
   );
 }
-
-// Trigger new deployment with npm
