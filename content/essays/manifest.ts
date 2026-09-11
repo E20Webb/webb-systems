@@ -2,6 +2,12 @@ export const essays = {
   "future-isnt-lost-its-underbuilt": () =>
     import("./future-isnt-lost-its-underbuilt.mdx"),
 
+  "gaming-culture": () =>
+    import("./gaming-culture.mdx"),
+
+  "gaming-profits": () =>
+    import("./gaming-profits.mdx"),
+
   "genre-bottleneck": () =>
     import("./genre-bottleneck.mdx"),
 

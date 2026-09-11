@@ -9,7 +9,6 @@ export type EssayMeta = {
 };
 
 export const essayMeta: EssayMeta[] = [
-
   {
     slug: "future-isnt-lost-its-underbuilt",
     title: "The Future Isn’t Lost — It’s Underbuilt",
@@ -20,6 +19,30 @@ export const essayMeta: EssayMeta[] = [
     category: "Culture",
     thumbnail: "/thumbnails/future-isnt-lost-its-underbuilt.jpg",
     thumbnailMotion: "/thumbnails/future-isnt-lost-its-underbuilt-motion.mp4"
+  },
+
+  {
+    slug: "gaming-culture",
+    title: "Gaming Culture",
+    abstract:
+      "Where gaming lived, where it went, and what comes next.",
+    thumbnailCaption:
+      "The technology changed. The gathering didn’t.",
+    category: "Culture",
+    thumbnail: "/thumbnails/gaming-culture.jpg",
+    thumbnailMotion: "/thumbnails/gaming-culture-motion.mp4"
+  },
+
+  {
+    slug: "gaming-profits",
+    title: "Gaming Profits",
+    abstract:
+      "The money between the islands.",
+    thumbnailCaption:
+      "There is money in the gaps.",
+    category: "Culture",
+    thumbnail: "/thumbnails/gaming-profits.jpg",
+    thumbnailMotion: "/thumbnails/gaming-profits-motion.mp4"
   },
 
   {
@@ -93,5 +116,5 @@ export const essayMeta: EssayMeta[] = [
     thumbnail: "/thumbnails/death-of-play.jpg",
     thumbnailMotion: "/thumbnails/death-of-play-motion.mp4"
   }
-
+  
 ];
