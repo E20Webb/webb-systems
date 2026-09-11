@@ -183,7 +183,7 @@ export default function HomePage() {
                        hover:bg-neutral-900 transition"
           >
             <h3 className="text-xl md:text-2xl font-medium text-white group-hover:underline underline-offset-4">
-              About Me
+              About
             </h3>
 
             <p className="text-neutral-500 mt-3">
