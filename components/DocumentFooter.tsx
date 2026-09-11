@@ -56,7 +56,7 @@ export default function DocumentFooter({
           </Link>
 
           <a href="mailto:elliott@webb.systems" className="text-neutral-400 hover:text-white transition">
-            Contact
+            Email
           </a>
         </div>
       </div>
