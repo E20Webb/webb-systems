@@ -2,6 +2,9 @@ export const essays = {
   "future-isnt-lost-its-underbuilt": () =>
     import("./future-isnt-lost-its-underbuilt.mdx"),
 
+   "steam-is-not-a-store": () =>
+    import("./steam-is-not-a-store.mdx"),
+
   "gaming-culture": () =>
     import("./gaming-culture.mdx"),
 
