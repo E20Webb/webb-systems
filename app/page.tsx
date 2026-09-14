@@ -18,11 +18,11 @@ const featuredSelections = [
   },
   {
     type: "essay",
-    slug: "gaming-profits",
+    slug: "steam-is-not-a-store",
   },
   {
-    type: "architecture",
-    slug: "advertising-mode-problem-architecture",
+    type: "essay",
+    slug: "gaming-profits",
   },
   {
     type: "architecture",
@@ -176,7 +176,7 @@ export default function HomePage() {
             </p>
           </Link>
 
-          {/* About Me Tile */}
+          {/* About Tile */}
           <Link
             href="/about"
             className="group block border border-neutral-800 rounded-lg p-6 md:p-10

@@ -20,22 +20,16 @@ export const essayMeta: EssayMeta[] = [
     thumbnail: "/thumbnails/future-isnt-lost-its-underbuilt.jpg",
     thumbnailMotion: "/thumbnails/future-isnt-lost-its-underbuilt-motion.mp4"
   },
-  
+
  {
     slug: "steam-is-not-a-store",
-
     title: "Steam Is Not a Store",
-
     abstract:
       "Why Steam’s advantage comes from the ecosystem that can build around it.",
-
     thumbnailCaption:
       "The store is only one layer.",
-
     category: "Culture",
-
     thumbnail: "/thumbnails/steam-is-not-a-store.jpg",
-
     thumbnailMotion: "/thumbnails/steam-is-not-a-store-motion.mp4"
   },
 
