@@ -3,9 +3,6 @@ export const architecture = {
   "post-launch-architecture": () =>
     import("./post-launch-architecture.mdx"),
 
-  "discord-server-era": () =>
-    import("./discord-server-era.mdx"),
-
   "advertising-mode-problem-architecture": () =>
     import("./advertising-mode-problem-architecture.mdx"),
 

@@ -37,24 +37,6 @@ export const architectureMeta: ArchitectureMeta[] = [
 },
 
 {
-  slug: "discord-server-era",
-
-  title: "The Discord Server Era",
-
-  abstract:
-    "How gaming’s social layer moved outside the platform — and what a platform-native social architecture should do next.",
-
-  thumbnailCaption:
-    "The social layer moved.",
-
-  category: "Architecture",
-
-  thumbnail: "/thumbnails/discord-server-era.jpg",
-
-  thumbnailMotion: "/thumbnails/discord-server-era-motion.mp4"
-},
-
-{
   slug: "advertising-mode-problem-architecture",
 
   title: "Advertising Is a Mode Problem",
