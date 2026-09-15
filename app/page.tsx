@@ -13,10 +13,6 @@ const featuredSelections = [
     slug: "gaming-culture",
   },
   {
-    type: "architecture",
-    slug: "discord-server-era",
-  },
-  {
     type: "essay",
     slug: "steam-is-not-a-store",
   },
