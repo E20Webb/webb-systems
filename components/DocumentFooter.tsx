@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export type RelatedWorkItem = {
-  type: "Essay" | "Architecture";
+  type: "Essay" | "Architecture" | "Research" | "Project";
   title: string;
   href: string;
 };
@@ -31,7 +31,7 @@ export default function DocumentFooter({
                 </p>
 
                 <p className="text-lg font-medium text-white group-hover:underline underline-offset-4">
-                  {item.title} →
+                  {item.title} &rarr;
                 </p>
               </Link>
             ))}
@@ -39,23 +39,36 @@ export default function DocumentFooter({
         </section>
       )}
 
-      <div className={`${related.length > 0 ? "mt-12 border-t border-neutral-800 pt-8" : ""} flex flex-col gap-4 md:flex-row md:items-end md:justify-between`}>
+      <div
+        className={`${
+          related.length > 0
+            ? "mt-12 border-t border-neutral-800 pt-8"
+            : ""
+        } flex flex-col gap-4 md:flex-row md:items-end md:justify-between`}
+      >
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-neutral-500">
             Webb Systems
           </p>
+
           <p className="mt-2 max-w-xl text-sm leading-relaxed text-neutral-500">
-            Essays, architecture, and systems thinking for technology, gaming,
-            and culture.
+            Essays, research, architecture, and systems thinking for technology,
+            gaming, and culture.
           </p>
         </div>
 
         <div className="flex items-center gap-5 text-sm">
-          <Link href="/about" className="text-neutral-400 hover:text-white transition">
+          <Link
+            href="/about"
+            className="text-neutral-400 hover:text-white transition"
+          >
             About
           </Link>
 
-          <a href="mailto:elliott@webb.systems" className="text-neutral-400 hover:text-white transition">
+          <a
+            href="mailto:elliott@webb.systems"
+            className="text-neutral-400 hover:text-white transition"
+          >
             Email
           </a>
         </div>

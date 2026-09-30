@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { xboxDocuments } from "@/content/projects/vault/xbox-forever/meta";
 
+import DocumentFooter from "@/components/DocumentFooter";
+import { getRelatedWork } from "@/content/related-work";
 export default function XboxForeverIndex() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-12 md:py-20 space-y-12">
@@ -74,6 +76,8 @@ export default function XboxForeverIndex() {
           </li>
         ))}
       </ul>
+
+      <DocumentFooter related={getRelatedWork("project", "xbox-forever")} />
     </main>
   );
 }

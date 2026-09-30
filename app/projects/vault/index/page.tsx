@@ -15,39 +15,46 @@ export default function VaultIndex() {
         <h2 className="text-lg md:text-xl font-medium">Orientation</h2>
 
         <p>
-          This vault contains private architecture from Xbox Forever, Xbox
-          Forever Ads, the Dashboard Launcher Kit, Forge, and the NC Framework
-          — systems developed at different scales but through the same method:
-          identify the structural constraint, separate responsibilities, and
-          design the architecture that makes a different outcome possible.
+          This vault contains research and private architecture developed at
+          different scales but through the same method: identify the structural
+          constraint, separate responsibilities, and design the conditions that
+          make a different outcome possible.
+        </p>
+
+        <p>
+          The Vault is organized into two layers.{" "}
+          <strong className="text-white">Research</strong> examines the
+          economic, cultural, and technical conditions shaping a problem.{" "}
+          <strong className="text-white">Projects</strong> explore architectural
+          responses to those conditions.
         </p>
 
         <p>
           <strong className="text-white">Xbox Forever</strong> explores the
-          platform layer around games — continuity, identity, discovery,
+          platform layer around games &mdash; continuity, identity, discovery,
           community, competition, creation, and long-term ecosystem structure.
         </p>
 
         <p>
           <strong className="text-white">Xbox Forever Ads</strong> explores the
-          economic layer around games — creating platform-native advertising,
-          discovery, and cultural surfaces built around participation rather
-          than interruption.
+          economic layer around games &mdash; creating platform-native
+          advertising, discovery, and cultural surfaces built around
+          participation rather than interruption.
         </p>
 
         <p>
           <strong className="text-white">
             Dashboard Launcher Kit
           </strong>{" "}
-          explores the delivery layer — a practical way to evolve Xbox Home
-          while creating a path toward the broader Xbox Forever platform
+          explores the delivery layer &mdash; a practical way to evolve Xbox
+          Home while creating a path toward the broader Xbox Forever platform
           vision.
         </p>
 
         <p>
           <strong className="text-white">Forge</strong> addresses the production
-          layer — making complex interactive systems more coherent, traceable,
-          predictable, and transferable from design through runtime.
+          layer &mdash; making complex interactive systems more coherent,
+          traceable, predictable, and transferable from design through runtime.
         </p>
 
         <p>
@@ -57,10 +64,11 @@ export default function VaultIndex() {
         </p>
 
         <p>
-          These are not marketing materials. They are narrative views into
-          larger systems architectures. Many of the documents map directly to
-          working repositories containing the underlying models, contracts,
-          structures, and implementation strategy.
+          These are not marketing materials. The research establishes the
+          conditions and arguments behind the work, while the project documents
+          provide narrative views into larger systems architectures. Many of
+          the projects map directly to working repositories containing the
+          underlying models, contracts, structures, and implementation strategy.
         </p>
 
         <p>
@@ -89,6 +97,7 @@ export default function VaultIndex() {
         <h2 className="text-lg md:text-xl font-medium">Document Classes</h2>
 
         <ul className="list-disc list-inside text-neutral-300 space-y-1">
+          <li>Research Essays</li>
           <li>One-Pagers</li>
           <li>Executive Briefs</li>
           <li>Architecture Notes</li>
@@ -120,8 +129,66 @@ export default function VaultIndex() {
         </Link>
       </section>
 
-      {/* Existing Vault Items */}
-      <ul className="space-y-12 md:space-y-16 pt-10">
+      {/* Research */}
+      <section className="border-t border-neutral-800 pt-10 space-y-6">
+        <div className="space-y-3">
+          <p className="text-xs uppercase tracking-[0.2em] text-neutral-500">
+            Research
+          </p>
+
+          <h2 className="text-2xl md:text-3xl font-medium text-white">
+            Research
+          </h2>
+
+          <p className="text-neutral-400 leading-relaxed max-w-2xl">
+            Independent analysis of the economic, cultural, and technical
+            conditions behind the systems in this Vault. These pieces examine
+            the evidence, incentives, and structural forces that precede the
+            architectural response.
+          </p>
+        </div>
+
+        <Link
+          href="/projects/vault/research"
+          className="group block rounded-lg border border-neutral-800 p-6 md:p-8 hover:bg-neutral-900 transition"
+        >
+          <p className="text-xs uppercase tracking-[0.18em] text-neutral-500 mb-3">
+            Research Collection
+          </p>
+
+          <h3 className="text-xl md:text-2xl font-medium text-white group-hover:underline underline-offset-4">
+            Explore the Research
+          </h3>
+
+          <p className="mt-3 text-neutral-400 leading-relaxed">
+            Platform economics, culture, infrastructure, trust, production,
+            and the structural conditions behind the projects.
+          </p>
+
+          <p className="mt-5 text-sm text-green-400 group-hover:text-green-300 transition">
+            Browse Research &rarr;
+          </p>
+        </Link>
+      </section>
+
+      {/* Projects */}
+      <section className="border-t border-neutral-800 pt-10">
+        <p className="text-xs uppercase tracking-[0.2em] text-neutral-500 mb-3">
+          Projects
+        </p>
+
+        <h2 className="text-2xl md:text-3xl font-medium text-white">
+          Projects
+        </h2>
+
+        <p className="mt-3 text-neutral-400 leading-relaxed max-w-2xl">
+          Architectural responses developed from the structural problems,
+          opportunities, and conditions explored throughout the Vault.
+        </p>
+      </section>
+
+      {/* Vault Projects */}
+      <ul className="space-y-12 md:space-y-16">
 
         {/* Xbox Forever */}
         <li>
@@ -248,7 +315,7 @@ export default function VaultIndex() {
                 image="/thumbnails/nc-foundation.jpg"
                 video="/thumbnails/nc-foundation-motion.mp4"
                 alt="NC Foundation"
-                caption="NC — A direction for future systems"
+                caption="NC - A direction for future systems"
               />
             </div>
           </Link>

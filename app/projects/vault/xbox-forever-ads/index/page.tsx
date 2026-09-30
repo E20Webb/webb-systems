@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { xboxForeverAdsDocuments } from "@/content/projects/vault/xbox-forever-ads/meta";
 
+import DocumentFooter from "@/components/DocumentFooter";
+import { getRelatedWork } from "@/content/related-work";
 export default function XboxForeverAdsIndex() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-12 md:py-20 space-y-12">
@@ -83,6 +85,8 @@ export default function XboxForeverAdsIndex() {
           </li>
         ))}
       </ul>
+
+      <DocumentFooter related={getRelatedWork("project", "xbox-forever-ads")} />
     </main>
   );
 }

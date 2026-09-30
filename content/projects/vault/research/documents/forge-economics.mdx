@@ -1,0 +1,1179 @@
+<div className="not-prose mb-20">
+  <div className="text-sm uppercase tracking-[0.2em] text-gray-500 mb-5">
+    Webb Systems Research
+  </div>
+
+  <h1 className="text-5xl md:text-6xl font-semibold tracking-tight text-white">
+    FORGE Economics
+  </h1>
+
+  <p className="text-xl md:text-2xl text-gray-400 mt-5 max-w-3xl leading-relaxed">
+    The financial case for reusable game-production architecture.
+  </p>
+</div>
+
+Games are expensive. That is not the interesting part.
+
+The interesting part is how much of that expense has to be paid again.
+
+Every large game leaves behind the thing players see: the finished product. But during production, a studio also builds something less visible. It develops tools, workflows, validation practices, integration logic, performance knowledge, authoring conventions, deployment processes, debugging habits, and institutional understanding of how to make that particular game work.
+
+Some of that capability survives.
+
+Too much of it does not.
+
+The next project changes engines, changes tools, changes schemas, changes assumptions, changes teams, or simply begins with a sufficiently different architecture that large portions of the production machinery have to be rebuilt, relearned, or rediscovered.
+
+At AAA scale, that is no longer a tooling inconvenience.
+
+It is a capital-allocation problem.
+
+<div className="border-l-4 border-blue-500 pl-6 py-4 my-12 text-gray-200 text-xl leading-relaxed">
+  <strong>FORGE is an architecture for turning game-production capability from something each project consumes into something the portfolio accumulates.</strong>
+</div>
+
+<div className="not-prose mt-24 mb-8">
+  <div className="text-base tracking-[0.2em] uppercase text-gray-500 mb-3">
+    I.
+  </div>
+
+  <h2 className="text-3xl font-semibold tracking-tight text-white">
+    The Engine Should Be an Engine
+  </h2>
+</div>
+
+In 2024, Halo Studios explained why it was moving Halo development from its proprietary Slipspace Engine to Unreal Engine.
+
+The explanation was revealing.
+
+Xbox said a large portion of the staff at 343 Industries had been required simply to develop and maintain Slipspace. Studio Head Pierre Hintze described *Halo Infinite* as a project in which the team had been developing the game and a technology stack intended to support its future at the same time. COO Elizabeth van Wyck connected the move to Unreal not only to getting games to market, but to updating them, delivering new content, recruiting developers, and shortening the time required before a new employee could create something that actually appeared in the game.
+
+There is nothing unusual about wanting proprietary technology. Engines matter. Rendering matters. Physics, networking, animation, input, memory management, asset streaming, and platform integration matter.
+
+But there is a second category of work that often grows around the engine.
+
+Narrative tools.
+
+Encounter tools.
+
+Pacing systems.
+
+World-state configuration.
+
+Content workflows.
+
+Live-operations tooling.
+
+Validation.
+
+Performance governance.
+
+Deployment processes.
+
+The distinction matters because those problems do not all inherently belong to the runtime engine.
+
+CD Projekt described a similar cost when explaining its move from REDengine to Unreal Engine 5. Its CTO said substantial resources and energy had previously gone into evolving and adapting REDengine for each subsequent release, and the company expected the Unreal partnership to improve development predictability and efficiency.
+
+The lesson is not that proprietary engines are bad.
+
+The lesson is that an engine can gradually become responsible for far more than being an engine.
+
+<div className="not-prose my-16">
+  <p className="text-3xl md:text-4xl font-semibold tracking-tight text-white leading-tight">
+    A game engine should not have to carry the entire studio.
+  </p>
+</div>
+
+FORGE begins by separating those responsibilities.
+
+Its architecture defines it as a **Game Design Authoring Engine**: a design-time platform where systems, encounters, pacing, world logic, and narrative structures are authored and validated as deterministic, engine-agnostic contracts. It does not replace Unreal, Unity, or a proprietary runtime.
+
+The engine runs the game.
+
+FORGE defines more of the machinery used to design it.
+
+That separation changes the economics.
+
+<div className="not-prose mt-24 mb-8">
+  <div className="text-base tracking-[0.2em] uppercase text-gray-500 mb-3">
+    II.
+  </div>
+
+  <h2 className="text-3xl font-semibold tracking-tight text-white">
+    The Hidden Asset Inside a Game Budget
+  </h2>
+</div>
+
+Recent disclosures illustrate how large modern development investments have become.
+
+Court documents exposed development budgets of roughly $220 million for *The Last of Us Part II* and $212 million for *Horizon Forbidden West*.
+
+Activision disclosed even larger lifecycle development expenditures for several Call of Duty titles: more than $450 million for *Black Ops III*, more than $640 million for *Modern Warfare*, and more than $700 million for *Black Ops Cold War*.
+
+Those numbers do not tell us what FORGE would save.
+
+They establish something more important.
+
+At this scale, production capability itself is valuable enough to treat as an asset.
+
+A $200 million game does not merely buy levels, characters, animation, code, and art. It also pays hundreds of people to discover how to build the game: how content should be authored, how systems communicate, how performance limits are managed, how errors are detected, how changes are deployed, and how different disciplines coordinate.
+
+The visible asset is the game.
+
+The invisible asset is the factory that learned how to make it.
+
+Yet the accounting logic of game production frequently behaves as though only the first asset matters.
+
+When the project ends, teams reorganize. Tools become project-specific. Knowledge leaves with employees. A sequel starts with a different technical environment. Another studio solves a similar problem independently.
+
+The next game pays again.
+
+FORGE is designed around a different premise. Its systemic workflow packages authored capability into reusable Bundles and defines the architecture independently of any particular game, implementation, or engine.
+
+<div className="border-l-4 border-blue-500 pl-6 py-4 my-12 text-gray-200 text-xl leading-relaxed">
+  <strong>How much of the money spent making one game can reduce the cost, time, or risk of making the next one?</strong>
+</div>
+
+That is the question FORGE Economics is really about.
+
+<div className="not-prose mt-24 mb-8">
+  <div className="text-base tracking-[0.2em] uppercase text-gray-500 mb-3">
+    III.
+  </div>
+
+  <h2 className="text-3xl font-semibold tracking-tight text-white">
+    Separate the Factory From the Product
+  </h2>
+</div>
+
+Reuse is often misunderstood in creative industries.
+
+The goal is not to make every game use the same mechanics.
+
+It is not to make every studio look alike.
+
+It is not to standardize art direction, narrative structure, level design, combat, or creative identity.
+
+And it does not require every team to use the same runtime engine.
+
+The reusable thing is the **production capability underneath the creative work**.
+
+FORGE's engine-agnostic core includes schemas, Bundles, systemic logic, pacing, world state, factions, hazards, state machines, presentation definitions, interaction definitions, validation rules, serialization, hot-reload rules, the export pipeline, and DCS authoring workflows. Those remain independent of the engine even after Engine Anchoring.
+
+Rendering and physics can remain Unreal problems.
+
+The game can remain a Halo problem.
+
+The production architecture can become a portfolio asset.
+
+<div className="not-prose my-16">
+  <p className="text-4xl md:text-5xl font-semibold tracking-tight text-white">
+    Reuse the factory, not the product.
+  </p>
+</div>
+
+This matters because shared technology already has an established economic rationale.
+
+EA has described Frostbite's common foundation as a way to prevent redundant investment, make higher-level technology easier to share, and improve development velocity. It has also acknowledged the governance problem created by shared technology: studios need enough flexibility that the common platform does not become a constraint.
+
+Ubisoft has gone further in explicitly financial language. In FY2024 it said it had consolidated and “mutualized” technology assets to achieve economies of scale, including reducing Anvil and Snowdrop to common reference branches shared across projects.
+
+FORGE pushes the principle into a different layer.
+
+Instead of requiring one engine to become the shared factory, it attempts to make more of the factory **survive above the engine**.
+
+<div className="not-prose mt-24 mb-8">
+  <div className="text-base tracking-[0.2em] uppercase text-gray-500 mb-3">
+    IV.
+  </div>
+
+  <h2 className="text-3xl font-semibold tracking-tight text-white">
+    Time to First Playable
+  </h2>
+</div>
+
+Before a studio knows whether a game is good, it is spending money on a hypothesis.
+
+That makes time to playable one of the most important financial variables in development.
+
+The earlier a team can play a meaningful representation of an idea, the earlier it can learn whether that idea deserves more money.
+
+FORGE changes that timeline because substantial design work can begin before Engine Anchoring.
+
+Before binding to Unreal, Unity, or another runtime, FORGE can already perform systemic authoring, deterministic simulation, validation, pacing, world-state modeling, faction and hazard configuration, state-machine work, and interaction and presentation definition.
+
+Its architecture is explicit that Mode, Modernization, Live Ops, and Debug Bundles can be authored without engine binding.
+
+Consider two designers working on the same game.
+
+One believes the central loop should emphasize slower tactical encounters, smaller enemy populations, and deeper systemic interactions.
+
+Another believes the same game works better with faster pacing, larger encounters, and different objective structures.
+
+FORGE allows those ideas to become structured systemic models in parallel while the engine team continues its work.
+
+The designers can simulate, validate, alter, and compare those structures before the entire runtime production environment is complete. Game modes in FORGE are data-driven compositions, and the architecture explicitly encourages modular objectives, factions, pacing, and world logic so that modes can evolve without destructive overrides.
+
+Once the required runtime surfaces are anchored, those authored structures can drive actual gameplay rather than being thrown away and rebuilt.
+
+The industry already understands the value of this principle in simpler forms. Epic recommends grayboxing precisely because gameplay can be tested before finished art exists, allowing design problems to be discovered before expensive assets have to be redone. Snowdrop was built around similarly fast iteration; Massive describes its data-driven approach as allowing non-programmers to try ideas without waiting for a programmer to become available.
+
+FORGE extends that idea beyond blockout.
+
+It is not merely trying to make the first level playable sooner.
+
+It is trying to let more of the **game's systemic structure exist sooner**.
+
+<div className="border-l-4 border-blue-500 pl-6 py-4 my-12 text-gray-200 text-xl leading-relaxed">
+  <strong>The purpose of a prototype is not to prove that the team can build the game. It is to discover which game deserves to be built.</strong>
+</div>
+
+The faster that question can be answered, the less money has to be spent guessing.
+
+<div className="not-prose mt-24 mb-8">
+  <div className="text-base tracking-[0.2em] uppercase text-gray-500 mb-3">
+    V.
+  </div>
+
+  <h2 className="text-3xl font-semibold tracking-tight text-white">
+    Move Work Off the Critical Path
+  </h2>
+</div>
+
+Speed is usually discussed as though every task simply needs to become faster.
+
+That misses a larger source of cost.
+
+Some work is expensive because it is waiting.
+
+An artist cannot finalize an asset because the encounter keeps changing.
+
+A designer cannot test an idea because the required tool does not exist yet.
+
+A writer cannot validate a branch because the narrative logic still has to be implemented.
+
+A technical artist waits for engineering.
+
+Engineering waits for design.
+
+QA waits for integration.
+
+The people do not disappear while the dependency is unresolved.
+
+They remain on payroll.
+
+This makes blocked capacity a financial category.
+
+If a production requires A to finish before B can begin, the duration of A affects the cost of B even if B's actual task never changes.
+
+FORGE attacks that dependency structure.
+
+Engine work can continue while designers author and simulate systemic behavior.
+
+Narrative work can proceed inside structured dialogue tools.
+
+Performance assumptions can be evaluated before engine binding.
+
+Content requirements can begin emerging before every final asset exists.
+
+Validation can occur while work is being authored rather than waiting for an integration milestone.
+
+Massive described the traditional version of this problem directly when discussing Snowdrop: having an idea but needing to wait for one or two programmers to have enough bandwidth to try it was itself a production roadblock.
+
+<div className="not-prose my-16">
+  <p className="text-3xl md:text-4xl font-semibold tracking-tight text-white leading-tight">
+    FORGE does not merely shorten the critical path. It moves work off the critical path.
+  </p>
+</div>
+
+That changes the utilization of an entire team.
+
+<div className="not-prose mt-24 mb-8">
+  <div className="text-base tracking-[0.2em] uppercase text-gray-500 mb-3">
+    VI.
+  </div>
+
+  <h2 className="text-3xl font-semibold tracking-tight text-white">
+    Design Before Production Debt
+  </h2>
+</div>
+
+Fast prototyping also changes what happens to art.
+
+Artists will always revise work. Creative iteration is not waste.
+
+But there is another kind of rework: producing assets against assumptions that later prove structurally wrong.
+
+An encounter changes.
+
+The population changes.
+
+The timing changes.
+
+The environment no longer supports the gameplay.
+
+Performance turns out to be impossible.
+
+An animation requirement disappears.
+
+A system is cut.
+
+Then finished or partially finished work has to be rebuilt around the new reality.
+
+FORGE's Content Requirements system provides a different sequence. Its Asset Binding Panel can generate production-facing packages describing required animation, VFX, audio, UI, camera, and environment assets, including asset lists, missing assets, fallback assets, binding metadata, content hooks, and runtime requirements.
+
+The Asset Authoring Station then governs the definition and validation of characters, props, items, FX, environmental objects, UI elements, and systemic entities throughout the wider production model.
+
+This does not mean FORGE somehow knows the final art before artists create it.
+
+It means more of what the game **requires** can become explicit before expensive production work accumulates around unstable assumptions.
+
+**Traditional:**  
+Design assumption → asset production → gameplay changes → asset rework
+
+**FORGE:**  
+Systemic design → simulation → validation → requirements → asset production → runtime refinement
+
+<div className="border-l-4 border-blue-500 pl-6 py-4 my-12 text-gray-200 text-xl leading-relaxed">
+  <strong>Prove the behavior before paying to finish everything around it.</strong>
+</div>
+
+That is not merely an art benefit.
+
+It is avoided production debt.
+
+<div className="not-prose mt-24 mb-8">
+  <div className="text-base tracking-[0.2em] uppercase text-gray-500 mb-3">
+    VII.
+  </div>
+
+  <h2 className="text-3xl font-semibold tracking-tight text-white">
+    Time to First Affordable Playable
+  </h2>
+</div>
+
+A prototype can prove that an idea is fun and still lie about whether the final game can afford it.
+
+Prototype assets are simpler.
+
+AI populations are smaller.
+
+Animation is incomplete.
+
+VFX is temporary.
+
+Streaming pressure is absent.
+
+The production version arrives months later and reveals that the original idea costs far more than expected.
+
+FORGE treats performance as part of design rather than something discovered after design.
+
+Before Engine Anchoring, it uses abstract, engine-agnostic cost models. After anchoring, those models bind to engine-specific performance contracts covering real asset, systemic-update, presentation, spawn, memory, streaming, CPU, and GPU costs.
+
+Once bound, the engine provides the real cost model: meshes, materials and shaders, animation, VFX, audio, UI, systemic updates, memory, and streaming become actual runtime costs validated against the engine.
+
+And the information is not hidden inside a profiler used only by technical specialists.
+
+FORGE surfaces performance through timeline overlays, composition heatmaps, subsystem cost bars, per-asset cost breakdowns, and export reports. Designers see the effect of their decisions while they are making them.
+
+The important progression is:
+
+**Is the idea systemically viable?**
+
+Then:
+
+**Is the idea computationally plausible?**
+
+Then:
+
+**What does the idea actually cost in the target engine?**
+
+The earlier answer is an estimate.
+
+The later answer is runtime truth.
+
+But they are part of the same design process.
+
+<div className="not-prose my-16">
+  <p className="text-3xl md:text-4xl font-semibold tracking-tight text-white leading-tight">
+    A FORGE prototype is not only asking whether an idea works. It is already asking what the idea costs.
+  </p>
+</div>
+
+Time to first playable matters.
+
+**Time to first affordable playable matters more.**
+
+<div className="not-prose mt-24 mb-8">
+  <div className="text-base tracking-[0.2em] uppercase text-gray-500 mb-3">
+    VIII.
+  </div>
+
+  <h2 className="text-3xl font-semibold tracking-tight text-white">
+    Correctness Before QA
+  </h2>
+</div>
+
+Performance is only one form of production debt.
+
+Incorrectness is another.
+
+Traditional game production often allows invalid work to travel surprisingly far.
+
+A designer authors something.
+
+It gets integrated.
+
+A build is produced.
+
+QA discovers a problem.
+
+Someone traces the cause.
+
+The original work is reopened.
+
+It is corrected.
+
+It is integrated again.
+
+QA retests it.
+
+The expensive part is not necessarily the fix.
+
+It is the distance the defect traveled before becoming visible.
+
+FORGE's Production Model Guarantees are deliberately stronger than a conventional “better tools reduce bugs” promise. They define safe authoring, deterministic and reproducible runtime behavior, correctness enforcement through Coherence, integration without hidden coupling, and no late-stage integration failures within the FORGE production model.
+
+The Coherence Layer continuously examines the authored and systemic world for structural validity, reachability, contradictions, softlocks, narrative inconsistencies, systemic instability, and unintended outcomes.
+
+That changes what a defect is.
+
+An unreachable branch does not have to become a shipped bug.
+
+An impossible world-state transition does not have to become a QA discovery.
+
+A broken dependency does not have to become an integration mystery.
+
+Within the surfaces FORGE governs, invalidity becomes an **authoring failure**.
+
+<div className="border-l-4 border-blue-500 pl-6 py-4 my-12 text-gray-200 text-xl leading-relaxed">
+  <strong>The cheapest bug is not the one fixed quickly. It is the one the production system never allows to become a bug.</strong>
+</div>
+
+This does not make every software layer infallible.
+
+A graphics-driver defect is not a FORGE authoring error. Neither is a renderer defect, a faulty external SDK, a hardware problem, or a bug in FORGE's own implementation. The architecture cannot govern systems it does not control.
+
+But that boundary should not obscure what it does control.
+
+For FORGE-authored work, correctness moves upstream.
+
+QA can spend less time discovering structural mistakes the production system already knows how to identify and more time answering the questions humans are better at answering:
+
+Does this feel good?
+
+Is it fun?
+
+Is the difficulty right?
+
+Does the story land?
+
+Does this encounter communicate what the designer intended?
+
+That is a better use of QA than finding an unreachable branch after a milestone build.
+
+<div className="not-prose mt-24 mb-8">
+  <div className="text-base tracking-[0.2em] uppercase text-gray-500 mb-3">
+    IX.
+  </div>
+
+  <h2 className="text-3xl font-semibold tracking-tight text-white">
+    Adoption Without the Leap of Faith
+  </h2>
+</div>
+
+None of this matters if introducing FORGE requires a studio to stop production, migrate everything, retrain everyone, and bet a game on the result.
+
+Enterprise technology often asks for trust before it has earned it.
+
+FORGE does not need to.
+
+Consider something as bounded as dialogue authoring.
+
+Its Dialogue Tree Tool is designed to replace branching-dialogue spreadsheets, scripting, and disconnected external tools with a visual systemic interface that provides schema-driven output and real-time feedback on reachability, visibility, and contradictions.
+
+A studio does not need to begin by asking:
+
+“Should our entire production organization move to FORGE?”
+
+It can ask:
+
+“Are our writers losing time managing branching dialogue this way?”
+
+Then install the tool where the pain exists.
+
+Measure authoring time.
+
+Measure handoffs.
+
+Measure errors.
+
+Measure revision time.
+
+If it works, FORGE has earned another surface.
+
+That approach has precedent far beyond games. Carnegie Mellon's Software Engineering Institute has long treated reusable platform capability as an up-front investment that must earn payback through reuse, and specifically describes organizations favoring incremental adoption beginning with the highest-value common areas rather than financing the entire platform first.
+
+Modern platform-engineering guidance reaches a similar conclusion: start with the common path that can become demonstrably better, prove value, and expand from there.
+
+**Evaluate → pilot → measure → expand**
+
+not
+
+**Migrate → disrupt → commit → hope**
+
+<div className="not-prose my-16">
+  <p className="text-3xl md:text-4xl font-semibold tracking-tight text-white leading-tight">
+    FORGE does not require adoption before value. It uses value as the path to adoption.
+  </p>
+</div>
+
+<div className="not-prose mt-24 mb-8">
+  <div className="text-base tracking-[0.2em] uppercase text-gray-500 mb-3">
+    X.
+  </div>
+
+  <h2 className="text-3xl font-semibold tracking-tight text-white">
+    Launch Is Not the End of Production
+  </h2>
+</div>
+
+For many modern games, launch is the beginning of another production cycle.
+
+Modes change.
+
+Events arrive.
+
+Balance changes.
+
+Narrative content expands.
+
+Items are added.
+
+Systems are tuned.
+
+Players expose problems nobody predicted.
+
+A live game can remain in production for years.
+
+That means a production architecture that saves money only before launch is leaving a large part of the problem untouched.
+
+FORGE's deployment model explicitly supports systemic hotfixes, upgrades, pacing adjustments, faction tuning, hazard and crisis tuning, event changes, presentation tuning, mode updates, and modernization rollouts as **data rather than code**.
+
+Its game-mode architecture similarly treats modes as data-driven compositions that can be packaged and hot-swapped without turning each one into a new engine feature.
+
+That creates a useful economic question:
+
+<div className="border-l-4 border-blue-500 pl-6 py-4 my-12 text-gray-200 text-xl leading-relaxed">
+  <strong>How much post-launch engineering exists because content changes are unnecessarily coupled to engine work?</strong>
+</div>
+
+If a pacing adjustment can remain an authored data change, it should not have to become a low-level programming task.
+
+If a new event can be created through validated systemic tools, it should not require the same production path as a new engine capability.
+
+If a cosmetic item can be created, bound, validated, performance-checked, and packaged through the governed asset pipeline, its addition should not create unrelated instability elsewhere in the game.
+
+If a campaign expansion uses the same quest, dialogue, progression, world-state, and Composition Surfaces that already govern the shipped title, its authors are not rebuilding the machinery required to express those structures. FORGE's Composition Surfaces explicitly assemble quests, beats, arcs, chapters, faction structures, environmental structures, and presentation structures. Its Sheets include dialogue, quest, and progression models alongside combat, navigation, and world-state configuration.
+
+There is a real boundary.
+
+FORGE cannot magically add an engine capability that the shipped game has no way to expose. Features Mode works where runtime systems, configuration layers, scripting surfaces, mod hooks, data tables, live-operations systems, or content pipelines provide something FORGE can bind to.
+
+A new renderer is still an engineering problem.
+
+A fundamental networking change is still an engineering problem.
+
+But that distinction creates a useful principle:
+
+> **Engineers should work on things that actually require engineering.**
+
+Routine content production should not repeatedly become an engine problem.
+
+<div className="not-prose mt-24 mb-8">
+  <div className="text-base tracking-[0.2em] uppercase text-gray-500 mb-3">
+    XI.
+  </div>
+
+  <h2 className="text-3xl font-semibold tracking-tight text-white">
+    What If Slipspace Only Had to Be Slipspace?
+  </h2>
+</div>
+
+Halo Infinite provides a useful counterfactual because we know what actually happened well enough to separate documented history from architectural speculation.
+
+In early 2022, 343 was simultaneously addressing player-facing problems, completing Season 2, building Campaign Co-op, continuing Forge development, and working on Season 3. The studio publicly acknowledged that it needed to deliver more content and features faster while maintaining a sustainable development rhythm.
+
+In 2023, Halo Infinite went so far as to separate Campaign and Multiplayer assets that had previously been shared. Halo Support said the purpose was to reduce the possibility that a change in Multiplayer would unexpectedly affect Campaign.
+
+Then came the 2024 engine transition.
+
+Halo Studios said Slipspace required substantial staffing to maintain, that *Infinite* had involved building both the technology stack and the game, and that Unreal would improve recruiting, ramp-up, updates, and the speed at which new content could reach players.
+
+None of that proves FORGE would have “fixed Halo Infinite.”
+
+The more useful question is different.
+
+Suppose Slipspace had reached a stable runtime state.
+
+What if Slipspace then only had to be Slipspace?
+
+It could handle rendering.
+
+Physics.
+
+Networking.
+
+Animation.
+
+Input.
+
+Platform-specific execution.
+
+The things an engine should be responsible for.
+
+FORGE could sit above it.
+
+Designers could use a common authoring environment for systemic content.
+
+Campaign structures could be composed through quests, arcs, chapters, and world state.
+
+Modes could become modular Bundles.
+
+Performance costs could be modeled and then bound to Slipspace's actual runtime profile.
+
+Coherence could reject invalid authored states before deployment.
+
+Live content could move through validated data pipelines.
+
+Items and other authored assets could pass through common lifecycle, binding, and validation rules.
+
+Then ask the harder question:
+
+<div className="not-prose my-16">
+  <p className="text-3xl md:text-4xl font-semibold tracking-tight text-white leading-tight">
+    Would Halo Studios have needed to replace Slipspace to solve production problems that no longer had to belong to Slipspace?
+  </p>
+</div>
+
+Maybe it still would have.
+
+Unreal could still have been the better renderer, better recruitment platform, or better long-term runtime.
+
+FORGE does not answer that decision for Halo Studios.
+
+It changes what that decision means.
+
+The studio could evaluate engines primarily as engines rather than as containers for years of accumulated production logic.
+
+And if it still chose Unreal, more of the production model above the engine could survive the transition.
+
+That is the larger architecture.
+
+<div className="not-prose mt-24 mb-8">
+  <div className="text-base tracking-[0.2em] uppercase text-gray-500 mb-3">
+    XII.
+  </div>
+
+  <h2 className="text-3xl font-semibold tracking-tight text-white">
+    Production Knowledge That Travels
+  </h2>
+</div>
+
+Halo Studios' recruiting argument is important because it exposes another hidden development cost.
+
+A developer can be highly experienced and still become temporarily less productive when joining a new production environment.
+
+Halo Studios said developers joining 343 previously had to learn Slipspace, while Unreal gives new hires a much shorter technical on-ramp because so many developers already know it.
+
+CD Projekt made the same point in its investor materials: adopting Unreal broadened recruiting opportunities because the engine was already familiar to a large developer pool.
+
+Microsoft's own research on developer onboarding similarly notes that skilled new hires often take several weeks to reach the productivity of established employees and identifies unfamiliarity with processes as one factor in that ramp-up.
+
+Unreal solves one part of that problem.
+
+It makes **engine literacy** more transferable.
+
+FORGE creates the possibility of doing the same thing higher in the stack.
+
+A developer may already understand Unreal and still need to learn:
+
+how this studio expresses world state,
+
+how it authors encounters,
+
+how dialogue dependencies work,
+
+how content is validated,
+
+how performance decisions are communicated,
+
+how live content gets packaged,
+
+how modes are constructed,
+
+how systemic logic reaches the runtime.
+
+Those workflows are often studio-specific.
+
+FORGE cannot eliminate the need to learn a new game's creative identity.
+
+It should not.
+
+But it can reduce how much of the production environment itself must become project-specific.
+
+<div className="not-prose my-16">
+  <p className="text-3xl md:text-4xl font-semibold tracking-tight text-white leading-tight">
+    Unreal can standardize the engine layer. FORGE can standardize more of the production layer above it.
+  </p>
+</div>
+
+That creates **transferable production literacy**.
+
+The designer transferring to another FORGE project does not begin from zero.
+
+Neither does the tools engineer.
+
+Neither does the producer.
+
+Neither does the live-operations team.
+
+The game is new.
+
+More of the language used to build it is not.
+
+<div className="not-prose mt-24 mb-8">
+  <div className="text-base tracking-[0.2em] uppercase text-gray-500 mb-3">
+    XIII.
+  </div>
+
+  <h2 className="text-3xl font-semibold tracking-tight text-white">
+    The Economics of the Second Game
+  </h2>
+</div>
+
+Most productivity tools make the first project faster.
+
+The real financial promise of FORGE begins with the second.
+
+The first game pays to establish the production architecture.
+
+It creates schemas.
+
+It establishes workflows.
+
+It binds FORGE to the runtime.
+
+Teams learn the DCS.
+
+Production conventions mature.
+
+Validation rules become proven.
+
+Tooling improves.
+
+The project develops reusable Bundles and patterns.
+
+Then the game ships.
+
+In a conventional project-centric model, too much of that investment risks becoming historical residue.
+
+With FORGE, more of it is supposed to become the starting condition of the next project.
+
+This is not an alien idea.
+
+Massive describes Snowdrop's modular architecture as allowing different games to reuse tools and editors developed for previous projects.
+
+EA describes its shared engine foundation as a way to prevent redundant investment and share higher-level technology between teams.
+
+Ubisoft explicitly says its consolidation of technology assets is intended to produce economies of scale and make technology easier to share across studios.
+
+Software-product-line economics have studied the same mechanism for decades: substantial up-front investment can make financial sense when reusable core assets reduce the cost of subsequent products. Carnegie Mellon's SEI also emphasizes that the business case depends on the cost of the shared capability and the amount of reuse it actually achieves.
+
+That is exactly how FORGE should be evaluated.
+
+Not:
+
+Did FORGE save money on Game One?
+
+But:
+
+<div className="border-l-4 border-blue-500 pl-6 py-4 my-12 text-gray-200 text-xl leading-relaxed">
+  <strong>Did the money spent solving Game One make Game Two cheaper, faster, easier to staff, or less risky?</strong>
+</div>
+
+If the answer is yes, the value compounds.
+
+The second title inherits more factory than the first had.
+
+The third inherits more again.
+
+And the marginal cost of solving classes of production problems begins to fall.
+
+<div className="not-prose mt-24 mb-8">
+  <div className="text-base tracking-[0.2em] uppercase text-gray-500 mb-3">
+    XIV.
+  </div>
+
+  <h2 className="text-3xl font-semibold tracking-tight text-white">
+    The Factory Should Survive the Engine
+  </h2>
+</div>
+
+There is an even more important implication.
+
+The production capability can potentially outlive the runtime that first used it.
+
+FORGE Engine Anchoring explicitly preserves its engine-agnostic schemas, Bundles, systemic logic, validation, serialization, and DCS workflows while allowing rendering, physics, animation, input, navigation, asset resolution, and other runtime-specific capabilities to change underneath them.
+
+That matters because engine transitions are expensive precisely when production knowledge has become inseparable from the engine being replaced.
+
+CD Projekt's rationale for moving away from REDengine included the recurring resources required to evolve the engine for each new release.
+
+FORGE does not make an engine migration free.
+
+Every runtime has different performance behavior.
+
+Bindings change.
+
+Assets may need adaptation.
+
+Rendering features change.
+
+Platform behavior changes.
+
+But the systemic authoring language does not necessarily have to be thrown away with the renderer.
+
+That creates a different form of option value.
+
+<div className="not-prose my-16">
+  <p className="text-3xl md:text-4xl font-semibold tracking-tight text-white leading-tight">
+    The most valuable production infrastructure may be the infrastructure that does not care which engine wins.
+  </p>
+</div>
+
+It also changes cancellation economics.
+
+In 2026, Embracer recorded a SEK 1.2 billion impairment tied especially to a large unannounced game project whose studio or team had been discontinued.
+
+A cancelled game will always destroy some value.
+
+Its bespoke art may have nowhere to go.
+
+Its writing may be unusable.
+
+Its specific world may never ship.
+
+FORGE cannot change that.
+
+But reusable authoring systems, validation logic, schemas, integration contracts, production workflows, performance models, and tooling knowledge do not necessarily have to die with the product.
+
+The question becomes:
+
+> **When the game dies, how much of what the publisher paid to learn and build has to die with it?**
+
+That is a portfolio question, not a project question.
+
+<div className="not-prose mt-24 mb-8">
+  <div className="text-base tracking-[0.2em] uppercase text-gray-500 mb-3">
+    XV.
+  </div>
+
+  <h2 className="text-3xl font-semibold tracking-tight text-white">
+    Development Capacity Is Also a Return
+  </h2>
+</div>
+
+Cost savings are usually imagined as spending less.
+
+That is only one possible return.
+
+Suppose a studio keeps the same people.
+
+FORGE reduces the number of routine changes that require engineering.
+
+Designers wait less.
+
+Artists redo less avoidable work.
+
+QA spends less time chasing structurally invalid content.
+
+Live updates require fewer cross-disciplinary handoffs.
+
+The studio does not necessarily become smaller.
+
+It becomes capable of doing more.
+
+Call of Duty is an extreme example because its disclosed lifecycle expenditures demonstrate the amount of development capacity that can be attached to sustaining a major franchise. Activision reported lifecycle development spending in the hundreds of millions of dollars across several titles.
+
+The relevant FORGE question is not whether one team can suddenly make Call of Duty alone.
+
+It is:
+
+<div className="border-l-4 border-blue-500 pl-6 py-4 my-12 text-gray-200 text-xl leading-relaxed">
+  <strong>What happens if maintaining that content machine requires materially less of the total development organization?</strong>
+</div>
+
+The capacity does not vanish.
+
+Those engineers can solve deeper technical problems.
+
+Those designers can create additional systems.
+
+Those artists can create more content.
+
+Another team can move earlier onto the next title.
+
+A studio can experiment with something new without the existing franchise missing its cadence.
+
+A publisher can produce more with the same organization.
+
+That may be a larger financial return than a simple budget reduction.
+
+<div className="not-prose my-16">
+  <p className="text-3xl md:text-4xl font-semibold tracking-tight text-white leading-tight">
+    FORGE does not only change how much a publisher spends. It changes how much development the publisher can buy with the organization it already has.
+  </p>
+</div>
+
+For a portfolio company, that distinction matters enormously.
+
+Savings appear on a spreadsheet.
+
+Capacity appears in the release slate.
+
+<div className="not-prose mt-24 mb-8">
+  <div className="text-base tracking-[0.2em] uppercase text-gray-500 mb-3">
+    XVI.
+  </div>
+
+  <h2 className="text-3xl font-semibold tracking-tight text-white">
+    FORGE Still Has to Earn Its Capital
+  </h2>
+</div>
+
+None of this makes FORGE free.
+
+It has to be engineered.
+
+It needs runtime adapters.
+
+It needs testing.
+
+Documentation.
+
+Schema governance.
+
+Tool maintenance.
+
+Compatibility work.
+
+Training.
+
+Migration support.
+
+Studio support.
+
+Someone has to steward the common architecture without turning it into bureaucracy.
+
+Shared technology also creates real risks.
+
+A bad common decision can propagate farther than a bad local one.
+
+A common platform can become a bottleneck.
+
+Standardization can become rigidity.
+
+Teams may resist changing familiar workflows.
+
+FORGE itself can contain implementation defects.
+
+Some studios may benefit from only part of the architecture.
+
+And forcing adoption where it produces no value would recreate exactly the kind of organizational waste FORGE is intended to remove.
+
+That is why its incremental adoption model matters economically.
+
+Do not begin by migrating a studio.
+
+Begin by solving a measurable problem.
+
+Dialogue authoring.
+
+Performance budgeting.
+
+A mode-production workflow.
+
+A live-operations surface.
+
+A modernization project.
+
+Then measure.
+
+Time to first systemic prototype.
+
+Time to engine-bound playable.
+
+Time to performance-valid playable.
+
+Contributor days blocked by dependencies.
+
+Engineering handoffs per content change.
+
+Asset rework.
+
+Defects rejected before deployment.
+
+QA rework.
+
+New-hire time to productive output.
+
+Live-content turnaround.
+
+Percentage of content changes that require code.
+
+Reuse on the next title.
+
+If FORGE cannot improve those measurements enough to justify its cost, the studio should know.
+
+If it can, the argument for the next integration becomes stronger.
+
+<div className="border-l-4 border-blue-500 pl-6 py-4 my-12 text-gray-200 text-xl leading-relaxed">
+  <strong>FORGE does not require Xbox to believe a savings estimate. It gives Xbox a system whose savings can be measured.</strong>
+</div>
+
+That is how the architecture earns adoption.
+
+And eventually, how it earns standardization.
+
+<div className="not-prose mt-24 mb-8">
+  <div className="text-base tracking-[0.2em] uppercase text-gray-500 mb-3">
+    XVII.
+  </div>
+
+  <h2 className="text-3xl font-semibold tracking-tight text-white">
+    The Factory Should Survive the Game
+  </h2>
+</div>
+
+A game is not a manufactured widget.
+
+Its value comes from creative choices that cannot be standardized into existence.
+
+A great character cannot be amortized into a spreadsheet.
+
+A great mechanic still has to be invented.
+
+A world still needs artists.
+
+A story still needs writers.
+
+An engine still needs engineers.
+
+A team still has to take risks.
+
+FORGE does not remove the cost of creation.
+
+It targets something else:
+
+the cost of repeatedly rebuilding the ability to create.
+
+The repeated tool.
+
+The repeated integration.
+
+The repeated translation layer.
+
+The repeated performance crisis.
+
+The repeated production workflow.
+
+The repeated bug that could have been rejected as invalid data.
+
+The repeated onboarding journey.
+
+The repeated months before the team can meaningfully test what it is making.
+
+The repeated engineering burden of turning ordinary content changes into engine changes.
+
+The repeated loss of capability when a project ships, fails, moves engines, or disappears.
+
+That is where FORGE changes the economic model.
+
+The first game should not merely leave behind a game.
+
+It should leave the next team better equipped than the first team was.
+
+The second should improve that capability.
+
+The third should inherit it.
+
+A live game should continue benefiting from it.
+
+A cancelled game should not take all of it to the grave.
+
+And an engine transition should not require the studio to forget how to produce.
+
+<div className="not-prose mt-20 mb-28">
+  <p className="text-2xl md:text-3xl leading-relaxed text-gray-300">
+    Production capability should compound.
+  </p>
+
+  <p className="text-2xl md:text-3xl leading-relaxed text-gray-300 mt-10">
+    The industry already knows how to amortize engines, technology, intellectual property, and platform infrastructure across portfolios. FORGE asks why the production intelligence used to turn those things into games should be treated differently.
+  </p>
+
+  <p className="text-4xl md:text-5xl font-semibold tracking-tight text-white mt-10">
+    The factory should survive the game.
+  </p>
+</div>
+
+<div className="not-prose mt-24 mb-8">
+  <h2 className="text-2xl font-semibold tracking-tight text-white">
+    Sources
+  </h2>
+</div>
+
+<div className="not-prose mb-28 space-y-5 text-sm md:text-base leading-relaxed text-gray-500">
+  <p>Xbox Wire. “Halo Studios: New Name, New Engine, New Games, New Philosophy.” October 6, 2024.</p>
+
+  <p>Halo Waypoint. “Halo Infinite Update — March 2022.” March 2022.</p>
+
+  <p>Halo Support. “Halo Infinite Campaign Installation Changes FAQ.” 2023.</p>
+
+  <p>CD Projekt. “New Witcher Saga Announced. CD PROJEKT RED Begins Development on Unreal Engine 5 as Part of a Strategic Partnership with Epic Games.” March 2022.</p>
+
+  <p>CD Projekt. Management Board Report on CD PROJEKT Group Activities, H1 2022.</p>
+
+  <p>GameSpot. “The Last of Us Part 2 And Horizon Forbidden West Budgets Revealed By Accident, And They Weren't Cheap.” 2023.</p>
+
+  <p>Game File. Reporting on disclosed Call of Duty development budgets for Black Ops III, Modern Warfare, and Black Ops Cold War. 2025.</p>
+
+  <p>Electronic Arts / Motive. “How Technology Sparks Creativity.” Discussion of Frostbite as shared technology infrastructure.</p>
+
+  <p>Ubisoft. FY2024 Earnings Release. Discussion of consolidated and mutualized technology assets, including Anvil and Snowdrop.</p>
+
+  <p>Ubisoft. “The Division 2: How the Snowdrop Engine Powering Operation Dark Hours Fuels Creativity.”</p>
+
+  <p>Massive Entertainment. “The History of Snowdrop: From R&amp;D Concept to AAA Engine.”</p>
+
+  <p>Epic Games. Unreal Engine documentation on project setup, level blockout, and grayboxing workflows.</p>
+
+  <p>Carnegie Mellon Software Engineering Institute. “Predicting When Product Line Investment Pays.”</p>
+
+  <p>DORA. Platform Engineering research and guidance.</p>
+
+  <p>Microsoft Research. “Ramp-Up Journey of New Hires: Do Strategic Practices of Software Companies Influence Productivity?”</p>
+
+  <p>Embracer Group. Q4 January–March 2026 Interim Report.</p>
+</div>

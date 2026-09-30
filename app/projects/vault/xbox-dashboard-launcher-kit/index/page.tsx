@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { dashboardLauncherKitDocuments } from "@/content/projects/vault/xbox-dashboard-launcher-kit/meta";
 
+import DocumentFooter from "@/components/DocumentFooter";
+import { getRelatedWork } from "@/content/related-work";
 export default function XboxDashboardLauncherKitIndex() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-12 md:py-20 space-y-12">
@@ -77,6 +79,8 @@ export default function XboxDashboardLauncherKitIndex() {
           </li>
         ))}
       </ul>
+
+      <DocumentFooter related={getRelatedWork("project", "xbox-dashboard-launcher-kit")} />
     </main>
   );
 }

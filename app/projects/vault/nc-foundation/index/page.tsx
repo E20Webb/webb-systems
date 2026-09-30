@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import DocumentFooter from "@/components/DocumentFooter";
+import { getRelatedWork } from "@/content/related-work";
 export default function NCFoundationIndex() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-12 md:py-20 space-y-12">
@@ -48,6 +50,8 @@ export default function NCFoundationIndex() {
         </p>
       </section>
 
+
+      <DocumentFooter related={getRelatedWork("project", "nc-foundation")} />
     </main>
   );
 }

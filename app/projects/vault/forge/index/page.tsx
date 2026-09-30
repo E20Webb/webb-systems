@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { forgeDocuments } from "@/content/projects/vault/forge/meta";
 
+import DocumentFooter from "@/components/DocumentFooter";
+import { getRelatedWork } from "@/content/related-work";
 export default function ForgeIndex() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-12 md:py-20 space-y-12">
@@ -61,6 +63,8 @@ export default function ForgeIndex() {
           </li>
         ))}
       </ul>
+
+      <DocumentFooter related={getRelatedWork("project", "forge")} />
     </main>
   );
 }
