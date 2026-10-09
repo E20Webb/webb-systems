@@ -1,4 +1,8 @@
 export const architecture = {
+  "dashboard-launcher-kit-modular-experience-architecture": () =>
+    import("./dashboard-launcher-kit-modular-experience-architecture.mdx"),
+
+
 
   "post-launch-architecture": () =>
     import("./post-launch-architecture.mdx"),

@@ -1,0 +1,294 @@
+<div className="not-prose mb-20">
+  <div className="text-sm uppercase tracking-[0.2em] text-gray-500 mb-5">
+    Webb Systems Essay
+  </div>
+
+  <h1 className="text-5xl md:text-6xl font-semibold tracking-tight text-white">
+    Xbox Can Evolve Home Without Rebuilding It
+  </h1>
+
+  <p className="text-xl md:text-2xl text-gray-400 mt-5 max-w-3xl leading-relaxed">
+    A stable dashboard should not limit how quickly the experiences around it can change.
+  </p>
+</div>
+
+The Xbox dashboard has an unusual responsibility.
+
+It must be familiar enough that players can use it without thinking. Navigation should remain predictable. Games should launch where players expect them to. Friends, libraries, accounts, and system controls should not become harder to reach every time the interface changes.
+
+But the dashboard also sits at the entrance to an entertainment culture that does not stand still.
+
+Games run seasons. Communities organize events. Creators redirect attention. New ways of playing, watching, competing, and discovering games emerge without waiting for a console interface release.
+
+These are not entirely new behaviors. People have gathered around games in arcades, living rooms, tournaments, and communities for decades. The formats and technology change. The social and cultural activity continues.
+
+That creates two legitimate demands on the same experience.
+
+<div className="not-prose my-20 max-w-4xl">
+  <p className="text-2xl md:text-3xl leading-relaxed font-medium text-white">
+    The platform must remain stable. The experiences it connects must be able to evolve.
+  </p>
+</div>
+
+The mistake would be to treat those demands as inseparable.
+
+Xbox does not need to rebuild Home every time it wants to try something new.
+
+It needs a way to change what Home can connect to without repeatedly changing what makes Home dependable.
+
+<div className="not-prose mt-24 mb-8">
+  <div className="text-base tracking-[0.2em] uppercase text-gray-500 mb-3">
+    I.
+  </div>
+
+  <h2 className="text-3xl font-semibold tracking-tight text-white">
+    Two Different Clocks
+  </h2>
+</div>
+
+A console shell has to move carefully.
+
+It is responsible for the routines players rely on every day: moving between games and applications, handling controller input, maintaining focus and navigation, returning safely from an experience, and keeping essential platform functions available.
+
+The cost of getting those things wrong is unusually high. A problem with a promotional page is frustrating. A problem with Home can affect everyone who uses the device.
+
+Cultural experiences operate on another clock.
+
+An unexpected game becomes popular. A competitive community creates a new format. A publisher launches an event. A creator discovers an audience the platform had not anticipated. A new entertainment partnership makes sense for one season and not the next.
+
+Those opportunities may deserve experiments, not permanent changes to the shell.
+
+Yet the more tightly an experience is coupled to the dashboard's implementation, the more difficult it becomes to test that experience independently.
+
+A stable platform can end up moving at the speed of its most sensitive component.
+
+The solution is not to make that component less stable.
+
+It is to give new experiences a different path into the platform.
+
+<div className="not-prose mt-24 mb-8">
+  <div className="text-base tracking-[0.2em] uppercase text-gray-500 mb-3">
+    II.
+  </div>
+
+  <h2 className="text-3xl font-semibold tracking-tight text-white">
+    Adding a Tile Is Not the Same as Adding an Experience
+  </h2>
+</div>
+
+Dashboards already change. They can rearrange content, introduce recommendations, add customization, and promote events.
+
+Xbox's April 2026 update, for example, expanded the number of Groups players could pin to Home, introduced custom colors, and added more control over Quick Resume. These are useful improvements to an interface people already know.
+
+But improving an existing dashboard experience and expanding the kinds of experiences a dashboard can support are different engineering objectives.
+
+A new tile and a new type of experience are not the same thing.
+
+Imagine a community destination that needs its own layout, navigation, overlays, entry and exit behavior, and relationship to existing Xbox services. Or a publisher experience that needs to feel distinctive without taking control of the console. Or an event that needs to exist for a limited period and then disappear cleanly.
+
+The hard question is not simply where to place a button.
+
+It is how to introduce a different interaction model without making the dashboard responsible for that experience's entire design and lifecycle.
+
+If every new format requires new shell-specific decisions about navigation, routing, focus, state, and recovery, experimentation inherits the risks and dependencies of the central interface.
+
+That is a structural problem, not a shortage of ideas.
+
+And solving it requires more than a new arrangement of Home.
+
+<div className="not-prose mt-24 mb-8">
+  <div className="text-base tracking-[0.2em] uppercase text-gray-500 mb-3">
+    III.
+  </div>
+
+  <h2 className="text-3xl font-semibold tracking-tight text-white">
+    Preserve the Host. Extend the Experience.
+  </h2>
+</div>
+
+This is the purpose of the **Dashboard Launcher Kit**.
+
+The proposal is a lightweight, modular integration architecture through which Xbox could introduce new pages, Surfaces, and experience formats while preserving the dashboard as the canonical host.
+
+The distinction matters.
+
+The existing dashboard host remains responsible for Home, platform navigation, focus, input, and final presentation behavior. **Dashboard Launcher** supplies the contracts and orchestration boundary through which changing experiences are interpreted, entered, routed, and exited. The **Dashboard Launcher Kit** is the proposed architecture that makes this separation reusable.
+
+An experience describes what it needs to present and how a player interacts with it. Adapters translate the meaning of that experience into terms the dashboard can handle. Bounded rules govern how the experience may appear and what happens when it ends or encounters a problem.
+
+The experience does not acquire ownership of Home merely because it appears there.
+
+Nor does Launcher need to become the database for player identity, the authority for social relationships, or the ledger for commerce. Those responsibilities remain with the systems that already own them, or with the appropriate services participating in an integration.
+
+This is not a proposal to replace the Xbox shell with a new operating system.
+
+It is a proposal to establish a stable boundary between the shell and the experiences Xbox wants to evolve.
+
+That boundary matters beyond any single dashboard design. A future Xbox Home might look completely different from today's. The Kit's contracts and integration principles could remain useful, although each new host would still need compatible interfaces and the appropriate implementation work. The goal is not a universal plug-in that magically fits every dashboard. It is an architecture whose value does not expire when the interface changes.
+
+<div className="not-prose mt-24 mb-8">
+  <div className="text-base tracking-[0.2em] uppercase text-gray-500 mb-3">
+    IV.
+  </div>
+
+  <h2 className="text-3xl font-semibold tracking-tight text-white">
+    The Destination Changes. The Relationship Remains.
+  </h2>
+</div>
+
+A player does not stop being part of Xbox when they open a different page.
+
+Their friends do not disappear because they enter a competition. Their platform identity should not need to be recreated for an event. A community destination should not have to rebuild the essential services that make the wider platform useful.
+
+A changing Surface can present a different experience while the appropriate shared identity, communication, entitlement, and session systems remain authoritative.
+
+That does not mean every capability must be visible everywhere. Nor does it mean a partner automatically receives access to private account or social data. Continuity still requires explicit integration, permissions, and boundaries.
+
+It means the player can move among different destinations without each destination pretending to be an entirely separate platform.
+
+This is especially important if Xbox wants to support a wider range of communities and formats. Different players should not be required to share the same taste, the same preferred activities, or the same understanding of what a gaming session looks like.
+
+A durable host can make room for those differences.
+
+<div className="not-prose mt-24 mb-8">
+  <div className="text-base tracking-[0.2em] uppercase text-gray-500 mb-3">
+    V.
+  </div>
+
+  <h2 className="text-3xl font-semibold tracking-tight text-white">
+    Experimentation Is an Infrastructure Decision
+  </h2>
+</div>
+
+A good experiment should be able to succeed without requiring everything around it to change.
+
+It should also be able to fail without taking the surrounding platform with it.
+
+Consider a temporary live-event destination. If players respond, Xbox may want to expand it. If they do not, Xbox should be able to revise or withdraw it while preserving familiar navigation and the authoritative state of the platform.
+
+The Kit is designed around that kind of controlled evolution: reusable experience boundaries, predictable routing, reversible transitions, and rules for how extensions coexist.
+
+This does not make integration free. Every real implementation would still require engineering, platform review, performance testing, accessibility, security, and operational work. Its suitability for Microsoft's production infrastructure would have to be demonstrated.
+
+But it changes the question teams are asked to solve.
+
+Instead of **How do we redesign Home to accommodate this idea?**
+
+They can ask **Can this idea operate through a stable, reusable interface to Home?**
+
+That distinction has implications for cost, development velocity, organizational coordination, and risk. It creates the possibility of testing more ideas without making each one a platform-wide commitment.
+
+<div className="not-prose mt-12 mb-5">
+  <h3 className="text-2xl font-semibold tracking-tight text-white">Continuous Improvement</h3>
+</div>
+
+The most valuable experiment may not introduce an entirely new experience. It may improve one that is already working.
+
+A Live destination might draw players to an event but make the next activity difficult to find. A Clubs experience might attract interest but introduce friction when friends try to join one another. A new discovery format might earn attention without turning that attention into play.
+
+Those are reasons to learn and iterate, not necessarily reasons to redesign Home.
+
+Player behavior could reveal the problem months after a feature launches. With the right engineering and release process, Xbox could refine a specific Surface's presentation, interactions, or navigation without automatically making that change a broader shell initiative. Not every improvement would be quick or isolated. But the architecture is designed to reduce the amount of the platform that must change when one experience improves.
+
+The benefits extend beyond engagement. Better navigation can reduce frustration. Better community entry points can help people spend time together. More useful discovery can bring overlooked games to the right players. Retention and activity become outcomes to improve, not just numbers to report.
+
+And there is a commercial dimension.
+
+Changing a promotion tests what gets a player's attention. Changing the experience itself tests whether a different path from attention to participation works better. A publisher destination, a new discovery format, or a community experience could generate value that a rearranged promotional tile does not.
+
+Microsoft already provides acquisition and conversion reporting for Xbox games through Partner Center. The Kit could provide consistent experience context for authorized measurement integrations, allowing teams to evaluate new formats against appropriate baselines rather than inventing a second financial reporting system. Engagement, retention, conversions, costs, and financial returns could inform which experiences deserve refinement, expansion, or retirement.
+
+That does not make Launcher a profit-calculation engine or the owner of player data. Measurement and financial attribution remain with the systems responsible for them. Nor does an increase in clicks automatically mean an increase in profit.
+
+<div className="not-prose my-20 max-w-4xl">
+  <p className="text-2xl md:text-3xl leading-relaxed font-medium text-white">
+    The objective is not simply to make Home easier to change. It is to make improving the experiences around Home a continuous process.
+  </p>
+</div>
+
+<div className="not-prose mt-24 mb-8">
+  <div className="text-base tracking-[0.2em] uppercase text-gray-500 mb-3">
+    VI.
+  </div>
+
+  <h2 className="text-3xl font-semibold tracking-tight text-white">
+    A Path to Xbox Forever, Not a Dependency on It
+  </h2>
+</div>
+
+The Dashboard Launcher Kit was designed as a practical entry point for **Xbox Forever**, a broader proposal connecting discovery, competition, communities, and live cultural activity.
+
+Its principal experience engines are **Crawl** for discovery, **Arena** for competition, and **Live** for culture.
+
+Those experiences are intended to connect over time. They do not need to arrive together.
+
+A single experience could be introduced through its own integration boundary, evaluated, and improved before another is added. The Kit would provide a consistent way to connect them without requiring a single, irreversible launch of the entire Xbox Forever vision.
+
+But the Kit does not depend on Xbox Forever succeeding.
+
+A future publisher destination, an event format, a community experience, or an idea Xbox has not yet conceived could present the same architectural need. None requires the Launcher to own the business, content, or underlying services involved.
+
+The architecture is valuable because **the next useful experience does not have to be known in advance**.
+
+That is what makes it an infrastructure proposal rather than a bet on one specific interface.
+
+<div className="not-prose mt-24 mb-8">
+  <div className="text-base tracking-[0.2em] uppercase text-gray-500 mb-3">
+    VII.
+  </div>
+
+  <h2 className="text-3xl font-semibold tracking-tight text-white">
+    Build the Capacity to Evolve First
+  </h2>
+</div>
+
+Xbox has publicly identified fragmented discovery, social experiences, and personalization among the problems it wants to address. Its April 2026 strategy called for improvements for players, developers, and creators, while naming daily active players as a guiding measure. In July, Xbox leadership also outlined plans for a cleaner codebase, shared services, and simpler ways of working.
+
+These are meaningful priorities, and Xbox is already making dashboard improvements. But the public record of feature updates cannot tell us everything about Microsoft's internal architecture. We should not assume Xbox lacks its own extension mechanisms.
+
+The question worth evaluating is broader: can new categories of experience be introduced, measured, and refined without repeatedly taking on the scope and risk of changing the canonical host?
+
+The Dashboard Launcher Kit is one proposed answer.
+
+The architecture has been developed and evaluated at the specification level. It has not been implemented or validated inside Microsoft's production dashboard, and it should be evaluated on those terms.
+
+That is also why its first promise is deliberately modest.
+
+Keep Home familiar.
+
+Keep its platform responsibilities authoritative.
+
+Give new experiences defined ways to enter, operate, and leave.
+
+Let individual ideas prove their value before asking the entire platform to change with them.
+
+<div className="not-prose mt-20 mb-24">
+  <p className="text-2xl md:text-3xl leading-relaxed text-gray-300">
+    A platform should not have to choose between stability and evolution.
+  </p>
+  <p className="text-4xl md:text-5xl font-semibold tracking-tight text-white mt-10">
+    Xbox can evolve Home without rebuilding it.
+  </p>
+</div>
+
+<div className="not-prose mt-24 mb-8">
+  <h2 className="text-2xl font-semibold tracking-tight text-white">Source and Project Context</h2>
+</div>
+
+<div className="not-prose mb-28 space-y-5 text-sm md:text-base leading-relaxed text-gray-500">
+  <p>
+    Xbox. <a href="https://news.xbox.com/en-us/2026/04/23/we-are-xbox/" className="underline underline-offset-4">“We Are XBOX.”</a> Xbox Wire, April 23, 2026. Public platform priorities, including discovery, social experiences, and daily activity.
+  </p>
+  <p>
+    Xbox. <a href="https://news.xbox.com/en-us/2026/04/30/april-xbox-update-2026/" className="underline underline-offset-4">“April Xbox Update.”</a> Xbox Wire, April 30, 2026. Examples of delivered dashboard and platform experience improvements.
+  </p>
+  <p>
+    Xbox. <a href="https://news.xbox.com/en-us/2026/07/06/resetting-xbox/" className="underline underline-offset-4">“Resetting XBOX.”</a> Xbox Wire, July 6, 2026. Plans to simplify tools, code, and shared services.
+  </p>
+  <p>
+    Microsoft. <a href="https://learn.microsoft.com/en-us/partner-center/insights/acquisitions-report" className="underline underline-offset-4">“Acquisitions Report.”</a> Microsoft Learn, Partner Center. Documents GDK/Xbox game acquisitions and campaign-conversion reporting.
+  </p>
+  <p>
+    The Dashboard Launcher Kit is a proposed specification-level architecture. This essay summarizes its public design rationale; detailed architecture and implementation documentation remain private.
+  </p>
+</div>

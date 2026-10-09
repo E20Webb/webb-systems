@@ -8,7 +8,20 @@ export type EssayMeta = {
   thumbnailMotion: string;
 };
 
-export const essayMeta: EssayMeta[] = [  
+export const essayMeta: EssayMeta[] = [
+  {
+    slug: "xbox-can-evolve-home-without-rebuilding-it",
+    title: "Xbox Can Evolve Home Without Rebuilding It",
+    abstract:
+      "How Xbox can continually improve player experiences, engagement, and commercial outcomes without rebuilding Home.",
+    thumbnailCaption:
+      "Build the capacity to evolve.",
+    category: "Culture",
+    thumbnail: "/thumbnails/xbox-can-evolve-home-without-rebuilding-it.jpg",
+    thumbnailMotion: "/thumbnails/xbox-can-evolve-home-without-rebuilding-it-mo.mp4"
+  },
+
+
    {
     slug: "future-isnt-lost-its-underbuilt",
     title: "The Future Isn’t Lost — It’s Underbuilt",
@@ -128,5 +141,5 @@ export const essayMeta: EssayMeta[] = [
     thumbnail: "/thumbnails/death-of-play.jpg",
     thumbnailMotion: "/thumbnails/death-of-play-motion.mp4"
   }
-  
+
 ];

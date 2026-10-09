@@ -1,0 +1,295 @@
+<div className="not-prose mb-16">
+  <div className="text-sm uppercase tracking-[0.2em] text-gray-500 mb-5">
+    Webb Systems Architecture
+  </div>
+  <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-white">
+    Dashboard Launcher Kit: Modular Experience Architecture
+  </h1>
+  <div className="text-xl text-gray-300 mt-4 max-w-3xl leading-relaxed">
+    A stable dashboard host. Governed experience extensions. Continuous evolution without a shell rewrite.
+  </div>
+  <div className="text-sm text-gray-500 mt-4">
+    October 2026 · Public Architectural Overview
+  </div>
+</div>
+
+---
+
+A new dashboard page is easy to imagine.
+
+The difficult part is making it behave like a trustworthy part of the platform.
+
+It needs a route into and out of the experience. It needs predictable controller focus and navigation. It may depend on social presence, identity, entitlements, or cloud availability. It must coexist with other experiences without competing for control of Home. And when it changes—or disappears—the player should not lose the reliable behavior of the surrounding system.
+
+Those requirements become more consequential as the dashboard begins supporting experiences that differ substantially from one another: playable discovery, competitions, community destinations, live events, publisher spaces, and formats that do not exist yet.
+
+The **Dashboard Launcher Kit** is a proposed modular integration architecture for that problem.
+
+Its purpose is not to replace the Xbox dashboard, or to make the dashboard responsible for every experience it hosts.
+
+**Its purpose is to make the boundary between a stable platform host and changing experiences reusable, explicit, and governed.**
+
+---
+
+## I. The Host Is Not the Experience
+
+A platform host and the experiences presented through it have different responsibilities.
+
+The existing dashboard host must remain authoritative over Home, navigation, controller focus and input, transitions, tile placement, overlay invocation, and system-level presentation. In the canonical Launcher design, this host is called **Dashboard Mode**.
+
+An experience may decide what content matters, how its own activities are organized, and which actions make sense within its domain. A competitive experience understands competition; a discovery experience understands discovery. Neither becomes the owner of the shell simply because it appears on the dashboard.
+
+**Dashboard Launcher** occupies the boundary between them. It interprets normalized experience information, resolves intended destinations, and coordinates dashboard-facing transitions under stable rules.
+
+The broader **Xbox Forever Dashboard Layer** is a different concept: the proposed player-facing environment across Home and multiple Xbox Forever Surfaces. Dashboard Launcher is a subordinate integration mechanism within that larger vision, not a synonym for the Dashboard Layer and not a new operating system.
+
+The separation can be stated simply:
+
+- **The dashboard host owns the shell.**
+- **Experiences and engines own their domain behavior.**
+- **Shared systems own persistent platform state.**
+- **Launcher owns the defined integration and transition boundary.**
+
+That allocation of responsibility is the architecture's starting point.
+
+---
+
+## II. The Architectural Spine
+
+The design is organized around **seven architectural areas**. They are cooperating responsibilities, not a claim that seven deployable services, processes, or applications must exist.
+
+**1. Contracts — the rules that remain stable.**
+Contracts define how experiences participate in the host: navigation, focus, activation, state boundaries, transitions, and valid relationships among extensions. They protect predictable platform behavior as implementations change.
+
+**2. Adapters — translation rather than ownership transfer.**
+An Adapter takes the output of a particular engine or experience and expresses what is relevant to the dashboard in a form Launcher can work with. An engine does not directly seize responsibility for Home or the shell.
+
+**3. Overrides — bounded changes to presentation.**
+Overrides permit specified dashboard-facing modifications, such as changes to an eligible Home area, tile behavior, or presentation mode. They operate within the host's rules; they are not a license to replace the shell arbitrarily.
+
+**4. Runtime — routing, transitions, and restoration.**
+The Launcher Runtime coordinates navigation intent, destination resolution, state transitions, and recovery. Its job is to help an experience enter and leave predictably while respecting the host's control of focus and navigation.
+
+**5. ExperienceSpecs — the experience-facing definition.**
+ExperienceSpecs describe the presentation and interaction requirements of a Surface: the kind of layout, modules, navigation, entry and exit behavior, and overlays it needs. They do not move an engine's substantive domain decisions into Launcher.
+
+**6. SharedSystems — persistent authorities.**
+The Avatar Substrate, Social Grid, PEM, and Cloud Slice provide the relevant identity and expression, social and party, economic and entitlement, and cloud-session authorities. Launcher can integrate with them without becoming their replacement or duplicating their source of truth.
+
+**7. AdaptersV2 — the path for experiences not yet anticipated.**
+The extension vocabulary is designed to accommodate future Surfaces, tile types, overlays, routes, and experience categories without requiring each new idea to be embedded as special-purpose logic in the canonical host. It extends the current Adapter model rather than discarding it.
+
+Together these areas describe a system in which **new experience semantics are translated into stable platform behavior instead of being written directly into the shell**.
+
+<div className="not-prose my-14">
+  <div className="rounded-xl border border-white/10 bg-white/[0.03] p-6 md:p-8">
+    <div className="text-xs uppercase tracking-[0.18em] text-gray-500 mb-5">
+      Conceptual responsibility flow
+    </div>
+    <pre className="text-sm leading-7 text-gray-200 whitespace-pre-wrap m-0">{`EXPERIENCE / ENGINE
+    Live · Crawl · Arena · other approved formats
+                       |
+                Engine Adapter
+                       |     ExperienceSpec
+                       |            |
+                       v            v
+              DASHBOARD LAUNCHER
+        Contracts / Launcher Governance
+         Experience Routing / Runtime
+             Bounded Overrides
+            Future AdaptersV2
+                       |
+                       v
+             DASHBOARD HOST
+         Home · Focus · Navigation
+         Final presentation authority
+
+SHARED SYSTEM AUTHORITIES
+Avatar Substrate · Social Grid · PEM · Cloud Slice
+(consulted through defined integration boundaries;
+ their canonical state remains outside Launcher)`}</pre>
+  </div>
+  <p className="text-sm text-gray-500 mt-3">
+    Logical responsibility diagram, not a production process, service, or network topology.
+  </p>
+</div>
+
+---
+
+## III. From Engine Activity to a Dashboard Experience
+
+Consider a proposed **Live** experience.
+
+Live might identify an activity worth presenting to players: an event, community moment, creator activity, or competitive result. Determining that the moment matters is Live's domain responsibility. Launcher is not asked to become a cultural-ranking engine.
+
+The Live Adapter translates the relevant result into dashboard-facing information. Its ExperienceSpec describes the player-facing interaction. Launcher then evaluates the intended destination, applicable presentation boundaries, and transition behavior. The dashboard host retains final responsibility for how navigation, focus, overlays, and placement behave.
+
+If the experience needs presence or party information, the relevant Social Grid authority remains responsible for that state. If it needs to check an entitlement, that truth remains with PEM. Launcher is a participant in those integrations, not a parallel identity, communication, or commerce system.
+
+The important design decision is what **does not** happen:
+
+```text
+Engine discovers new requirement
+          ↓
+Engine rewrites Dashboard Home
+```
+
+Instead, the proposed path is:
+
+```text
+Engine behavior
+      ↓
+Adapter + experience definition
+      ↓
+Launcher contracts and routing
+      ↓
+Dashboard-owned presentation
+```
+
+A different Live layout, entry path, or eligible interaction could be evaluated through that same integration boundary. Such a change would still require appropriate testing and approvals, but it would not automatically require Live to become part of the host's core implementation.
+
+---
+
+## IV. Extensibility Needs Governance
+
+Allowing extensions is only half an architecture.
+
+The other half is determining what happens when extensions disagree.
+
+Imagine two independently valid experiences both attempting to alter the same presentation area. Or one experience replacing a destination while another still holds a route to the previous version. Or a transition failing after a newer social or entitlement state has already been recorded elsewhere.
+
+A platform cannot resolve these situations safely by assuming that whichever extension loads last wins.
+
+**Launcher Governance**, defined within Contracts, specifies the relationships that make extension behavior deterministic: when changes may coexist, when one explicitly supersedes another, which destination remains valid, and how restoration or fallback must respect the authoritative state of the system.
+
+Governance is not an eighth architectural layer, a new arbitration service, or an alternative shell. It is a set of binding relationship rules across the existing mechanisms.
+
+That distinction matters for both safety and iteration.
+
+An experience should be removable without leaving ambiguous navigation behind. Restoring a previous UI state must not roll back a newer purchase, party change, or other authoritative platform event. If an extension cannot satisfy the applicable contracts, the host's protected behavior takes precedence.
+
+**Extensibility without governance multiplies risk. Extensibility with governance makes change manageable.**
+
+---
+
+## V. One Experience at a Time
+
+Xbox Forever describes three principal experience engines:
+
+- **Crawl** — playable discovery.
+- **Arena** — competition and competitive identity.
+- **Live** — cultural activity and real-time moments.
+
+The intended relationship among them is reinforcing: discovery can lead to competition; competitive activity can create cultural moments; cultural attention can lead to new discovery.
+
+But that relationship is **not a required deployment sequence**.
+
+Under the Launcher proposal, an individual experience can be introduced through its applicable Adapter and experience boundary without requiring all three engines to arrive as one inseparable product. Xbox could evaluate a Live Surface, refine it, and decide whether or when other proposed experiences should connect to it.
+
+Other shared capabilities may still be dependencies where applicable. Incremental adoption does not mean that every engine is self-contained or that no common infrastructure is required. It means the decision to adopt one experience need not force adoption of the entire Xbox Forever model.
+
+This is also what protects the Kit's independent value.
+
+A publisher destination, a community format, or a short-lived event Surface could have a legitimate reason to use the same integration pattern even if Xbox never adopts Crawl, Arena, or Live.
+
+**The extension architecture should not need to predict which experience wins.**
+
+---
+
+## VI. Continuous Improvement Is Part of the Design Goal
+
+A Surface does not become finished merely because it launches.
+
+Players may use Live differently than expected. A Clubs entry path may create unnecessary friction. A discovery experience may attract attention without converting it into meaningful play. The ability to change an experience should remain available after its first release.
+
+The Kit's architectural contribution is to limit how much host-level behavior must be reconsidered when an experience is revised. Different layouts, navigation paths, formats, and supported interactions can be proposed through controlled experience boundaries rather than automatically becoming shell-wide changes.
+
+**This extends beyond interface maintenance. It creates a basis for continuous experience experimentation.**
+
+Xbox already operates analytics and commercial reporting capabilities. Where appropriate and authorized, Launcher integrations could provide consistent experience identifiers and context so existing measurement systems can evaluate outcomes such as engagement, retention, discovery, conversion, and economic performance.
+
+The separation of responsibilities must remain clear:
+
+- **Launcher enables the changing experience and its integration context.**
+- **Analytics systems measure activity and outcomes.**
+- **The relevant product and financial authorities decide what those results mean.**
+
+A higher click-through rate is not the same as better retention. More sales are not automatically incremental profit. And a technical integration boundary is not itself a reporting or profit-attribution engine.
+
+This measurement connection is a **proposed extension opportunity**, not a claim that the current canonical Launcher Runtime already implements a telemetry pipeline or financial dashboard.
+
+The commercial and player-experience proposition is nevertheless substantial: Xbox could gain a more repeatable way to introduce an experience, learn from it, refine it, and decide whether to expand or retire it.
+
+---
+
+## VII. A Different Dashboard Should Not Erase the Investment
+
+The interface Xbox uses five years from now may not resemble the interface it uses today. Console, PC, handheld, and other approved Xbox hosts may have different input methods, presentation conventions, and technical constraints.
+
+The Kit does not assume that one implementation can be dropped into all of them unchanged.
+
+A new host would still need compatible shell contracts, host-specific integration, accessibility and performance validation, and appropriately adapted presentation behavior. Platform security and permitted feature access would remain host responsibilities.
+
+The architectural aim is more durable than universal plug-and-play compatibility.
+
+**Keep the contract between host and experience stable enough that a host redesign does not automatically require redesigning every experience that connects to it.**
+
+The same principle works in the opposite direction: a changing publisher or community experience should not automatically force a rewrite of a stable host.
+
+This is a proposal for reducing coupling across generations of Xbox interfaces—not a guarantee that every interface change will be isolated or inexpensive.
+
+---
+
+## VIII. What Is Designed—and What Still Must Be Proven
+
+The Dashboard Launcher Kit is a **specification-level architecture**. Its responsibilities, contracts, extension relationships, and governance rules have been developed, reviewed, revised, and evaluated in the project corpus.
+
+It is **not** a demonstrated implementation inside Microsoft's production Xbox dashboard.
+
+Several important decisions would belong to a real implementation effort: how the generic declarations are represented and loaded, how changes are coordinated during an active transition, what the performance and accessibility constraints require, how the host exposes compatible interfaces, and how operational testing and release procedures work.
+
+The design does not prescribe Microsoft's internal rendering stack, transport protocols, deployment topology, staffing, schedule, or measured implementation costs. Nor does it establish that every future experience can be introduced without any host changes.
+
+Those are evaluation questions, not facts to invent in an architectural overview.
+
+The proposition to test is narrower and more useful:
+
+**Can the platform expose a governed, reusable experience boundary that preserves host authority while reducing the amount of host-specific work required for future changes?**
+
+If that boundary can be implemented and validated, it could serve dashboard work that matters now while leaving room for experiences that arrive later.
+
+---
+
+## IX. Make Evolution a Platform Capability
+
+Xbox does not need every new experience to become an operating-system initiative.
+
+It needs trustworthy host behavior, clear ownership of state, bounded extensibility, and a way to learn from experience changes without repeatedly destabilizing the platform around them.
+
+The Dashboard Launcher Kit separates those concerns.
+
+The shell remains authoritative. Engines remain responsible for their own domains. SharedSystems preserve canonical truth. Launcher supplies the governed integration boundary through which experiences can appear, evolve, and leave.
+
+That makes the Kit useful as a proposed first step toward Xbox Forever.
+
+It also makes the Kit useful without Xbox Forever.
+
+<div className="not-prose mt-16 mb-20">
+  <p className="text-2xl md:text-3xl leading-relaxed text-gray-300">
+    A stable platform does not have to be a static platform.
+  </p>
+  <p className="text-3xl md:text-4xl font-semibold tracking-tight text-white mt-8">
+    Build the boundary once. Keep creating through it.
+  </p>
+</div>
+
+---
+
+<div className="not-prose mt-16 mb-24 text-sm md:text-base leading-relaxed text-gray-500">
+  <p>
+    <strong>Project context:</strong> Dashboard Launcher Kit is a proposed, specification-level architecture for controlled Xbox dashboard evolution. This public overview describes responsibilities, system boundaries, and adoption principles. Canonical contracts, validation materials, and detailed implementation specifications remain private.
+  </p>
+  <p className="mt-4">
+    For project evaluation or detailed architectural access: <a href="mailto:Elliott@Webb.Systems" className="underline underline-offset-4">Elliott@Webb.Systems</a>
+  </p>
+</div>

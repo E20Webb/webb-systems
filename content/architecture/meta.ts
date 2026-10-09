@@ -17,6 +17,19 @@ export type ArchitectureMeta = {
 };
 
 export const architectureMeta: ArchitectureMeta[] = [
+  {
+    slug: "dashboard-launcher-kit-modular-experience-architecture",
+    title: "Dashboard Launcher Kit: Modular Experience Architecture",
+    abstract:
+      "A governed extension architecture for evolving Xbox experiences while preserving the dashboard host and authoritative platform systems.",
+    thumbnailCaption:
+      "The host stays stable. Experiences evolve.",
+    category: "Architecture",
+    thumbnail: "/thumbnails/dashboard-launcher-kit-modular-experience-archit.jpg",
+    thumbnailMotion: "/thumbnails/dashboard-launcher-kit-modular-experience-motion.mp4"
+  },
+
+
 
 {
   slug: "post-launch-architecture",

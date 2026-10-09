@@ -1,4 +1,8 @@
 export const essays = {
+  "xbox-can-evolve-home-without-rebuilding-it": () =>
+    import("./xbox-can-evolve-home-without-rebuilding-it.mdx"),
+
+
   "future-isnt-lost-its-underbuilt": () =>
     import("./future-isnt-lost-its-underbuilt.mdx"),
 
