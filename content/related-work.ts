@@ -65,6 +65,11 @@ const relatedSelections: Record<string, RelatedReference[]> = {
   // ESSAYS
   // =========================================================
 
+  "essay:xbox-can-evolve-home-without-rebuilding-it": [
+    { type: "architecture", slug: "dashboard-launcher-kit-modular-experience-architecture" },
+    { type: "project", slug: "xbox-dashboard-launcher-kit" },
+  ],
+
   "essay:future-isnt-lost-its-underbuilt": [
     { type: "research", slug: "forge-economics" },
     { type: "project", slug: "forge" },
@@ -133,6 +138,11 @@ const relatedSelections: Record<string, RelatedReference[]> = {
   // =========================================================
   // ARCHITECTURE
   // =========================================================
+
+  "architecture:dashboard-launcher-kit-modular-experience-architecture": [
+    { type: "essay", slug: "xbox-can-evolve-home-without-rebuilding-it" },
+    { type: "project", slug: "xbox-dashboard-launcher-kit" },
+  ],
 
   "architecture:advertising-mode-problem-architecture": [
     { type: "essay", slug: "gaming-profits" },
@@ -275,6 +285,8 @@ const relatedSelections: Record<string, RelatedReference[]> = {
   ],
 
   "project:xbox-dashboard-launcher-kit": [
+    { type: "essay", slug: "xbox-can-evolve-home-without-rebuilding-it" },
+    { type: "architecture", slug: "dashboard-launcher-kit-modular-experience-architecture" },
     { type: "project", slug: "xbox-forever" },
   ],
 
