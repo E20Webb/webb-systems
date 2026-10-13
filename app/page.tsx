@@ -4,21 +4,27 @@ import { architectureMeta } from "@/content/architecture/meta";
 import Thumbnail from "../components/Thumbnail";
 
 const featuredSelections = [
+  // Social behavior -> market opportunity -> specific commercial proposal.
   {
     type: "essay",
-    slug: "future-isnt-lost-its-underbuilt",
+    slug: "the-game-isnt-the-session",
   },
   {
     type: "essay",
-    slug: "gaming-culture",
+    slug: "friendslop-market-signal",
+  },
+  {
+    type: "essay",
+    slug: "gears-of-war-second-business-model",
+  },
+  // Connect the newest essays to wider platform strategy and architecture.
+  {
+    type: "essay",
+    slug: "xbox-can-evolve-home-without-rebuilding-it",
   },
   {
     type: "essay",
     slug: "steam-is-not-a-store",
-  },
-  {
-    type: "essay",
-    slug: "gaming-profits",
   },
   {
     type: "architecture",

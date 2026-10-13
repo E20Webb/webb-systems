@@ -65,6 +65,27 @@ const relatedSelections: Record<string, RelatedReference[]> = {
   // ESSAYS
   // =========================================================
 
+  // New essays: connect social behavior, group purchasing, and catalog economics.
+  "essay:the-game-isnt-the-session": [
+    { type: "essay", slug: "friendslop-market-signal" },
+    { type: "essay", slug: "gaming-culture" },
+    { type: "architecture", slug: "cultural-infrastructure-architecture" },
+    { type: "research", slug: "return-of-the-destination" },
+  ],
+
+  "essay:friendslop-market-signal": [
+    { type: "essay", slug: "the-game-isnt-the-session" },
+    { type: "essay", slug: "gears-of-war-second-business-model" },
+    { type: "essay", slug: "lost-community" },
+    { type: "architecture", slug: "catalog-architecture" },
+  ],
+
+  "essay:gears-of-war-second-business-model": [
+    { type: "essay", slug: "friendslop-market-signal" },
+    { type: "essay", slug: "gaming-profits" },
+    { type: "architecture", slug: "post-launch-architecture" },
+  ],
+
   "essay:xbox-can-evolve-home-without-rebuilding-it": [
     { type: "architecture", slug: "dashboard-launcher-kit-modular-experience-architecture" },
     { type: "project", slug: "xbox-dashboard-launcher-kit" },
@@ -83,6 +104,7 @@ const relatedSelections: Record<string, RelatedReference[]> = {
   ],
 
   "essay:gaming-culture": [
+    { type: "essay", slug: "the-game-isnt-the-session" },
     { type: "architecture", slug: "cultural-infrastructure-architecture" },
     { type: "research", slug: "discord-server-era" },
     { type: "research", slug: "return-of-the-destination" },
@@ -90,6 +112,7 @@ const relatedSelections: Record<string, RelatedReference[]> = {
   ],
 
   "essay:gaming-profits": [
+    { type: "essay", slug: "gears-of-war-second-business-model" },
     { type: "research", slug: "the-monetary-value-of-being-the-board" },
     { type: "architecture", slug: "advertising-mode-problem-architecture" },
     { type: "project", slug: "xbox-forever-ads" },
@@ -103,6 +126,7 @@ const relatedSelections: Record<string, RelatedReference[]> = {
   ],
 
   "essay:lost-community": [
+    { type: "essay", slug: "friendslop-market-signal" },
     { type: "architecture", slug: "taste-graph-problem-architecture" },
     { type: "architecture", slug: "catalog-architecture" },
     { type: "research", slug: "return-of-the-destination" },

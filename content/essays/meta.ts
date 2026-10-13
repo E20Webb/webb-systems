@@ -10,6 +10,42 @@ export type EssayMeta = {
 
 export const essayMeta: EssayMeta[] = [
   {
+    slug: "gears-of-war-second-business-model",
+    title: "Gears of War Doesn’t Need a Price Cut. It Needs a Second Business Model.",
+    abstract:
+      "How a standalone multiplayer offering, evolving Horde Siege, and player identity could expand Gears of War’s audience without discounting its campaign.",
+    thumbnailCaption:
+      "Give the war another way in.",
+    category: "Culture",
+    thumbnail: "/thumbnails/gears-of-war-second-business-model.jpg",
+    thumbnailMotion: "/thumbnails/gears-of-war-second-business-model-motion.mp4"
+  },
+
+  {
+    slug: "friendslop-market-signal",
+    title: "Friendslop Isn’t a Genre. It’s a Market Signal.",
+    abstract:
+      "What affordable social games reveal about group purchases, discovery, and new opportunities for overlooked game catalogs.",
+    thumbnailCaption:
+      "The group decides what gets played.",
+    category: "Culture",
+    thumbnail: "/thumbnails/friendslop-market-signal.jpg",
+    thumbnailMotion: "/thumbnails/friendslop-market-signal-motion.mp4"
+  },
+
+  {
+    slug: "the-game-isnt-the-session",
+    title: "The Game Isn’t the Session.",
+    abstract:
+      "Why the social gaming session can continue across different games, screens, and activities—and why platforms should pay attention.",
+    thumbnailCaption:
+      "The friend group is the container.",
+    category: "Culture",
+    thumbnail: "/thumbnails/the-game-isnt-the-session.jpg",
+    thumbnailMotion: "/thumbnails/the-game-isnt-the-session-motion.mp4"
+  },
+
+  {
     slug: "xbox-can-evolve-home-without-rebuilding-it",
     title: "Xbox Can Evolve Home Without Rebuilding It",
     abstract:

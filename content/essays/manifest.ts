@@ -1,4 +1,13 @@
 export const essays = {
+  "gears-of-war-second-business-model": () =>
+    import("./gears-of-war-second-business-model.mdx"),
+
+  "friendslop-market-signal": () =>
+    import("./friendslop-market-signal.mdx"),
+
+  "the-game-isnt-the-session": () =>
+    import("./the-game-isnt-the-session.mdx"),
+
   "xbox-can-evolve-home-without-rebuilding-it": () =>
     import("./xbox-can-evolve-home-without-rebuilding-it.mdx"),
 
