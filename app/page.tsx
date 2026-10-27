@@ -4,23 +4,23 @@ import { architectureMeta } from "@/content/architecture/meta";
 import Thumbnail from "../components/Thumbnail";
 
 const featuredSelections = [
-  // Social behavior -> market opportunity -> specific commercial proposal.
+  // Recent essays: physical ownership, player creation, and gaming culture.
+  {
+    type: "essay",
+    slug: "physical-gaming-beyond-the-disc",
+  },
+  {
+    type: "essay",
+    slug: "what-if-xbox-let-players-build-with-its-worlds",
+  },
+  {
+    type: "essay",
+    slug: "the-elements-of-video-game-culture",
+  },
+  // Established work showing social, platform, and architectural range.
   {
     type: "essay",
     slug: "the-game-isnt-the-session",
-  },
-  {
-    type: "essay",
-    slug: "friendslop-market-signal",
-  },
-  {
-    type: "essay",
-    slug: "gears-of-war-second-business-model",
-  },
-  // Connect the newest essays to wider platform strategy and architecture.
-  {
-    type: "essay",
-    slug: "xbox-can-evolve-home-without-rebuilding-it",
   },
   {
     type: "essay",
