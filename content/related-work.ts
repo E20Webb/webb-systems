@@ -65,6 +65,24 @@ const relatedSelections: Record<string, RelatedReference[]> = {
   // ESSAYS
   // =========================================================
 
+  // New essays: physical ownership, player-created worlds, and gaming culture.
+  "essay:physical-gaming-beyond-the-disc": [
+    { type: "essay", slug: "lost-community" },
+    { type: "essay", slug: "steam-is-not-a-store" },
+  ],
+
+  "essay:what-if-xbox-let-players-build-with-its-worlds": [
+    { type: "essay", slug: "the-elements-of-video-game-culture" },
+    { type: "essay", slug: "game-ip-mythos-vs-continuity" },
+    { type: "architecture", slug: "ip-expansion-architecture" },
+  ],
+
+  "essay:the-elements-of-video-game-culture": [
+    { type: "essay", slug: "gaming-culture" },
+    { type: "essay", slug: "what-if-xbox-let-players-build-with-its-worlds" },
+    { type: "architecture", slug: "cultural-infrastructure-architecture" },
+  ],
+
   // New essays: connect social behavior, group purchasing, and catalog economics.
   "essay:the-game-isnt-the-session": [
     { type: "essay", slug: "friendslop-market-signal" },

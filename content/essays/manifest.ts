@@ -1,4 +1,13 @@
 export const essays = {
+  "physical-gaming-beyond-the-disc": () =>
+    import("./physical-gaming-beyond-the-disc.mdx"),
+
+  "what-if-xbox-let-players-build-with-its-worlds": () =>
+    import("./what-if-xbox-let-players-build-with-its-worlds.mdx"),
+
+  "the-elements-of-video-game-culture": () =>
+    import("./the-elements-of-video-game-culture.mdx"),
+
   "gears-of-war-second-business-model": () =>
     import("./gears-of-war-second-business-model.mdx"),
 

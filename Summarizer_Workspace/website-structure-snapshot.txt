@@ -1,0 +1,2586 @@
+﻿
+================================================================================
+WEBB.SYSTEMS STRUCTURAL SNAPSHOT
+================================================================================
+
+Generated: 2026-09-28 16:16:14
+Root: C:\webb-systems
+
+================================================================================
+GIT STATUS
+================================================================================
+
+ M content/architecture/catalog-architecture.mdx
+?? Summarizer_Workspace/
+?? content/essays/forge-economics.mdx
+?? content/essays/return-of-the-destination.mdx
+?? content/essays/the-monetary-value-of-being-the-board.mdx
+?? content/essays/the-trust-layer.mdx
+?? content/essays/you-dont-need-to-own-the-stack.mdx
+
+================================================================================
+REPOSITORY ROOT
+================================================================================
+
+
+================================================================================
+KEY CONFIGURATION FILES
+================================================================================
+
+
+FILE: .\package.json
+--------------------------------------------------------------------------------
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "prettier": "prettier --write --ignore-unknown ."
+  },
+  "dependencies": {
+    "@heroicons/react": "2.2.0",
+    "@mdx-js/loader": "3.1.1",
+    "@mdx-js/react": "3.1.1",
+    "@next/mdx": "16.2.6",
+    "@types/mdx": "2.0.13",
+    "clsx": "2.1.1",
+    "codehike": "1.0.7",
+    "date-fns": "4.1.0",
+    "dinero.js": "2.0.0-alpha.10",
+    "ms": "3.0.0-canary.1",
+    "next": "16.3.0-preview.3",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "recma-codehike": "0.0.1",
+    "remark-codehike": "0.0.1",
+    "server-only": "0.0.1",
+    "styled-components": "6.1.15",
+    "use-count-up": "3.0.1",
+    "zod": "3.24.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "0.5.10",
+    "@tailwindcss/postcss": "4.1.4",
+    "@tailwindcss/typography": "0.5.16",
+    "@types/ms": "2.1.0",
+    "@types/node": "22.13.1",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "postcss": "8.5.14",
+    "prettier": "3.5.3",
+    "prettier-plugin-tailwindcss": "0.6.12",
+    "tailwindcss": "4.1.4",
+    "typescript": "5.7.3"
+  }
+}
+
+
+FILE: .\next.config.ts
+--------------------------------------------------------------------------------
+import createMDX from '@next/mdx';
+
+const withMDX = createMDX({
+  extension: /\.mdx?$/,
+});
+
+const nextConfig = {
+  cacheComponents: true,
+  partialPrefetching: true,
+
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+
+  experimental: {
+    inlineCss: true,
+    cachedNavigations: true,
+    viewTransition: true,
+  },
+};
+
+export default withMDX(nextConfig);
+
+FILE: .\tsconfig.json
+--------------------------------------------------------------------------------
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+
+
+    "paths": {
+      "#/*": ["./*"],
+      "@/*": ["./*"]
+    },
+
+    "plugins": [{ "name": "next" }]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
+  ],
+  "exclude": ["node_modules"]
+}
+
+================================================================================
+APP ROUTER FILE TREE
+================================================================================
+
+app\about\page.tsx
+app\architecture\[slug]\page.tsx
+app\architecture\page.tsx
+app\essays\[slug]\page.tsx
+app\essays\page.tsx
+app\icon.png
+app\layout.tsx
+app\NavBar.tsx
+app\page.tsx
+app\projects\vault\forge\[slug]\page.tsx
+app\projects\vault\forge\index\page.tsx
+app\projects\vault\forge\page.tsx
+app\projects\vault\index\page.tsx
+app\projects\vault\nc-foundation\[slug]\page.tsx
+app\projects\vault\nc-foundation\index\page.tsx
+app\projects\vault\nc-foundation\page.tsx
+app\projects\vault\page.tsx
+app\projects\vault\xbox-dashboard-launcher-kit\[slug]\page.tsx
+app\projects\vault\xbox-dashboard-launcher-kit\index\page.tsx
+app\projects\vault\xbox-dashboard-launcher-kit\page.tsx
+app\projects\vault\xbox-forever\[slug]\page.tsx
+app\projects\vault\xbox-forever\index\page.tsx
+app\projects\vault\xbox-forever\page.tsx
+app\projects\vault\xbox-forever-ads\[slug]\page.tsx
+app\projects\vault\xbox-forever-ads\index\page.tsx
+app\projects\vault\xbox-forever-ads\page.tsx
+
+================================================================================
+CONTENT FILE TREE
+================================================================================
+
+content\architecture\advertising-mode-problem-architecture.mdx
+content\architecture\aesthetic-identity.mdx
+content\architecture\catalog-architecture.mdx
+content\architecture\cultural-infrastructure-architecture.mdx
+content\architecture\discord-server-era.mdx
+content\architecture\genre-taxonomy-architecture.mdx
+content\architecture\ip-expansion-architecture.mdx
+content\architecture\manifest.ts
+content\architecture\meta.ts
+content\architecture\post-launch-architecture.mdx
+content\architecture\publisher-identity-architecture.mdx
+content\architecture\release-cadence-architecture.mdx
+content\architecture\studio-identity-architecture.mdx
+content\architecture\taste-graph-problem-architecture.mdx
+content\essays\death-of-play.mdx
+content\essays\forge-economics.mdx
+content\essays\future-isnt-lost-its-underbuilt.mdx
+content\essays\game-development-starts-at-zero.mdx
+content\essays\game-ip-mythos-vs-continuity.mdx
+content\essays\gaming-culture.mdx
+content\essays\gaming-profits.mdx
+content\essays\genre-bottleneck.mdx
+content\essays\lost-community.mdx
+content\essays\manifest.ts
+content\essays\meta.ts
+content\essays\return-of-the-destination.mdx
+content\essays\steam-is-not-a-store.mdx
+content\essays\the-monetary-value-of-being-the-board.mdx
+content\essays\the-trust-layer.mdx
+content\essays\unexploited-identity.mdx
+content\essays\you-dont-need-to-own-the-stack.mdx
+content\mdx-components.tsx
+content\projects\manifest.ts
+content\projects\vault\forge\documents\adaptability.mdx
+content\projects\vault\forge\documents\architecture.mdx
+content\projects\vault\forge\documents\coherence.mdx
+content\projects\vault\forge\documents\designer-sovereignty.mdx
+content\projects\vault\forge\documents\executive-summary.mdx
+content\projects\vault\forge\documents\founder-letter.mdx
+content\projects\vault\forge\documents\iteration.mdx
+content\projects\vault\forge\documents\one-pager.mdx
+content\projects\vault\forge\documents\portability.mdx
+content\projects\vault\forge\documents\predictability.mdx
+content\projects\vault\forge\documents\systemic-drift.mdx
+content\projects\vault\forge\documents\technical-dependency.mdx
+content\projects\vault\forge\documents\traceability.mdx
+content\projects\vault\forge\meta.ts
+content\projects\vault\forge\page.tsx
+content\projects\vault\meta.ts
+content\projects\vault\nc-foundation\documents\nc_foundation_one_pager.mdx
+content\projects\vault\nc-foundation\meta.ts
+content\projects\vault\nc-foundation\page.tsx
+content\projects\vault\types.ts
+content\projects\vault\xbox-dashboard-launcher-kit\documents\dashboard_launcher_kit_one_pager.mdx
+content\projects\vault\xbox-dashboard-launcher-kit\meta.ts
+content\projects\vault\xbox-forever\documents\xbox_forever_life_inside_a_persistent_platform.mdx
+content\projects\vault\xbox-forever\documents\xbox_forever_one_pager.mdx
+content\projects\vault\xbox-forever\documents\xbox_forever_structural_inversion_and_the_cultural_gap.mdx
+content\projects\vault\xbox-forever\documents\xbox_forever_why_persistence_Is_the_missing_layer.mdx
+content\projects\vault\xbox-forever\meta.ts
+content\projects\vault\xbox-forever-ads\documents\xbox-forever-ads-one-pager.mdx
+content\projects\vault\xbox-forever-ads\meta.ts
+content\related-work.ts
+
+================================================================================
+COMPONENTS / LIB / UTILITY FILES
+================================================================================
+
+
+[.\components]
+components\DocumentFooter.tsx
+components\Thumbnail.tsx
+
+================================================================================
+CONTENT MANIFEST / META FILE CONTENTS
+================================================================================
+
+
+FILE: content\architecture\manifest.ts
+--------------------------------------------------------------------------------
+export const architecture = {
+
+  "post-launch-architecture": () =>
+    import("./post-launch-architecture.mdx"),
+
+  "advertising-mode-problem-architecture": () =>
+    import("./advertising-mode-problem-architecture.mdx"),
+
+  "ip-expansion-architecture": () =>
+    import("./ip-expansion-architecture.mdx"),
+
+  "aesthetic-identity": () =>
+    import("./aesthetic-identity.mdx"),
+
+  "publisher-identity-architecture": () =>
+    import("./publisher-identity-architecture.mdx"),
+
+  "genre-taxonomy-architecture": () =>
+    import("./genre-taxonomy-architecture.mdx"),
+
+  "catalog-architecture": () =>
+    import("./catalog-architecture.mdx"),
+
+  "taste-graph-problem-architecture": () =>
+    import("./taste-graph-problem-architecture.mdx"),
+
+  "studio-identity-architecture": () =>
+    import("./studio-identity-architecture.mdx"),
+
+  "cultural-infrastructure-architecture": () =>
+    import("./cultural-infrastructure-architecture.mdx"),
+
+  "release-cadence-architecture": () =>
+    import("./release-cadence-architecture.mdx"),
+
+};
+
+export type ArchitectureSlug = keyof typeof architecture;
+
+FILE: content\architecture\meta.ts
+--------------------------------------------------------------------------------
+export type ArchitectureMeta = {
+
+  slug: string;
+
+  title: string;
+
+  abstract: string;
+
+  thumbnailCaption?: string;
+
+  category: string;
+
+  thumbnail: string;
+
+  thumbnailMotion: string;
+
+};
+
+export const architectureMeta: ArchitectureMeta[] = [
+
+{
+  slug: "post-launch-architecture",
+
+  title: "Post-Launch Architecture",
+
+  abstract:
+    "Why live-ops burnout exists â€” and how platforms can sustain games, studios, and portfolios through structure.",
+
+  thumbnailCaption:
+    "Post-launch is the spine.",
+
+  category: "Architecture",
+
+  thumbnail: "/thumbnails/post-launch-architecture.jpg",
+
+  thumbnailMotion: "/thumbnails/post-launch-architecture-motion.mp4"
+},
+
+{
+  slug: "advertising-mode-problem-architecture",
+
+  title: "Advertising Is a Mode Problem",
+
+  abstract:
+    "How new play surfaces can create revenue without breaking games.",
+
+  thumbnailCaption:
+    "Monetize curiosity, not frustration.",
+
+  category: "Architecture",
+
+  thumbnail: "/thumbnails/advertising-mode-problem-architecture.jpg",
+
+  thumbnailMotion: "/thumbnails/advertising-mode-problem-architecture-motion.mp4"
+},
+
+{
+  slug: "ip-expansion-architecture",
+
+  title: "The IP Expansion Architecture",
+
+  abstract:
+    "How aesthetic identity turns franchises into worlds.",
+
+  thumbnailCaption:
+    "One world. Infinite doors.",
+
+  category: "Architecture",
+
+  thumbnail: "/thumbnails/ways-to-skin-a-cat.jpg",
+
+  thumbnailMotion: "/thumbnails/ways-to-skin-a-cat.mp4"
+},
+
+{
+  slug: "aesthetic-identity",
+
+  title: "The Aesthetic Identity",
+
+  abstract:
+    "Why IP isnâ€™t a gameplay loop â€” itâ€™s a world, and how aesthetic identity unlocks infinite expansion.",
+
+  thumbnailCaption:
+    "Identity survives the loop.",
+
+  category: "Architecture",
+
+  thumbnail: "/thumbnails/aesthetic-identity.jpg",
+
+  thumbnailMotion: "/thumbnails/aesthetic-identity-motion.mp4"
+},
+
+{
+  slug: "publisher-identity-architecture",
+
+  title: "Publisher Identity Architecture",
+
+  abstract:
+    "How fantasy-mechanical labels create identity lanes that unify catalogs, culture, cadence, and discovery.",
+
+  thumbnailCaption:
+    "The missing layer between publisher and studio.",
+
+  category: "Architecture",
+
+  thumbnail: "/thumbnails/publisher-architecture.jpg",
+
+  thumbnailMotion: "/thumbnails/publisher-architecture-motion.mp4"
+},
+
+{
+  slug: "genre-taxonomy-architecture",
+
+  title: "Genre Taxonomy Architecture",
+
+  abstract:
+    "Experience taxonomy, the platformâ€™s true classification system.",
+
+  thumbnailCaption:
+    "Genre is the label. Taxonomy is the structure.",
+
+  category: "Architecture",
+
+  thumbnail: "/thumbnails/genre-taxonomy-architecture.jpg",
+
+  thumbnailMotion: "/thumbnails/genre-taxonomy-architecture-motion.mp4"
+},
+
+{
+  slug: "catalog-architecture",
+
+  title: "Catalog Architecture: The Platformâ€™s World Model",
+
+  abstract:
+    "Why catalogs failâ€”and how a relational world model unlocks discovery, identity, and continuity.",
+
+  thumbnailCaption:
+    "The catalog is the spine.",
+
+  category: "Architecture",
+
+  thumbnail: "/thumbnails/catalog-architecture.jpg",
+
+  thumbnailMotion: "/thumbnails/catalog-architecture-motion.mp4"
+},
+
+{
+  slug: "taste-graph-problem-architecture",
+
+  title: "The Taste Graph Problem",
+
+  abstract:
+    "Why personalization breaks â€” and how a graph model fixes it.",
+
+  thumbnailCaption:
+    "Taste is relational, not categorical.",
+
+  category: "Architecture",
+
+  thumbnail: "/thumbnails/taste-graph-problem-architecture.jpg",
+
+  thumbnailMotion: "/thumbnails/taste-graph-problem-architecture-motion.mp4"
+},
+
+{
+  slug: "studio-identity-architecture",
+
+  title: "Studio Identity Architecture",
+
+  abstract:
+    "How studios express identity, signature, and continuity across a platform.",
+
+  thumbnailCaption:
+    "A studio is more than a logo.",
+
+  category: "Architecture",
+
+  thumbnail: "/thumbnails/studio-identity-architecture.jpg",
+
+  thumbnailMotion: "/thumbnails/studio-identity-architecture-motion.mp4"
+},
+
+{
+  slug: "cultural-infrastructure-architecture",
+
+  title: "Cultural Infrastructure Architecture",
+
+  abstract:
+    "How platforms build, sustain, and express culture through identity, continuity, and shared meaning.",
+
+  thumbnailCaption:
+    "Culture needs infrastructure.",
+
+  category: "Architecture",
+
+  thumbnail: "/thumbnails/cultural-infrastructure-architecture.jpg",
+
+  thumbnailMotion: "/thumbnails/cultural-infrastructure-architecture-motion.mp4"
+},
+
+{
+  slug: "release-cadence-architecture",
+
+  title: "Release Cadence Architecture",
+
+  abstract:
+    "How platforms shape rhythm, continuity, and cultural momentum through world, series, studio, platform, and community cadence.",
+
+  thumbnailCaption:
+    "Cadence is the platformâ€™s heartbeat.",
+
+  category: "Architecture",
+
+  thumbnail: "/thumbnails/release-cadence-architecture.jpg",
+
+  thumbnailMotion: "/thumbnails/release-cadence-architecture-motion.mp4"
+}
+
+];
+
+FILE: content\essays\manifest.ts
+--------------------------------------------------------------------------------
+export const essays = {
+  "future-isnt-lost-its-underbuilt": () =>
+    import("./future-isnt-lost-its-underbuilt.mdx"),
+
+   "steam-is-not-a-store": () =>
+    import("./steam-is-not-a-store.mdx"),
+
+  "gaming-culture": () =>
+    import("./gaming-culture.mdx"),
+
+  "gaming-profits": () =>
+    import("./gaming-profits.mdx"),
+
+  "genre-bottleneck": () =>
+    import("./genre-bottleneck.mdx"),
+
+  "lost-community": () =>
+    import("./lost-community.mdx"),
+
+  "unexploited-identity": () =>
+    import("./unexploited-identity.mdx"),
+
+  "game-ip-mythos-vs-continuity": () =>
+    import("./game-ip-mythos-vs-continuity.mdx"),
+
+  "game-development-starts-at-zero": () =>
+    import("./game-development-starts-at-zero.mdx"),
+
+  "death-of-play": () =>
+    import("./death-of-play.mdx"),
+};
+
+export type EssaySlug = keyof typeof essays;
+
+FILE: content\essays\meta.ts
+--------------------------------------------------------------------------------
+export type EssayMeta = {
+  slug: string;
+  title: string;
+  abstract: string;
+  thumbnailCaption?: string;
+  category: string;
+  thumbnail: string;
+  thumbnailMotion: string;
+};
+
+export const essayMeta: EssayMeta[] = [  
+   {
+    slug: "future-isnt-lost-its-underbuilt",
+    title: "The Future Isnâ€™t Lost â€” Itâ€™s Underbuilt",
+    abstract:
+      "Why instability in tech and gaming isnâ€™t a failure of people â€” but a failure of foundations, pipelines, and culture.",
+    thumbnailCaption:
+      "The problem is the foundation.",
+    category: "Culture",
+    thumbnail: "/thumbnails/future-isnt-lost-its-underbuilt.jpg",
+    thumbnailMotion: "/thumbnails/future-isnt-lost-its-underbuilt-motion.mp4"
+  },
+
+ {
+    slug: "steam-is-not-a-store",
+    title: "Steam Is Not a Store",
+    abstract:
+      "Why Steamâ€™s advantage comes from the ecosystem that can build around it.",
+    thumbnailCaption:
+      "The store is only one layer.",
+    category: "Culture",
+    thumbnail: "/thumbnails/steam-is-not-a-store.jpg",
+    thumbnailMotion: "/thumbnails/steam-is-not-a-store-motion.mp4"
+  },
+
+  {
+    slug: "gaming-culture",
+    title: "Gaming Culture",
+    abstract:
+      "Where gaming lived, where it went, and what comes next.",
+    thumbnailCaption:
+      "The technology changed. The gathering didnâ€™t.",
+    category: "Culture",
+    thumbnail: "/thumbnails/gaming-culture.jpg",
+    thumbnailMotion: "/thumbnails/gaming-culture-motion.mp4"
+  },
+
+  {
+    slug: "gaming-profits",
+    title: "Gaming Profits",
+    abstract:
+      "The money between the islands.",
+    thumbnailCaption:
+      "There is money in the gaps.",
+    category: "Culture",
+    thumbnail: "/thumbnails/gaming-profits.jpg",
+    thumbnailMotion: "/thumbnails/gaming-profits-motion.mp4"
+  },
+
+  {
+    slug: "genre-bottleneck",
+    title: "The Genre Bottleneck",
+    abstract:
+      "Why the industry lost its variety â€” and why players deserve better.",
+    thumbnailCaption:
+      "The shelves all look the same.",
+    category: "Culture",
+    thumbnail: "/thumbnails/genre-bottleneck.jpg",
+    thumbnailMotion: "/thumbnails/genre-bottleneck-motion.mp4"
+  },
+
+  {
+    slug: "lost-community",
+    title: "The Lost Community",
+    abstract:
+      "Why gaming needs its store culture back â€” and why discovery collapsed when it disappeared.",
+    thumbnailCaption:
+      "Discovery used to have a place.",
+    category: "Culture",
+    thumbnail: "/thumbnails/lost-community.jpg",
+    thumbnailMotion: "/thumbnails/lost-community-motion.mp4"
+  },
+
+  {
+    slug: "unexploited-identity",
+    title: "An Unexploited Identity",
+    abstract:
+      "How gaming lost the competitive identity that once defined the medium.",
+    thumbnailCaption:
+      "Competition lost its home.",
+    category: "Culture",
+    thumbnail: "/thumbnails/unexploited-identity.jpg",
+    thumbnailMotion: "/thumbnails/unexploited-identity-motion.mp4"
+  },
+
+  {
+    slug: "game-ip-mythos-vs-continuity",
+    title: "Game IP: Cultural Mythos vs Continuity",
+    abstract:
+      "Can games escape the cage of continuity?",
+    thumbnailCaption:
+      "Mythos needs room to reinterpret.",
+    category: "Culture",
+    thumbnail: "/thumbnails/game-ip-mythos-vs-continuity.jpg",
+    thumbnailMotion: "/thumbnails/game-ip-mythos-vs-continuity-motion.mp4"
+  },
+
+  {
+    slug: "game-development-starts-at-zero",
+    title: "Why Game Development Always Starts at Zero",
+    abstract:
+      "The structural inefficiency of game creation.",
+    thumbnailCaption:
+      "Every project rebuilds the foundation.",
+    category: "Culture",
+    thumbnail: "/thumbnails/game-development-starts-at-zero.jpg",
+    thumbnailMotion: "/thumbnails/game-development-starts-at-zero-motion.mp4"
+  },
+
+  {
+    slug: "death-of-play",
+    title: "The Death of Play",
+    abstract:
+      "How modern games drifted away from play.",
+    thumbnailCaption:
+      "Games got bigger. Play got smaller.",
+    category: "Culture",
+    thumbnail: "/thumbnails/death-of-play.jpg",
+    thumbnailMotion: "/thumbnails/death-of-play-motion.mp4"
+  }
+  
+];
+
+FILE: content\projects\manifest.ts
+--------------------------------------------------------------------------------
+import { vaultMeta } from "@/content/projects/vault/meta";
+
+export const projects = {
+  "nc-foundation": () => import("./vault/nc-foundation.mdx"),
+  "forge": () => import("./vault/forge.mdx"),
+  "xbox-forever": () => import("./vault/xbox-forever.mdx"),
+};
+
+export type ProjectSlug = keyof typeof projects;
+
+
+
+FILE: content\projects\vault\forge\meta.ts
+--------------------------------------------------------------------------------
+import type { VaultDocument } from "@/content/projects/vault/types";
+
+export const forgeDocuments: VaultDocument[] = [
+    {
+    slug: "architecture",
+    title: "Forge Architecture Brief",
+    abstract: "A structural overview of the Forge system architecture and its core components.",
+    category: "Platform Strategy",
+    thumbnail: "/thumbnails/vault/forge/architecture.jpg",
+    mdx: "/content/projects/vault/forge/documents/architecture.mdx",
+    pdf: "/projects/vault/forge/FORGE â€” Vision.pdf",
+    ndaNote: "The PDF provides a high-level overview only. Detailed technical, commercial, or proprietary materials are available under NDA. To request access, email Elliott@Webb.Systems with your name, organization, and intended use; requests are reviewed within 3 business days.",
+  },
+  {
+    slug: "one-pager",
+    title: "Forge One-Pager",
+    abstract: "A concise overview of the Forge platform vision and strategic intent.",
+    category: "Platform Strategy",
+    thumbnail: "/thumbnails/vault/forge/one-pager.jpg",
+    mdx: "/content/projects/vault/forge/documents/one-pager.mdx",
+    pdf: "/projects/vault/forge/FORGE â€” One-Pager.pdf",
+    ndaNote: "The PDF provides a high-level overview only. Detailed technical, commercial, or proprietary materials are available under NDA. To request access, email Elliott@Webb.Systems with your name, organization, and intended use; requests are reviewed within 3 business days.",
+  },
+  {
+    slug: "executive-overview",
+    title: "Forge Executive Overview",
+    abstract: "A leadership-facing summary of the Forge platform, its goals, and its value.",
+    category: "Platform Strategy",
+    thumbnail: "/thumbnails/vault/forge/executive-summary.jpg",
+    mdx: "/content/projects/vault/forge/documents/executive-summary.mdx",
+    pdf: "/projects/vault/forge/FORGE â€” Overview.pdf",
+    ndaNote: "The PDF provides a high-level overview only. Detailed technical, commercial, or proprietary materials are available under NDA. To request access, email Elliott@Webb.Systems with your name, organization, and intended use; requests are reviewed within 3 business days.",
+  },
+  {
+    slug: "founder-letter",
+    title: "Forge â€” Founder Letter",
+    abstract: "A foundational letter outlining the vision and philosophy behind Forge.",
+    category: "Foundation",
+    mdx: "/content/projects/vault/forge/documents/founder-letter.mdx",
+    pdf: "/projects/vault/forge/FORGE â€” Founder Letter.pdf",
+    ndaNote: "The PDF provides a high-level overview only. Detailed technical, commercial, or proprietary materials are available under NDA. To request access, email Elliott@Webb.Systems with your name, organization, and intended use; requests are reviewed within 3 business days.",
+  },
+  {
+    slug: "systemic-drift",
+    title: "Forge â€” Systemic Drift",
+    abstract: "An analysis of systemic drift and how Forge prevents long-term degradation.",
+    category: "Foundation",
+    mdx: "/content/projects/vault/forge/documents/systemic-drift.mdx",
+    pdf: "/projects/vault/forge/FORGE â€” Systemic Drift.pdf",
+    ndaNote: "The PDF provides a high-level overview only. Detailed technical, commercial, or proprietary materials are available under NDA. To request access, email Elliott@Webb.Systems with your name, organization, and intended use; requests are reviewed within 3 business days.",
+  },
+  {
+    slug: "coherence",
+    title: "Forge â€” Coherence",
+    abstract: "A discussion of systemic coherence and how Forge maintains structural clarity.",
+    category: "Foundation",
+    mdx: "/content/projects/vault/forge/documents/coherence.mdx",
+    pdf: "/projects/vault/forge/FORGE â€” Coherence.pdf",
+    ndaNote: "The PDF provides a high-level overview only. Detailed technical, commercial, or proprietary materials are available under NDA. To request access, email Elliott@Webb.Systems with your name, organization, and intended use; requests are reviewed within 3 business days.",
+  },
+  {
+    slug: "predictability",
+    title: "Forge â€” Predictability",
+    abstract: "Why predictable systems matter and how Forge enforces them.",
+    category: "Engineering",
+    mdx: "/content/projects/vault/forge/documents/predictability.mdx",
+    pdf: "/projects/vault/forge/FORGE â€” Predictability.pdf",
+    ndaNote: "The PDF provides a high-level overview only. Detailed technical, commercial, or proprietary materials are available under NDA. To request access, email Elliott@Webb.Systems with your name, organization, and intended use; requests are reviewed within 3 business days.",
+  },
+  {
+    slug: "traceability",
+    title: "Forge â€” Traceability",
+    abstract: "A deep dive into traceability and how Forge maintains clear lineage of decisions.",
+    category: "Engineering",
+    mdx: "/content/projects/vault/forge/documents/traceability.mdx",
+    pdf: "/projects/vault/forge/FORGE â€” Traceability.pdf",
+    ndaNote: "The PDF provides a high-level overview only. Detailed technical, commercial, or proprietary materials are available under NDA. To request access, email Elliott@Webb.Systems with your name, organization, and intended use; requests are reviewed within 3 business days.",
+  },
+  {
+    slug: "iteration",
+    title: "Forge â€” Iteration",
+    abstract: "How Forge supports rapid iteration without sacrificing stability.",
+    category: "Engineering",
+    mdx: "/content/projects/vault/forge/documents/iteration.mdx",
+    pdf: "/projects/vault/forge/FORGE â€” Iteration.pdf",
+    ndaNote: "The PDF provides a high-level overview only. Detailed technical, commercial, or proprietary materials are available under NDA. To request access, email Elliott@Webb.Systems with your name, organization, and intended use; requests are reviewed within 3 business days.",
+  },
+  {
+    slug: "technical-dependency",
+    title: "Forge â€” Technical Dependency",
+    abstract: "How Forge reduces unnecessary dependencies and increases system resilience.",
+    category: "Design",
+    mdx: "/content/projects/vault/forge/documents/technical-dependency.mdx",
+    pdf: "/projects/vault/forge/FORGE â€” Technical Dependency.pdf",
+    ndaNote: "The PDF provides a high-level overview only. Detailed technical, commercial, or proprietary materials are available under NDA. To request access, email Elliott@Webb.Systems with your name, organization, and intended use; requests are reviewed within 3 business days.",
+  },
+    {
+    slug: "designer-sovereignty",
+    title: "Forge â€” Designer Sovereignty",
+    abstract: "Why Forge protects designer intent and prevents systemic drift.",
+    category: "Design",
+    mdx: "/content/projects/vault/forge/documents/designer-sovereignty.mdx",
+    pdf: "/projects/vault/forge/FORGE â€” Designer Sovereignty.pdf",
+    ndaNote: "The PDF provides a high-level overview only. Detailed technical, commercial, or proprietary materials are available under NDA. To request access, email Elliott@Webb.Systems with your name, organization, and intended use; requests are reviewed within 3 business days.",
+  },
+  {
+    slug: "portability",
+    title: "Forge â€” Portability",
+    abstract: "A look at how Forge enables systems to move across contexts without breaking.",
+    category: "Strategy",
+    mdx: "/content/projects/vault/forge/documents/portability.mdx",
+    pdf: "/projects/vault/forge/FORGE â€” Portability.pdf",
+    ndaNote: "The PDF provides a high-level overview only. Detailed technical, commercial, or proprietary materials are available under NDA. To request access, email Elliott@Webb.Systems with your name, organization, and intended use; requests are reviewed within 3 business days.",
+  },
+  {
+    slug: "adaptability",
+    title: "Forge â€” Adaptability",
+    abstract: "How Forge enables adaptable systems that evolve with creators and constraints.",
+    category: "Strategy",
+    mdx: "/content/projects/vault/forge/documents/adaptability.mdx",
+    pdf: "/projects/vault/forge/FORGE â€” Adaptability.pdf",
+    ndaNote: "The PDF provides a high-level overview only. Detailed technical, commercial, or proprietary materials are available under NDA. To request access, email Elliott@Webb.Systems with your name, organization, and intended use; requests are reviewed within 3 business days.",
+  },
+];
+
+
+FILE: content\projects\vault\meta.ts
+--------------------------------------------------------------------------------
+export type VaultMeta = {
+  slug: string;
+  title: string;
+  abstract: string;
+  category: string;
+  thumbnail: string;
+  thumbnailMotion: string;
+};
+
+export const vaultMeta: VaultMeta[] = [
+  {
+    slug: "nc-foundation",
+    title: "NC Foundation",
+    abstract: "The foundational layer of the Neural Computer.",
+    category: "Architecture",
+    thumbnail: "/thumbnails/nc-foundation.jpg",
+    thumbnailMotion: "/thumbnails/nc-foundation-motion.mp4"
+  },
+
+  {
+    slug: "forge",
+    title: "Forge",
+    abstract: "A platform-level model for the future of game creation.",
+    category: "Architecture",
+    thumbnail: "/thumbnails/forge.jpg",
+    thumbnailMotion: "/thumbnails/forge-motion.mp4"
+  },
+
+  {
+    slug: "xbox-forever",
+    title: "Xbox Forever",
+    abstract: "A unified vision for the next era of Xbox.",
+    category: "Architecture",
+    thumbnail: "/thumbnails/xbox-forever.jpg",
+    thumbnailMotion: "/thumbnails/xbox-forever-motion.mp4"
+  },
+
+  {
+    slug: "xbox-forever-ads",
+    title: "Xbox Forever Ads",
+    abstract:
+      "A platform-native advertising and discovery model built around participation rather than interruption.",
+    category: "Advertising Architecture",
+    thumbnail: "/thumbnails/xbox-forever-ads.jpg",
+    thumbnailMotion: "/thumbnails/xbox-forever-ads-motion.mp4"
+  },
+
+  {
+    slug: "xbox-dashboard-launcher-kit",
+    title: "Dashboard Launcher Kit",
+    abstract: "A practical first step toward Xbox Forever.",
+    category: "Platform Infrastructure",
+    thumbnail: "/thumbnails/dashboard-launcher-kit.jpg",
+    thumbnailMotion: "/thumbnails/dashboard-launcher-kit-motion.mp4"
+  }
+];
+
+FILE: content\projects\vault\nc-foundation\meta.ts
+--------------------------------------------------------------------------------
+import type { VaultDocument } from "@/content/projects/vault/types";
+
+export const ncDocuments: VaultDocument[] = [
+  {
+    slug: "one-pager",
+    title: "NC Foundation One-Pager",
+    abstract: "A concise overview of the NC Foundation initiative and its strategic intent.",
+    category: "Platform Strategy",
+    mdx: "/content/projects/vault/nc-foundation/documents/nc_foundation_one_pager.mdx",
+    pdf: "/projects/vault/nc-foundation/NC Foundation â€” One-Pager.pdf",
+  },
+];
+
+
+FILE: content\projects\vault\xbox-dashboard-launcher-kit\meta.ts
+--------------------------------------------------------------------------------
+import type { VaultDocument } from "@/content/projects/vault/types";
+
+export const dashboardLauncherKitDocuments: VaultDocument[] = [
+  {
+    slug: "one-pager",
+    title: "Dashboard Launcher Kit One-Pager",
+    abstract:
+      "A practical framework for evolving Xbox Home and creating a path toward Xbox Forever.",
+    category: "Platform Infrastructure",
+    mdx: "/content/projects/vault/xbox-dashboard-launcher-kit/dashboard_launcher_kit_one_pager.mdx",
+    pdf: "/projects/vault/dashboard-launcher-kit/Dashboard Launcher Kit One Pager.pdf",
+    ndaNote:
+      "The PDF provides an NDA-safe, high-level overview only. Detailed architectural, technical, or implementation materials are available under NDA. To request access, email Elliott@Webb.Systems with your name, organization, and intended use; requests are reviewed within 3 business days.",
+  },
+];
+
+FILE: content\projects\vault\xbox-forever\meta.ts
+--------------------------------------------------------------------------------
+import type { VaultDocument } from "@/content/projects/vault/types";
+
+export const xboxDocuments: VaultDocument[] = [
+  {
+    slug: "one-pager",
+    title: "Xbox Forever One-Pager",
+    abstract: "A concise overview of the Xbox Forever platform vision and strategic intent.",
+    category: "Platform Strategy",
+    mdx: "/content/projects/vault/xbox-forever/xbox_forever_one_pager.mdx",
+    pdf: "/projects/vault/xbox-forever/Xbox Forever â€” One Pager.pdf",
+    ndaNote: "The PDF provides a high-level overview only. Detailed technical, commercial, or proprietary materials are available under NDA. To request access, email Elliott@Webb.Systems with your name, organization, and intended use; requests are reviewed within 3 business days.",
+  },
+    {
+    slug: "why-persistence-is-the-missing-layer",
+    title: "Why Persistence Is the Missing Layer",
+    abstract: "Argues that persistence is the missing layer in the Xbox platform stack.",
+    category: "Platform Strategy",
+    mdx: "/content/projects/vault/xbox-forever/xbox_forever_why_persistence_Is_the_missing_layer.mdx",
+    pdf: "/projects/vault/xbox-forever/Xbox Forever â€” Why Persistence Is the Missing Layer.pdf",
+    ndaNote: "The PDF provides a high-level overview only. Detailed technical, commercial, or proprietary materials are available under NDA. To request access, email Elliott@Webb.Systems with your name, organization, and intended use; requests are reviewed within 3 business days.",
+  },
+  {
+    slug: "life-inside-a-persistent-platform",
+    title: "Life Inside a Persistent Platform",
+    abstract: "Explores what it means to live inside a persistent Xbox ecosystem.",
+    category: "Culture & Experience",
+    mdx: "/content/projects/vault/xbox-forever/xbox_forever_life_inside_a_persistent_platform.mdx",
+    pdf: "/projects/vault/xbox-forever/Xbox Forever â€” Life Inside a Persistent Platform.pdf",
+    ndaNote: "The PDF provides a high-level overview only. Detailed technical, commercial, or proprietary materials are available under NDA. To request access, email Elliott@Webb.Systems with your name, organization, and intended use; requests are reviewed within 3 business days.",
+  },
+  {
+    slug: "structural-inversion-and-the-cultural-gap",
+    title: "Structural Inversion and the Cultural Gap",
+    abstract: "Analyzes structural inversion in Xbox and its impact on culture.",
+    category: "Architecture & Culture",
+    mdx: "/content/projects/vault/xbox-forever/xbox_forever_structural_inversion_and_the_cultural_gap.mdx",
+    pdf: "/projects/vault/xbox-forever/Xbox Forever â€” Structural Inversion and The Cultural Gap.pdf",
+    ndaNote: "The PDF provides a high-level overview only. Detailed technical, commercial, or proprietary materials are available under NDA. To request access, email Elliott@Webb.Systems with your name, organization, and intended use; requests are reviewed within 3 business days.",
+  },
+];
+
+
+FILE: content\projects\vault\xbox-forever-ads\meta.ts
+--------------------------------------------------------------------------------
+import type { VaultDocument } from "@/content/projects/vault/types";
+
+export const xboxForeverAdsDocuments: VaultDocument[] = [
+  {
+    slug: "one-pager",
+    title: "Xbox Forever Ads One-Pager",
+    abstract:
+      "A platform-native advertising and discovery model for Xbox built around participation rather than interruption.",
+    category: "Advertising Architecture",
+    mdx: "/content/projects/vault/xbox-forever-ads/documents/xbox-forever-ads-one-pager.mdx",
+    pdf: "/projects/vault/xbox-forever-ads/XBOX FOREVER ADS - ONE-PAGER.pdf",
+    ndaNote:
+      "The PDF provides an NDA-safe, high-level overview only. Detailed architectural, technical, scoring, API, integration, and implementation materials are available under NDA. To request access, email Elliott@Webb.Systems with your name, organization, and intended use; requests are reviewed within 3 business days.",
+  },
+];
+
+================================================================================
+ROUTE PAGE SOURCES
+================================================================================
+
+
+FILE: app\about\page.tsx
+--------------------------------------------------------------------------------
+export default function AboutPage() {
+  return (
+    <main className="mx-auto max-w-5xl px-6 py-12 md:py-20">
+
+      {/* Identity */}
+      <section className="flex flex-col items-center text-center space-y-6 mb-24">
+        <img
+          src="/about/elliott.jpg"
+          alt="Elliott Webb"
+          className="w-40 h-40 object-cover border border-neutral-800 shadow-lg rounded-md"
+        />
+
+        <h1 className="text-3xl md:text-4xl font-medium tracking-tight text-white">
+          Elliott Webb
+        </h1>
+
+        <p className="text-neutral-400 max-w-2xl leading-relaxed text-base md:text-lg">
+          Systems architect. Cultural thinker. Platform-level designer.
+          <br />
+          I productize emerging capability through systems architecture.
+        </p>
+      </section>
+
+      {/* Why I Build */}
+      <section className="border-t border-neutral-700 pt-14 mb-20">
+        <p className="text-sm uppercase tracking-[0.18em] text-neutral-500 mb-6">
+          Why I Build
+        </p>
+
+        <div className="border-l-4 border-emerald-400 pl-8 py-4 max-w-4xl">
+          <h2 className="text-2xl md:text-3xl font-medium leading-snug text-white">
+            I look for the gap between what technology can already do
+            and what we have actually built with it.
+          </h2>
+
+          <p className="mt-5 text-neutral-400 text-base md:text-lg leading-relaxed max-w-3xl">
+            My work is about turning that gap into coherent systems,
+            products, platforms, and possibilities that weren&apos;t obvious
+            from the individual pieces.
+          </p>
+        </div>
+      </section>
+
+      {/* Approach */}
+      <section className="border-t border-neutral-700 pt-14 mb-20">
+        <h2 className="text-2xl md:text-3xl font-medium text-white tracking-tight mb-10">
+          How I Approach Problems
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="border border-neutral-800 rounded-lg p-7 min-h-64 flex flex-col">
+            <p className="text-xs uppercase tracking-[0.18em] text-neutral-500 mb-5">
+              01
+            </p>
+
+            <h3 className="text-xl md:text-2xl font-medium text-white mb-4">
+              See the System
+            </h3>
+
+            <p className="text-neutral-400 leading-relaxed">
+              Identify the structure beneath the problem: constraints,
+              dependencies, incentives, behaviors, failure points, and
+              assumptions that have hardened into convention.
+            </p>
+          </div>
+
+          <div className="border border-neutral-800 rounded-lg p-7 min-h-64 flex flex-col">
+            <p className="text-xs uppercase tracking-[0.18em] text-neutral-500 mb-5">
+              02
+            </p>
+
+            <h3 className="text-xl md:text-2xl font-medium text-white mb-4">
+              Recompose the Pieces
+            </h3>
+
+            <p className="text-neutral-400 leading-relaxed">
+              Look at what already exists and ask whether the same technologies,
+              capabilities, and structures could be arranged around a different
+              product premise.
+            </p>
+          </div>
+
+          <div className="border border-neutral-800 rounded-lg p-7 min-h-64 flex flex-col">
+            <p className="text-xs uppercase tracking-[0.18em] text-neutral-500 mb-5">
+              03
+            </p>
+
+            <h3 className="text-xl md:text-2xl font-medium text-white mb-4">
+              Build With Others
+            </h3>
+
+            <p className="text-neutral-400 leading-relaxed">
+              Treat the first coherent architecture as a starting point â€”
+              something to be tested, challenged, refined, and improved through
+              engineering, creative, business, and cultural expertise.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* How I Work */}
+      <section className="border-t border-neutral-700 pt-14 mb-20">
+        <h2 className="text-2xl md:text-3xl font-medium text-white tracking-tight mb-8">
+          How I Work
+        </h2>
+
+        <div className="max-w-3xl space-y-6 text-neutral-300 leading-relaxed text-base md:text-lg">
+          <p>
+            Give me a problem and my instinct is to architect it.
+          </p>
+
+          <p>
+            I want to understand what exists, what is missing, what depends on
+            what, where the real constraints live, and what a coherent solution
+            would require.
+          </p>
+
+          <p>
+            I design systems that sit above products â€” frameworks, taxonomies,
+            and architectures that reshape how people build, create, and
+            interact.
+          </p>
+
+          <p>
+            The goal is not novelty for its own sake. It is finding a structure
+            that makes something previously fragmented, difficult, or
+            overlooked possible.
+          </p>
+        </div>
+      </section>
+
+      {/* Method / Site Architecture */}
+      <section className="border-t border-neutral-700 pt-14 mb-20">
+        <p className="text-sm uppercase tracking-[0.18em] text-neutral-500 mb-8">
+          From Problem to Possibility
+        </p>
+
+        <div className="border border-neutral-800 rounded-lg px-6 py-10 md:px-10 md:py-12">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-center">
+            <span className="text-lg md:text-xl font-medium text-white">
+              Problem
+            </span>
+
+            <span className="hidden md:block text-neutral-600">â†’</span>
+
+            <span className="text-lg md:text-xl font-medium text-white">
+              System
+            </span>
+
+            <span className="hidden md:block text-neutral-600">â†’</span>
+
+            <span className="text-lg md:text-xl font-medium text-white">
+              Architecture
+            </span>
+
+            <span className="hidden md:block text-neutral-600">â†’</span>
+
+            <span className="text-lg md:text-xl font-medium text-white">
+              Product Possibility
+            </span>
+          </div>
+
+          <div className="border-t border-neutral-800 mt-10 pt-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div>
+                <p className="text-white font-medium mb-2">Essays</p>
+                <p className="text-neutral-500 text-sm">Diagnose.</p>
+              </div>
+
+              <div>
+                <p className="text-white font-medium mb-2">Architecture</p>
+                <p className="text-neutral-500 text-sm">Structure.</p>
+              </div>
+
+              <div>
+                <p className="text-white font-medium mb-2">Projects</p>
+                <p className="text-neutral-500 text-sm">Demonstrate.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Broader Focus */}
+      <section className="border-t border-neutral-700 pt-14 mb-20">
+        <h2 className="text-2xl md:text-3xl font-medium text-white tracking-tight mb-8">
+          What I&apos;m Interested In
+        </h2>
+
+        <div className="max-w-3xl space-y-6 text-neutral-300 leading-relaxed text-base md:text-lg">
+          <p>
+            My work spans cultural essays, platform strategy, and large-scale
+            systems architectures exploring identity, creativity, interaction,
+            discovery, persistence, and the future of digital platforms.
+          </p>
+
+          <p>
+            I&apos;m especially interested in worldmaking â€” the pipelines,
+            primitives, institutions, and conceptual foundations that allow
+            complex interactive worlds and communities to emerge.
+          </p>
+
+          <p>
+            The recurring question is simple: what becomes possible when the
+            underlying system is designed differently?
+          </p>
+        </div>
+      </section>
+
+      {/* Collaboration */}
+      <section className="border-t border-neutral-700 pt-14 mb-20">
+        <div className="border border-neutral-800 rounded-lg p-8 md:p-10">
+          <p className="text-sm uppercase tracking-[0.18em] text-neutral-500 mb-5">
+            Collaboration
+          </p>
+
+          <h2 className="text-2xl md:text-3xl font-medium text-white tracking-tight mb-6">
+            Architecture is a beginning, not a monument.
+          </h2>
+
+          <div className="max-w-3xl space-y-5 text-neutral-300 leading-relaxed text-base md:text-lg">
+            <p>
+              Good architecture establishes a coherent starting point. Better
+              architecture emerges when it encounters engineering reality,
+              creative expertise, business constraints, cultural perspective,
+              and people who see things the original architect did not.
+            </p>
+
+            <p>
+              The work on Webb Systems is meant to be challenged, extended,
+              refined, and â€” when useful â€” built.
+            </p>
+
+            <p>
+              I&apos;m interested in collaborating with people working on
+              difficult problems, ambitious platforms, new forms of interactive
+              media, or technologies whose full product potential has not yet
+              been realized.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section className="border-t border-neutral-700 pt-14">
+        <h2 className="text-2xl md:text-3xl font-medium text-white tracking-tight mb-6">
+          Contact
+        </h2>
+
+        <p className="text-neutral-400 leading-relaxed max-w-2xl text-base md:text-lg mb-7">
+          If something here intersects with a problem you&apos;re trying to
+          solve, I&apos;d like to hear about it.
+        </p>
+
+        <div className="space-y-2 text-neutral-300">
+          <p>
+            <span className="text-neutral-500">Email:</span>{" "}
+            <a
+              href="mailto:elliott@webb.systems"
+              className="text-blue-400 hover:underline"
+            >
+              elliott@webb.systems
+            </a>
+          </p>
+
+          <p>
+            <span className="text-neutral-500">LinkedIn:</span>{" "}
+            <a
+              href="https://www.linkedin.com/in/elliott-webb-56b906226/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:underline"
+            >
+              LinkedIn Profile
+            </a>
+          </p>
+        </div>
+      </section>
+
+    </main>
+  );
+}
+
+FILE: app\architecture\[slug]\page.tsx
+--------------------------------------------------------------------------------
+
+FILE: app\architecture\page.tsx
+--------------------------------------------------------------------------------
+"use client";
+
+import Link from "next/link";
+import { architectureMeta } from "@/content/architecture/meta";
+import Thumbnail from "@/components/Thumbnail";
+
+export default function ArchitectureIndex() {
+  return (
+    <main className="mx-auto max-w-3xl px-6 py-12 md:py-20 space-y-12">
+
+      {/* Cinematic Banner */}
+      <div className="w-full aspect-[2.35/1] rounded-lg overflow-hidden">
+        <video
+          src="/banners/architecture-banner.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Page Title */}
+      <header className="space-y-2">
+        <h1 className="text-3xl md:text-4xl font-medium tracking-tight text-white">
+          Architecture
+        </h1>
+        <p className="text-neutral-500 text-sm md:text-base">
+          Systems, pipelines, frameworks, and conceptual models.
+        </p>
+      </header>
+
+      {/* Orientation */}
+      <section className="space-y-6 text-neutral-300 leading-relaxed">
+        <h2 className="text-lg md:text-xl font-medium">Orientation</h2>
+
+        <p>
+          These architectural pieces are different from the essays. Theyâ€™re more structured, more
+          technical, and more focused on systems design. They explore pipelines, frameworks,
+          conceptual models, and the underlying mechanics that shape how complex projects are built.
+        </p>
+
+        <p>
+          Some of these documents include diagrams, JSON structures, component maps, and
+          multi-layered frameworks. Theyâ€™re meant to be read slowly â€” not as declarations, but as
+          working blueprints.
+        </p>
+
+        <p>
+          None of these architectures are final. Theyâ€™re living documents, evolving as the medium
+          evolves. Theyâ€™re here to map possibilities, clarify foundations, and explore how better
+          systems might be built.
+        </p>
+      </section>
+
+      {/* Architecture List */}
+      <ul className="space-y-12 md:space-y-16">
+        {architectureMeta.map((item) => (
+          <li key={item.slug}>
+            <Link href={`/architecture/${item.slug}`} className="block group">
+              <div className="aspect-[16/9] w-full pointer-events-none">
+                <Thumbnail
+                  image={item.thumbnail}
+                  video={item.thumbnailMotion}
+                  alt={item.title}
+                  caption={item.thumbnailCaption}
+                />
+              </div>
+            </Link>
+
+            <div className="mt-4 space-y-1">
+              <Link
+                href={`/architecture/${item.slug}`}
+                className="text-xl md:text-2xl font-medium text-white hover:text-neutral-200 transition"
+              >
+                {item.title}
+              </Link>
+
+              <p className="text-neutral-500 text-sm md:text-base">
+                {item.category}
+              </p>
+
+              {item.abstract && (
+                <p className="text-neutral-400 text-sm md:text-base">
+                  {item.abstract}
+                </p>
+              )}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </main>
+  );
+}
+
+FILE: app\essays\[slug]\page.tsx
+--------------------------------------------------------------------------------
+
+FILE: app\essays\page.tsx
+--------------------------------------------------------------------------------
+"use client";
+
+import Link from "next/link";
+import { essayMeta } from "@/content/essays/meta";
+import Thumbnail from "@/components/Thumbnail";
+
+export default function EssaysIndex() {
+  return (
+    <main className="mx-auto max-w-3xl px-6 py-12 md:py-20 space-y-12">
+
+      {/* Cinematic Banner */}
+      <div className="w-full aspect-[2.35/1] rounded-lg overflow-hidden">
+        <video
+          src="/banners/essays-banner.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Page Title */}
+      <header className="space-y-2">
+        <h1 className="text-3xl md:text-4xl font-medium tracking-tight text-white">
+          Essays
+        </h1>
+        <p className="text-neutral-500 text-sm md:text-base">
+          Writing, analysis, and longâ€‘form thinking.
+        </p>
+      </header>
+
+      {/* Orientation */}
+      <section className="space-y-6 text-neutral-300 leading-relaxed">
+        <h2 className="text-lg md:text-xl font-medium">Orientation</h2>
+
+        <p>
+          These essays arenâ€™t meant to be definitive. Theyâ€™re explorations â€” my attempt to start
+          different conversations, to follow the paths culture is revealing, to map out ideas that
+          feel unfinished, and to think through the systems, stories, and transitions shaping the
+          medium.
+        </p>
+
+        <p>
+          Some of these pieces are personal. Some are structural. Some are architectural. All of
+          them are explorations.
+        </p>
+
+        <p>
+          If any of them resonate with you, Iâ€™m glad youâ€™re here thinking through them with me.
+        </p>
+      </section>
+
+      {/* Essays List */}
+      <ul className="space-y-12 md:space-y-16">
+        {essayMeta.map((essay) => (
+          <li key={essay.slug}>
+            <Link href={`/essays/${essay.slug}`} className="block group">
+              <div className="aspect-[16/9] w-full pointer-events-none">
+                <Thumbnail
+                  image={essay.thumbnail}
+                  video={essay.thumbnailMotion}
+                  alt={essay.title}
+                  caption={essay.thumbnailCaption}
+                />
+              </div>
+            </Link>
+
+            <div className="mt-4 space-y-1">
+              <Link
+                href={`/essays/${essay.slug}`}
+                className="text-xl md:text-2xl font-medium text-white hover:text-neutral-200 transition"
+              >
+                {essay.title}
+              </Link>
+
+              <p className="text-neutral-500 text-sm md:text-base">
+                {essay.category}
+              </p>
+
+              {essay.abstract && (
+                <p className="text-neutral-400 text-sm md:text-base">
+                  {essay.abstract}
+                </p>
+              )}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </main>
+  );
+}
+
+
+FILE: app\layout.tsx
+--------------------------------------------------------------------------------
+import '../styles/globals.css';
+import { Geist, Geist_Mono } from 'next/font/google';
+import NavBar from "./NavBar";
+import { Suspense } from "react";
+
+const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
+const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en" className="[color-scheme:dark]">
+      <body className={`overflow-y-scroll bg-gray-950 font-sans ${geistSans.variable} ${geistMono.variable} antialiased`}>
+
+        {/* GLOBAL HEADER */}
+        <header className="mb-4 border-b border-gray-800 pb-0">
+          <Suspense fallback={null}>
+            <NavBar />
+          </Suspense>
+        </header>
+
+        {/* PAGE CONTENT */}
+        <div className="mx-auto mt-2 mb-24 max-w-4xl lg:px-8 lg:py-8">
+          {children}
+        </div>
+
+      </body>
+    </html>
+  );
+}
+
+
+FILE: app\page.tsx
+--------------------------------------------------------------------------------
+import Link from "next/link";
+import { essayMeta } from "@/content/essays/meta";
+import { architectureMeta } from "@/content/architecture/meta";
+import Thumbnail from "../components/Thumbnail";
+
+const featuredSelections = [
+  {
+    type: "essay",
+    slug: "future-isnt-lost-its-underbuilt",
+  },
+  {
+    type: "essay",
+    slug: "gaming-culture",
+  },
+  {
+    type: "essay",
+    slug: "steam-is-not-a-store",
+  },
+  {
+    type: "essay",
+    slug: "gaming-profits",
+  },
+  {
+    type: "architecture",
+    slug: "post-launch-architecture",
+  },
+] as const;
+
+const featuredWork = featuredSelections.map((selection) => {
+  const source =
+    selection.type === "essay" ? essayMeta : architectureMeta;
+
+  const item = source.find(
+    (entry) => entry.slug === selection.slug
+  );
+
+  if (!item) {
+    throw new Error(
+      `Featured ${selection.type} not found: ${selection.slug}`
+    );
+  }
+
+  return {
+    ...item,
+    type: selection.type === "essay" ? "Essay" : "Architecture",
+    href:
+      selection.type === "essay"
+        ? `/essays/${selection.slug}`
+        : `/architecture/${selection.slug}`,
+  };
+});
+
+export default function HomePage() {
+  return (
+    <main className="mx-auto max-w-4xl px-6 pt-2 pb-16 md:pb-24">
+
+      {/* Slim Motion Arrow Banner */}
+      <div className="mb-8 md:mb-16 flex justify-center">
+        <video
+          src="/banners/home-arrow-banner.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-20 md:w-24 h-auto block"
+        />
+      </div>
+
+      {/* Homepage Identity Block */}
+      <div className="not-prose mb-12 md:mb-20 text-center md:text-left">
+        <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-white">
+          Culture, Systems, and the Architecture of Future Worlds
+        </h1>
+
+        <div className="text-lg md:text-xl text-neutral-400 mt-2 tracking-tight">
+          A unified body of work exploring the foundations, pipelines, and
+          worldmaking principles shaping the future of interactive worlds.
+        </div>
+      </div>
+
+      {/* Selected Work */}
+      <section>
+        <p className="text-xs uppercase tracking-widest text-neutral-500 mb-8 md:mb-10">
+          Selected Work
+        </p>
+
+        <div className="space-y-12 md:space-y-20">
+          {featuredWork.map((item) => (
+            <Link
+              key={`${item.type}-${item.slug}`}
+              href={item.href}
+              className="group block"
+            >
+              <div className="flex flex-col md:flex-row gap-6 md:gap-10">
+
+                {/* Thumbnail */}
+                <div className="shrink-0 w-full h-48 md:w-56 md:h-36">
+                  <Thumbnail
+                    image={item.thumbnail}
+                    video={item.thumbnailMotion}
+                    alt={item.title}
+                  />
+                </div>
+
+                {/* Text Content */}
+                <div className="flex flex-col justify-center">
+                  <p className="text-xs uppercase tracking-widest text-neutral-500 mb-2">
+                    {item.type}
+                  </p>
+
+                  <h2 className="text-3xl font-medium text-white group-hover:underline underline-offset-4">
+                    {item.title}
+                  </h2>
+
+                  <p className="text-neutral-400 mt-3 leading-relaxed max-w-prose">
+                    {item.abstract}
+                  </p>
+                </div>
+
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Homepage Tiles */}
+      <section className="mt-20 md:mt-32 border-t border-neutral-800 pt-12 md:pt-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+          {/* Essays Tile */}
+          <Link
+            href="/essays"
+            className="group block border border-neutral-800 rounded-lg p-6 md:p-10
+                       hover:bg-neutral-900 transition"
+          >
+            <h3 className="text-xl md:text-2xl font-medium text-white group-hover:underline underline-offset-4">
+              Essays
+            </h3>
+
+            <p className="text-neutral-500 mt-3">
+              Cultural analysis, systems thinking, and the future of games.
+            </p>
+          </Link>
+
+          {/* Architecture Tile */}
+          <Link
+            href="/architecture"
+            className="group block border border-neutral-800 rounded-lg p-6 md:p-10
+                       hover:bg-neutral-900 transition"
+          >
+            <h3 className="text-xl md:text-2xl font-medium text-white group-hover:underline underline-offset-4">
+              Architecture
+            </h3>
+
+            <p className="text-neutral-500 mt-3">
+              Conceptual frameworks, diagrams, and industry-level models.
+            </p>
+          </Link>
+
+          {/* Projects Vault Tile */}
+          <Link
+            href="/projects/vault"
+            className="group block border border-neutral-800 rounded-lg p-6 md:p-10
+                       hover:bg-neutral-900 transition"
+          >
+            <h3 className="text-xl md:text-2xl font-medium text-white group-hover:underline underline-offset-4">
+              Projects Vault
+            </h3>
+
+            <p className="text-neutral-500 mt-3">
+              Password-protected one-pagers and executive summaries.
+            </p>
+          </Link>
+
+          {/* About Tile */}
+          <Link
+            href="/about"
+            className="group block border border-neutral-800 rounded-lg p-6 md:p-10
+                       hover:bg-neutral-900 transition"
+          >
+            <h3 className="text-xl md:text-2xl font-medium text-white group-hover:underline underline-offset-4">
+              About
+            </h3>
+
+            <p className="text-neutral-500 mt-3">
+              Who I am, what I build, and how to reach me.
+            </p>
+          </Link>
+
+        </div>
+      </section>
+
+    </main>
+  );
+}
+
+FILE: app\projects\vault\forge\[slug]\page.tsx
+--------------------------------------------------------------------------------
+
+FILE: app\projects\vault\forge\index\page.tsx
+--------------------------------------------------------------------------------
+import Link from "next/link";
+import { forgeDocuments } from "@/content/projects/vault/forge/meta";
+
+export default function ForgeIndex() {
+  return (
+    <main className="mx-auto max-w-3xl px-6 py-12 md:py-20 space-y-12">
+
+      {/* PROJECT INTRO */}
+      <section className="not-prose mb-12 space-y-4">
+        <h1 className="text-4xl font-bold tracking-tight text-white">
+          Forge â€” Project Overview
+        </h1>
+
+        <p className="text-lg text-gray-300 leading-relaxed">
+          Forge is a designâ€‘time engine built to correct the structural problems that make
+          modern game development slow, expensive, and unpredictable. It provides deterministic
+          behavior modeling, designerâ€‘first iteration, and engineâ€‘agnostic world coherence.
+          Enabling teams to build complex systems without losing clarity, time, money, or control.
+        </p>
+
+        <p className="text-gray-400 leading-relaxed">
+          This page contains the highâ€‘level vision document and the architectural brief.
+          Together, these documents outline Forgeâ€™s purpose, its commercial strategy, its
+          technical foundations, and the structural correction it introduces to modern game
+          development.
+        </p>
+      </section>
+
+      {/* DOCUMENT LIST */}
+      <h1 className="text-3xl md:text-4xl font-medium mb-6 md:mb-8">
+        Forge Documents
+      </h1>
+
+      <ul className="space-y-8 md:space-y-12">
+        {forgeDocuments.map((doc) => (
+          <li key={doc.slug} className="border-b pb-6">
+            <h2 className="text-xl md:text-2xl font-semibold">{doc.title}</h2>
+
+            <p className="text-neutral-600 mt-2 text-base md:text-lg">
+              {doc.abstract}
+            </p>
+
+            <div className="mt-4 flex flex-col md:flex-row md:space-x-4 space-y-2 md:space-y-0">
+              <Link
+                href={`/projects/vault/forge/${doc.slug}`}
+                className="text-green-400 hover:text-green-300 underline"
+              >
+                Read Web Version
+              </Link>
+
+              {doc.pdf && (
+                <a
+                  href={doc.pdf}
+                  download
+                  className="text-green-400 hover:text-green-300 underline"
+                >
+                  Download PDF
+                </a>
+              )}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </main>
+  );
+}
+
+
+FILE: app\projects\vault\forge\page.tsx
+--------------------------------------------------------------------------------
+export { default } from "./index/page";
+
+
+FILE: app\projects\vault\index\page.tsx
+--------------------------------------------------------------------------------
+"use client";
+
+import Link from "next/link";
+import Thumbnail from "@/components/Thumbnail";
+
+export default function VaultIndex() {
+  return (
+    <main className="mx-auto max-w-3xl px-6 pt-6 pb-16 md:pb-24 space-y-12 md:space-y-16">
+      <h1 className="text-3xl md:text-4xl font-medium mb-8 md:mb-10">
+        Vault
+      </h1>
+
+      {/* Orientation */}
+      <section className="space-y-6 text-neutral-300 leading-relaxed">
+        <h2 className="text-lg md:text-xl font-medium">Orientation</h2>
+
+        <p>
+          This vault contains private architecture from Xbox Forever, Xbox
+          Forever Ads, the Dashboard Launcher Kit, Forge, and the NC Framework
+          â€” systems developed at different scales but through the same method:
+          identify the structural constraint, separate responsibilities, and
+          design the architecture that makes a different outcome possible.
+        </p>
+
+        <p>
+          <strong className="text-white">Xbox Forever</strong> explores the
+          platform layer around games â€” continuity, identity, discovery,
+          community, competition, creation, and long-term ecosystem structure.
+        </p>
+
+        <p>
+          <strong className="text-white">Xbox Forever Ads</strong> explores the
+          economic layer around games â€” creating platform-native advertising,
+          discovery, and cultural surfaces built around participation rather
+          than interruption.
+        </p>
+
+        <p>
+          <strong className="text-white">
+            Dashboard Launcher Kit
+          </strong>{" "}
+          explores the delivery layer â€” a practical way to evolve Xbox Home
+          while creating a path toward the broader Xbox Forever platform
+          vision.
+        </p>
+
+        <p>
+          <strong className="text-white">Forge</strong> addresses the production
+          layer â€” making complex interactive systems more coherent, traceable,
+          predictable, and transferable from design through runtime.
+        </p>
+
+        <p>
+          <strong className="text-white">NC</strong> explores a longer-horizon
+          computing problem: the governed environment persistent intelligence
+          would require to operate across time, contexts, agents, and devices.
+        </p>
+
+        <p>
+          These are not marketing materials. They are narrative views into
+          larger systems architectures. Many of the documents map directly to
+          working repositories containing the underlying models, contracts,
+          structures, and implementation strategy.
+        </p>
+
+        <p>
+          The material here is intentionally limited. Full repositories and
+          deeper architectural documentation are available through direct
+          conversation under NDA.
+        </p>
+      </section>
+
+      {/* Sovereign Seal */}
+      <section className="pt-4">
+        <div className="flex items-center gap-4">
+          <img
+            src="/site-icons/web-systems-seal.png"
+            alt="Web Systems Seal"
+            className="w-40 md:w-56 h-auto opacity-90"
+          />
+          <span className="text-neutral-400 uppercase tracking-wide text-sm">
+            Restricted Access
+          </span>
+        </div>
+      </section>
+
+      {/* Document Classes */}
+      <section className="space-y-4">
+        <h2 className="text-lg md:text-xl font-medium">Document Classes</h2>
+
+        <ul className="list-disc list-inside text-neutral-300 space-y-1">
+          <li>One-Pagers</li>
+          <li>Executive Briefs</li>
+          <li>Architecture Notes</li>
+          <li>Strategic Addenda</li>
+        </ul>
+      </section>
+
+      {/* Last Updated */}
+      <section>
+        <p className="text-neutral-500 text-sm">
+          Last Updated: September 2026
+        </p>
+      </section>
+
+      {/* Full Architecture */}
+      <section className="space-y-2">
+        <h2 className="text-lg md:text-xl font-medium">Full Architecture</h2>
+
+        <p className="text-neutral-300">
+          The complete repositories and deeper architectural corpus are
+          available for serious review under NDA.
+        </p>
+
+        <Link
+          href="mailto:Elliott@Webb.Systems?subject=Request%20for%20Full%20Architecture%20Access%20(NDA%20Required)"
+          className="text-blue-400 hover:underline"
+        >
+          Contact Elliott@Webb.Systems
+        </Link>
+      </section>
+
+      {/* Existing Vault Items */}
+      <ul className="space-y-12 md:space-y-16 pt-10">
+
+        {/* Xbox Forever */}
+        <li>
+          <Link
+            href="/projects/vault/xbox-forever"
+            className="block group"
+          >
+            <div className="aspect-[16/9] w-full pointer-events-none">
+              <Thumbnail
+                image="/thumbnails/xbox-forever.jpg"
+                video="/thumbnails/xbox-forever-motion.mp4"
+                alt="Xbox Forever"
+                caption="The long-term platform strategy for Xbox and its ecosystem."
+              />
+            </div>
+          </Link>
+
+          <div className="mt-4">
+            <Link
+              href="/projects/vault/xbox-forever"
+              className="text-xl md:text-2xl font-medium hover:underline underline-offset-4"
+            >
+              Xbox Forever
+            </Link>
+
+            <p className="text-neutral-500 text-sm uppercase tracking-wide mt-1">
+              Platform Strategy
+            </p>
+          </div>
+        </li>
+
+        {/* Xbox Forever Ads */}
+        <li>
+          <Link
+            href="/projects/vault/xbox-forever-ads"
+            className="block group"
+          >
+            <div className="aspect-[16/9] w-full pointer-events-none">
+              <Thumbnail
+                image="/thumbnails/xbox-forever-ads.jpg"
+                video="/thumbnails/xbox-forever-ads-motion.mp4"
+                alt="Xbox Forever Ads"
+                caption="Monetize curiosity, not frustration."
+              />
+            </div>
+          </Link>
+
+          <div className="mt-4">
+            <Link
+              href="/projects/vault/xbox-forever-ads"
+              className="text-xl md:text-2xl font-medium hover:underline underline-offset-4"
+            >
+              Xbox Forever Ads
+            </Link>
+
+            <p className="text-neutral-500 text-sm uppercase tracking-wide mt-1">
+              Advertising Architecture
+            </p>
+          </div>
+        </li>
+
+        {/* Dashboard Launcher Kit */}
+        <li>
+          <Link
+            href="/projects/vault/xbox-dashboard-launcher-kit"
+            className="block group"
+          >
+            <div className="aspect-[16/9] w-full pointer-events-none">
+              <Thumbnail
+                image="/thumbnails/dashboard-launcher-kit.jpg"
+                video="/thumbnails/dashboard-launcher-kit-motion.mp4"
+                alt="Dashboard Launcher Kit"
+                caption="A practical first step toward Xbox Forever."
+              />
+            </div>
+          </Link>
+
+          <div className="mt-4">
+            <Link
+              href="/projects/vault/xbox-dashboard-launcher-kit"
+              className="text-xl md:text-2xl font-medium hover:underline underline-offset-4"
+            >
+              Dashboard Launcher Kit
+            </Link>
+
+            <p className="text-neutral-500 text-sm uppercase tracking-wide mt-1">
+              Platform Infrastructure
+            </p>
+          </div>
+        </li>
+
+        {/* Forge */}
+        <li>
+          <Link href="/projects/vault/forge" className="block group">
+            <div className="aspect-[16/9] w-full pointer-events-none">
+              <Thumbnail
+                image="/thumbnails/forge.jpg"
+                video="/thumbnails/forge-motion.mp4"
+                alt="Forge"
+                caption="The creative suite and pipeline architecture powering next-generation content."
+              />
+            </div>
+          </Link>
+
+          <div className="mt-4">
+            <Link
+              href="/projects/vault/forge"
+              className="text-xl md:text-2xl font-medium hover:underline underline-offset-4"
+            >
+              Forge
+            </Link>
+
+            <p className="text-neutral-500 text-sm uppercase tracking-wide mt-1">
+              Creative Pipeline
+            </p>
+          </div>
+        </li>
+
+        {/* NC Foundation */}
+        <li>
+          <Link href="/projects/vault/nc-foundation" className="block group">
+            <div className="aspect-[16/9] w-full pointer-events-none">
+              <Thumbnail
+                image="/thumbnails/nc-foundation.jpg"
+                video="/thumbnails/nc-foundation-motion.mp4"
+                alt="NC Foundation"
+                caption="NC â€” A direction for future systems"
+              />
+            </div>
+          </Link>
+
+          <div className="mt-4">
+            <Link
+              href="/projects/vault/nc-foundation"
+              className="text-xl md:text-2xl font-medium hover:underline underline-offset-4"
+            >
+              NC Foundation
+            </Link>
+          </div>
+        </li>
+
+      </ul>
+    </main>
+  );
+}
+
+FILE: app\projects\vault\nc-foundation\[slug]\page.tsx
+--------------------------------------------------------------------------------
+
+FILE: app\projects\vault\nc-foundation\index\page.tsx
+--------------------------------------------------------------------------------
+import Link from "next/link";
+
+export default function NCFoundationIndex() {
+  return (
+    <main className="mx-auto max-w-3xl px-6 py-12 md:py-20 space-y-12">
+
+      {/* PROJECT INTRO */}
+      <section className="not-prose mb-12 space-y-4">
+        <h1 className="text-4xl font-bold tracking-tight text-white">
+          NC â€” A Proposed Architectural Direction for Long-Horizon Intelligent Systems
+        </h1>
+
+        <p className="text-lg text-gray-300 leading-relaxed">
+          NC explores the environment persistent intelligence would need to operate across
+          time â€” maintaining continuity, identity, context, accountability, and governed
+          autonomy across agents, applications, and devices.
+        </p>
+
+        <p className="text-lg text-gray-300 leading-relaxed">
+          It is a proposed systems architecture for the layer around intelligent models:
+          the substrate that provides durable state, memory, execution boundaries,
+          coordination, safety, and continuity.
+        </p>
+
+        <p className="text-lg text-gray-300 leading-relaxed">
+          It is the place intelligence lives.
+        </p>
+
+        <p className="text-gray-400 leading-relaxed">
+          This work is currently in controlled distribution. A deeper version â€” including
+          architectural primitives, substrate exploration, operating model detail, and
+          system-level governance â€” is available only through direct conversation.
+        </p>
+
+        <p className="text-gray-400 leading-relaxed">
+          <strong>Access:</strong> By request
+          <br />
+          <strong>Contact:</strong> Elliott@Webb.Systems
+        </p>
+      </section>
+
+      {/* CONTROLLED ACCESS NOTICE */}
+      <section className="border-t pt-8">
+        <p className="text-neutral-500 text-base md:text-lg">
+          NC Foundation is not publicly accessible within the Vault.
+          <br />
+          Full documents are available only through direct conversation.
+        </p>
+      </section>
+
+    </main>
+  );
+}
+
+FILE: app\projects\vault\nc-foundation\page.tsx
+--------------------------------------------------------------------------------
+export { default } from "./index/page";
+
+FILE: app\projects\vault\page.tsx
+--------------------------------------------------------------------------------
+"use client";
+
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+
+export default function VaultLogin() {
+  const [password, setPassword] = useState("");
+  const [show, setShow] = useState(false);
+  const router = useRouter();
+
+  // Auto-redirect if already unlocked
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (localStorage.getItem("vault") === "open") {
+        router.push("/projects/vault/index");
+      }
+    }
+  }, [router]);
+
+  function submit(e: React.FormEvent) {
+    e.preventDefault();
+
+    const allowed = process.env.NEXT_PUBLIC_VAULT_PASSWORD?.split(",");
+
+    if (allowed?.includes(password)) {
+      localStorage.setItem("vault", "open");
+      router.push("/projects/vault/index");
+    } else {
+      alert("Incorrect password.");
+    }
+  }
+
+  return (
+    <main className="mx-auto max-w-md px-6 py-16 md:py-24 space-y-12">
+      <section className="space-y-4">
+        <h1 className="text-2xl md:text-3xl font-medium">
+          Projects Vault
+        </h1>
+
+        <p className="text-neutral-300 leading-relaxed">
+          Private architecture, executive briefs, and system-level documentation
+          for Xbox Forever, Forge, and selected long-horizon research.
+        </p>
+
+        <p className="text-neutral-500 text-sm leading-relaxed">
+          Provided for controlled review. Deeper repositories and architectural
+          material are available through direct conversation under NDA.
+        </p>
+      </section>
+
+      <form onSubmit={submit} className="space-y-6">
+
+        {/* Dark theme password input with Show/Hide toggle */}
+        <div className="relative">
+          <input
+            type={show ? "text" : "password"}
+            placeholder="Enter password"
+            className="border border-neutral-700 bg-neutral-900 text-neutral-100 px-4 py-3 w-full rounded"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+
+          <button
+            type="button"
+            onClick={() => setShow(!show)}
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-neutral-400 hover:text-neutral-200 transition"
+          >
+            {show ? "Hide" : "Show"}
+          </button>
+        </div>
+
+        <button
+          type="submit"
+          className="bg-black text-white px-4 py-3 w-full rounded"
+        >
+          Enter Vault
+        </button>
+      </form>
+    </main>
+  );
+}
+
+FILE: app\projects\vault\xbox-dashboard-launcher-kit\[slug]\page.tsx
+--------------------------------------------------------------------------------
+
+FILE: app\projects\vault\xbox-dashboard-launcher-kit\index\page.tsx
+--------------------------------------------------------------------------------
+import Link from "next/link";
+import { dashboardLauncherKitDocuments } from "@/content/projects/vault/xbox-dashboard-launcher-kit/meta";
+
+export default function XboxDashboardLauncherKitIndex() {
+  return (
+    <main className="mx-auto max-w-3xl px-6 py-12 md:py-20 space-y-12">
+
+      {/* PROJECT INTRO */}
+      <section className="not-prose mb-12 space-y-4">
+        <h1 className="text-4xl font-bold tracking-tight text-white">
+          Dashboard Launcher Kit â€” Project Overview
+        </h1>
+
+        <p className="text-lg text-gray-300 leading-relaxed">
+          The Dashboard Launcher Kit is a lightweight, modular layer for
+          introducing new pages, formats, and player experiences inside the
+          existing Xbox dashboard. It allows Home to evolve faster while
+          preserving familiar navigation and platform stability.
+        </p>
+
+        <p className="text-gray-400 leading-relaxed">
+          Reusable page structures, shared navigation rules, and controlled
+          deployment let teams update individual surfaces without redesigning
+          the underlying shell. Discovery, community, entertainment, and
+          commerce experiences can evolve independently while retaining
+          consistent platform behavior.
+        </p>
+
+        <p className="text-gray-400 leading-relaxed">
+          The Launcher Kit delivers immediate infrastructure value while
+          establishing a modular surface layer for future discovery,
+          competition, creator, and live experiences. This creates a practical
+          first step toward the broader Xbox Forever platform vision.
+        </p>
+
+        <p className="text-gray-400 leading-relaxed">
+          Note: This page presents an NDA-safe overview of the Dashboard
+          Launcher Kit. Detailed architectural and implementation materials are
+          available through direct conversation under NDA.
+        </p>
+      </section>
+
+      {/* DOCUMENT LIST */}
+      <h1 className="text-3xl md:text-4xl font-medium mb-6 md:mb-8">
+        Dashboard Launcher Kit Documents
+      </h1>
+
+      <ul className="space-y-8 md:space-y-12">
+        {dashboardLauncherKitDocuments.map((doc) => (
+          <li key={doc.slug} className="border-b pb-6">
+            <h2 className="text-xl md:text-2xl font-semibold">
+              {doc.title}
+            </h2>
+
+            <p className="text-neutral-400 mt-2 text-base md:text-lg">
+              {doc.abstract}
+            </p>
+
+            <div className="mt-4 flex flex-col md:flex-row md:space-x-4 space-y-2 md:space-y-0">
+              <Link
+                href={`/projects/vault/xbox-dashboard-launcher-kit/${doc.slug}`}
+                className="text-green-400 hover:text-green-300 underline"
+              >
+                Read Web Version
+              </Link>
+
+              {doc.pdf && (
+                <a
+                  href={doc.pdf}
+                  download
+                  className="text-green-400 hover:text-green-300 underline"
+                >
+                  Download PDF
+                </a>
+              )}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </main>
+  );
+}
+
+FILE: app\projects\vault\xbox-dashboard-launcher-kit\page.tsx
+--------------------------------------------------------------------------------
+export { default } from "./index/page";
+
+FILE: app\projects\vault\xbox-forever\[slug]\page.tsx
+--------------------------------------------------------------------------------
+
+FILE: app\projects\vault\xbox-forever\index\page.tsx
+--------------------------------------------------------------------------------
+import Link from "next/link";
+import { xboxDocuments } from "@/content/projects/vault/xbox-forever/meta";
+
+export default function XboxForeverIndex() {
+  return (
+    <main className="mx-auto max-w-3xl px-6 py-12 md:py-20 space-y-12">
+
+      {/* PROJECT INTRO */}
+      <section className="not-prose mb-12 space-y-4">
+        <h1 className="text-4xl font-bold tracking-tight text-white">
+          Xbox Forever â€” Project Overview
+        </h1>
+
+        <p className="text-lg text-gray-300 leading-relaxed">
+          Xbox Forever is a unified, intelligent platform layer that sits above individual
+          games and turns Xbox into the home where discovery, culture, identity, creators,
+          and competition all connect and compound together. It reframes Xbox not as a
+          storefront or launcher, but as the connective tissue of modern play â€” a system
+          that amplifies the worlds players already inhabit rather than competing with them.
+        </p>
+
+        <p className="text-gray-400 leading-relaxed">
+          Built on lessons learned from Steam and the broader PC ecosystem, Xbox Forever is
+          designed to make Xbox the most compelling platform to play video games on both PC
+          and console. It strengthens the platform layer that modern games have eroded,
+          restoring the cultural relevance, economic leverage, and ecosystem coherence that
+          once defined console gaming.
+        </p>
+
+        <p className="text-gray-400 leading-relaxed">
+          This page contains the strategic vision and architectural foundation for Xbox
+          Forever â€” outlining how the platform evolves, how it creates value, and how it
+          becomes the place where the biggest worlds in gaming connect.
+        </p>
+
+        <p className="text-gray-400 leading-relaxed">
+          Note: This page presents the high-level vision for Xbox Forever. Detailed specifications for platform systems â€” including Ad Revenue, Subscription design, and other economic components â€” are part of the NDA documentation and are not shown here.
+        </p>
+
+      </section>
+
+      {/* DOCUMENT LIST */}
+      <h1 className="text-3xl md:text-4xl font-medium mb-6 md:mb-8">
+        Xbox Forever Documents
+      </h1>
+
+      <ul className="space-y-8 md:space-y-12">
+        {xboxDocuments.map((doc) => (
+          <li key={doc.slug} className="border-b pb-6">
+            <h2 className="text-xl md:text-2xl font-semibold">{doc.title}</h2>
+
+            <p className="text-neutral-600 mt-2 text-base md:text-lg">
+              {doc.abstract}
+            </p>
+
+            <div className="mt-4 flex flex-col md:flex-row md:space-x-4 space-y-2 md:space-y-0">
+              <Link
+                href={`/projects/vault/xbox-forever/${doc.slug}`}
+                className="text-green-400 hover:text-green-300 underline"
+              >
+                Read Web Version
+              </Link>
+
+              {doc.pdf && (
+                <a
+                  href={doc.pdf}
+                  download
+                  className="text-green-400 hover:text-green-300 underline"
+                >
+                  Download PDF
+                </a>
+              )}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </main>
+  );
+}
+
+
+FILE: app\projects\vault\xbox-forever\page.tsx
+--------------------------------------------------------------------------------
+export { default } from "./index/page";
+
+
+FILE: app\projects\vault\xbox-forever-ads\[slug]\page.tsx
+--------------------------------------------------------------------------------
+
+FILE: app\projects\vault\xbox-forever-ads\index\page.tsx
+--------------------------------------------------------------------------------
+import Link from "next/link";
+import { xboxForeverAdsDocuments } from "@/content/projects/vault/xbox-forever-ads/meta";
+
+export default function XboxForeverAdsIndex() {
+  return (
+    <main className="mx-auto max-w-3xl px-6 py-12 md:py-20 space-y-12">
+
+      {/* PROJECT INTRO */}
+      <section className="not-prose mb-12 space-y-4">
+        <h1 className="text-4xl font-bold tracking-tight text-white">
+          Xbox Forever Ads â€” Project Overview
+        </h1>
+
+        <p className="text-lg text-gray-300 leading-relaxed">
+          Xbox Forever Ads is a platform-native advertising, discovery, and cultural
+          amplification architecture designed around a simple principle: new revenue
+          should come from new modes of participation, not from degrading traditional
+          games.
+        </p>
+
+        <p className="text-gray-400 leading-relaxed">
+          The system explores how playable discovery, competitive spectacle, live
+          culture, creators, identity, and commerce can become coordinated economic
+          surfaces across the Xbox platform. Advertising follows value rather than
+          interrupting it â€” creating new ways to monetize attention while preserving
+          player trust.
+        </p>
+
+        <p className="text-gray-400 leading-relaxed">
+          The architecture is designed to create value around the existing catalog
+          rather than requiring games to be rebuilt around advertising. Back catalog
+          titles, current games, and future releases can participate through new
+          platform experiences while the games themselves remain intact.
+        </p>
+
+        <p className="text-gray-400 leading-relaxed">
+          This page contains the executive and strategic material for Xbox Forever Ads.
+          The deeper repository includes the underlying auction, relevance, safety,
+          ranking, delivery, telemetry, attribution, creator amplification, and
+          platform integration architecture.
+        </p>
+
+        <p className="text-gray-400 leading-relaxed">
+          Note: Detailed system specifications, implementation contracts, scoring
+          models, APIs, integration logic, and engineering documentation are part of
+          the NDA architecture and are not shown here.
+        </p>
+
+      </section>
+
+      {/* DOCUMENT LIST */}
+      <h1 className="text-3xl md:text-4xl font-medium mb-6 md:mb-8">
+        Xbox Forever Ads Documents
+      </h1>
+
+      <ul className="space-y-8 md:space-y-12">
+        {xboxForeverAdsDocuments.map((doc) => (
+          <li key={doc.slug} className="border-b pb-6">
+            <h2 className="text-xl md:text-2xl font-semibold">{doc.title}</h2>
+
+            <p className="text-neutral-600 mt-2 text-base md:text-lg">
+              {doc.abstract}
+            </p>
+
+            <div className="mt-4 flex flex-col md:flex-row md:space-x-4 space-y-2 md:space-y-0">
+              <Link
+                href={`/projects/vault/xbox-forever-ads/${doc.slug}`}
+                className="text-green-400 hover:text-green-300 underline"
+              >
+                Read Web Version
+              </Link>
+
+              {doc.pdf && (
+                <a
+                  href={doc.pdf}
+                  download
+                  className="text-green-400 hover:text-green-300 underline"
+                >
+                  Download PDF
+                </a>
+              )}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </main>
+  );
+}
+
+FILE: app\projects\vault\xbox-forever-ads\page.tsx
+--------------------------------------------------------------------------------
+export { default } from "./index/page";
+
+
+================================================================================
+PUBLIC ASSET TREE
+================================================================================
+
+public\about\elliott.jpg
+public\banners\architecture-banner.mp4
+public\banners\essays-banner.mp4
+public\banners\home-arrow-banner.mp4
+public\essays\death-of-play\death-of-play.png
+public\essays\game-ip-mythos\game-ip-mythos.png
+public\essays\gaming-culture\gaming-culture-1.jpg
+public\essays\gaming-culture\gaming-culture-2.jpg
+public\essays\gaming-profits\gaming-profits-1.jpg
+public\essays\gaming-profits\gaming-profits-2.jpg
+public\essays\genre-bottleneck\genre-bottleneck.png
+public\essays\lost-community\lost-community.png
+public\essays\starts-at-zero\starts-at-zero.png
+public\essays\steam-is-not-a-store\steam-is-not-a-store-1.jpg
+public\essays\steam-is-not-a-store\steam-is-not-a-store-2.jpg
+public\essays\steam-is-not-a-store\steam-is-not-a-store-3.jpg
+public\essays\unexploited-identity\unexploited-1.png
+public\essays\unexploited-identity\unexploited-2.png
+public\projects\vault\dashboard-launcher-kit\Dashboard Launcher Kit One Pager.pdf
+public\projects\vault\forge\FORGE — Adaptability.pdf
+public\projects\vault\forge\FORGE — Coherence.pdf
+public\projects\vault\forge\FORGE — Designer Sovereignty.pdf
+public\projects\vault\forge\FORGE — Founder Letter.pdf
+public\projects\vault\forge\FORGE — Iteration.pdf
+public\projects\vault\forge\FORGE — One-Pager.pdf
+public\projects\vault\forge\FORGE — Overview.pdf
+public\projects\vault\forge\FORGE — Portability.pdf
+public\projects\vault\forge\FORGE — Predictability.pdf
+public\projects\vault\forge\FORGE — Systemic Drift.pdf
+public\projects\vault\forge\FORGE — Technical Dependency.pdf
+public\projects\vault\forge\FORGE — Traceability.pdf
+public\projects\vault\forge\FORGE — Vision.pdf
+public\projects\vault\nc-foundation\NC - One Pager.pdf
+public\projects\vault\xbox-forever\Xbox Forever — Life Inside a Persistent Platform.pdf
+public\projects\vault\xbox-forever\Xbox Forever - One Pager.pdf
+public\projects\vault\xbox-forever\Xbox Forever — Structural Inversion and The Cultural Gap.pdf
+public\projects\vault\xbox-forever\Xbox Forever — Why Persistence Is the Missing Layer.pdf
+public\projects\vault\xbox-forever-ads\XBOX FOREVER ADS - ONE-PAGER.pdf
+public\site-icons\web-systems-seal.png
+public\thumbnails\advertising-mode-problem-architecture.jpg
+public\thumbnails\advertising-mode-problem-architecture-motion.mp4
+public\thumbnails\aesthetic-identity.jpg
+public\thumbnails\aesthetic-identity-motion.mp4
+public\thumbnails\catalog-architecture.jpg
+public\thumbnails\catalog-architecture-motion.mp4
+public\thumbnails\cultural-infrastructure-architecture.jpg
+public\thumbnails\cultural-infrastructure-architecture-motion.mp4
+public\thumbnails\dashboard-launcher-kit.jpg
+public\thumbnails\dashboard-launcher-kit-motion.mp4
+public\thumbnails\death-of-play.jpg
+public\thumbnails\death-of-play-motion.mp4
+public\thumbnails\discord-server-era.jpg
+public\thumbnails\discord-server-era-motion.mp4
+public\thumbnails\forge.jpg
+public\thumbnails\forge-motion.mp4
+public\thumbnails\future-isnt-lost-its-underbuilt.jpg
+public\thumbnails\future-isnt-lost-its-underbuilt-motion.mp4
+public\thumbnails\game-development-starts-at-zero.jpg
+public\thumbnails\game-development-starts-at-zero-motion.mp4
+public\thumbnails\game-ip-mythos-vs-continuity.jpg
+public\thumbnails\game-ip-mythos-vs-continuity-motion.mp4
+public\thumbnails\gaming-culture.jpg
+public\thumbnails\gaming-culture-motion.mp4
+public\thumbnails\gaming-profits.jpg
+public\thumbnails\gaming-profits-motion.mp4
+public\thumbnails\genre-bottleneck.jpg
+public\thumbnails\genre-bottleneck-motion.mp4
+public\thumbnails\genre-taxonomy-architecture.jpg
+public\thumbnails\genre-taxonomy-architecture-motion.mp4
+public\thumbnails\label-tree.jpg
+public\thumbnails\label-tree-motion.mp4
+public\thumbnails\lost-community.jpg
+public\thumbnails\lost-community-motion.mp4
+public\thumbnails\nc-foundation.jpg
+public\thumbnails\nc-foundation-motion.mp4
+public\thumbnails\post-launch-architecture.jpg
+public\thumbnails\post-launch-architecture-motion.mp4
+public\thumbnails\publisher-architecture.jpg
+public\thumbnails\publisher-architecture-motion.mp4
+public\thumbnails\release-cadence-architecture.jpg
+public\thumbnails\release-cadence-architecture-motion.mp4
+public\thumbnails\steam-is-not-a-store.jpg
+public\thumbnails\steam-is-not-a-store-motion.mp4
+public\thumbnails\studio-identity-architecture.jpg
+public\thumbnails\studio-identity-architecture-motion.mp4
+public\thumbnails\taste-graph.jpg
+public\thumbnails\taste-graph-motion.mp4
+public\thumbnails\taste-graph-problem-architecture.jpg
+public\thumbnails\taste-graph-problem-architecture-motion.mp4
+public\thumbnails\unexploited-identity.jpg
+public\thumbnails\unexploited-identity-motion.mp4
+public\thumbnails\ways-to-skin-a-cat.jpg
+public\thumbnails\ways-to-skin-a-cat.mp4
+public\thumbnails\xbox-forever.jpg
+public\thumbnails\xbox-forever-ads.jpg
+public\thumbnails\xbox-forever-ads-motion.mp4
+public\thumbnails\xbox-forever-motion.mp4
+public\visuals\cacheable-routes-client-cache.png
+public\visuals\cacheable-routes-prerendering.png
+public\visuals\cacheable-routes-server-cache.png
+public\webb-systems-logo.png

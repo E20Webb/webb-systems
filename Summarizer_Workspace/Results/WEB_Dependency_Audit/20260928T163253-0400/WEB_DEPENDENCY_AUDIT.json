@@ -1,0 +1,3610 @@
+{
+  "tool": "Webb.systems Dependency Audit",
+  "revision": "gpt56-web-dependency-audit-v1",
+  "mode": "READ_ONLY",
+  "generated_at": "2026-09-28T16:32:53.014764-04:00",
+  "repository_root": "C:\\webb-systems",
+  "corpus_manifest_sha256": "4d50da5d86577b06ab29b591f89fef5dcb8014e25af3090420979120269fd436",
+  "summary": {
+    "files_audited": 212,
+    "routes_detected": 23,
+    "entry_roots": 32,
+    "reachable_files": 162,
+    "unreachable_files": 50,
+    "references_scanned": 305,
+    "resolved_local_references": 198,
+    "unresolved_references": 11,
+    "external_packages_observed": 5,
+    "decode_failures": 0
+  },
+  "file_category_counts": {
+    "APP_CODE": 1,
+    "APP_ENTRYPOINT": 24,
+    "BINARY_OTHER": 3,
+    "COMPONENT": 2,
+    "CONFIG": 7,
+    "CONTENT_CODE": 5,
+    "CONTENT_DOCUMENT": 47,
+    "CONTENT_SUPPORT": 11,
+    "NEXT_CONVENTION": 1,
+    "PUBLIC_ASSET": 101,
+    "SOURCE_CODE": 4,
+    "STYLE": 1,
+    "TEXT_OTHER": 5
+  },
+  "reference_classification_counts": {
+    "PUBLIC_ASSET": 120,
+    "EXTERNAL_PACKAGE": 63,
+    "LOCAL_MODULE": 63,
+    "ROUTE": 18,
+    "CONTENT_PATH": 15,
+    "DYNAMIC_ROUTE": 11,
+    "UNRESOLVED_CONTENT_PATH": 5,
+    "EXTERNAL_URI": 4,
+    "UNRESOLVED_LOCAL_MODULE": 3,
+    "UNRESOLVED_PUBLIC_ASSET": 3
+  },
+  "routes": [
+    "/",
+    "/about",
+    "/architecture",
+    "/architecture/[slug]",
+    "/essays",
+    "/essays/[slug]",
+    "/projects/vault",
+    "/projects/vault/forge",
+    "/projects/vault/forge/[slug]",
+    "/projects/vault/forge/index",
+    "/projects/vault/index",
+    "/projects/vault/nc-foundation",
+    "/projects/vault/nc-foundation/[slug]",
+    "/projects/vault/nc-foundation/index",
+    "/projects/vault/xbox-dashboard-launcher-kit",
+    "/projects/vault/xbox-dashboard-launcher-kit/[slug]",
+    "/projects/vault/xbox-dashboard-launcher-kit/index",
+    "/projects/vault/xbox-forever",
+    "/projects/vault/xbox-forever-ads",
+    "/projects/vault/xbox-forever-ads/[slug]",
+    "/projects/vault/xbox-forever-ads/index",
+    "/projects/vault/xbox-forever/[slug]",
+    "/projects/vault/xbox-forever/index"
+  ],
+  "entry_roots": [
+    ".gitignore",
+    ".npmrc",
+    "app/about/page.tsx",
+    "app/architecture/[slug]/page.tsx",
+    "app/architecture/page.tsx",
+    "app/essays/[slug]/page.tsx",
+    "app/essays/page.tsx",
+    "app/icon.png",
+    "app/layout.tsx",
+    "app/page.tsx",
+    "app/projects/vault/forge/[slug]/page.tsx",
+    "app/projects/vault/forge/index/page.tsx",
+    "app/projects/vault/forge/page.tsx",
+    "app/projects/vault/index/page.tsx",
+    "app/projects/vault/nc-foundation/[slug]/page.tsx",
+    "app/projects/vault/nc-foundation/index/page.tsx",
+    "app/projects/vault/nc-foundation/page.tsx",
+    "app/projects/vault/page.tsx",
+    "app/projects/vault/xbox-dashboard-launcher-kit/[slug]/page.tsx",
+    "app/projects/vault/xbox-dashboard-launcher-kit/index/page.tsx",
+    "app/projects/vault/xbox-dashboard-launcher-kit/page.tsx",
+    "app/projects/vault/xbox-forever-ads/[slug]/page.tsx",
+    "app/projects/vault/xbox-forever-ads/index/page.tsx",
+    "app/projects/vault/xbox-forever-ads/page.tsx",
+    "app/projects/vault/xbox-forever/[slug]/page.tsx",
+    "app/projects/vault/xbox-forever/index/page.tsx",
+    "app/projects/vault/xbox-forever/page.tsx",
+    "next-env.d.ts",
+    "next.config.ts",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.json"
+  ],
+  "unresolved_references": [
+    {
+      "source": "content/projects/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./vault/nc-foundation.mdx",
+      "classification": "UNRESOLVED_LOCAL_MODULE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "content/projects/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./vault/forge.mdx",
+      "classification": "UNRESOLVED_LOCAL_MODULE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "content/projects/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./vault/xbox-forever.mdx",
+      "classification": "UNRESOLVED_LOCAL_MODULE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/vault/forge/architecture.jpg",
+      "classification": "UNRESOLVED_PUBLIC_ASSET",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/vault/forge/one-pager.jpg",
+      "classification": "UNRESOLVED_PUBLIC_ASSET",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/vault/forge/executive-summary.jpg",
+      "classification": "UNRESOLVED_PUBLIC_ASSET",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "content/projects/vault/xbox-dashboard-launcher-kit/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/content/projects/vault/xbox-dashboard-launcher-kit/dashboard_launcher_kit_one_pager.mdx",
+      "classification": "UNRESOLVED_CONTENT_PATH",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "content/projects/vault/xbox-forever/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/content/projects/vault/xbox-forever/xbox_forever_one_pager.mdx",
+      "classification": "UNRESOLVED_CONTENT_PATH",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "content/projects/vault/xbox-forever/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/content/projects/vault/xbox-forever/xbox_forever_why_persistence_Is_the_missing_layer.mdx",
+      "classification": "UNRESOLVED_CONTENT_PATH",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "content/projects/vault/xbox-forever/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/content/projects/vault/xbox-forever/xbox_forever_life_inside_a_persistent_platform.mdx",
+      "classification": "UNRESOLVED_CONTENT_PATH",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "content/projects/vault/xbox-forever/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/content/projects/vault/xbox-forever/xbox_forever_structural_inversion_and_the_cultural_gap.mdx",
+      "classification": "UNRESOLVED_CONTENT_PATH",
+      "resolved": false,
+      "target": null
+    }
+  ],
+  "route_references": [
+    {
+      "source": "app/architecture/page.tsx",
+      "kind": "ROUTE_TEMPLATE",
+      "raw": "/architecture/${item.slug}",
+      "classification": "DYNAMIC_ROUTE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "app/essays/page.tsx",
+      "kind": "ROUTE_TEMPLATE",
+      "raw": "/essays/${essay.slug}",
+      "classification": "DYNAMIC_ROUTE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "app/NavBar.tsx",
+      "kind": "HREF",
+      "raw": "/",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/"
+    },
+    {
+      "source": "app/NavBar.tsx",
+      "kind": "HREF",
+      "raw": "/essays",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/essays"
+    },
+    {
+      "source": "app/NavBar.tsx",
+      "kind": "HREF",
+      "raw": "/architecture",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/architecture"
+    },
+    {
+      "source": "app/NavBar.tsx",
+      "kind": "HREF",
+      "raw": "/projects/vault",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/projects/vault"
+    },
+    {
+      "source": "app/NavBar.tsx",
+      "kind": "HREF",
+      "raw": "/about",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/about"
+    },
+    {
+      "source": "app/page.tsx",
+      "kind": "HREF",
+      "raw": "/essays",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/essays"
+    },
+    {
+      "source": "app/page.tsx",
+      "kind": "HREF",
+      "raw": "/architecture",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/architecture"
+    },
+    {
+      "source": "app/page.tsx",
+      "kind": "HREF",
+      "raw": "/projects/vault",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/projects/vault"
+    },
+    {
+      "source": "app/page.tsx",
+      "kind": "HREF",
+      "raw": "/about",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/about"
+    },
+    {
+      "source": "app/page.tsx",
+      "kind": "ROUTE_TEMPLATE",
+      "raw": "/essays/${selection.slug}",
+      "classification": "DYNAMIC_ROUTE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "app/page.tsx",
+      "kind": "ROUTE_TEMPLATE",
+      "raw": "/architecture/${selection.slug}",
+      "classification": "DYNAMIC_ROUTE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "app/projects/vault/forge/index/page.tsx",
+      "kind": "ROUTE_TEMPLATE",
+      "raw": "/projects/vault/forge/${doc.slug}",
+      "classification": "DYNAMIC_ROUTE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "app/projects/vault/index/page.tsx",
+      "kind": "HREF",
+      "raw": "/projects/vault/xbox-forever",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/projects/vault/xbox-forever"
+    },
+    {
+      "source": "app/projects/vault/index/page.tsx",
+      "kind": "HREF",
+      "raw": "/projects/vault/xbox-forever-ads",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/projects/vault/xbox-forever-ads"
+    },
+    {
+      "source": "app/projects/vault/index/page.tsx",
+      "kind": "HREF",
+      "raw": "/projects/vault/xbox-dashboard-launcher-kit",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/projects/vault/xbox-dashboard-launcher-kit"
+    },
+    {
+      "source": "app/projects/vault/index/page.tsx",
+      "kind": "HREF",
+      "raw": "/projects/vault/forge",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/projects/vault/forge"
+    },
+    {
+      "source": "app/projects/vault/index/page.tsx",
+      "kind": "HREF",
+      "raw": "/projects/vault/nc-foundation",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/projects/vault/nc-foundation"
+    },
+    {
+      "source": "app/projects/vault/page.tsx",
+      "kind": "ROUTE_NAVIGATION",
+      "raw": "/projects/vault/index",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/projects/vault/index"
+    },
+    {
+      "source": "app/projects/vault/xbox-dashboard-launcher-kit/index/page.tsx",
+      "kind": "ROUTE_TEMPLATE",
+      "raw": "/projects/vault/xbox-dashboard-launcher-kit/${doc.slug}",
+      "classification": "DYNAMIC_ROUTE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "app/projects/vault/xbox-forever-ads/index/page.tsx",
+      "kind": "ROUTE_TEMPLATE",
+      "raw": "/projects/vault/xbox-forever-ads/${doc.slug}",
+      "classification": "DYNAMIC_ROUTE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "app/projects/vault/xbox-forever/index/page.tsx",
+      "kind": "ROUTE_TEMPLATE",
+      "raw": "/projects/vault/xbox-forever/${doc.slug}",
+      "classification": "DYNAMIC_ROUTE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "components/DocumentFooter.tsx",
+      "kind": "HREF",
+      "raw": "/about",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/about"
+    },
+    {
+      "source": "content/projects/vault/forge/page.tsx",
+      "kind": "ROUTE_TEMPLATE",
+      "raw": "/projects/vault/forge/${doc.slug}",
+      "classification": "DYNAMIC_ROUTE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "content/projects/vault/nc-foundation/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/projects/vault/nc-foundation/NC Foundation — One-Pager.pdf",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/projects/vault/nc-foundation/NC Foundation — One-Pager.pdf"
+    },
+    {
+      "source": "content/projects/vault/xbox-forever/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/projects/vault/xbox-forever/Xbox Forever — One Pager.pdf",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/projects/vault/xbox-forever/Xbox Forever — One Pager.pdf"
+    },
+    {
+      "source": "content/related-work.ts",
+      "kind": "ROUTE_TEMPLATE",
+      "raw": "/essays/${item.slug}",
+      "classification": "DYNAMIC_ROUTE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "content/related-work.ts",
+      "kind": "ROUTE_TEMPLATE",
+      "raw": "/architecture/${item.slug}",
+      "classification": "DYNAMIC_ROUTE",
+      "resolved": false,
+      "target": null
+    }
+  ],
+  "external_packages": {
+    "observed_import_counts": {
+      "next": 54,
+      "react": 6,
+      "@next/mdx": 1,
+      "mdx": 1,
+      "tailwindcss": 1
+    },
+    "imported_but_undeclared": [
+      "mdx"
+    ],
+    "declared_but_not_observed_in_imports": [
+      "@heroicons/react",
+      "@mdx-js/loader",
+      "@mdx-js/react",
+      "@tailwindcss/forms",
+      "@tailwindcss/postcss",
+      "@tailwindcss/typography",
+      "@types/mdx",
+      "@types/ms",
+      "@types/node",
+      "@types/react",
+      "@types/react-dom",
+      "clsx",
+      "codehike",
+      "date-fns",
+      "dinero.js",
+      "ms",
+      "postcss",
+      "prettier",
+      "prettier-plugin-tailwindcss",
+      "react-dom",
+      "recma-codehike",
+      "remark-codehike",
+      "server-only",
+      "styled-components",
+      "typescript",
+      "use-count-up",
+      "zod"
+    ],
+    "note": "Declared-but-not-observed is informational only and is not evidence that a package is unused."
+  },
+  "candidate_groups": {
+    "ORPHAN_CODE_CANDIDATE": [
+      {
+        "path": "content/projects/vault/forge/page.tsx",
+        "category": "CONTENT_CODE",
+        "bytes": 2383,
+        "incoming_references": 0,
+        "outgoing_references": 1
+      },
+      {
+        "path": "content/projects/vault/nc-foundation/page.tsx",
+        "category": "CONTENT_CODE",
+        "bytes": 0,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "mdx-components.tsx",
+        "category": "SOURCE_CODE",
+        "bytes": 800,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "mdx.d.ts",
+        "category": "SOURCE_CODE",
+        "bytes": 25,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "postcss.config.cjs",
+        "category": "SOURCE_CODE",
+        "bytes": 63,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "prettier.config.js",
+        "category": "SOURCE_CODE",
+        "bytes": 309,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      }
+    ],
+    "ORPHAN_CONTENT_SUPPORT_CANDIDATE": [
+      {
+        "path": "content/architecture/manifest.ts",
+        "category": "CONTENT_SUPPORT",
+        "bytes": 1126,
+        "incoming_references": 0,
+        "outgoing_references": 11
+      },
+      {
+        "path": "content/projects/manifest.ts",
+        "category": "CONTENT_SUPPORT",
+        "bytes": 318,
+        "incoming_references": 0,
+        "outgoing_references": 1
+      },
+      {
+        "path": "content/projects/vault/meta.ts",
+        "category": "CONTENT_SUPPORT",
+        "bytes": 1685,
+        "incoming_references": 1,
+        "outgoing_references": 10
+      }
+    ],
+    "UNREFERENCED_FILE_REVIEW": [
+      {
+        "path": ".env.local",
+        "category": "TEXT_OTHER",
+        "bytes": 59,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": ".prettierignore",
+        "category": "BINARY_OTHER",
+        "bytes": 23,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": ".vscode/extensions.json",
+        "category": "TEXT_OTHER",
+        "bytes": 489,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": ".vscode/settings.json",
+        "category": "TEXT_OTHER",
+        "bytes": 146,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "license.md",
+        "category": "TEXT_OTHER",
+        "bytes": 1100,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "readme.md",
+        "category": "TEXT_OTHER",
+        "bytes": 471,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "tsconfig.tsbuildinfo",
+        "category": "BINARY_OTHER",
+        "bytes": 339413,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "web systems img/Elliott 7 yo.png",
+        "category": "BINARY_OTHER",
+        "bytes": 3281638,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      }
+    ],
+    "UNREFERENCED_PUBLIC_ASSET": [
+      {
+        "path": "public/projects/vault/nc-foundation/NC - One Pager.pdf",
+        "category": "PUBLIC_ASSET",
+        "bytes": 70602,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "public/projects/vault/xbox-forever/Xbox Forever - One Pager.pdf",
+        "category": "PUBLIC_ASSET",
+        "bytes": 82015,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "public/thumbnails/discord-server-era-motion.mp4",
+        "category": "PUBLIC_ASSET",
+        "bytes": 1559185,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "public/thumbnails/discord-server-era.jpg",
+        "category": "PUBLIC_ASSET",
+        "bytes": 153258,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "public/thumbnails/label-tree-motion.mp4",
+        "category": "PUBLIC_ASSET",
+        "bytes": 1088804,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "public/thumbnails/label-tree.jpg",
+        "category": "PUBLIC_ASSET",
+        "bytes": 405553,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "public/thumbnails/taste-graph-motion.mp4",
+        "category": "PUBLIC_ASSET",
+        "bytes": 461388,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "public/thumbnails/taste-graph.jpg",
+        "category": "PUBLIC_ASSET",
+        "bytes": 167450,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "public/visuals/cacheable-routes-client-cache.png",
+        "category": "PUBLIC_ASSET",
+        "bytes": 78891,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "public/visuals/cacheable-routes-prerendering.png",
+        "category": "PUBLIC_ASSET",
+        "bytes": 135310,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "public/visuals/cacheable-routes-server-cache.png",
+        "category": "PUBLIC_ASSET",
+        "bytes": 106414,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      }
+    ],
+    "UNREGISTERED_PUBLIC_CONTENT": [
+      {
+        "path": "content/architecture/advertising-mode-problem-architecture.mdx",
+        "category": "CONTENT_DOCUMENT",
+        "bytes": 14418,
+        "incoming_references": 1,
+        "outgoing_references": 0
+      },
+      {
+        "path": "content/architecture/aesthetic-identity.mdx",
+        "category": "CONTENT_DOCUMENT",
+        "bytes": 12106,
+        "incoming_references": 1,
+        "outgoing_references": 0
+      },
+      {
+        "path": "content/architecture/catalog-architecture.mdx",
+        "category": "CONTENT_DOCUMENT",
+        "bytes": 5197,
+        "incoming_references": 1,
+        "outgoing_references": 0
+      },
+      {
+        "path": "content/architecture/cultural-infrastructure-architecture.mdx",
+        "category": "CONTENT_DOCUMENT",
+        "bytes": 4984,
+        "incoming_references": 1,
+        "outgoing_references": 0
+      },
+      {
+        "path": "content/architecture/discord-server-era.mdx",
+        "category": "CONTENT_DOCUMENT",
+        "bytes": 12155,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "content/architecture/genre-taxonomy-architecture.mdx",
+        "category": "CONTENT_DOCUMENT",
+        "bytes": 5002,
+        "incoming_references": 1,
+        "outgoing_references": 0
+      },
+      {
+        "path": "content/architecture/ip-expansion-architecture.mdx",
+        "category": "CONTENT_DOCUMENT",
+        "bytes": 14121,
+        "incoming_references": 1,
+        "outgoing_references": 0
+      },
+      {
+        "path": "content/architecture/post-launch-architecture.mdx",
+        "category": "CONTENT_DOCUMENT",
+        "bytes": 15153,
+        "incoming_references": 1,
+        "outgoing_references": 0
+      },
+      {
+        "path": "content/architecture/publisher-identity-architecture.mdx",
+        "category": "CONTENT_DOCUMENT",
+        "bytes": 12642,
+        "incoming_references": 1,
+        "outgoing_references": 0
+      },
+      {
+        "path": "content/architecture/release-cadence-architecture.mdx",
+        "category": "CONTENT_DOCUMENT",
+        "bytes": 10459,
+        "incoming_references": 1,
+        "outgoing_references": 0
+      },
+      {
+        "path": "content/architecture/studio-identity-architecture.mdx",
+        "category": "CONTENT_DOCUMENT",
+        "bytes": 4665,
+        "incoming_references": 1,
+        "outgoing_references": 0
+      },
+      {
+        "path": "content/architecture/taste-graph-problem-architecture.mdx",
+        "category": "CONTENT_DOCUMENT",
+        "bytes": 5252,
+        "incoming_references": 1,
+        "outgoing_references": 0
+      },
+      {
+        "path": "content/essays/forge-economics.mdx",
+        "category": "CONTENT_DOCUMENT",
+        "bytes": 44101,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "content/essays/return-of-the-destination.mdx",
+        "category": "CONTENT_DOCUMENT",
+        "bytes": 21141,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "content/essays/the-monetary-value-of-being-the-board.mdx",
+        "category": "CONTENT_DOCUMENT",
+        "bytes": 32114,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "content/essays/the-trust-layer.mdx",
+        "category": "CONTENT_DOCUMENT",
+        "bytes": 24099,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "content/essays/you-dont-need-to-own-the-stack.mdx",
+        "category": "CONTENT_DOCUMENT",
+        "bytes": 32278,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      }
+    ],
+    "UNREGISTERED_VAULT_DOCUMENT": [
+      {
+        "path": "content/projects/vault/xbox-dashboard-launcher-kit/documents/dashboard_launcher_kit_one_pager.mdx",
+        "category": "CONTENT_DOCUMENT",
+        "bytes": 3066,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "content/projects/vault/xbox-forever/documents/xbox_forever_life_inside_a_persistent_platform.mdx",
+        "category": "CONTENT_DOCUMENT",
+        "bytes": 8193,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "content/projects/vault/xbox-forever/documents/xbox_forever_one_pager.mdx",
+        "category": "CONTENT_DOCUMENT",
+        "bytes": 2774,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "content/projects/vault/xbox-forever/documents/xbox_forever_structural_inversion_and_the_cultural_gap.mdx",
+        "category": "CONTENT_DOCUMENT",
+        "bytes": 7959,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      },
+      {
+        "path": "content/projects/vault/xbox-forever/documents/xbox_forever_why_persistence_Is_the_missing_layer.mdx",
+        "category": "CONTENT_DOCUMENT",
+        "bytes": 9416,
+        "incoming_references": 0,
+        "outgoing_references": 0
+      }
+    ]
+  },
+  "decode_failures": [],
+  "references": [
+    {
+      "source": "app/about/page.tsx",
+      "kind": "HREF",
+      "raw": "mailto:elliott@webb.systems",
+      "classification": "EXTERNAL_URI",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "app/about/page.tsx",
+      "kind": "HREF",
+      "raw": "https://www.linkedin.com/in/elliott-webb-56b906226/",
+      "classification": "EXTERNAL_URI",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "app/about/page.tsx",
+      "kind": "SRC",
+      "raw": "/about/elliott.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/about/elliott.jpg"
+    },
+    {
+      "source": "app/about/page.tsx",
+      "kind": "PATH_LITERAL",
+      "raw": "/about/elliott.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/about/elliott.jpg"
+    },
+    {
+      "source": "app/architecture/[slug]/page.tsx",
+      "kind": "IMPORT",
+      "raw": "next/navigation",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "app/architecture/[slug]/page.tsx",
+      "kind": "IMPORT",
+      "raw": "@/content/mdx-components",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/mdx-components.tsx"
+    },
+    {
+      "source": "app/architecture/[slug]/page.tsx",
+      "kind": "IMPORT",
+      "raw": "@/content/related-work",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/related-work.ts"
+    },
+    {
+      "source": "app/architecture/[slug]/page.tsx",
+      "kind": "IMPORT",
+      "raw": "@/components/DocumentFooter",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "components/DocumentFooter.tsx"
+    },
+    {
+      "source": "app/architecture/[slug]/page.tsx",
+      "kind": "IMPORT",
+      "raw": "react",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "react"
+    },
+    {
+      "source": "app/architecture/page.tsx",
+      "kind": "IMPORT",
+      "raw": "next/link",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "app/architecture/page.tsx",
+      "kind": "IMPORT",
+      "raw": "@/content/architecture/meta",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/architecture/meta.ts"
+    },
+    {
+      "source": "app/architecture/page.tsx",
+      "kind": "IMPORT",
+      "raw": "@/components/Thumbnail",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "components/Thumbnail.tsx"
+    },
+    {
+      "source": "app/architecture/page.tsx",
+      "kind": "SRC",
+      "raw": "/banners/architecture-banner.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/banners/architecture-banner.mp4"
+    },
+    {
+      "source": "app/architecture/page.tsx",
+      "kind": "PATH_LITERAL",
+      "raw": "/banners/architecture-banner.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/banners/architecture-banner.mp4"
+    },
+    {
+      "source": "app/architecture/page.tsx",
+      "kind": "ROUTE_TEMPLATE",
+      "raw": "/architecture/${item.slug}",
+      "classification": "DYNAMIC_ROUTE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "app/essays/[slug]/page.tsx",
+      "kind": "IMPORT",
+      "raw": "next/navigation",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "app/essays/[slug]/page.tsx",
+      "kind": "IMPORT",
+      "raw": "@/content/essays/manifest",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/essays/manifest.ts"
+    },
+    {
+      "source": "app/essays/[slug]/page.tsx",
+      "kind": "IMPORT",
+      "raw": "@/content/related-work",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/related-work.ts"
+    },
+    {
+      "source": "app/essays/[slug]/page.tsx",
+      "kind": "IMPORT",
+      "raw": "@/components/DocumentFooter",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "components/DocumentFooter.tsx"
+    },
+    {
+      "source": "app/essays/[slug]/page.tsx",
+      "kind": "IMPORT",
+      "raw": "react",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "react"
+    },
+    {
+      "source": "app/essays/page.tsx",
+      "kind": "IMPORT",
+      "raw": "next/link",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "app/essays/page.tsx",
+      "kind": "IMPORT",
+      "raw": "@/content/essays/meta",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/essays/meta.ts"
+    },
+    {
+      "source": "app/essays/page.tsx",
+      "kind": "IMPORT",
+      "raw": "@/components/Thumbnail",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "components/Thumbnail.tsx"
+    },
+    {
+      "source": "app/essays/page.tsx",
+      "kind": "SRC",
+      "raw": "/banners/essays-banner.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/banners/essays-banner.mp4"
+    },
+    {
+      "source": "app/essays/page.tsx",
+      "kind": "PATH_LITERAL",
+      "raw": "/banners/essays-banner.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/banners/essays-banner.mp4"
+    },
+    {
+      "source": "app/essays/page.tsx",
+      "kind": "ROUTE_TEMPLATE",
+      "raw": "/essays/${essay.slug}",
+      "classification": "DYNAMIC_ROUTE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "app/layout.tsx",
+      "kind": "IMPORT",
+      "raw": "../styles/globals.css",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "styles/globals.css"
+    },
+    {
+      "source": "app/layout.tsx",
+      "kind": "IMPORT",
+      "raw": "next/font/google",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "app/layout.tsx",
+      "kind": "IMPORT",
+      "raw": "./NavBar",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "app/NavBar.tsx"
+    },
+    {
+      "source": "app/layout.tsx",
+      "kind": "IMPORT",
+      "raw": "react",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "react"
+    },
+    {
+      "source": "app/NavBar.tsx",
+      "kind": "IMPORT",
+      "raw": "next/link",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "app/NavBar.tsx",
+      "kind": "IMPORT",
+      "raw": "next/navigation",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "app/NavBar.tsx",
+      "kind": "HREF",
+      "raw": "/",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/"
+    },
+    {
+      "source": "app/NavBar.tsx",
+      "kind": "HREF",
+      "raw": "/essays",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/essays"
+    },
+    {
+      "source": "app/NavBar.tsx",
+      "kind": "HREF",
+      "raw": "/architecture",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/architecture"
+    },
+    {
+      "source": "app/NavBar.tsx",
+      "kind": "HREF",
+      "raw": "/projects/vault",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/projects/vault"
+    },
+    {
+      "source": "app/NavBar.tsx",
+      "kind": "HREF",
+      "raw": "/about",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/about"
+    },
+    {
+      "source": "app/NavBar.tsx",
+      "kind": "SRC",
+      "raw": "/webb-systems-logo.png",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/webb-systems-logo.png"
+    },
+    {
+      "source": "app/NavBar.tsx",
+      "kind": "PATH_LITERAL",
+      "raw": "/webb-systems-logo.png",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/webb-systems-logo.png"
+    },
+    {
+      "source": "app/page.tsx",
+      "kind": "IMPORT",
+      "raw": "next/link",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "app/page.tsx",
+      "kind": "IMPORT",
+      "raw": "@/content/essays/meta",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/essays/meta.ts"
+    },
+    {
+      "source": "app/page.tsx",
+      "kind": "IMPORT",
+      "raw": "@/content/architecture/meta",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/architecture/meta.ts"
+    },
+    {
+      "source": "app/page.tsx",
+      "kind": "IMPORT",
+      "raw": "../components/Thumbnail",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "components/Thumbnail.tsx"
+    },
+    {
+      "source": "app/page.tsx",
+      "kind": "HREF",
+      "raw": "/essays",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/essays"
+    },
+    {
+      "source": "app/page.tsx",
+      "kind": "HREF",
+      "raw": "/architecture",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/architecture"
+    },
+    {
+      "source": "app/page.tsx",
+      "kind": "HREF",
+      "raw": "/projects/vault",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/projects/vault"
+    },
+    {
+      "source": "app/page.tsx",
+      "kind": "HREF",
+      "raw": "/about",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/about"
+    },
+    {
+      "source": "app/page.tsx",
+      "kind": "SRC",
+      "raw": "/banners/home-arrow-banner.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/banners/home-arrow-banner.mp4"
+    },
+    {
+      "source": "app/page.tsx",
+      "kind": "PATH_LITERAL",
+      "raw": "/banners/home-arrow-banner.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/banners/home-arrow-banner.mp4"
+    },
+    {
+      "source": "app/page.tsx",
+      "kind": "ROUTE_TEMPLATE",
+      "raw": "/essays/${selection.slug}",
+      "classification": "DYNAMIC_ROUTE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "app/page.tsx",
+      "kind": "ROUTE_TEMPLATE",
+      "raw": "/architecture/${selection.slug}",
+      "classification": "DYNAMIC_ROUTE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "app/projects/vault/forge/[slug]/page.tsx",
+      "kind": "IMPORT",
+      "raw": "next/navigation",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "app/projects/vault/forge/[slug]/page.tsx",
+      "kind": "IMPORT",
+      "raw": "@/content/projects/vault/forge/meta",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/projects/vault/forge/meta.ts"
+    },
+    {
+      "source": "app/projects/vault/forge/index/page.tsx",
+      "kind": "IMPORT",
+      "raw": "next/link",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "app/projects/vault/forge/index/page.tsx",
+      "kind": "IMPORT",
+      "raw": "@/content/projects/vault/forge/meta",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/projects/vault/forge/meta.ts"
+    },
+    {
+      "source": "app/projects/vault/forge/index/page.tsx",
+      "kind": "ROUTE_TEMPLATE",
+      "raw": "/projects/vault/forge/${doc.slug}",
+      "classification": "DYNAMIC_ROUTE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "app/projects/vault/forge/page.tsx",
+      "kind": "EXPORT_FROM",
+      "raw": "./index/page",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "app/projects/vault/forge/index/page.tsx"
+    },
+    {
+      "source": "app/projects/vault/index/page.tsx",
+      "kind": "IMPORT",
+      "raw": "next/link",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "app/projects/vault/index/page.tsx",
+      "kind": "IMPORT",
+      "raw": "@/components/Thumbnail",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "components/Thumbnail.tsx"
+    },
+    {
+      "source": "app/projects/vault/index/page.tsx",
+      "kind": "HREF",
+      "raw": "mailto:Elliott@Webb.Systems?subject=Request%20for%20Full%20Architecture%20Access%20(NDA%20Required)",
+      "classification": "EXTERNAL_URI",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "app/projects/vault/index/page.tsx",
+      "kind": "HREF",
+      "raw": "/projects/vault/xbox-forever",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/projects/vault/xbox-forever"
+    },
+    {
+      "source": "app/projects/vault/index/page.tsx",
+      "kind": "HREF",
+      "raw": "/projects/vault/xbox-forever-ads",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/projects/vault/xbox-forever-ads"
+    },
+    {
+      "source": "app/projects/vault/index/page.tsx",
+      "kind": "HREF",
+      "raw": "/projects/vault/xbox-dashboard-launcher-kit",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/projects/vault/xbox-dashboard-launcher-kit"
+    },
+    {
+      "source": "app/projects/vault/index/page.tsx",
+      "kind": "HREF",
+      "raw": "/projects/vault/forge",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/projects/vault/forge"
+    },
+    {
+      "source": "app/projects/vault/index/page.tsx",
+      "kind": "HREF",
+      "raw": "/projects/vault/nc-foundation",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/projects/vault/nc-foundation"
+    },
+    {
+      "source": "app/projects/vault/index/page.tsx",
+      "kind": "SRC",
+      "raw": "/site-icons/web-systems-seal.png",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/site-icons/web-systems-seal.png"
+    },
+    {
+      "source": "app/projects/vault/index/page.tsx",
+      "kind": "PATH_LITERAL",
+      "raw": "/site-icons/web-systems-seal.png",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/site-icons/web-systems-seal.png"
+    },
+    {
+      "source": "app/projects/vault/index/page.tsx",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/xbox-forever.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/xbox-forever.jpg"
+    },
+    {
+      "source": "app/projects/vault/index/page.tsx",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/xbox-forever-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/xbox-forever-motion.mp4"
+    },
+    {
+      "source": "app/projects/vault/index/page.tsx",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/xbox-forever-ads.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/xbox-forever-ads.jpg"
+    },
+    {
+      "source": "app/projects/vault/index/page.tsx",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/xbox-forever-ads-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/xbox-forever-ads-motion.mp4"
+    },
+    {
+      "source": "app/projects/vault/index/page.tsx",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/dashboard-launcher-kit.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/dashboard-launcher-kit.jpg"
+    },
+    {
+      "source": "app/projects/vault/index/page.tsx",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/dashboard-launcher-kit-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/dashboard-launcher-kit-motion.mp4"
+    },
+    {
+      "source": "app/projects/vault/index/page.tsx",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/forge.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/forge.jpg"
+    },
+    {
+      "source": "app/projects/vault/index/page.tsx",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/forge-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/forge-motion.mp4"
+    },
+    {
+      "source": "app/projects/vault/index/page.tsx",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/nc-foundation.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/nc-foundation.jpg"
+    },
+    {
+      "source": "app/projects/vault/index/page.tsx",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/nc-foundation-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/nc-foundation-motion.mp4"
+    },
+    {
+      "source": "app/projects/vault/nc-foundation/[slug]/page.tsx",
+      "kind": "IMPORT",
+      "raw": "next/navigation",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "app/projects/vault/nc-foundation/[slug]/page.tsx",
+      "kind": "IMPORT",
+      "raw": "@/content/projects/vault/nc-foundation/meta",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/projects/vault/nc-foundation/meta.ts"
+    },
+    {
+      "source": "app/projects/vault/nc-foundation/index/page.tsx",
+      "kind": "IMPORT",
+      "raw": "next/link",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "app/projects/vault/nc-foundation/page.tsx",
+      "kind": "EXPORT_FROM",
+      "raw": "./index/page",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "app/projects/vault/nc-foundation/index/page.tsx"
+    },
+    {
+      "source": "app/projects/vault/page.tsx",
+      "kind": "IMPORT",
+      "raw": "react",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "react"
+    },
+    {
+      "source": "app/projects/vault/page.tsx",
+      "kind": "IMPORT",
+      "raw": "next/navigation",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "app/projects/vault/page.tsx",
+      "kind": "ROUTE_NAVIGATION",
+      "raw": "/projects/vault/index",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/projects/vault/index"
+    },
+    {
+      "source": "app/projects/vault/xbox-dashboard-launcher-kit/[slug]/page.tsx",
+      "kind": "IMPORT",
+      "raw": "next/navigation",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "app/projects/vault/xbox-dashboard-launcher-kit/[slug]/page.tsx",
+      "kind": "IMPORT",
+      "raw": "@/content/projects/vault/xbox-dashboard-launcher-kit/meta",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/projects/vault/xbox-dashboard-launcher-kit/meta.ts"
+    },
+    {
+      "source": "app/projects/vault/xbox-dashboard-launcher-kit/index/page.tsx",
+      "kind": "IMPORT",
+      "raw": "next/link",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "app/projects/vault/xbox-dashboard-launcher-kit/index/page.tsx",
+      "kind": "IMPORT",
+      "raw": "@/content/projects/vault/xbox-dashboard-launcher-kit/meta",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/projects/vault/xbox-dashboard-launcher-kit/meta.ts"
+    },
+    {
+      "source": "app/projects/vault/xbox-dashboard-launcher-kit/index/page.tsx",
+      "kind": "ROUTE_TEMPLATE",
+      "raw": "/projects/vault/xbox-dashboard-launcher-kit/${doc.slug}",
+      "classification": "DYNAMIC_ROUTE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "app/projects/vault/xbox-dashboard-launcher-kit/page.tsx",
+      "kind": "EXPORT_FROM",
+      "raw": "./index/page",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "app/projects/vault/xbox-dashboard-launcher-kit/index/page.tsx"
+    },
+    {
+      "source": "app/projects/vault/xbox-forever-ads/[slug]/page.tsx",
+      "kind": "IMPORT",
+      "raw": "next/navigation",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "app/projects/vault/xbox-forever-ads/[slug]/page.tsx",
+      "kind": "IMPORT",
+      "raw": "@/content/projects/vault/xbox-forever-ads/meta",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/projects/vault/xbox-forever-ads/meta.ts"
+    },
+    {
+      "source": "app/projects/vault/xbox-forever-ads/index/page.tsx",
+      "kind": "IMPORT",
+      "raw": "next/link",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "app/projects/vault/xbox-forever-ads/index/page.tsx",
+      "kind": "IMPORT",
+      "raw": "@/content/projects/vault/xbox-forever-ads/meta",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/projects/vault/xbox-forever-ads/meta.ts"
+    },
+    {
+      "source": "app/projects/vault/xbox-forever-ads/index/page.tsx",
+      "kind": "ROUTE_TEMPLATE",
+      "raw": "/projects/vault/xbox-forever-ads/${doc.slug}",
+      "classification": "DYNAMIC_ROUTE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "app/projects/vault/xbox-forever-ads/page.tsx",
+      "kind": "EXPORT_FROM",
+      "raw": "./index/page",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "app/projects/vault/xbox-forever-ads/index/page.tsx"
+    },
+    {
+      "source": "app/projects/vault/xbox-forever/[slug]/page.tsx",
+      "kind": "IMPORT",
+      "raw": "next/navigation",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "app/projects/vault/xbox-forever/[slug]/page.tsx",
+      "kind": "IMPORT",
+      "raw": "@/content/projects/vault/xbox-forever/meta",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/projects/vault/xbox-forever/meta.ts"
+    },
+    {
+      "source": "app/projects/vault/xbox-forever/index/page.tsx",
+      "kind": "IMPORT",
+      "raw": "next/link",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "app/projects/vault/xbox-forever/index/page.tsx",
+      "kind": "IMPORT",
+      "raw": "@/content/projects/vault/xbox-forever/meta",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/projects/vault/xbox-forever/meta.ts"
+    },
+    {
+      "source": "app/projects/vault/xbox-forever/index/page.tsx",
+      "kind": "ROUTE_TEMPLATE",
+      "raw": "/projects/vault/xbox-forever/${doc.slug}",
+      "classification": "DYNAMIC_ROUTE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "app/projects/vault/xbox-forever/page.tsx",
+      "kind": "EXPORT_FROM",
+      "raw": "./index/page",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "app/projects/vault/xbox-forever/index/page.tsx"
+    },
+    {
+      "source": "components/DocumentFooter.tsx",
+      "kind": "IMPORT",
+      "raw": "next/link",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "components/DocumentFooter.tsx",
+      "kind": "HREF",
+      "raw": "/about",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/about"
+    },
+    {
+      "source": "components/DocumentFooter.tsx",
+      "kind": "HREF",
+      "raw": "mailto:elliott@webb.systems",
+      "classification": "EXTERNAL_URI",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "components/Thumbnail.tsx",
+      "kind": "IMPORT",
+      "raw": "react",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "react"
+    },
+    {
+      "source": "content/architecture/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./post-launch-architecture.mdx",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/architecture/post-launch-architecture.mdx"
+    },
+    {
+      "source": "content/architecture/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./advertising-mode-problem-architecture.mdx",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/architecture/advertising-mode-problem-architecture.mdx"
+    },
+    {
+      "source": "content/architecture/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./ip-expansion-architecture.mdx",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/architecture/ip-expansion-architecture.mdx"
+    },
+    {
+      "source": "content/architecture/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./aesthetic-identity.mdx",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/architecture/aesthetic-identity.mdx"
+    },
+    {
+      "source": "content/architecture/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./publisher-identity-architecture.mdx",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/architecture/publisher-identity-architecture.mdx"
+    },
+    {
+      "source": "content/architecture/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./genre-taxonomy-architecture.mdx",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/architecture/genre-taxonomy-architecture.mdx"
+    },
+    {
+      "source": "content/architecture/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./catalog-architecture.mdx",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/architecture/catalog-architecture.mdx"
+    },
+    {
+      "source": "content/architecture/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./taste-graph-problem-architecture.mdx",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/architecture/taste-graph-problem-architecture.mdx"
+    },
+    {
+      "source": "content/architecture/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./studio-identity-architecture.mdx",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/architecture/studio-identity-architecture.mdx"
+    },
+    {
+      "source": "content/architecture/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./cultural-infrastructure-architecture.mdx",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/architecture/cultural-infrastructure-architecture.mdx"
+    },
+    {
+      "source": "content/architecture/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./release-cadence-architecture.mdx",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/architecture/release-cadence-architecture.mdx"
+    },
+    {
+      "source": "content/architecture/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/post-launch-architecture.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/post-launch-architecture.jpg"
+    },
+    {
+      "source": "content/architecture/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/post-launch-architecture-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/post-launch-architecture-motion.mp4"
+    },
+    {
+      "source": "content/architecture/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/advertising-mode-problem-architecture.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/advertising-mode-problem-architecture.jpg"
+    },
+    {
+      "source": "content/architecture/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/advertising-mode-problem-architecture-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/advertising-mode-problem-architecture-motion.mp4"
+    },
+    {
+      "source": "content/architecture/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/ways-to-skin-a-cat.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/ways-to-skin-a-cat.jpg"
+    },
+    {
+      "source": "content/architecture/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/ways-to-skin-a-cat.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/ways-to-skin-a-cat.mp4"
+    },
+    {
+      "source": "content/architecture/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/aesthetic-identity.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/aesthetic-identity.jpg"
+    },
+    {
+      "source": "content/architecture/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/aesthetic-identity-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/aesthetic-identity-motion.mp4"
+    },
+    {
+      "source": "content/architecture/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/publisher-architecture.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/publisher-architecture.jpg"
+    },
+    {
+      "source": "content/architecture/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/publisher-architecture-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/publisher-architecture-motion.mp4"
+    },
+    {
+      "source": "content/architecture/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/genre-taxonomy-architecture.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/genre-taxonomy-architecture.jpg"
+    },
+    {
+      "source": "content/architecture/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/genre-taxonomy-architecture-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/genre-taxonomy-architecture-motion.mp4"
+    },
+    {
+      "source": "content/architecture/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/catalog-architecture.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/catalog-architecture.jpg"
+    },
+    {
+      "source": "content/architecture/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/catalog-architecture-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/catalog-architecture-motion.mp4"
+    },
+    {
+      "source": "content/architecture/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/taste-graph-problem-architecture.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/taste-graph-problem-architecture.jpg"
+    },
+    {
+      "source": "content/architecture/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/taste-graph-problem-architecture-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/taste-graph-problem-architecture-motion.mp4"
+    },
+    {
+      "source": "content/architecture/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/studio-identity-architecture.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/studio-identity-architecture.jpg"
+    },
+    {
+      "source": "content/architecture/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/studio-identity-architecture-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/studio-identity-architecture-motion.mp4"
+    },
+    {
+      "source": "content/architecture/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/cultural-infrastructure-architecture.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/cultural-infrastructure-architecture.jpg"
+    },
+    {
+      "source": "content/architecture/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/cultural-infrastructure-architecture-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/cultural-infrastructure-architecture-motion.mp4"
+    },
+    {
+      "source": "content/architecture/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/release-cadence-architecture.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/release-cadence-architecture.jpg"
+    },
+    {
+      "source": "content/architecture/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/release-cadence-architecture-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/release-cadence-architecture-motion.mp4"
+    },
+    {
+      "source": "content/essays/death-of-play.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/essays/death-of-play.mdx",
+      "kind": "SRC",
+      "raw": "/essays/death-of-play/death-of-play.png",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/death-of-play/death-of-play.png"
+    },
+    {
+      "source": "content/essays/death-of-play.mdx",
+      "kind": "PATH_LITERAL",
+      "raw": "/essays/death-of-play/death-of-play.png",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/death-of-play/death-of-play.png"
+    },
+    {
+      "source": "content/essays/future-isnt-lost-its-underbuilt.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/essays/game-development-starts-at-zero.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/essays/game-development-starts-at-zero.mdx",
+      "kind": "SRC",
+      "raw": "/essays/starts-at-zero/starts-at-zero.png",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/starts-at-zero/starts-at-zero.png"
+    },
+    {
+      "source": "content/essays/game-development-starts-at-zero.mdx",
+      "kind": "PATH_LITERAL",
+      "raw": "/essays/starts-at-zero/starts-at-zero.png",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/starts-at-zero/starts-at-zero.png"
+    },
+    {
+      "source": "content/essays/game-ip-mythos-vs-continuity.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/essays/game-ip-mythos-vs-continuity.mdx",
+      "kind": "SRC",
+      "raw": "/essays/game-ip-mythos/game-ip-mythos.png",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/game-ip-mythos/game-ip-mythos.png"
+    },
+    {
+      "source": "content/essays/game-ip-mythos-vs-continuity.mdx",
+      "kind": "PATH_LITERAL",
+      "raw": "/essays/game-ip-mythos/game-ip-mythos.png",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/game-ip-mythos/game-ip-mythos.png"
+    },
+    {
+      "source": "content/essays/gaming-culture.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/essays/gaming-culture.mdx",
+      "kind": "SRC",
+      "raw": "/essays/gaming-culture/gaming-culture-1.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/gaming-culture/gaming-culture-1.jpg"
+    },
+    {
+      "source": "content/essays/gaming-culture.mdx",
+      "kind": "SRC",
+      "raw": "/essays/gaming-culture/gaming-culture-2.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/gaming-culture/gaming-culture-2.jpg"
+    },
+    {
+      "source": "content/essays/gaming-culture.mdx",
+      "kind": "PATH_LITERAL",
+      "raw": "/essays/gaming-culture/gaming-culture-1.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/gaming-culture/gaming-culture-1.jpg"
+    },
+    {
+      "source": "content/essays/gaming-culture.mdx",
+      "kind": "PATH_LITERAL",
+      "raw": "/essays/gaming-culture/gaming-culture-2.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/gaming-culture/gaming-culture-2.jpg"
+    },
+    {
+      "source": "content/essays/gaming-profits.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/essays/gaming-profits.mdx",
+      "kind": "SRC",
+      "raw": "/essays/gaming-profits/gaming-profits-1.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/gaming-profits/gaming-profits-1.jpg"
+    },
+    {
+      "source": "content/essays/gaming-profits.mdx",
+      "kind": "SRC",
+      "raw": "/essays/gaming-profits/gaming-profits-2.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/gaming-profits/gaming-profits-2.jpg"
+    },
+    {
+      "source": "content/essays/gaming-profits.mdx",
+      "kind": "PATH_LITERAL",
+      "raw": "/essays/gaming-profits/gaming-profits-1.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/gaming-profits/gaming-profits-1.jpg"
+    },
+    {
+      "source": "content/essays/gaming-profits.mdx",
+      "kind": "PATH_LITERAL",
+      "raw": "/essays/gaming-profits/gaming-profits-2.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/gaming-profits/gaming-profits-2.jpg"
+    },
+    {
+      "source": "content/essays/genre-bottleneck.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/essays/genre-bottleneck.mdx",
+      "kind": "SRC",
+      "raw": "/essays/genre-bottleneck/genre-bottleneck.png",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/genre-bottleneck/genre-bottleneck.png"
+    },
+    {
+      "source": "content/essays/genre-bottleneck.mdx",
+      "kind": "PATH_LITERAL",
+      "raw": "/essays/genre-bottleneck/genre-bottleneck.png",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/genre-bottleneck/genre-bottleneck.png"
+    },
+    {
+      "source": "content/essays/lost-community.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/essays/lost-community.mdx",
+      "kind": "SRC",
+      "raw": "/essays/lost-community/lost-community.png",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/lost-community/lost-community.png"
+    },
+    {
+      "source": "content/essays/lost-community.mdx",
+      "kind": "PATH_LITERAL",
+      "raw": "/essays/lost-community/lost-community.png",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/lost-community/lost-community.png"
+    },
+    {
+      "source": "content/essays/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./future-isnt-lost-its-underbuilt.mdx",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/essays/future-isnt-lost-its-underbuilt.mdx"
+    },
+    {
+      "source": "content/essays/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./steam-is-not-a-store.mdx",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/essays/steam-is-not-a-store.mdx"
+    },
+    {
+      "source": "content/essays/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./gaming-culture.mdx",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/essays/gaming-culture.mdx"
+    },
+    {
+      "source": "content/essays/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./gaming-profits.mdx",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/essays/gaming-profits.mdx"
+    },
+    {
+      "source": "content/essays/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./genre-bottleneck.mdx",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/essays/genre-bottleneck.mdx"
+    },
+    {
+      "source": "content/essays/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./lost-community.mdx",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/essays/lost-community.mdx"
+    },
+    {
+      "source": "content/essays/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./unexploited-identity.mdx",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/essays/unexploited-identity.mdx"
+    },
+    {
+      "source": "content/essays/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./game-ip-mythos-vs-continuity.mdx",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/essays/game-ip-mythos-vs-continuity.mdx"
+    },
+    {
+      "source": "content/essays/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./game-development-starts-at-zero.mdx",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/essays/game-development-starts-at-zero.mdx"
+    },
+    {
+      "source": "content/essays/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./death-of-play.mdx",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/essays/death-of-play.mdx"
+    },
+    {
+      "source": "content/essays/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/future-isnt-lost-its-underbuilt.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/future-isnt-lost-its-underbuilt.jpg"
+    },
+    {
+      "source": "content/essays/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/future-isnt-lost-its-underbuilt-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/future-isnt-lost-its-underbuilt-motion.mp4"
+    },
+    {
+      "source": "content/essays/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/steam-is-not-a-store.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/steam-is-not-a-store.jpg"
+    },
+    {
+      "source": "content/essays/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/steam-is-not-a-store-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/steam-is-not-a-store-motion.mp4"
+    },
+    {
+      "source": "content/essays/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/gaming-culture.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/gaming-culture.jpg"
+    },
+    {
+      "source": "content/essays/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/gaming-culture-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/gaming-culture-motion.mp4"
+    },
+    {
+      "source": "content/essays/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/gaming-profits.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/gaming-profits.jpg"
+    },
+    {
+      "source": "content/essays/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/gaming-profits-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/gaming-profits-motion.mp4"
+    },
+    {
+      "source": "content/essays/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/genre-bottleneck.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/genre-bottleneck.jpg"
+    },
+    {
+      "source": "content/essays/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/genre-bottleneck-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/genre-bottleneck-motion.mp4"
+    },
+    {
+      "source": "content/essays/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/lost-community.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/lost-community.jpg"
+    },
+    {
+      "source": "content/essays/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/lost-community-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/lost-community-motion.mp4"
+    },
+    {
+      "source": "content/essays/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/unexploited-identity.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/unexploited-identity.jpg"
+    },
+    {
+      "source": "content/essays/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/unexploited-identity-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/unexploited-identity-motion.mp4"
+    },
+    {
+      "source": "content/essays/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/game-ip-mythos-vs-continuity.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/game-ip-mythos-vs-continuity.jpg"
+    },
+    {
+      "source": "content/essays/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/game-ip-mythos-vs-continuity-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/game-ip-mythos-vs-continuity-motion.mp4"
+    },
+    {
+      "source": "content/essays/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/game-development-starts-at-zero.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/game-development-starts-at-zero.jpg"
+    },
+    {
+      "source": "content/essays/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/game-development-starts-at-zero-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/game-development-starts-at-zero-motion.mp4"
+    },
+    {
+      "source": "content/essays/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/death-of-play.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/death-of-play.jpg"
+    },
+    {
+      "source": "content/essays/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/death-of-play-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/death-of-play-motion.mp4"
+    },
+    {
+      "source": "content/essays/steam-is-not-a-store.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/essays/steam-is-not-a-store.mdx",
+      "kind": "SRC",
+      "raw": "/essays/steam-is-not-a-store/steam-is-not-a-store-1.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/steam-is-not-a-store/steam-is-not-a-store-1.jpg"
+    },
+    {
+      "source": "content/essays/steam-is-not-a-store.mdx",
+      "kind": "SRC",
+      "raw": "/essays/steam-is-not-a-store/steam-is-not-a-store-3.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/steam-is-not-a-store/steam-is-not-a-store-3.jpg"
+    },
+    {
+      "source": "content/essays/steam-is-not-a-store.mdx",
+      "kind": "SRC",
+      "raw": "/essays/steam-is-not-a-store/steam-is-not-a-store-2.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/steam-is-not-a-store/steam-is-not-a-store-2.jpg"
+    },
+    {
+      "source": "content/essays/steam-is-not-a-store.mdx",
+      "kind": "PATH_LITERAL",
+      "raw": "/essays/steam-is-not-a-store/steam-is-not-a-store-1.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/steam-is-not-a-store/steam-is-not-a-store-1.jpg"
+    },
+    {
+      "source": "content/essays/steam-is-not-a-store.mdx",
+      "kind": "PATH_LITERAL",
+      "raw": "/essays/steam-is-not-a-store/steam-is-not-a-store-3.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/steam-is-not-a-store/steam-is-not-a-store-3.jpg"
+    },
+    {
+      "source": "content/essays/steam-is-not-a-store.mdx",
+      "kind": "PATH_LITERAL",
+      "raw": "/essays/steam-is-not-a-store/steam-is-not-a-store-2.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/steam-is-not-a-store/steam-is-not-a-store-2.jpg"
+    },
+    {
+      "source": "content/essays/unexploited-identity.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/essays/unexploited-identity.mdx",
+      "kind": "SRC",
+      "raw": "/essays/unexploited-identity/unexploited-1.png",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/unexploited-identity/unexploited-1.png"
+    },
+    {
+      "source": "content/essays/unexploited-identity.mdx",
+      "kind": "SRC",
+      "raw": "/essays/unexploited-identity/unexploited-2.png",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/unexploited-identity/unexploited-2.png"
+    },
+    {
+      "source": "content/essays/unexploited-identity.mdx",
+      "kind": "PATH_LITERAL",
+      "raw": "/essays/unexploited-identity/unexploited-1.png",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/unexploited-identity/unexploited-1.png"
+    },
+    {
+      "source": "content/essays/unexploited-identity.mdx",
+      "kind": "PATH_LITERAL",
+      "raw": "/essays/unexploited-identity/unexploited-2.png",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/essays/unexploited-identity/unexploited-2.png"
+    },
+    {
+      "source": "content/mdx-components.tsx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/mdx-components.tsx",
+      "kind": "IMPORT",
+      "raw": "react",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "react"
+    },
+    {
+      "source": "content/projects/manifest.ts",
+      "kind": "IMPORT",
+      "raw": "@/content/projects/vault/meta",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/projects/vault/meta.ts"
+    },
+    {
+      "source": "content/projects/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./vault/nc-foundation.mdx",
+      "classification": "UNRESOLVED_LOCAL_MODULE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "content/projects/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./vault/forge.mdx",
+      "classification": "UNRESOLVED_LOCAL_MODULE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "content/projects/manifest.ts",
+      "kind": "DYNAMIC_IMPORT",
+      "raw": "./vault/xbox-forever.mdx",
+      "classification": "UNRESOLVED_LOCAL_MODULE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "content/projects/vault/forge/documents/adaptability.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/projects/vault/forge/documents/architecture.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/projects/vault/forge/documents/coherence.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/projects/vault/forge/documents/designer-sovereignty.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/projects/vault/forge/documents/executive-summary.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/projects/vault/forge/documents/founder-letter.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/projects/vault/forge/documents/iteration.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/projects/vault/forge/documents/one-pager.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/projects/vault/forge/documents/portability.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/projects/vault/forge/documents/predictability.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/projects/vault/forge/documents/systemic-drift.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/projects/vault/forge/documents/technical-dependency.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/projects/vault/forge/documents/traceability.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "IMPORT",
+      "raw": "@/content/projects/vault/types",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/projects/vault/types.ts"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/vault/forge/architecture.jpg",
+      "classification": "UNRESOLVED_PUBLIC_ASSET",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/content/projects/vault/forge/documents/architecture.mdx",
+      "classification": "CONTENT_PATH",
+      "resolved": true,
+      "target": "content/projects/vault/forge/documents/architecture.mdx"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/projects/vault/forge/FORGE — Vision.pdf",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/projects/vault/forge/FORGE — Vision.pdf"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/vault/forge/one-pager.jpg",
+      "classification": "UNRESOLVED_PUBLIC_ASSET",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/content/projects/vault/forge/documents/one-pager.mdx",
+      "classification": "CONTENT_PATH",
+      "resolved": true,
+      "target": "content/projects/vault/forge/documents/one-pager.mdx"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/projects/vault/forge/FORGE — One-Pager.pdf",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/projects/vault/forge/FORGE — One-Pager.pdf"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/vault/forge/executive-summary.jpg",
+      "classification": "UNRESOLVED_PUBLIC_ASSET",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/content/projects/vault/forge/documents/executive-summary.mdx",
+      "classification": "CONTENT_PATH",
+      "resolved": true,
+      "target": "content/projects/vault/forge/documents/executive-summary.mdx"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/projects/vault/forge/FORGE — Overview.pdf",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/projects/vault/forge/FORGE — Overview.pdf"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/content/projects/vault/forge/documents/founder-letter.mdx",
+      "classification": "CONTENT_PATH",
+      "resolved": true,
+      "target": "content/projects/vault/forge/documents/founder-letter.mdx"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/projects/vault/forge/FORGE — Founder Letter.pdf",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/projects/vault/forge/FORGE — Founder Letter.pdf"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/content/projects/vault/forge/documents/systemic-drift.mdx",
+      "classification": "CONTENT_PATH",
+      "resolved": true,
+      "target": "content/projects/vault/forge/documents/systemic-drift.mdx"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/projects/vault/forge/FORGE — Systemic Drift.pdf",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/projects/vault/forge/FORGE — Systemic Drift.pdf"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/content/projects/vault/forge/documents/coherence.mdx",
+      "classification": "CONTENT_PATH",
+      "resolved": true,
+      "target": "content/projects/vault/forge/documents/coherence.mdx"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/projects/vault/forge/FORGE — Coherence.pdf",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/projects/vault/forge/FORGE — Coherence.pdf"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/content/projects/vault/forge/documents/predictability.mdx",
+      "classification": "CONTENT_PATH",
+      "resolved": true,
+      "target": "content/projects/vault/forge/documents/predictability.mdx"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/projects/vault/forge/FORGE — Predictability.pdf",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/projects/vault/forge/FORGE — Predictability.pdf"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/content/projects/vault/forge/documents/traceability.mdx",
+      "classification": "CONTENT_PATH",
+      "resolved": true,
+      "target": "content/projects/vault/forge/documents/traceability.mdx"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/projects/vault/forge/FORGE — Traceability.pdf",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/projects/vault/forge/FORGE — Traceability.pdf"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/content/projects/vault/forge/documents/iteration.mdx",
+      "classification": "CONTENT_PATH",
+      "resolved": true,
+      "target": "content/projects/vault/forge/documents/iteration.mdx"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/projects/vault/forge/FORGE — Iteration.pdf",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/projects/vault/forge/FORGE — Iteration.pdf"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/content/projects/vault/forge/documents/technical-dependency.mdx",
+      "classification": "CONTENT_PATH",
+      "resolved": true,
+      "target": "content/projects/vault/forge/documents/technical-dependency.mdx"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/projects/vault/forge/FORGE — Technical Dependency.pdf",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/projects/vault/forge/FORGE — Technical Dependency.pdf"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/content/projects/vault/forge/documents/designer-sovereignty.mdx",
+      "classification": "CONTENT_PATH",
+      "resolved": true,
+      "target": "content/projects/vault/forge/documents/designer-sovereignty.mdx"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/projects/vault/forge/FORGE — Designer Sovereignty.pdf",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/projects/vault/forge/FORGE — Designer Sovereignty.pdf"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/content/projects/vault/forge/documents/portability.mdx",
+      "classification": "CONTENT_PATH",
+      "resolved": true,
+      "target": "content/projects/vault/forge/documents/portability.mdx"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/projects/vault/forge/FORGE — Portability.pdf",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/projects/vault/forge/FORGE — Portability.pdf"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/content/projects/vault/forge/documents/adaptability.mdx",
+      "classification": "CONTENT_PATH",
+      "resolved": true,
+      "target": "content/projects/vault/forge/documents/adaptability.mdx"
+    },
+    {
+      "source": "content/projects/vault/forge/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/projects/vault/forge/FORGE — Adaptability.pdf",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/projects/vault/forge/FORGE — Adaptability.pdf"
+    },
+    {
+      "source": "content/projects/vault/forge/page.tsx",
+      "kind": "IMPORT",
+      "raw": "next/link",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/projects/vault/forge/page.tsx",
+      "kind": "IMPORT",
+      "raw": "@/content/projects/vault/forge/meta",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/projects/vault/forge/meta.ts"
+    },
+    {
+      "source": "content/projects/vault/forge/page.tsx",
+      "kind": "ROUTE_TEMPLATE",
+      "raw": "/projects/vault/forge/${doc.slug}",
+      "classification": "DYNAMIC_ROUTE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "content/projects/vault/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/nc-foundation.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/nc-foundation.jpg"
+    },
+    {
+      "source": "content/projects/vault/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/nc-foundation-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/nc-foundation-motion.mp4"
+    },
+    {
+      "source": "content/projects/vault/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/forge.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/forge.jpg"
+    },
+    {
+      "source": "content/projects/vault/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/forge-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/forge-motion.mp4"
+    },
+    {
+      "source": "content/projects/vault/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/xbox-forever.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/xbox-forever.jpg"
+    },
+    {
+      "source": "content/projects/vault/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/xbox-forever-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/xbox-forever-motion.mp4"
+    },
+    {
+      "source": "content/projects/vault/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/xbox-forever-ads.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/xbox-forever-ads.jpg"
+    },
+    {
+      "source": "content/projects/vault/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/xbox-forever-ads-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/xbox-forever-ads-motion.mp4"
+    },
+    {
+      "source": "content/projects/vault/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/dashboard-launcher-kit.jpg",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/dashboard-launcher-kit.jpg"
+    },
+    {
+      "source": "content/projects/vault/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/thumbnails/dashboard-launcher-kit-motion.mp4",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/thumbnails/dashboard-launcher-kit-motion.mp4"
+    },
+    {
+      "source": "content/projects/vault/nc-foundation/documents/nc_foundation_one_pager.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/projects/vault/nc-foundation/meta.ts",
+      "kind": "IMPORT",
+      "raw": "@/content/projects/vault/types",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/projects/vault/types.ts"
+    },
+    {
+      "source": "content/projects/vault/nc-foundation/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/content/projects/vault/nc-foundation/documents/nc_foundation_one_pager.mdx",
+      "classification": "CONTENT_PATH",
+      "resolved": true,
+      "target": "content/projects/vault/nc-foundation/documents/nc_foundation_one_pager.mdx"
+    },
+    {
+      "source": "content/projects/vault/nc-foundation/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/projects/vault/nc-foundation/NC Foundation — One-Pager.pdf",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/projects/vault/nc-foundation/NC Foundation — One-Pager.pdf"
+    },
+    {
+      "source": "content/projects/vault/xbox-dashboard-launcher-kit/documents/dashboard_launcher_kit_one_pager.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/projects/vault/xbox-dashboard-launcher-kit/meta.ts",
+      "kind": "IMPORT",
+      "raw": "@/content/projects/vault/types",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/projects/vault/types.ts"
+    },
+    {
+      "source": "content/projects/vault/xbox-dashboard-launcher-kit/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/content/projects/vault/xbox-dashboard-launcher-kit/dashboard_launcher_kit_one_pager.mdx",
+      "classification": "UNRESOLVED_CONTENT_PATH",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "content/projects/vault/xbox-dashboard-launcher-kit/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/projects/vault/dashboard-launcher-kit/Dashboard Launcher Kit One Pager.pdf",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/projects/vault/dashboard-launcher-kit/Dashboard Launcher Kit One Pager.pdf"
+    },
+    {
+      "source": "content/projects/vault/xbox-forever-ads/meta.ts",
+      "kind": "IMPORT",
+      "raw": "@/content/projects/vault/types",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/projects/vault/types.ts"
+    },
+    {
+      "source": "content/projects/vault/xbox-forever-ads/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/content/projects/vault/xbox-forever-ads/documents/xbox-forever-ads-one-pager.mdx",
+      "classification": "CONTENT_PATH",
+      "resolved": true,
+      "target": "content/projects/vault/xbox-forever-ads/documents/xbox-forever-ads-one-pager.mdx"
+    },
+    {
+      "source": "content/projects/vault/xbox-forever-ads/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/projects/vault/xbox-forever-ads/XBOX FOREVER ADS - ONE-PAGER.pdf",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/projects/vault/xbox-forever-ads/XBOX FOREVER ADS - ONE-PAGER.pdf"
+    },
+    {
+      "source": "content/projects/vault/xbox-forever/documents/xbox_forever_life_inside_a_persistent_platform.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/projects/vault/xbox-forever/documents/xbox_forever_one_pager.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/projects/vault/xbox-forever/documents/xbox_forever_structural_inversion_and_the_cultural_gap.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/projects/vault/xbox-forever/documents/xbox_forever_why_persistence_Is_the_missing_layer.mdx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "content/projects/vault/xbox-forever/meta.ts",
+      "kind": "IMPORT",
+      "raw": "@/content/projects/vault/types",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/projects/vault/types.ts"
+    },
+    {
+      "source": "content/projects/vault/xbox-forever/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/content/projects/vault/xbox-forever/xbox_forever_one_pager.mdx",
+      "classification": "UNRESOLVED_CONTENT_PATH",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "content/projects/vault/xbox-forever/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/projects/vault/xbox-forever/Xbox Forever — One Pager.pdf",
+      "classification": "ROUTE",
+      "resolved": true,
+      "target": "/projects/vault/xbox-forever/Xbox Forever — One Pager.pdf"
+    },
+    {
+      "source": "content/projects/vault/xbox-forever/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/content/projects/vault/xbox-forever/xbox_forever_why_persistence_Is_the_missing_layer.mdx",
+      "classification": "UNRESOLVED_CONTENT_PATH",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "content/projects/vault/xbox-forever/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/projects/vault/xbox-forever/Xbox Forever — Why Persistence Is the Missing Layer.pdf",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/projects/vault/xbox-forever/Xbox Forever — Why Persistence Is the Missing Layer.pdf"
+    },
+    {
+      "source": "content/projects/vault/xbox-forever/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/content/projects/vault/xbox-forever/xbox_forever_life_inside_a_persistent_platform.mdx",
+      "classification": "UNRESOLVED_CONTENT_PATH",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "content/projects/vault/xbox-forever/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/projects/vault/xbox-forever/Xbox Forever — Life Inside a Persistent Platform.pdf",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/projects/vault/xbox-forever/Xbox Forever — Life Inside a Persistent Platform.pdf"
+    },
+    {
+      "source": "content/projects/vault/xbox-forever/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/content/projects/vault/xbox-forever/xbox_forever_structural_inversion_and_the_cultural_gap.mdx",
+      "classification": "UNRESOLVED_CONTENT_PATH",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "content/projects/vault/xbox-forever/meta.ts",
+      "kind": "PATH_LITERAL",
+      "raw": "/projects/vault/xbox-forever/Xbox Forever — Structural Inversion and The Cultural Gap.pdf",
+      "classification": "PUBLIC_ASSET",
+      "resolved": true,
+      "target": "public/projects/vault/xbox-forever/Xbox Forever — Structural Inversion and The Cultural Gap.pdf"
+    },
+    {
+      "source": "content/related-work.ts",
+      "kind": "IMPORT",
+      "raw": "@/content/essays/meta",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/essays/meta.ts"
+    },
+    {
+      "source": "content/related-work.ts",
+      "kind": "IMPORT",
+      "raw": "@/content/architecture/meta",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "content/architecture/meta.ts"
+    },
+    {
+      "source": "content/related-work.ts",
+      "kind": "IMPORT",
+      "raw": "@/components/DocumentFooter",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": "components/DocumentFooter.tsx"
+    },
+    {
+      "source": "content/related-work.ts",
+      "kind": "ROUTE_TEMPLATE",
+      "raw": "/essays/${item.slug}",
+      "classification": "DYNAMIC_ROUTE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "content/related-work.ts",
+      "kind": "ROUTE_TEMPLATE",
+      "raw": "/architecture/${item.slug}",
+      "classification": "DYNAMIC_ROUTE",
+      "resolved": false,
+      "target": null
+    },
+    {
+      "source": "mdx-components.tsx",
+      "kind": "IMPORT",
+      "raw": "mdx/types",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "mdx"
+    },
+    {
+      "source": "mdx-components.tsx",
+      "kind": "IMPORT",
+      "raw": "next/link",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "mdx-components.tsx",
+      "kind": "IMPORT",
+      "raw": "next/image",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "next"
+    },
+    {
+      "source": "next-env.d.ts",
+      "kind": "IMPORT",
+      "raw": "./.next/types/routes.d.ts",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": ".next/types/routes.d.ts"
+    },
+    {
+      "source": "next-env.d.ts",
+      "kind": "IMPORT",
+      "raw": "./.next/types/root-params.d.ts",
+      "classification": "LOCAL_MODULE",
+      "resolved": true,
+      "target": ".next/types/root-params.d.ts"
+    },
+    {
+      "source": "next.config.ts",
+      "kind": "IMPORT",
+      "raw": "@next/mdx",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "@next/mdx"
+    },
+    {
+      "source": "styles/globals.css",
+      "kind": "IMPORT",
+      "raw": "tailwindcss",
+      "classification": "EXTERNAL_PACKAGE",
+      "resolved": false,
+      "target": null,
+      "package": "tailwindcss"
+    }
+  ],
+  "graph": {
+    "app/NavBar.tsx": [
+      "public/webb-systems-logo.png"
+    ],
+    "app/about/page.tsx": [
+      "public/about/elliott.jpg"
+    ],
+    "app/architecture/[slug]/page.tsx": [
+      "components/DocumentFooter.tsx",
+      "content/mdx-components.tsx",
+      "content/related-work.ts"
+    ],
+    "app/architecture/page.tsx": [
+      "components/Thumbnail.tsx",
+      "content/architecture/meta.ts",
+      "public/banners/architecture-banner.mp4"
+    ],
+    "app/essays/[slug]/page.tsx": [
+      "components/DocumentFooter.tsx",
+      "content/essays/manifest.ts",
+      "content/related-work.ts"
+    ],
+    "app/essays/page.tsx": [
+      "components/Thumbnail.tsx",
+      "content/essays/meta.ts",
+      "public/banners/essays-banner.mp4"
+    ],
+    "app/layout.tsx": [
+      "app/NavBar.tsx",
+      "styles/globals.css"
+    ],
+    "app/page.tsx": [
+      "components/Thumbnail.tsx",
+      "content/architecture/meta.ts",
+      "content/essays/meta.ts",
+      "public/banners/home-arrow-banner.mp4"
+    ],
+    "app/projects/vault/forge/[slug]/page.tsx": [
+      "content/projects/vault/forge/meta.ts"
+    ],
+    "app/projects/vault/forge/index/page.tsx": [
+      "content/projects/vault/forge/meta.ts"
+    ],
+    "app/projects/vault/forge/page.tsx": [
+      "app/projects/vault/forge/index/page.tsx"
+    ],
+    "app/projects/vault/index/page.tsx": [
+      "components/Thumbnail.tsx",
+      "public/site-icons/web-systems-seal.png",
+      "public/thumbnails/dashboard-launcher-kit-motion.mp4",
+      "public/thumbnails/dashboard-launcher-kit.jpg",
+      "public/thumbnails/forge-motion.mp4",
+      "public/thumbnails/forge.jpg",
+      "public/thumbnails/nc-foundation-motion.mp4",
+      "public/thumbnails/nc-foundation.jpg",
+      "public/thumbnails/xbox-forever-ads-motion.mp4",
+      "public/thumbnails/xbox-forever-ads.jpg",
+      "public/thumbnails/xbox-forever-motion.mp4",
+      "public/thumbnails/xbox-forever.jpg"
+    ],
+    "app/projects/vault/nc-foundation/[slug]/page.tsx": [
+      "content/projects/vault/nc-foundation/meta.ts"
+    ],
+    "app/projects/vault/nc-foundation/page.tsx": [
+      "app/projects/vault/nc-foundation/index/page.tsx"
+    ],
+    "app/projects/vault/xbox-dashboard-launcher-kit/[slug]/page.tsx": [
+      "content/projects/vault/xbox-dashboard-launcher-kit/meta.ts"
+    ],
+    "app/projects/vault/xbox-dashboard-launcher-kit/index/page.tsx": [
+      "content/projects/vault/xbox-dashboard-launcher-kit/meta.ts"
+    ],
+    "app/projects/vault/xbox-dashboard-launcher-kit/page.tsx": [
+      "app/projects/vault/xbox-dashboard-launcher-kit/index/page.tsx"
+    ],
+    "app/projects/vault/xbox-forever-ads/[slug]/page.tsx": [
+      "content/projects/vault/xbox-forever-ads/meta.ts"
+    ],
+    "app/projects/vault/xbox-forever-ads/index/page.tsx": [
+      "content/projects/vault/xbox-forever-ads/meta.ts"
+    ],
+    "app/projects/vault/xbox-forever-ads/page.tsx": [
+      "app/projects/vault/xbox-forever-ads/index/page.tsx"
+    ],
+    "app/projects/vault/xbox-forever/[slug]/page.tsx": [
+      "content/projects/vault/xbox-forever/meta.ts"
+    ],
+    "app/projects/vault/xbox-forever/index/page.tsx": [
+      "content/projects/vault/xbox-forever/meta.ts"
+    ],
+    "app/projects/vault/xbox-forever/page.tsx": [
+      "app/projects/vault/xbox-forever/index/page.tsx"
+    ],
+    "content/architecture/manifest.ts": [
+      "content/architecture/advertising-mode-problem-architecture.mdx",
+      "content/architecture/aesthetic-identity.mdx",
+      "content/architecture/catalog-architecture.mdx",
+      "content/architecture/cultural-infrastructure-architecture.mdx",
+      "content/architecture/genre-taxonomy-architecture.mdx",
+      "content/architecture/ip-expansion-architecture.mdx",
+      "content/architecture/post-launch-architecture.mdx",
+      "content/architecture/publisher-identity-architecture.mdx",
+      "content/architecture/release-cadence-architecture.mdx",
+      "content/architecture/studio-identity-architecture.mdx",
+      "content/architecture/taste-graph-problem-architecture.mdx"
+    ],
+    "content/architecture/meta.ts": [
+      "public/thumbnails/advertising-mode-problem-architecture-motion.mp4",
+      "public/thumbnails/advertising-mode-problem-architecture.jpg",
+      "public/thumbnails/aesthetic-identity-motion.mp4",
+      "public/thumbnails/aesthetic-identity.jpg",
+      "public/thumbnails/catalog-architecture-motion.mp4",
+      "public/thumbnails/catalog-architecture.jpg",
+      "public/thumbnails/cultural-infrastructure-architecture-motion.mp4",
+      "public/thumbnails/cultural-infrastructure-architecture.jpg",
+      "public/thumbnails/genre-taxonomy-architecture-motion.mp4",
+      "public/thumbnails/genre-taxonomy-architecture.jpg",
+      "public/thumbnails/post-launch-architecture-motion.mp4",
+      "public/thumbnails/post-launch-architecture.jpg",
+      "public/thumbnails/publisher-architecture-motion.mp4",
+      "public/thumbnails/publisher-architecture.jpg",
+      "public/thumbnails/release-cadence-architecture-motion.mp4",
+      "public/thumbnails/release-cadence-architecture.jpg",
+      "public/thumbnails/studio-identity-architecture-motion.mp4",
+      "public/thumbnails/studio-identity-architecture.jpg",
+      "public/thumbnails/taste-graph-problem-architecture-motion.mp4",
+      "public/thumbnails/taste-graph-problem-architecture.jpg",
+      "public/thumbnails/ways-to-skin-a-cat.jpg",
+      "public/thumbnails/ways-to-skin-a-cat.mp4"
+    ],
+    "content/essays/death-of-play.mdx": [
+      "public/essays/death-of-play/death-of-play.png"
+    ],
+    "content/essays/game-development-starts-at-zero.mdx": [
+      "public/essays/starts-at-zero/starts-at-zero.png"
+    ],
+    "content/essays/game-ip-mythos-vs-continuity.mdx": [
+      "public/essays/game-ip-mythos/game-ip-mythos.png"
+    ],
+    "content/essays/gaming-culture.mdx": [
+      "public/essays/gaming-culture/gaming-culture-1.jpg",
+      "public/essays/gaming-culture/gaming-culture-2.jpg"
+    ],
+    "content/essays/gaming-profits.mdx": [
+      "public/essays/gaming-profits/gaming-profits-1.jpg",
+      "public/essays/gaming-profits/gaming-profits-2.jpg"
+    ],
+    "content/essays/genre-bottleneck.mdx": [
+      "public/essays/genre-bottleneck/genre-bottleneck.png"
+    ],
+    "content/essays/lost-community.mdx": [
+      "public/essays/lost-community/lost-community.png"
+    ],
+    "content/essays/manifest.ts": [
+      "content/essays/death-of-play.mdx",
+      "content/essays/future-isnt-lost-its-underbuilt.mdx",
+      "content/essays/game-development-starts-at-zero.mdx",
+      "content/essays/game-ip-mythos-vs-continuity.mdx",
+      "content/essays/gaming-culture.mdx",
+      "content/essays/gaming-profits.mdx",
+      "content/essays/genre-bottleneck.mdx",
+      "content/essays/lost-community.mdx",
+      "content/essays/steam-is-not-a-store.mdx",
+      "content/essays/unexploited-identity.mdx"
+    ],
+    "content/essays/meta.ts": [
+      "public/thumbnails/death-of-play-motion.mp4",
+      "public/thumbnails/death-of-play.jpg",
+      "public/thumbnails/future-isnt-lost-its-underbuilt-motion.mp4",
+      "public/thumbnails/future-isnt-lost-its-underbuilt.jpg",
+      "public/thumbnails/game-development-starts-at-zero-motion.mp4",
+      "public/thumbnails/game-development-starts-at-zero.jpg",
+      "public/thumbnails/game-ip-mythos-vs-continuity-motion.mp4",
+      "public/thumbnails/game-ip-mythos-vs-continuity.jpg",
+      "public/thumbnails/gaming-culture-motion.mp4",
+      "public/thumbnails/gaming-culture.jpg",
+      "public/thumbnails/gaming-profits-motion.mp4",
+      "public/thumbnails/gaming-profits.jpg",
+      "public/thumbnails/genre-bottleneck-motion.mp4",
+      "public/thumbnails/genre-bottleneck.jpg",
+      "public/thumbnails/lost-community-motion.mp4",
+      "public/thumbnails/lost-community.jpg",
+      "public/thumbnails/steam-is-not-a-store-motion.mp4",
+      "public/thumbnails/steam-is-not-a-store.jpg",
+      "public/thumbnails/unexploited-identity-motion.mp4",
+      "public/thumbnails/unexploited-identity.jpg"
+    ],
+    "content/essays/steam-is-not-a-store.mdx": [
+      "public/essays/steam-is-not-a-store/steam-is-not-a-store-1.jpg",
+      "public/essays/steam-is-not-a-store/steam-is-not-a-store-2.jpg",
+      "public/essays/steam-is-not-a-store/steam-is-not-a-store-3.jpg"
+    ],
+    "content/essays/unexploited-identity.mdx": [
+      "public/essays/unexploited-identity/unexploited-1.png",
+      "public/essays/unexploited-identity/unexploited-2.png"
+    ],
+    "content/projects/manifest.ts": [
+      "content/projects/vault/meta.ts"
+    ],
+    "content/projects/vault/forge/meta.ts": [
+      "content/projects/vault/forge/documents/adaptability.mdx",
+      "content/projects/vault/forge/documents/architecture.mdx",
+      "content/projects/vault/forge/documents/coherence.mdx",
+      "content/projects/vault/forge/documents/designer-sovereignty.mdx",
+      "content/projects/vault/forge/documents/executive-summary.mdx",
+      "content/projects/vault/forge/documents/founder-letter.mdx",
+      "content/projects/vault/forge/documents/iteration.mdx",
+      "content/projects/vault/forge/documents/one-pager.mdx",
+      "content/projects/vault/forge/documents/portability.mdx",
+      "content/projects/vault/forge/documents/predictability.mdx",
+      "content/projects/vault/forge/documents/systemic-drift.mdx",
+      "content/projects/vault/forge/documents/technical-dependency.mdx",
+      "content/projects/vault/forge/documents/traceability.mdx",
+      "content/projects/vault/types.ts",
+      "public/projects/vault/forge/FORGE — Adaptability.pdf",
+      "public/projects/vault/forge/FORGE — Coherence.pdf",
+      "public/projects/vault/forge/FORGE — Designer Sovereignty.pdf",
+      "public/projects/vault/forge/FORGE — Founder Letter.pdf",
+      "public/projects/vault/forge/FORGE — Iteration.pdf",
+      "public/projects/vault/forge/FORGE — One-Pager.pdf",
+      "public/projects/vault/forge/FORGE — Overview.pdf",
+      "public/projects/vault/forge/FORGE — Portability.pdf",
+      "public/projects/vault/forge/FORGE — Predictability.pdf",
+      "public/projects/vault/forge/FORGE — Systemic Drift.pdf",
+      "public/projects/vault/forge/FORGE — Technical Dependency.pdf",
+      "public/projects/vault/forge/FORGE — Traceability.pdf",
+      "public/projects/vault/forge/FORGE — Vision.pdf"
+    ],
+    "content/projects/vault/forge/page.tsx": [
+      "content/projects/vault/forge/meta.ts"
+    ],
+    "content/projects/vault/meta.ts": [
+      "public/thumbnails/dashboard-launcher-kit-motion.mp4",
+      "public/thumbnails/dashboard-launcher-kit.jpg",
+      "public/thumbnails/forge-motion.mp4",
+      "public/thumbnails/forge.jpg",
+      "public/thumbnails/nc-foundation-motion.mp4",
+      "public/thumbnails/nc-foundation.jpg",
+      "public/thumbnails/xbox-forever-ads-motion.mp4",
+      "public/thumbnails/xbox-forever-ads.jpg",
+      "public/thumbnails/xbox-forever-motion.mp4",
+      "public/thumbnails/xbox-forever.jpg"
+    ],
+    "content/projects/vault/nc-foundation/meta.ts": [
+      "content/projects/vault/nc-foundation/documents/nc_foundation_one_pager.mdx",
+      "content/projects/vault/types.ts"
+    ],
+    "content/projects/vault/xbox-dashboard-launcher-kit/meta.ts": [
+      "content/projects/vault/types.ts",
+      "public/projects/vault/dashboard-launcher-kit/Dashboard Launcher Kit One Pager.pdf"
+    ],
+    "content/projects/vault/xbox-forever-ads/meta.ts": [
+      "content/projects/vault/types.ts",
+      "content/projects/vault/xbox-forever-ads/documents/xbox-forever-ads-one-pager.mdx",
+      "public/projects/vault/xbox-forever-ads/XBOX FOREVER ADS - ONE-PAGER.pdf"
+    ],
+    "content/projects/vault/xbox-forever/meta.ts": [
+      "content/projects/vault/types.ts",
+      "public/projects/vault/xbox-forever/Xbox Forever — Life Inside a Persistent Platform.pdf",
+      "public/projects/vault/xbox-forever/Xbox Forever — Structural Inversion and The Cultural Gap.pdf",
+      "public/projects/vault/xbox-forever/Xbox Forever — Why Persistence Is the Missing Layer.pdf"
+    ],
+    "content/related-work.ts": [
+      "components/DocumentFooter.tsx",
+      "content/architecture/meta.ts",
+      "content/essays/meta.ts"
+    ]
+  }
+}

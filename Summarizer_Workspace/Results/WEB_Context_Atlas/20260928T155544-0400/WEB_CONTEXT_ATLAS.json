@@ -1,0 +1,2079 @@
+{
+  "tool": "Webb.systems Context Atlas",
+  "revision": "gpt56-web-context-atlas-v1",
+  "mode": "READ_ONLY",
+  "generated_at": "2026-09-28T15:55:44.985552-04:00",
+  "repository_root": "C:\\webb-systems",
+  "exclusions": [
+    ".cache",
+    ".git",
+    ".next",
+    ".turbo",
+    ".vercel",
+    "Summarizer_Workspace",
+    "build",
+    "coverage",
+    "dist",
+    "node_modules",
+    "out"
+  ],
+  "summary": {
+    "source_files": 212,
+    "text_files": 105,
+    "binary_or_asset_files": 107,
+    "markdown_files": 2,
+    "mdx_files": 47,
+    "source_code_files": 49,
+    "empty_files": 1,
+    "directories_represented": 63,
+    "total_bytes": 91672209,
+    "total_text_lines": 23479,
+    "utf8_text_files": 105,
+    "text_decode_failures": 0,
+    "routes_detected": 23
+  },
+  "extension_counts": {
+    ".mdx": 47,
+    ".jpg": 37,
+    ".mp4": 32,
+    ".tsx": 31,
+    ".pdf": 20,
+    ".ts": 16,
+    ".png": 14,
+    ".json": 5,
+    "[no extension]": 3,
+    ".md": 2,
+    ".cjs": 1,
+    ".css": 1,
+    ".js": 1,
+    ".local": 1,
+    ".tsbuildinfo": 1
+  },
+  "category_counts": {
+    "PUBLIC_ASSET": 101,
+    "CONTENT": 63,
+    "ROUTE_OR_APP": 26,
+    "BINARY_OR_ASSET": 5,
+    "CONFIG": 5,
+    "SOURCE_CODE": 5,
+    "COMPONENT": 2,
+    "MARKDOWN": 2,
+    "TEXT_OTHER": 2,
+    "STYLE": 1
+  },
+  "top_level_inventory": {
+    ".env.local": {
+      "files": 1,
+      "bytes": 59
+    },
+    ".gitignore": {
+      "files": 1,
+      "bytes": 452
+    },
+    ".npmrc": {
+      "files": 1,
+      "bytes": 17
+    },
+    ".prettierignore": {
+      "files": 1,
+      "bytes": 23
+    },
+    ".vscode": {
+      "files": 2,
+      "bytes": 635
+    },
+    "app": {
+      "files": 26,
+      "bytes": 231295
+    },
+    "components": {
+      "files": 2,
+      "bytes": 6667
+    },
+    "content": {
+      "files": 63,
+      "bytes": 512769
+    },
+    "license.md": {
+      "files": 1,
+      "bytes": 1100
+    },
+    "mdx-components.tsx": {
+      "files": 1,
+      "bytes": 800
+    },
+    "mdx.d.ts": {
+      "files": 1,
+      "bytes": 25
+    },
+    "next-env.d.ts": {
+      "files": 1,
+      "bytes": 295
+    },
+    "next.config.ts": {
+      "files": 1,
+      "bytes": 379
+    },
+    "package-lock.json": {
+      "files": 1,
+      "bytes": 144403
+    },
+    "package.json": {
+      "files": 1,
+      "bytes": 1206
+    },
+    "postcss.config.cjs": {
+      "files": 1,
+      "bytes": 63
+    },
+    "prettier.config.js": {
+      "files": 1,
+      "bytes": 309
+    },
+    "public": {
+      "files": 101,
+      "bytes": 87143106
+    },
+    "readme.md": {
+      "files": 1,
+      "bytes": 471
+    },
+    "styles": {
+      "files": 1,
+      "bytes": 6356
+    },
+    "tsconfig.json": {
+      "files": 1,
+      "bytes": 728
+    },
+    "tsconfig.tsbuildinfo": {
+      "files": 1,
+      "bytes": 339413
+    },
+    "web systems img": {
+      "files": 1,
+      "bytes": 3281638
+    }
+  },
+  "directories": {
+    ".vscode": 2,
+    "[repo root]": 16,
+    "app": 4,
+    "app/about": 1,
+    "app/architecture": 1,
+    "app/architecture/[slug]": 1,
+    "app/essays": 1,
+    "app/essays/[slug]": 1,
+    "app/projects/vault": 1,
+    "app/projects/vault/forge": 1,
+    "app/projects/vault/forge/[slug]": 1,
+    "app/projects/vault/forge/index": 1,
+    "app/projects/vault/index": 1,
+    "app/projects/vault/nc-foundation": 1,
+    "app/projects/vault/nc-foundation/[slug]": 1,
+    "app/projects/vault/nc-foundation/index": 1,
+    "app/projects/vault/xbox-dashboard-launcher-kit": 1,
+    "app/projects/vault/xbox-dashboard-launcher-kit/[slug]": 1,
+    "app/projects/vault/xbox-dashboard-launcher-kit/index": 1,
+    "app/projects/vault/xbox-forever": 1,
+    "app/projects/vault/xbox-forever-ads": 1,
+    "app/projects/vault/xbox-forever-ads/[slug]": 1,
+    "app/projects/vault/xbox-forever-ads/index": 1,
+    "app/projects/vault/xbox-forever/[slug]": 1,
+    "app/projects/vault/xbox-forever/index": 1,
+    "components": 2,
+    "content": 2,
+    "content/architecture": 14,
+    "content/essays": 17,
+    "content/projects": 1,
+    "content/projects/vault": 2,
+    "content/projects/vault/forge": 2,
+    "content/projects/vault/forge/documents": 13,
+    "content/projects/vault/nc-foundation": 2,
+    "content/projects/vault/nc-foundation/documents": 1,
+    "content/projects/vault/xbox-dashboard-launcher-kit": 1,
+    "content/projects/vault/xbox-dashboard-launcher-kit/documents": 1,
+    "content/projects/vault/xbox-forever": 1,
+    "content/projects/vault/xbox-forever-ads": 1,
+    "content/projects/vault/xbox-forever-ads/documents": 1,
+    "content/projects/vault/xbox-forever/documents": 4,
+    "public": 1,
+    "public/about": 1,
+    "public/banners": 3,
+    "public/essays/death-of-play": 1,
+    "public/essays/game-ip-mythos": 1,
+    "public/essays/gaming-culture": 2,
+    "public/essays/gaming-profits": 2,
+    "public/essays/genre-bottleneck": 1,
+    "public/essays/lost-community": 1,
+    "public/essays/starts-at-zero": 1,
+    "public/essays/steam-is-not-a-store": 3,
+    "public/essays/unexploited-identity": 2,
+    "public/projects/vault/dashboard-launcher-kit": 1,
+    "public/projects/vault/forge": 13,
+    "public/projects/vault/nc-foundation": 1,
+    "public/projects/vault/xbox-forever": 4,
+    "public/projects/vault/xbox-forever-ads": 1,
+    "public/site-icons": 1,
+    "public/thumbnails": 58,
+    "public/visuals": 3,
+    "styles": 1,
+    "web systems img": 1
+  },
+  "routes": [
+    {
+      "route": "/",
+      "kind": "PAGE",
+      "source": "app/page.tsx"
+    },
+    {
+      "route": "/about",
+      "kind": "PAGE",
+      "source": "app/about/page.tsx"
+    },
+    {
+      "route": "/architecture",
+      "kind": "PAGE",
+      "source": "app/architecture/page.tsx"
+    },
+    {
+      "route": "/architecture/[slug]",
+      "kind": "PAGE",
+      "source": "app/architecture/[slug]/page.tsx"
+    },
+    {
+      "route": "/essays",
+      "kind": "PAGE",
+      "source": "app/essays/page.tsx"
+    },
+    {
+      "route": "/essays/[slug]",
+      "kind": "PAGE",
+      "source": "app/essays/[slug]/page.tsx"
+    },
+    {
+      "route": "/projects/vault",
+      "kind": "PAGE",
+      "source": "app/projects/vault/page.tsx"
+    },
+    {
+      "route": "/projects/vault/forge",
+      "kind": "PAGE",
+      "source": "app/projects/vault/forge/page.tsx"
+    },
+    {
+      "route": "/projects/vault/forge/[slug]",
+      "kind": "PAGE",
+      "source": "app/projects/vault/forge/[slug]/page.tsx"
+    },
+    {
+      "route": "/projects/vault/forge/index",
+      "kind": "PAGE",
+      "source": "app/projects/vault/forge/index/page.tsx"
+    },
+    {
+      "route": "/projects/vault/index",
+      "kind": "PAGE",
+      "source": "app/projects/vault/index/page.tsx"
+    },
+    {
+      "route": "/projects/vault/nc-foundation",
+      "kind": "PAGE",
+      "source": "app/projects/vault/nc-foundation/page.tsx"
+    },
+    {
+      "route": "/projects/vault/nc-foundation/[slug]",
+      "kind": "PAGE",
+      "source": "app/projects/vault/nc-foundation/[slug]/page.tsx"
+    },
+    {
+      "route": "/projects/vault/nc-foundation/index",
+      "kind": "PAGE",
+      "source": "app/projects/vault/nc-foundation/index/page.tsx"
+    },
+    {
+      "route": "/projects/vault/xbox-dashboard-launcher-kit",
+      "kind": "PAGE",
+      "source": "app/projects/vault/xbox-dashboard-launcher-kit/page.tsx"
+    },
+    {
+      "route": "/projects/vault/xbox-dashboard-launcher-kit/[slug]",
+      "kind": "PAGE",
+      "source": "app/projects/vault/xbox-dashboard-launcher-kit/[slug]/page.tsx"
+    },
+    {
+      "route": "/projects/vault/xbox-dashboard-launcher-kit/index",
+      "kind": "PAGE",
+      "source": "app/projects/vault/xbox-dashboard-launcher-kit/index/page.tsx"
+    },
+    {
+      "route": "/projects/vault/xbox-forever",
+      "kind": "PAGE",
+      "source": "app/projects/vault/xbox-forever/page.tsx"
+    },
+    {
+      "route": "/projects/vault/xbox-forever-ads",
+      "kind": "PAGE",
+      "source": "app/projects/vault/xbox-forever-ads/page.tsx"
+    },
+    {
+      "route": "/projects/vault/xbox-forever-ads/[slug]",
+      "kind": "PAGE",
+      "source": "app/projects/vault/xbox-forever-ads/[slug]/page.tsx"
+    },
+    {
+      "route": "/projects/vault/xbox-forever-ads/index",
+      "kind": "PAGE",
+      "source": "app/projects/vault/xbox-forever-ads/index/page.tsx"
+    },
+    {
+      "route": "/projects/vault/xbox-forever/[slug]",
+      "kind": "PAGE",
+      "source": "app/projects/vault/xbox-forever/[slug]/page.tsx"
+    },
+    {
+      "route": "/projects/vault/xbox-forever/index",
+      "kind": "PAGE",
+      "source": "app/projects/vault/xbox-forever/index/page.tsx"
+    }
+  ],
+  "largest_files": [
+    {
+      "path": "public/essays/lost-community/lost-community.png",
+      "bytes": 4213062,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/essays/unexploited-identity/unexploited-1.png",
+      "bytes": 3859634,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "web systems img/Elliott 7 yo.png",
+      "bytes": 3281638,
+      "category": "BINARY_OR_ASSET"
+    },
+    {
+      "path": "public/essays/game-ip-mythos/game-ip-mythos.png",
+      "bytes": 2939944,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/essays/death-of-play/death-of-play.png",
+      "bytes": 2820974,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/future-isnt-lost-its-underbuilt-motion.mp4",
+      "bytes": 2793085,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/banners/essays-banner.mp4",
+      "bytes": 2766609,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/banners/architecture-banner.mp4",
+      "bytes": 2610145,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/about/elliott.jpg",
+      "bytes": 2287893,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/cultural-infrastructure-architecture-motion.mp4",
+      "bytes": 2085101,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/game-ip-mythos-vs-continuity-motion.mp4",
+      "bytes": 1863832,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/essays/genre-bottleneck/genre-bottleneck.png",
+      "bytes": 1840538,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/post-launch-architecture-motion.mp4",
+      "bytes": 1668313,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/game-development-starts-at-zero-motion.mp4",
+      "bytes": 1662115,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/steam-is-not-a-store-motion.mp4",
+      "bytes": 1661103,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/xbox-forever-ads-motion.mp4",
+      "bytes": 1651340,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/studio-identity-architecture-motion.mp4",
+      "bytes": 1598061,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/dashboard-launcher-kit-motion.mp4",
+      "bytes": 1597165,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/discord-server-era-motion.mp4",
+      "bytes": 1559185,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/aesthetic-identity-motion.mp4",
+      "bytes": 1542837,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/gaming-culture-motion.mp4",
+      "bytes": 1519725,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/release-cadence-architecture-motion.mp4",
+      "bytes": 1509705,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/gaming-profits-motion.mp4",
+      "bytes": 1475283,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/advertising-mode-problem-architecture-motion.mp4",
+      "bytes": 1457768,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/death-of-play-motion.mp4",
+      "bytes": 1442835,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/xbox-forever-motion.mp4",
+      "bytes": 1414640,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/genre-taxonomy-architecture-motion.mp4",
+      "bytes": 1404652,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/ways-to-skin-a-cat.mp4",
+      "bytes": 1382143,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/unexploited-identity-motion.mp4",
+      "bytes": 1364603,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/taste-graph-problem-architecture-motion.mp4",
+      "bytes": 1361828,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/nc-foundation-motion.mp4",
+      "bytes": 1357022,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/catalog-architecture-motion.mp4",
+      "bytes": 1349788,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/taste-graph-problem-architecture.jpg",
+      "bytes": 1206248,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/catalog-architecture.jpg",
+      "bytes": 1185019,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/label-tree-motion.mp4",
+      "bytes": 1088804,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/steam-is-not-a-store.jpg",
+      "bytes": 1075448,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/lost-community-motion.mp4",
+      "bytes": 1000902,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/genre-bottleneck-motion.mp4",
+      "bytes": 968147,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/genre-taxonomy-architecture.jpg",
+      "bytes": 959391,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/dashboard-launcher-kit.jpg",
+      "bytes": 841967,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/essays/steam-is-not-a-store/steam-is-not-a-store-2.jpg",
+      "bytes": 771199,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/publisher-architecture-motion.mp4",
+      "bytes": 752310,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/essays/unexploited-identity/unexploited-2.png",
+      "bytes": 727572,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/forge-motion.mp4",
+      "bytes": 695122,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/game-ip-mythos-vs-continuity.jpg",
+      "bytes": 652609,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/site-icons/web-systems-seal.png",
+      "bytes": 609305,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/gaming-culture.jpg",
+      "bytes": 596260,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/advertising-mode-problem-architecture.jpg",
+      "bytes": 560605,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/gaming-profits.jpg",
+      "bytes": 541405,
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/xbox-forever.jpg",
+      "bytes": 474543,
+      "category": "PUBLIC_ASSET"
+    }
+  ],
+  "corpus_manifest_sha256": "4d50da5d86577b06ab29b591f89fef5dcb8014e25af3090420979120269fd436",
+  "manifest": [
+    {
+      "path": ".env.local",
+      "bytes": 59,
+      "sha256": "65b9fc3800a1131fe0b71b3362a742d5875de56f4e88baca18bdf708ec18577f",
+      "extension": ".local",
+      "category": "CONFIG"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 452,
+      "sha256": "c3a0543e65519711cd54f8ae82499917c9f1e1c4b9ab28a508d9c29b9fe27705",
+      "extension": "",
+      "category": "BINARY_OR_ASSET"
+    },
+    {
+      "path": ".npmrc",
+      "bytes": 17,
+      "sha256": "ee95d5d3662c62f27736551b1ce9d911de83becd845fa99a698d1da500875dbd",
+      "extension": "",
+      "category": "BINARY_OR_ASSET"
+    },
+    {
+      "path": ".prettierignore",
+      "bytes": 23,
+      "sha256": "1972c5153a4f44b803fe9f6d46ed0f0cc238f83c8205ff9c9505b65fab2dd1f6",
+      "extension": "",
+      "category": "BINARY_OR_ASSET"
+    },
+    {
+      "path": ".vscode/extensions.json",
+      "bytes": 489,
+      "sha256": "b643731c0203dc2fc7eba09729165c07d60cf58f9d9eb5bc94c8a7e5fd1716ca",
+      "extension": ".json",
+      "category": "TEXT_OTHER"
+    },
+    {
+      "path": ".vscode/settings.json",
+      "bytes": 146,
+      "sha256": "ed6b760c4ff7460d61fd8cfe32257b2547cde89b70a4cb233f3b18edfacc9eff",
+      "extension": ".json",
+      "category": "TEXT_OTHER"
+    },
+    {
+      "path": "app/about/page.tsx",
+      "bytes": 10849,
+      "sha256": "dd43fe65fed86a442b721f43316dc6c6c2fa69cecb2254dfe1d639afce10a12d",
+      "extension": ".tsx",
+      "category": "ROUTE_OR_APP"
+    },
+    {
+      "path": "app/architecture/[slug]/page.tsx",
+      "bytes": 1794,
+      "sha256": "7440ed440f9792682c4db2d814fd94068c596b3a1ac340f57661d9a9b95c74a3",
+      "extension": ".tsx",
+      "category": "ROUTE_OR_APP"
+    },
+    {
+      "path": "app/architecture/page.tsx",
+      "bytes": 3279,
+      "sha256": "80d32affaae43cbc99e7da7b3671b290675754a83a8dacd8e47241412ffd5e2b",
+      "extension": ".tsx",
+      "category": "ROUTE_OR_APP"
+    },
+    {
+      "path": "app/essays/[slug]/page.tsx",
+      "bytes": 1547,
+      "sha256": "dcd432ebe6dc252c991c20ee653b0f8b61845af43235a258056558341bc548d9",
+      "extension": ".tsx",
+      "category": "ROUTE_OR_APP"
+    },
+    {
+      "path": "app/essays/page.tsx",
+      "bytes": 3024,
+      "sha256": "167fb12f3c577261e44695cf29dfbb42fb2fbc93405f683c3234e7ff60dd949c",
+      "extension": ".tsx",
+      "category": "ROUTE_OR_APP"
+    },
+    {
+      "path": "app/icon.png",
+      "bytes": 168652,
+      "sha256": "8a5c29ba52590829ff1d8b8a57cd3fcaa55e3f3354cfa6373fee2c1650d2e5cd",
+      "extension": ".png",
+      "category": "ROUTE_OR_APP"
+    },
+    {
+      "path": "app/layout.tsx",
+      "bytes": 982,
+      "sha256": "d238283c6a4a94020ac859a8ede060f197753a75609abd5f23882521f386c3ec",
+      "extension": ".tsx",
+      "category": "ROUTE_OR_APP"
+    },
+    {
+      "path": "app/NavBar.tsx",
+      "bytes": 2778,
+      "sha256": "a23952f0bcdfd0caa27a5a42a066c0862d3d502782579e814af1f9c0190e4499",
+      "extension": ".tsx",
+      "category": "ROUTE_OR_APP"
+    },
+    {
+      "path": "app/page.tsx",
+      "bytes": 6130,
+      "sha256": "96db34f08c092737fd1b82ed4abbd11d10c443ad61f7a12c6b0df90afe53ebed",
+      "extension": ".tsx",
+      "category": "ROUTE_OR_APP"
+    },
+    {
+      "path": "app/projects/vault/forge/[slug]/page.tsx",
+      "bytes": 1124,
+      "sha256": "11710a6ab03a7f764869657273ae86a7e39fb433ebf23e59c8c3fe0477357ab7",
+      "extension": ".tsx",
+      "category": "ROUTE_OR_APP"
+    },
+    {
+      "path": "app/projects/vault/forge/index/page.tsx",
+      "bytes": 2481,
+      "sha256": "c1af241bf1885887b3434f0ef60a20c20cce5234af36499213e3a42258d653d0",
+      "extension": ".tsx",
+      "category": "ROUTE_OR_APP"
+    },
+    {
+      "path": "app/projects/vault/forge/page.tsx",
+      "bytes": 41,
+      "sha256": "53765f969bd88645a0b2511d5b7f2325988c6aec47698f7719d256259f5e7973",
+      "extension": ".tsx",
+      "category": "ROUTE_OR_APP"
+    },
+    {
+      "path": "app/projects/vault/index/page.tsx",
+      "bytes": 9413,
+      "sha256": "f0b8e8504e341649bcc4d46c2eb4b9ad9a8bc833cfc812d1b9c7018654bde494",
+      "extension": ".tsx",
+      "category": "ROUTE_OR_APP"
+    },
+    {
+      "path": "app/projects/vault/nc-foundation/[slug]/page.tsx",
+      "bytes": 915,
+      "sha256": "ed4b8862120da808afcc003a01f3b9193b21e856cd264606e01a23782c217db9",
+      "extension": ".tsx",
+      "category": "ROUTE_OR_APP"
+    },
+    {
+      "path": "app/projects/vault/nc-foundation/index/page.tsx",
+      "bytes": 2094,
+      "sha256": "f041687775deec58bba32ed182812f79f852a205b2f6e519280b81b58856ecc2",
+      "extension": ".tsx",
+      "category": "ROUTE_OR_APP"
+    },
+    {
+      "path": "app/projects/vault/nc-foundation/page.tsx",
+      "bytes": 39,
+      "sha256": "1c0768b13ee754e5da742bca6d5c1d380490c27b4510107e169faa97b279c80b",
+      "extension": ".tsx",
+      "category": "ROUTE_OR_APP"
+    },
+    {
+      "path": "app/projects/vault/page.tsx",
+      "bytes": 2544,
+      "sha256": "5d4e89a3783ee2d8321404bca134b4161f4ebf9ca902ccfb09af88668260cdb0",
+      "extension": ".tsx",
+      "category": "ROUTE_OR_APP"
+    },
+    {
+      "path": "app/projects/vault/xbox-dashboard-launcher-kit/[slug]/page.tsx",
+      "bytes": 1231,
+      "sha256": "b449aa8fb66bfd61cf72b4f92108ae380fd90d3c89bf950d8b5ee558d40d70ea",
+      "extension": ".tsx",
+      "category": "ROUTE_OR_APP"
+    },
+    {
+      "path": "app/projects/vault/xbox-dashboard-launcher-kit/index/page.tsx",
+      "bytes": 3233,
+      "sha256": "001972ba0ab63e1750c4a4c60618c551acff7ab3997465cc0114a233cb3a6b42",
+      "extension": ".tsx",
+      "category": "ROUTE_OR_APP"
+    },
+    {
+      "path": "app/projects/vault/xbox-dashboard-launcher-kit/page.tsx",
+      "bytes": 39,
+      "sha256": "1c0768b13ee754e5da742bca6d5c1d380490c27b4510107e169faa97b279c80b",
+      "extension": ".tsx",
+      "category": "ROUTE_OR_APP"
+    },
+    {
+      "path": "app/projects/vault/xbox-forever-ads/[slug]/page.tsx",
+      "bytes": 1191,
+      "sha256": "c769819a1b1875daa41b44ce747378f54b0038937eeeb02f1dd0d46ace6b089e",
+      "extension": ".tsx",
+      "category": "ROUTE_OR_APP"
+    },
+    {
+      "path": "app/projects/vault/xbox-forever-ads/index/page.tsx",
+      "bytes": 3569,
+      "sha256": "459230e9e2be6592747f779896846207450e29e517c5cdd52447a7bc24534dd8",
+      "extension": ".tsx",
+      "category": "ROUTE_OR_APP"
+    },
+    {
+      "path": "app/projects/vault/xbox-forever-ads/page.tsx",
+      "bytes": 41,
+      "sha256": "53765f969bd88645a0b2511d5b7f2325988c6aec47698f7719d256259f5e7973",
+      "extension": ".tsx",
+      "category": "ROUTE_OR_APP"
+    },
+    {
+      "path": "app/projects/vault/xbox-forever/[slug]/page.tsx",
+      "bytes": 917,
+      "sha256": "2018f720903dc686d8e211e82e0c3845f663c76bba20bc77ecc3fbf85bcc8951",
+      "extension": ".tsx",
+      "category": "ROUTE_OR_APP"
+    },
+    {
+      "path": "app/projects/vault/xbox-forever/index/page.tsx",
+      "bytes": 3347,
+      "sha256": "1f2a5daa0d97b54d3dba2cc10a87c6dfd6bf5f315d83b4c41afe0e45560ea48a",
+      "extension": ".tsx",
+      "category": "ROUTE_OR_APP"
+    },
+    {
+      "path": "app/projects/vault/xbox-forever/page.tsx",
+      "bytes": 41,
+      "sha256": "53765f969bd88645a0b2511d5b7f2325988c6aec47698f7719d256259f5e7973",
+      "extension": ".tsx",
+      "category": "ROUTE_OR_APP"
+    },
+    {
+      "path": "components/DocumentFooter.tsx",
+      "bytes": 2158,
+      "sha256": "b4b93d5d6434de55898718425cacab8e38dc5afd3c7ab7bef3595a1bf510d268",
+      "extension": ".tsx",
+      "category": "COMPONENT"
+    },
+    {
+      "path": "components/Thumbnail.tsx",
+      "bytes": 4509,
+      "sha256": "1c6d0842c02de9d335df7a488add87a71e9315c0f66704530c52bab4ecfa2cd6",
+      "extension": ".tsx",
+      "category": "COMPONENT"
+    },
+    {
+      "path": "content/architecture/advertising-mode-problem-architecture.mdx",
+      "bytes": 14418,
+      "sha256": "09e966b6116f08a72a46e1addf87cce3c563b96003901a239f527a2d5f98c2f7",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/architecture/aesthetic-identity.mdx",
+      "bytes": 12106,
+      "sha256": "a56b95341a79ae614e7a95c7c9596b460d67c5ff6b75a1a1e789f555b6b1a2e1",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/architecture/catalog-architecture.mdx",
+      "bytes": 5197,
+      "sha256": "ee017ef7bf80c09ec35c38b356c409cd765470646717cbf3c92197ddb689a4d8",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/architecture/cultural-infrastructure-architecture.mdx",
+      "bytes": 4984,
+      "sha256": "ddc1da64ae1ab83f55caa15bda1b7d4dd690ae51f5146c7558142daa9c84ff2c",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/architecture/discord-server-era.mdx",
+      "bytes": 12155,
+      "sha256": "0b3dbb5095eb74bb8c239c7572b2a742fa36312ed490cfe685d669769c9c395a",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/architecture/genre-taxonomy-architecture.mdx",
+      "bytes": 5002,
+      "sha256": "e7af828b7007423ae35edded2db65e62b81cea1129c75f0b894840b853fc642e",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/architecture/ip-expansion-architecture.mdx",
+      "bytes": 14121,
+      "sha256": "e738dcbdddd1f96e6fb33104eb97ce9b046c435a83bb9aa90bb3801481774ff8",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/architecture/manifest.ts",
+      "bytes": 1126,
+      "sha256": "10602243425ab8ade885252351894f8be885a24deed5e737cb75b5831de68704",
+      "extension": ".ts",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/architecture/meta.ts",
+      "bytes": 5100,
+      "sha256": "6886ec8ad2ecb89ec78c94f79d18075f2f5210e5df23a4acba063c4f795d1237",
+      "extension": ".ts",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/architecture/post-launch-architecture.mdx",
+      "bytes": 15153,
+      "sha256": "bffa9f7f7cc61f1ddf4e246c84474f3041cc94c6728ccfc200221c55f7ba8b39",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/architecture/publisher-identity-architecture.mdx",
+      "bytes": 12642,
+      "sha256": "c25d66f2f1885377e96aca9d26e4d78631b3a988621b8df6b93238939455bc4b",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/architecture/release-cadence-architecture.mdx",
+      "bytes": 10459,
+      "sha256": "54c85bf951e735751c27c4bd1bae07682a1a8cca85c9d51d1c012a2f4f96eec4",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/architecture/studio-identity-architecture.mdx",
+      "bytes": 4665,
+      "sha256": "f55b7aa79cdb517199a4a279348aded9afe1068446250126a29f8fd19dff5b3a",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/architecture/taste-graph-problem-architecture.mdx",
+      "bytes": 5252,
+      "sha256": "ac0ccee3029be3e99fb0962b20590990339b86c202e2ac37f154cc2d4a4d622b",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/essays/death-of-play.mdx",
+      "bytes": 5281,
+      "sha256": "c47491dc433a64c0f05f33c2870345c86f245b1a86b6b19469d8240d00791d3e",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/essays/forge-economics.mdx",
+      "bytes": 44101,
+      "sha256": "e48cd000fdf52ea2b830258bb1e11d582d5ca718204437a585a6f5062edd1ed8",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/essays/future-isnt-lost-its-underbuilt.mdx",
+      "bytes": 10301,
+      "sha256": "581994683f2cf73bcc8593a4eee8fdcbe99b5dcb64ee986a52d0260cf5c2951d",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/essays/game-development-starts-at-zero.mdx",
+      "bytes": 7922,
+      "sha256": "68360128904e3772fa13f38fe9d3e479e220feea23fc3a754805cc7d32427c6c",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/essays/game-ip-mythos-vs-continuity.mdx",
+      "bytes": 8798,
+      "sha256": "92e587d99de084f0e8e815016118e650fa0813082200de85d0de1454485752a0",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/essays/gaming-culture.mdx",
+      "bytes": 19065,
+      "sha256": "30d5ef03774ecb0ff94294df2979977b1153318cb46cbe12581ab85cbe3b940a",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/essays/gaming-profits.mdx",
+      "bytes": 18963,
+      "sha256": "8c6129a93130c64ac2a1db151e6b19a0a965cc76f14799bce1de4ebb0ecc7707",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/essays/genre-bottleneck.mdx",
+      "bytes": 5347,
+      "sha256": "891a94b418926bffa44b7c428fb7df0b32728f3208bb41f9b1d0b9abf7306098",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/essays/lost-community.mdx",
+      "bytes": 7060,
+      "sha256": "286e8631a981a786fd8ad17dfa0d91acf1a6ca09ad42c54c79c583cb5ae0fe5b",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/essays/manifest.ts",
+      "bytes": 856,
+      "sha256": "a5771182754b05cffa1af886de032f8637e37eacd87564bf1bb161dc7d14e2d4",
+      "extension": ".ts",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/essays/meta.ts",
+      "bytes": 4190,
+      "sha256": "73207f59565e30f69c605919a7969626999dec2701585d5f535d77caa3e456e4",
+      "extension": ".ts",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/essays/return-of-the-destination.mdx",
+      "bytes": 21141,
+      "sha256": "446f23c0dd8b173f6463c673c24e6fb3b923e82cd581d7a5f53b8a0f742d296f",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/essays/steam-is-not-a-store.mdx",
+      "bytes": 23861,
+      "sha256": "5aabc92a9d1c7cbaa2f9c13b28b9f95e5d63ecbc1587340fda712382e0bfed5b",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/essays/the-monetary-value-of-being-the-board.mdx",
+      "bytes": 32114,
+      "sha256": "e3ac5b15ac0af767aab135568ec1044850655da0a9838c57930f3cff83ef42f0",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/essays/the-trust-layer.mdx",
+      "bytes": 24099,
+      "sha256": "79f7b781b8d1b6d1535829eda4203d918f7c3e74204faf6b8b515af8a0482d1a",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/essays/unexploited-identity.mdx",
+      "bytes": 6403,
+      "sha256": "505849e7242feb3a7f7c009305efc7548f6337f1643727a871092f83599391c6",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/essays/you-dont-need-to-own-the-stack.mdx",
+      "bytes": 32278,
+      "sha256": "8458fe0208b81244fc0abaadb5500b141b68bbba64544a3ad87cb7c4c4d0bc98",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/mdx-components.tsx",
+      "bytes": 2455,
+      "sha256": "dec56b072602a2af64558630adbfaacf28cd5ac8f831588593db5b93e97c0cb9",
+      "extension": ".tsx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/manifest.ts",
+      "bytes": 318,
+      "sha256": "9182f64c848de281964e8ca079855939f1cff76ef13d536f5a7dd2d1f81cdccd",
+      "extension": ".ts",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/forge/documents/adaptability.mdx",
+      "bytes": 5415,
+      "sha256": "c1c767854eef7c69d141f9749c75aba38fe506dc32ed80ee36a33fcebe1330f5",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/forge/documents/architecture.mdx",
+      "bytes": 3564,
+      "sha256": "24f8b7513b3d56a5d1b0eb6734744a32c4bd1f29296f0456d62299bb0cb77bbb",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/forge/documents/coherence.mdx",
+      "bytes": 4723,
+      "sha256": "c4f6af556783dea4c055d0e133b0b632459759f93a7273b9179676125fa1291e",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/forge/documents/designer-sovereignty.mdx",
+      "bytes": 4384,
+      "sha256": "8ef068214fe814d6dcf2ac86ed71a8f3a2fbfa2866770fd06165c5c47ab151af",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/forge/documents/executive-summary.mdx",
+      "bytes": 3804,
+      "sha256": "e3503f43b9653dee05bcfa223e123295c1794f49c28ade97f0268fee1c06a5cf",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/forge/documents/founder-letter.mdx",
+      "bytes": 6437,
+      "sha256": "81b7ad22953ffe72f2fa4c18e9137069564c05ed519216d972934e2647aeb6e8",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/forge/documents/iteration.mdx",
+      "bytes": 3458,
+      "sha256": "2098feed399eb48c1abb94b42cfa127b4f5d55a71c5551d50c44d37ea6d7b052",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/forge/documents/one-pager.mdx",
+      "bytes": 3856,
+      "sha256": "581395f781cf73ea509e6db52e329c5592f0945584ddf483ceb6121ce1df8881",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/forge/documents/portability.mdx",
+      "bytes": 3459,
+      "sha256": "91e1a35c6bbb6738bd3349cdd1e69a4587a64c5d0ec27d5dcc1dc2d930c5c194",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/forge/documents/predictability.mdx",
+      "bytes": 3649,
+      "sha256": "43909388c7c627dbf064dfbd44ecfa36ca0481c4b5af65cd9564d94718f7816f",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/forge/documents/systemic-drift.mdx",
+      "bytes": 4720,
+      "sha256": "174973811f37a51c60e77f8cd9f893b566e9171a2c91d853988171820235196c",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/forge/documents/technical-dependency.mdx",
+      "bytes": 5539,
+      "sha256": "629620b70907f2ffd731e5c7ba1aedf280e18a103780ba9ad5c7ab9cc5993283",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/forge/documents/traceability.mdx",
+      "bytes": 4192,
+      "sha256": "2c1d22003f78d0ce50fa00a1839aeff7c151926bc79373c364209c77ffa8f836",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/forge/meta.ts",
+      "bytes": 8339,
+      "sha256": "ea3273fbdbd344374d8c1e04d43c6bde45710e5e881b3a851dfcdaa35e3066d9",
+      "extension": ".ts",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/forge/page.tsx",
+      "bytes": 2383,
+      "sha256": "3457fb86731561a72dab95cfe1fdb140c988372c2e93e7fc20fc01f545bb2e41",
+      "extension": ".tsx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/meta.ts",
+      "bytes": 1685,
+      "sha256": "4d994c5a1b8caaedc0ae51f9c3dad3e8581ad8d88f17d316bd041c8878b34008",
+      "extension": ".ts",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/nc-foundation/documents/nc_foundation_one_pager.mdx",
+      "bytes": 2885,
+      "sha256": "dae46b85dde48a9245d5c831f805cca478935f13546bd0d7033a9609130890ed",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/nc-foundation/meta.ts",
+      "bytes": 492,
+      "sha256": "e39322ca229fa23d6fa8a5aded803e3b1518a063653646212c95dc030b19b1d0",
+      "extension": ".ts",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/nc-foundation/page.tsx",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extension": ".tsx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/types.ts",
+      "bytes": 222,
+      "sha256": "912261bbe224aea42ace2594c37821696d08d21f82b574a012d589fc1c940d37",
+      "extension": ".ts",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/xbox-dashboard-launcher-kit/documents/dashboard_launcher_kit_one_pager.mdx",
+      "bytes": 3066,
+      "sha256": "fa353c89430b257e2e672b218547949de6bb09617c7ed17f72c73b40c86877cb",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/xbox-dashboard-launcher-kit/meta.ts",
+      "bytes": 874,
+      "sha256": "c99198acd233e2ab45d13088c980e1bfa3244ef8575f07e9263a9354670bbd4c",
+      "extension": ".ts",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/xbox-forever-ads/documents/xbox-forever-ads-one-pager.mdx",
+      "bytes": 4434,
+      "sha256": "21313fa5b7bd9ba093c2678444e873f2a64c3bc56bfe079dbc79f69657fcd73f",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/xbox-forever-ads/meta.ts",
+      "bytes": 900,
+      "sha256": "deb8b573815445538e0a3e9a5aeb17be78af35f82c5016017f9ddb5f6fb64a45",
+      "extension": ".ts",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/xbox-forever/documents/xbox_forever_life_inside_a_persistent_platform.mdx",
+      "bytes": 8193,
+      "sha256": "a1b847f9f59c5acef23eda70e25cee25613741a43e13bb8be5d3f454670c4c22",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/xbox-forever/documents/xbox_forever_one_pager.mdx",
+      "bytes": 2774,
+      "sha256": "b32e898adc942620420fcd2b6c4ab3d99b2627cea13c7c46fa6dbf69f2955125",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/xbox-forever/documents/xbox_forever_structural_inversion_and_the_cultural_gap.mdx",
+      "bytes": 7959,
+      "sha256": "c85a16289e321b5f138c51580a53564fa0ce3efae439d5468dcbe19967ff542d",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/xbox-forever/documents/xbox_forever_why_persistence_Is_the_missing_layer.mdx",
+      "bytes": 9416,
+      "sha256": "c6842d270ab0695775c22cf57ff35a5aae2787e469a4cc3ff93f70069ef21e99",
+      "extension": ".mdx",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/projects/vault/xbox-forever/meta.ts",
+      "bytes": 2954,
+      "sha256": "56e700b752e6ad86372f97862d3f5ceb7e4df85f3679db89d51dc42020e1cd4a",
+      "extension": ".ts",
+      "category": "CONTENT"
+    },
+    {
+      "path": "content/related-work.ts",
+      "bytes": 2060,
+      "sha256": "20387d0f340b986817e2c90b3eb54c2f2ce5b3faa2ce5b4a9f2c4e1282478c03",
+      "extension": ".ts",
+      "category": "CONTENT"
+    },
+    {
+      "path": "license.md",
+      "bytes": 1100,
+      "sha256": "a04340e39b4b67b5666fedc289dd5a2b3558ecdc50a9458bafbe95f33d6474a5",
+      "extension": ".md",
+      "category": "MARKDOWN"
+    },
+    {
+      "path": "mdx-components.tsx",
+      "bytes": 800,
+      "sha256": "9c69934ee84d42ae6b7f4cf478cefa752e6f754bfe55df945f18d16f8c3f8da8",
+      "extension": ".tsx",
+      "category": "SOURCE_CODE"
+    },
+    {
+      "path": "mdx.d.ts",
+      "bytes": 25,
+      "sha256": "c85bdf152d6c0884423bf483b423d03d47e0d863a7c229d94e364fd0fe12d1b9",
+      "extension": ".ts",
+      "category": "SOURCE_CODE"
+    },
+    {
+      "path": "next-env.d.ts",
+      "bytes": 295,
+      "sha256": "1b59d4c6b83807db275d43f3cf2cc8e9323f465fab764eea091cc5becd5bad37",
+      "extension": ".ts",
+      "category": "SOURCE_CODE"
+    },
+    {
+      "path": "next.config.ts",
+      "bytes": 379,
+      "sha256": "49cd219a87f0aeded2db87d5d255b06a560df312380436ded395bc6d6ed28d9f",
+      "extension": ".ts",
+      "category": "CONFIG"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 144403,
+      "sha256": "b234d5c4392d5e75a47f45919b25adee1b705f92fa78f4345176b967963b4375",
+      "extension": ".json",
+      "category": "CONFIG"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1206,
+      "sha256": "1d8c5135574fa34e57c2ac3829d748869e8b8de8e986ca347d6f88336a275c20",
+      "extension": ".json",
+      "category": "CONFIG"
+    },
+    {
+      "path": "postcss.config.cjs",
+      "bytes": 63,
+      "sha256": "0abb1a5d9aa83ed922e4e067832de3b41e5d1346a2e68f8c18534b10ef52b746",
+      "extension": ".cjs",
+      "category": "SOURCE_CODE"
+    },
+    {
+      "path": "prettier.config.js",
+      "bytes": 309,
+      "sha256": "cdd733291d6284c5bf5e2241c9d8a2909c18407a7f0534940d87e3ea21c7ed62",
+      "extension": ".js",
+      "category": "SOURCE_CODE"
+    },
+    {
+      "path": "public/about/elliott.jpg",
+      "bytes": 2287893,
+      "sha256": "34a602d21275936bb09f9bd86852aeb6acae7457de4bbb2b988a510f31aac7f1",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/banners/architecture-banner.mp4",
+      "bytes": 2610145,
+      "sha256": "fe6902401ec763c904066930bbbef8d5ad4cd98a0d59fe8265bb82da7e80f020",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/banners/essays-banner.mp4",
+      "bytes": 2766609,
+      "sha256": "60fd87136aaed99ea49512eb2d2f05c059e223f73668e335696946d1d23eb442",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/banners/home-arrow-banner.mp4",
+      "bytes": 144224,
+      "sha256": "c787b42ef9c32805e7d676667bf264e8e62ac7f8a07971d08e8e6799b7763109",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/essays/death-of-play/death-of-play.png",
+      "bytes": 2820974,
+      "sha256": "91519cadcd0b7a6316a5532430483a59cd46da51fd25f759f0369793250fee7f",
+      "extension": ".png",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/essays/game-ip-mythos/game-ip-mythos.png",
+      "bytes": 2939944,
+      "sha256": "136e6c40d996d5fe74fb8d02012157bce1858934b39b87eba3ea3fa91c63b443",
+      "extension": ".png",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/essays/gaming-culture/gaming-culture-1.jpg",
+      "bytes": 180351,
+      "sha256": "a5d0211c9475d14f4f00f8c64b1e5271ce6d053345a014326e59c9aef1b783b9",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/essays/gaming-culture/gaming-culture-2.jpg",
+      "bytes": 166725,
+      "sha256": "057fb9fe80ddbcdb4d27ce84d07458443c039b71053d47db85883e9e69f2c19c",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/essays/gaming-profits/gaming-profits-1.jpg",
+      "bytes": 440204,
+      "sha256": "77ef4514b4baad9a55fe12a374f15f1d5452449223c04c77f918eaed026ed50f",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/essays/gaming-profits/gaming-profits-2.jpg",
+      "bytes": 226344,
+      "sha256": "b94ea030d510aeb5c3eefea294aa1bdadf998285b579d44d647cc58e984f39ee",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/essays/genre-bottleneck/genre-bottleneck.png",
+      "bytes": 1840538,
+      "sha256": "19991d5250c881d62fa67d0ffd62ae97477efa0f0114916abab35e62fe512d9c",
+      "extension": ".png",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/essays/lost-community/lost-community.png",
+      "bytes": 4213062,
+      "sha256": "485f08c60f89c252201397ba11ee707d2e7706c1038d8dd37a797ec013a6c202",
+      "extension": ".png",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/essays/starts-at-zero/starts-at-zero.png",
+      "bytes": 260994,
+      "sha256": "087160e29072846d315d0697c0f5da28bda70eed5f0de75808214d1913fe976a",
+      "extension": ".png",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/essays/steam-is-not-a-store/steam-is-not-a-store-1.jpg",
+      "bytes": 421803,
+      "sha256": "7efc2ed8c7acbcc6d0775c31d133332bbb3e178e310a4cbe266a595f4d88a0f6",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/essays/steam-is-not-a-store/steam-is-not-a-store-2.jpg",
+      "bytes": 771199,
+      "sha256": "4b50e0d74ebcbf7a7231aef5d9bd14fc9df4f21807a74dceb12d02c07d3d065f",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/essays/steam-is-not-a-store/steam-is-not-a-store-3.jpg",
+      "bytes": 358614,
+      "sha256": "11bc71cbbad0fa63d1a2e7f218ec26069601abe6a5fab99fe0dcb09a6db65e8c",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/essays/unexploited-identity/unexploited-1.png",
+      "bytes": 3859634,
+      "sha256": "ebef75ad62c2def228cf2b8017420d64c577b2b4f5d35326181a51cee5164ec8",
+      "extension": ".png",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/essays/unexploited-identity/unexploited-2.png",
+      "bytes": 727572,
+      "sha256": "41c284f6bfb54c93b56bb623f789303bd48ee49a5e90c2ecc783498d8293dcf0",
+      "extension": ".png",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/projects/vault/dashboard-launcher-kit/Dashboard Launcher Kit One Pager.pdf",
+      "bytes": 208036,
+      "sha256": "1641b58b6332ccc7a5a59c1c6d6fef3ec419954311450a489d4f3c0f183f8839",
+      "extension": ".pdf",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/projects/vault/forge/FORGE — Adaptability.pdf",
+      "bytes": 264483,
+      "sha256": "a697835b5bc79099ff910cd925a0097e0a240159f6c0cceb75fd11793903242d",
+      "extension": ".pdf",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/projects/vault/forge/FORGE — Coherence.pdf",
+      "bytes": 227486,
+      "sha256": "205a6d5631807b24d45db1828679b320bd4181a23a38ab4be079b74219564f93",
+      "extension": ".pdf",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/projects/vault/forge/FORGE — Designer Sovereignty.pdf",
+      "bytes": 243742,
+      "sha256": "8338d4fb38d48bb862cfba9080b4b9e767fc299b61f729bd1046443bc96cb511",
+      "extension": ".pdf",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/projects/vault/forge/FORGE — Founder Letter.pdf",
+      "bytes": 126389,
+      "sha256": "66c6c1ca21f67657c3865a31b589cb7e8503d1f341aa91aa36df85570d896e27",
+      "extension": ".pdf",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/projects/vault/forge/FORGE — Iteration.pdf",
+      "bytes": 217691,
+      "sha256": "58608555dba167e60ad1741fc082e651a2e13f0701c3f8947e90b8debc1481ac",
+      "extension": ".pdf",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/projects/vault/forge/FORGE — One-Pager.pdf",
+      "bytes": 229671,
+      "sha256": "f4bd8c067a506b105a9784a17b21c2ca111177abde5db288d2fa547a4f8ce1aa",
+      "extension": ".pdf",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/projects/vault/forge/FORGE — Overview.pdf",
+      "bytes": 283395,
+      "sha256": "1139fcd57cc9ebe9917e0020d3cb3e34b4b252d9ca7ead49d9f5b5c72c75f732",
+      "extension": ".pdf",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/projects/vault/forge/FORGE — Portability.pdf",
+      "bytes": 243224,
+      "sha256": "74eff6ddc1a3c19a42e34d232939f876bab66b3f8bebae49c788e2fb0c023664",
+      "extension": ".pdf",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/projects/vault/forge/FORGE — Predictability.pdf",
+      "bytes": 242556,
+      "sha256": "a26c8e98862062ed482188c379d64285be42a19104287712dda763b599d82d16",
+      "extension": ".pdf",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/projects/vault/forge/FORGE — Systemic Drift.pdf",
+      "bytes": 262910,
+      "sha256": "da19ca3bc0c72f77d98844775738e829cb0a6e594fe99f28a99c06b70987e14c",
+      "extension": ".pdf",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/projects/vault/forge/FORGE — Technical Dependency.pdf",
+      "bytes": 263723,
+      "sha256": "14f5cbcf05a4903c422b353d9d5c991531138e44615ef6b2bd2d5e1a657896e5",
+      "extension": ".pdf",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/projects/vault/forge/FORGE — Traceability.pdf",
+      "bytes": 260986,
+      "sha256": "df7f125e960aed3fdd1ac40bc34b2b87897ffb22a52f3ed9df2f7e0634f56a0c",
+      "extension": ".pdf",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/projects/vault/forge/FORGE — Vision.pdf",
+      "bytes": 261806,
+      "sha256": "e1c28ffb17d9352b53f6dd37acc59ad99b9134b378873c45f39b72af1a2ec0ad",
+      "extension": ".pdf",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/projects/vault/nc-foundation/NC - One Pager.pdf",
+      "bytes": 70602,
+      "sha256": "de427fb43a57ccf0d81a70a99dee6aff95b3800459cc4afcd34b4e0f3990d275",
+      "extension": ".pdf",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/projects/vault/xbox-forever-ads/XBOX FOREVER ADS - ONE-PAGER.pdf",
+      "bytes": 84892,
+      "sha256": "3e041a5061f8d3d9febaedbedb541fd310d44eda147dfd0f136a87bef52014bc",
+      "extension": ".pdf",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/projects/vault/xbox-forever/Xbox Forever - One Pager.pdf",
+      "bytes": 82015,
+      "sha256": "53652e61bf34dc9541e0c804d9024d3bf2e09098ee731870857f8551b0c57dc3",
+      "extension": ".pdf",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/projects/vault/xbox-forever/Xbox Forever — Life Inside a Persistent Platform.pdf",
+      "bytes": 149412,
+      "sha256": "0131ac4b0e450e9c657441f633bdde0fbbd1c4dc4279fb58cd3fb75913d6943d",
+      "extension": ".pdf",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/projects/vault/xbox-forever/Xbox Forever — Structural Inversion and The Cultural Gap.pdf",
+      "bytes": 282650,
+      "sha256": "ab6a2c6d4bdc1824db10b364596b14ce3cb7320ecf859865f4264440604f5aa4",
+      "extension": ".pdf",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/projects/vault/xbox-forever/Xbox Forever — Why Persistence Is the Missing Layer.pdf",
+      "bytes": 110224,
+      "sha256": "9cbf945d0817dc22df3175655d8af7e024b4e1df3c6e67669655b04afd2dc98e",
+      "extension": ".pdf",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/site-icons/web-systems-seal.png",
+      "bytes": 609305,
+      "sha256": "30c7a95e52a397e74897d61ef2a2da0742d556a584b63a9d57ac4316571516df",
+      "extension": ".png",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/advertising-mode-problem-architecture-motion.mp4",
+      "bytes": 1457768,
+      "sha256": "cf577a30888eecc87d6fe2e954508e2e2a0f8cf4e5e83214f559603a4826d3d9",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/advertising-mode-problem-architecture.jpg",
+      "bytes": 560605,
+      "sha256": "78868505590789926e9943463d21360da09e4163a9694a4728f8908160867168",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/aesthetic-identity-motion.mp4",
+      "bytes": 1542837,
+      "sha256": "6c8a6e0d08375348e3de9f4ff9fe240cb0d3eec9b071f291b699d8be068324e0",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/aesthetic-identity.jpg",
+      "bytes": 199523,
+      "sha256": "b17b1b30898bea8ec7462bc8b02f23033e1fcf820f04a90a6b2d04deb4a245c7",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/catalog-architecture-motion.mp4",
+      "bytes": 1349788,
+      "sha256": "38f433a942be020967c7c392cc088fb5c5143c17e5287190c6611d85feffb4ec",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/catalog-architecture.jpg",
+      "bytes": 1185019,
+      "sha256": "5afe51915c0b3a26d439e8a8fc6c974d329f7d65e2e74b22c733ccbd50c32288",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/cultural-infrastructure-architecture-motion.mp4",
+      "bytes": 2085101,
+      "sha256": "445991b4b975b96e0c2d39563a213b85d9028182875704f4f75b91961e98b8e3",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/cultural-infrastructure-architecture.jpg",
+      "bytes": 162733,
+      "sha256": "d045c5aa7314f84ecb1d1ef459f95f59426417d76277c4c2e8463f2d0b4ad905",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/dashboard-launcher-kit-motion.mp4",
+      "bytes": 1597165,
+      "sha256": "edaaf22f144a1612847d5d6df9be836173a876b2b91b69445674016cd3fa8143",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/dashboard-launcher-kit.jpg",
+      "bytes": 841967,
+      "sha256": "1d04bf7b6258aafafece5fc47a920af758a44030c4762edecacd037f4a94aa00",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/death-of-play-motion.mp4",
+      "bytes": 1442835,
+      "sha256": "5c11fa196cd31f6d1a5bdf623c7a4ce14b7e869e20a829b3532a9e60f824b721",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/death-of-play.jpg",
+      "bytes": 364135,
+      "sha256": "64e847b16174af087b9260c03ab49baca8083d5ff703d03159c6c17229ee756c",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/discord-server-era-motion.mp4",
+      "bytes": 1559185,
+      "sha256": "2b19caba0e0cd09108fd096c6de4adfd111b831bea72e39123bdb180f14ebf9c",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/discord-server-era.jpg",
+      "bytes": 153258,
+      "sha256": "4d3abaec8ec3e85ba254a6cd94b8c7c0f4aa9e1f2ac880a124d578f83b164ea7",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/forge-motion.mp4",
+      "bytes": 695122,
+      "sha256": "3a1076215b87819e32a8431a32b3e4dc3a729b9191d16ddbdfb31a97adea10a1",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/forge.jpg",
+      "bytes": 447989,
+      "sha256": "460f2e7529051b4412a4d03dbeacd9fa8538cf7abc08a2629e18e9d30a09327b",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/future-isnt-lost-its-underbuilt-motion.mp4",
+      "bytes": 2793085,
+      "sha256": "886793e614c33dadf5613387a24c665efe87cc276de8718fea362a550a71d548",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/future-isnt-lost-its-underbuilt.jpg",
+      "bytes": 276006,
+      "sha256": "d8cbacae8fb6dd9b10844c8c5951ad9d49e2620a3211748330c2dff0ac687bcc",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/game-development-starts-at-zero-motion.mp4",
+      "bytes": 1662115,
+      "sha256": "124aa863c4372c8793698656c899217bbe77237c6aaaaece4bb77d54d8eba3e6",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/game-development-starts-at-zero.jpg",
+      "bytes": 426105,
+      "sha256": "6ce97701667e4ad9a9130aa670024c7fc05a642c8e9ca17e745aac027727d60d",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/game-ip-mythos-vs-continuity-motion.mp4",
+      "bytes": 1863832,
+      "sha256": "21fbd5b6eef5cd9a175a104cc3c01216f5a6613f6206514c10946e6153a91cd2",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/game-ip-mythos-vs-continuity.jpg",
+      "bytes": 652609,
+      "sha256": "3f187853939eaf2533266ee995ea8e5e99724c4cbeee1b21b97286e36b37b1bd",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/gaming-culture-motion.mp4",
+      "bytes": 1519725,
+      "sha256": "f8155725323ebbbdd9e77050b4fa7e5e7dbae998bb62690206a6b0ebcaf2c866",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/gaming-culture.jpg",
+      "bytes": 596260,
+      "sha256": "448c30f135483d6c26c84b08657440d4102e1295ac2cf0bf3118b4bad0154c0e",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/gaming-profits-motion.mp4",
+      "bytes": 1475283,
+      "sha256": "8a3aca91b0a6cef34fd23e85b9f5826177647fa0c3ab0eaaa52b76ee1cc32040",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/gaming-profits.jpg",
+      "bytes": 541405,
+      "sha256": "f419cf9b075fb72e5293c2bf6918fd5612a4749154ae3e77bfc6358690ba2e46",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/genre-bottleneck-motion.mp4",
+      "bytes": 968147,
+      "sha256": "a9fbc86ad9b72b85add0633a35658437375a48df900f64ad81be419112dd24a6",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/genre-bottleneck.jpg",
+      "bytes": 307782,
+      "sha256": "e4e9efda0c3f62db715b79fb259007a43b0d6fa79b2b5061f5753208738c0efc",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/genre-taxonomy-architecture-motion.mp4",
+      "bytes": 1404652,
+      "sha256": "81890df6572600c327c68972e077d7d19022abec57811601095ead5fc593f031",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/genre-taxonomy-architecture.jpg",
+      "bytes": 959391,
+      "sha256": "8d32094429e4d9ec59349c4cc9d08bc5f49eb055ed9c455bbaa5e7051254eb60",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/label-tree-motion.mp4",
+      "bytes": 1088804,
+      "sha256": "a865275fb517af52b507fa33437a5741e48520cbda637c5462e0ed04f3c67b5e",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/label-tree.jpg",
+      "bytes": 405553,
+      "sha256": "5035d169be4cef2c4d061fbac7840df34074d21de81ebfbb0a553a04f947d0b0",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/lost-community-motion.mp4",
+      "bytes": 1000902,
+      "sha256": "50decdaa701749a8e204191c92b776e56363e8db48d63bb5a491b052d03a3115",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/lost-community.jpg",
+      "bytes": 151201,
+      "sha256": "d6f31418c4539580ad7461bb67d1d8197b9046f3a64a8017e1d87d6e0da460db",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/nc-foundation-motion.mp4",
+      "bytes": 1357022,
+      "sha256": "a92a3bd5863f7aa57d45cc3de51a468c21619a645f0b500304aa75aac173e91a",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/nc-foundation.jpg",
+      "bytes": 161123,
+      "sha256": "f13654c794460bdba93af099977df0c01b5fb7c988146bce96836a74400db24d",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/post-launch-architecture-motion.mp4",
+      "bytes": 1668313,
+      "sha256": "a369aa9a3bbf11fb104fbccf896a2239d1169c3a5f4c335f6245963f6dc2602c",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/post-launch-architecture.jpg",
+      "bytes": 137062,
+      "sha256": "d83a2d8eb5cdba70c5591c0ff948e0ceaacc162e9ceee83c625b7bca6b1b9021",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/publisher-architecture-motion.mp4",
+      "bytes": 752310,
+      "sha256": "74e93b9c21bf21ecf52939b8a7e8fa015bfae14629fbe94dfaa8c8295410a886",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/publisher-architecture.jpg",
+      "bytes": 53902,
+      "sha256": "045bdf13d85441dfd6b6038ef61788f88f933ff51f233257750afc07ac7ca11e",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/release-cadence-architecture-motion.mp4",
+      "bytes": 1509705,
+      "sha256": "ea00870571395721ddec89890f9003975c0c84771be341ab2d6c9f21a1da78c3",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/release-cadence-architecture.jpg",
+      "bytes": 393115,
+      "sha256": "459264108b4f7300ba52397abecadcff789db51bcd0885c7cbd169ea266425ef",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/steam-is-not-a-store-motion.mp4",
+      "bytes": 1661103,
+      "sha256": "221b3fb20ce5eea3dd85a8b8b7b31557fa12f95a762474c584ade09f5af338fe",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/steam-is-not-a-store.jpg",
+      "bytes": 1075448,
+      "sha256": "7bb3130e50181629991be01dfaa6f70da4b2be8286d3c79daa657ecf0ab34f6d",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/studio-identity-architecture-motion.mp4",
+      "bytes": 1598061,
+      "sha256": "d38814f74ee7cd168b64fdc7440c57ddbe83233e817e8d17f2cfebe474022a00",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/studio-identity-architecture.jpg",
+      "bytes": 370735,
+      "sha256": "804f3f70f6b7264eeff8787d2cd40978d00834f21388ec64a07316f63a502f53",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/taste-graph-motion.mp4",
+      "bytes": 461388,
+      "sha256": "5622e2608070fe89fbe690fb041f120f60262ac447ff1564d50d975b80cb427e",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/taste-graph-problem-architecture-motion.mp4",
+      "bytes": 1361828,
+      "sha256": "230df409e610a3c3c3c304a8a0efcca0fabfed415d905c25583d2bbfb92293fa",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/taste-graph-problem-architecture.jpg",
+      "bytes": 1206248,
+      "sha256": "f09fa77fd2de204372b2cc5a3326290e7478dfaa21f1aab0cd38b69d9a4ab628",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/taste-graph.jpg",
+      "bytes": 167450,
+      "sha256": "bf675b1c67639d15c9065dc0477ead92e78248472713d403a7bfad55735201fd",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/unexploited-identity-motion.mp4",
+      "bytes": 1364603,
+      "sha256": "1849d903dc3555c07d932d5b0db69fed8106def19883f496fccbdd55dba1f024",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/unexploited-identity.jpg",
+      "bytes": 239513,
+      "sha256": "90a651e3b6d319f2dfb424bfbb5a185d7e99661ec6ad7cda03747529ee9d9812",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/ways-to-skin-a-cat.jpg",
+      "bytes": 282700,
+      "sha256": "bb6ce9d6f07b434fcdc6cb796a735f8076bed5156d46e52dd4ef8f59d6786cf3",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/ways-to-skin-a-cat.mp4",
+      "bytes": 1382143,
+      "sha256": "deab470bc3672d562844b98506109f6a15b5835e96483e84abd4485c63a1feda",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/xbox-forever-ads-motion.mp4",
+      "bytes": 1651340,
+      "sha256": "fe1e847fb037aa7882562a55a9414fb00f5820d975f7e31a39052cd2e9ba8339",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/xbox-forever-ads.jpg",
+      "bytes": 457292,
+      "sha256": "164e5a91336907a4ecd750832e832fc8acae9e9a2079d7bcdcb1e16fb4e42257",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/xbox-forever-motion.mp4",
+      "bytes": 1414640,
+      "sha256": "47bb815cbeae21cff377b491da4c523bf9bdc5bb30f86cd260f847db1621411d",
+      "extension": ".mp4",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/thumbnails/xbox-forever.jpg",
+      "bytes": 474543,
+      "sha256": "828933e8278940d6a961e5dcea41028409a9b175e32aa00b7af54a2a6b276aa1",
+      "extension": ".jpg",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/visuals/cacheable-routes-client-cache.png",
+      "bytes": 78891,
+      "sha256": "42a9ac46aa12324cf10d5962de9e1abc3e061b4bedbef5f6bfd083ce182839fd",
+      "extension": ".png",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/visuals/cacheable-routes-prerendering.png",
+      "bytes": 135310,
+      "sha256": "430573c000daf4cc1492c72d5c5ecbecdba5b93aeb1c0f1f7d14e986b8700cc1",
+      "extension": ".png",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/visuals/cacheable-routes-server-cache.png",
+      "bytes": 106414,
+      "sha256": "730307ed3a8ab66b279804efb9dead3439dbcf7374ad7b0bf5c35d6ca61fff2f",
+      "extension": ".png",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "public/webb-systems-logo.png",
+      "bytes": 120990,
+      "sha256": "47425f7c5558214a140f1026a25eb5308a89fcb904e18fe3af548023e7bf4986",
+      "extension": ".png",
+      "category": "PUBLIC_ASSET"
+    },
+    {
+      "path": "readme.md",
+      "bytes": 471,
+      "sha256": "72e74179d85ebcc50c8347ef05d1b3df488701dc60c2bed5d8727c1661b4fdbe",
+      "extension": ".md",
+      "category": "MARKDOWN"
+    },
+    {
+      "path": "styles/globals.css",
+      "bytes": 6356,
+      "sha256": "bda183e0fe8dff70dfb3d25b085d56e95c17c389564f60c9774ec0b9c4596ab5",
+      "extension": ".css",
+      "category": "STYLE"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 728,
+      "sha256": "bc44da50f3a0f435768572c41f6f9690cea83d02b5c7df941998aba6138401d8",
+      "extension": ".json",
+      "category": "CONFIG"
+    },
+    {
+      "path": "tsconfig.tsbuildinfo",
+      "bytes": 339413,
+      "sha256": "d57b4e47c108c45920370a96a421dee97b1884e33b4c83630019dfe9dce4509a",
+      "extension": ".tsbuildinfo",
+      "category": "BINARY_OR_ASSET"
+    },
+    {
+      "path": "web systems img/Elliott 7 yo.png",
+      "bytes": 3281638,
+      "sha256": "b3fe4bc333c37077588bc4b8861d6b4318902e97b0375ce20a5ed1fc2e323ffb",
+      "extension": ".png",
+      "category": "BINARY_OR_ASSET"
+    }
+  ]
+}

@@ -10,6 +10,42 @@ export type EssayMeta = {
 
 export const essayMeta: EssayMeta[] = [
   {
+    slug: "physical-gaming-beyond-the-disc",
+    title: "Physical Gaming Beyond the Disc",
+    abstract:
+      "How Xbox could reinvent physical ownership, retail, and the economics of game distribution.",
+    thumbnailCaption:
+      "The collectible is the license.",
+    category: "Culture",
+    thumbnail: "/thumbnails/physical-gaming-beyond-the-disc.jpg",
+    thumbnailMotion: "/thumbnails/physical_gaming_beyond_the_disc_motion.mp4"
+  },
+
+  {
+    slug: "what-if-xbox-let-players-build-with-its-worlds",
+    title: "What If Xbox Let Players Build With Its Worlds?",
+    abstract:
+      "How Xbox could turn approved characters, worlds, and game systems into a platform for player-created experiences.",
+    thumbnailCaption:
+      "Give creators worlds to build with.",
+    category: "Culture",
+    thumbnail: "/thumbnails/what-if-xbox-let-players-build-with-its-worlds.jpg",
+    thumbnailMotion: "/thumbnails/what-if-xbox-let-players-build-motion.mp4"
+  },
+
+  {
+    slug: "the-elements-of-video-game-culture",
+    title: "The Elements of Video Game Culture",
+    abstract:
+      "Seven cultural practices gamers have built around video games—and the opportunity for platforms to support them.",
+    thumbnailCaption:
+      "Video games are the medium. Gamers create the culture.",
+    category: "Culture",
+    thumbnail: "/thumbnails/the-elements-of-video-game-culture.jpg",
+    thumbnailMotion: "/thumbnails/the-elements-of-video-game-culture-motion.mp4"
+  },
+
+  {
     slug: "gears-of-war-second-business-model",
     title: "Gears of War Doesn’t Need a Price Cut. It Needs a Second Business Model.",
     abstract:
